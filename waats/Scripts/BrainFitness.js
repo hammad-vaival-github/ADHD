@@ -63,22 +63,22 @@ function LoadTask() {
             {
                 mRender: function (data, type, row) {
                     var linkQuery = '';
-                    linkQuery = ' <div class="card card border-dark">';
-                    linkQuery += '<div class="card-header">';
-                    linkQuery += '<span class="card-title h5">{Tdate}</span>&nbsp;&nbsp;'
+                    linkQuery = ' <div class="">';
+                    linkQuery += '<div class="">';
+                    linkQuery += '<span class="h5">{Tdate}</span>&nbsp;&nbsp;'
                         +'<i id = Completed_{CT} class="btn fa fa-check fw-semibold fa-1x text-success" aria-hidden="true" >&nbsp; Completed</i> ';
                     linkQuery += '</div>';
-                    linkQuery += '<div class="card-body"><table class="table table-bordered table-responsive"><thead>'+
-                        '<tr role="row" ><th class="smallcard-text text-end h6">StartingNumber</th>' +
-                        '<th class="smallcard-text text-center h6">Add</th>'+
-                        '<th class="smallcard-text text-center h6">Take</th>' +
-                        '<th class="smallcard-text text-center h6">Answer</th>' +
-                        '<th class="smallcard-text text-center h6">No of attempts</th></thead><tbody>' +
-                        '<tr role="row" ><td class="card-text  text-center">{te}</td>' +
-                        '<td class="smallcard-text text-center">{em}</td>' +
-                        '<td class="smallcard-text text-center">{bf}</td>' +
-                        '<td class="smallcard-text text-center">{whyt}</td>' +
-                        '<td class="smallcard-text text-center">{av}</td></thead></tbody></table>'
+                    linkQuery += '<div class=""><table class="table"><thead>'+
+                        '<tr role="row" ><th class="smallcard-text h6">Starting Number</th>' +
+                        '<th class="smallcard-text h6">Add</th>'+
+                        '<th class="smallcard-text h6">Take</th>' +
+                        '<th class="smallcard-text h6">Answer</th>' +
+                        '<th class="smallcard-text h6">No of attempts</th></thead><tbody>' +
+                        '<tr role="row" ><td class="card-text">{te}</td>' +
+                        '<td class="smallcard-text ">{em}</td>' +
+                        '<td class="smallcard-text ">{bf}</td>' +
+                        '<td class="smallcard-text ">{whyt}</td>' +
+                        '<td class="smallcard-text ">{av}</td></thead></tbody></table>'
                         ;
                     //linkQuery += '<span class="card-text text-end h6">StartingNumber</span> :<br/><span class="card-text text-end">{te}</span>';
                     //linkQuery += '<span class="card-text text-end h6">Add</span> :<br/><span class="card-text text-end">{em}</span>';

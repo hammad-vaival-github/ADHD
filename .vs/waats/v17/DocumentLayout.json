@@ -274,7 +274,7 @@
               "RelativeDocumentMoniker": "waats\\Views\\Account\\Login.cshtml",
               "ToolTip": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Views\\Account\\Login.cshtml",
               "RelativeToolTip": "waats\\Views\\Account\\Login.cshtml",
-              "ViewState": "AQIAAGYAAAAAAAAAAAAAAHUAAABRAAAA",
+              "ViewState": "AQIAAF0AAAAAAAAAAAAAAGwAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-05T07:33:12.469Z",
               "EditorCaption": ""
@@ -553,8 +553,7 @@
               "RelativeToolTip": "waats\\Controllers\\GraphController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T06:35:31.196Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T06:35:31.196Z"
             },
             {
               "$type": "Document",
