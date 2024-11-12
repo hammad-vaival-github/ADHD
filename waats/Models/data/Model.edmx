@@ -1,0 +1,941 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="waatsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AspNetRoles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUserClaims">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="ClaimType" Type="nvarchar(max)" />
+          <Property Name="ClaimValue" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="AspNetUserLogins">
+          <Key>
+            <PropertyRef Name="LoginProvider" />
+            <PropertyRef Name="ProviderKey" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUserRoles">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="RoleId" />
+            <PropertyRef Name="localid" />
+          </Key>
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="localid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUsers">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="256" />
+          <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+          <Property Name="Activationcode" Type="nvarchar" MaxLength="256" />
+          <Property Name="Firstname" Type="nvarchar" MaxLength="256" />
+          <Property Name="Lastname" Type="nvarchar" MaxLength="256" />
+          <Property Name="Dob" Type="nvarchar" MaxLength="25" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="25" />
+          <Property Name="EthnicOrigin" Type="nvarchar" MaxLength="50" />
+          <Property Name="EmploymentStatus" Type="nvarchar" MaxLength="50" />
+          <Property Name="PasswordHash" Type="nvarchar(max)" />
+          <Property Name="SecurityStamp" Type="nvarchar(max)" />
+          <Property Name="PhoneNumber" Type="nvarchar(max)" />
+          <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="datetime" />
+          <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="ADUserName" Type="nvarchar" MaxLength="256" />
+          <Property Name="AccountType" Type="int" Nullable="false" />
+          <Property Name="ConsentToSharedata" Type="bit" />
+          <Property Name="ProfilePic" Type="bit" />
+          <Property Name="AgreeToADHD" Type="bit" />
+          <Property Name="Dateinserted" Type="datetime" />
+          <Property Name="bDeleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="BrainFitness">
+          <Key>
+            <PropertyRef Name="BrainFitnessID" />
+          </Key>
+          <Property Name="BrainFitnessID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" />
+          <Property Name="MarkAsCompleted" Type="bit" />
+          <Property Name="CompletionDate" Type="datetime" />
+          <Property Name="bDeleted" Type="bit" />
+          <Property Name="StartingNumber" Type="int" />
+          <Property Name="Q_Add" Type="int" />
+          <Property Name="Q_Take" Type="int" />
+          <Property Name="Q_A" Type="int" />
+          <Property Name="Q_NoofAttempts" Type="int" />
+        </EntityType>
+        <EntityType Name="EOT">
+          <Key>
+            <PropertyRef Name="LocalId" />
+          </Key>
+          <Property Name="LocalId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="EST">
+          <Key>
+            <PropertyRef Name="LocalId" />
+          </Key>
+          <Property Name="LocalId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="GenderT">
+          <Key>
+            <PropertyRef Name="LocalId" />
+          </Key>
+          <Property Name="LocalId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="GratitudeJournal">
+          <Key>
+            <PropertyRef Name="GratitudeJouralID" />
+          </Key>
+          <Property Name="GratitudeJouralID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" />
+          <Property Name="thingsiamgratfullfortoday" Type="nvarchar" MaxLength="4000" />
+          <Property Name="AddedDate" Type="datetime" />
+          <Property Name="MarkAsCompleted" Type="bit" />
+          <Property Name="EditDate" Type="datetime" />
+          <Property Name="CompletionDate" Type="datetime" />
+          <Property Name="bDeleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="Logs">
+          <Key>
+            <PropertyRef Name="localId" />
+          </Key>
+          <Property Name="localId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WaatsFormId" Type="nchar" MaxLength="10" />
+          <Property Name="Description" Type="nvarchar" MaxLength="4000" />
+          <Property Name="CreationDate" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="MemoryMaker">
+          <Key>
+            <PropertyRef Name="memoryId" />
+          </Key>
+          <Property Name="memoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" />
+          <Property Name="One" Type="nvarchar" MaxLength="4000" />
+          <Property Name="two" Type="nvarchar" MaxLength="4000" />
+          <Property Name="three" Type="nvarchar" MaxLength="4000" />
+          <Property Name="four" Type="nvarchar" MaxLength="4000" />
+          <Property Name="AddedDate" Type="datetime" />
+          <Property Name="MarkAsCompleted" Type="bit" />
+          <Property Name="EditDate" Type="datetime" />
+          <Property Name="CompletionDate" Type="datetime" />
+          <Property Name="bDeleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="MindFullAttention">
+          <Key>
+            <PropertyRef Name="MindFulID" />
+          </Key>
+          <Property Name="MindFulID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" />
+          <Property Name="thepersonilistenedtospokeabout" Type="nvarchar" MaxLength="4000" />
+          <Property Name="AddedDate" Type="datetime" />
+          <Property Name="MarkAsCompleted" Type="bit" />
+          <Property Name="EditDate" Type="datetime" />
+          <Property Name="CompletionDate" Type="datetime" />
+          <Property Name="bDeleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="ProfilePicT">
+          <Key>
+            <PropertyRef Name="LocalId" />
+          </Key>
+          <Property Name="LocalId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserGUID" Type="nvarchar" MaxLength="128" />
+          <Property Name="FileData" Type="varbinary(max)" />
+          <Property Name="FileName" Type="nvarchar" MaxLength="200" />
+          <Property Name="FileType" Type="nvarchar" MaxLength="200" />
+          <Property Name="FileUploadDateTime" Type="datetime" />
+          <Property Name="bDeleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="ScheduleTask">
+          <Key>
+            <PropertyRef Name="LocalID" />
+          </Key>
+          <Property Name="LocalID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="250" />
+          <Property Name="Description" Type="nvarchar" MaxLength="4000" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="AddedDate" Type="datetime" />
+          <Property Name="MarkAsCompleted" Type="bit" />
+          <Property Name="EditDate" Type="datetime" />
+          <Property Name="bDeleted" Type="bit" />
+          <Property Name="SubTask" Type="bit" />
+          <Property Name="CompletionDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="SubScheduleTask">
+          <Key>
+            <PropertyRef Name="SubLocalID" />
+          </Key>
+          <Property Name="SubLocalID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MainTaskID" Type="int" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="250" />
+          <Property Name="Description" Type="nvarchar" MaxLength="4000" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="AddedDate" Type="datetime" />
+          <Property Name="MarkAsCompleted" Type="bit" />
+          <Property Name="EditDate" Type="datetime" />
+          <Property Name="CompletionDate" Type="datetime" />
+          <Property Name="bDeleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="Trigger">
+          <Key>
+            <PropertyRef Name="TriggerID" />
+          </Key>
+          <Property Name="TriggerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="whatwasthetriggerevent" Type="nvarchar" MaxLength="4000" />
+          <Property Name="whatwastheemotionthatyoufelt" Type="nvarchar" MaxLength="4000" />
+          <Property Name="howdiditfeelinyourbody" Type="nvarchar" MaxLength="4000" />
+          <Property Name="whymightthisbeatriggerforyou_thinkaboutyourpast" Type="nvarchar" MaxLength="4000" />
+          <Property Name="howcanyouavoidthesituationand_ormanageyourresponsetoitinfuture" Type="nvarchar" MaxLength="4000" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" />
+          <Property Name="AddedDate" Type="datetime" />
+          <Property Name="MarkAsCompleted" Type="bit" />
+          <Property Name="EditDate" Type="datetime" />
+          <Property Name="CompletionDate" Type="datetime" />
+          <Property Name="bDeleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="waatsForm">
+          <Key>
+            <PropertyRef Name="localID" />
+          </Key>
+          <Property Name="localID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Firstname" Type="nvarchar" MaxLength="300" />
+          <Property Name="Surname" Type="nvarchar" MaxLength="300" />
+          <Property Name="DoB" Type="nvarchar" MaxLength="20" />
+          <Property Name="Age" Type="int" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="20" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="GPName" Type="nvarchar" MaxLength="500" />
+          <Property Name="HistoryofMentalIllness" Type="nvarchar" MaxLength="1000" />
+          <Property Name="ReferredtoMentalHealth" Type="nvarchar" MaxLength="1000" />
+          <Property Name="HaveYouEverHadAnyThoughtsorMadeAttemptstoHarmYourself" Type="nvarchar" MaxLength="10" />
+          <Property Name="HaveYouCurrentlyorrecentlyAnyThoughtsorMadeAttemptstoHarmYourself" Type="nvarchar" MaxLength="10" />
+          <Property Name="HaveYouCurrentlyorrecentlyAnyThoughtsorMadeAttemptstoHarmAnyoneElse" Type="nvarchar" MaxLength="10" />
+          <Property Name="CompleteProjects" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequiresOrganization" Type="nvarchar" MaxLength="50" />
+          <Property Name="keepAppointments" Type="nvarchar" MaxLength="50" />
+          <Property Name="StartTasksOnTime" Type="nvarchar" MaxLength="50" />
+          <Property Name="FidgetAndSquirm" Type="nvarchar" MaxLength="50" />
+          <Property Name="OverlyActiveAndCompelled" Type="nvarchar" MaxLength="50" />
+          <Property Name="MakeCarelessMistakes" Type="nvarchar" MaxLength="50" />
+          <Property Name="DifficultyKeepingMyAttention" Type="nvarchar" MaxLength="50" />
+          <Property Name="DifficultyConcentrating" Type="nvarchar" MaxLength="50" />
+          <Property Name="DifficultyFinding" Type="nvarchar" MaxLength="50" />
+          <Property Name="EasilyDistracted" Type="nvarchar" MaxLength="50" />
+          <Property Name="LeaveMySeatInMeetings" Type="nvarchar" MaxLength="50" />
+          <Property Name="DifficultyRelaxingOrUnwinding" Type="nvarchar" MaxLength="50" />
+          <Property Name="TalkingTooMuch" Type="nvarchar" MaxLength="50" />
+          <Property Name="FinishingTheSentences" Type="nvarchar" MaxLength="50" />
+          <Property Name="DifficultyWaitingMyTurn" Type="nvarchar" MaxLength="50" />
+          <Property Name="InterruptOtherPeople" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReceiveWarningsAndPersistent" Type="nchar" MaxLength="10" />
+          <Property Name="DisciplinedOrAacked" Type="nchar" MaxLength="10" />
+          <Property Name="EverExperiencedABreakdown" Type="nchar" MaxLength="10" />
+          <Property Name="Completedby" Type="nvarchar" MaxLength="300" />
+          <Property Name="CompletionDate" Type="nvarchar" MaxLength="30" />
+          <Property Name="Action" Type="nvarchar" MaxLength="500" />
+          <Property Name="PracticeName" Type="nvarchar" MaxLength="500" />
+          <Property Name="Postcode" Type="nvarchar" MaxLength="500" />
+          <Property Name="Address" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="AspNetUserClaims">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="AspNetUserLogins">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="waatsModelStoreContainer">
+          <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BrainFitness" EntityType="Self.BrainFitness" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EOT" EntityType="Self.EOT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EST" EntityType="Self.EST" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GenderT" EntityType="Self.GenderT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GratitudeJournal" EntityType="Self.GratitudeJournal" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Logs" EntityType="Self.Logs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MemoryMaker" EntityType="Self.MemoryMaker" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MindFullAttention" EntityType="Self.MindFullAttention" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProfilePicT" EntityType="Self.ProfilePicT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ScheduleTask" EntityType="Self.ScheduleTask" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SubScheduleTask" EntityType="Self.SubScheduleTask" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Trigger" EntityType="Self.Trigger" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="waatsForm" EntityType="Self.waatsForm" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="waatsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="AspNetUsers">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="Activationcode" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Firstname" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Lastname" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Dob" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="Gender" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="EthnicOrigin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EmploymentStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+          <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ADUserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="AccountType" Type="Int32" Nullable="false" />
+          <Property Name="ConsentToSharedata" Type="Boolean" />
+          <Property Name="ProfilePic" Type="Boolean" />
+          <Property Name="AgreeToADHD" Type="Boolean" />
+          <Property Name="Dateinserted" Type="DateTime" Precision="3" />
+          <Property Name="bDeleted" Type="Boolean" />
+          <NavigationProperty Name="AspNetUserClaims" Relationship="waatsModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserClaims" />
+          <NavigationProperty Name="AspNetUserLogins" Relationship="waatsModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserLogins" />
+        </EntityType>
+        <EntityType Name="BrainFitness">
+          <Key>
+            <PropertyRef Name="BrainFitnessID" />
+          </Key>
+          <Property Name="BrainFitnessID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="MarkAsCompleted" Type="Boolean" />
+          <Property Name="CompletionDate" Type="DateTime" Precision="3" />
+          <Property Name="bDeleted" Type="Boolean" />
+          <Property Name="StartingNumber" Type="Int32" />
+          <Property Name="Q_Add" Type="Int32" />
+          <Property Name="Q_Take" Type="Int32" />
+          <Property Name="Q_A" Type="Int32" />
+          <Property Name="Q_NoofAttempts" Type="Int32" />
+        </EntityType>
+        <EntityType Name="EOT">
+          <Key>
+            <PropertyRef Name="LocalId" />
+          </Key>
+          <Property Name="LocalId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="EST">
+          <Key>
+            <PropertyRef Name="LocalId" />
+          </Key>
+          <Property Name="LocalId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="GenderT">
+          <Key>
+            <PropertyRef Name="LocalId" />
+          </Key>
+          <Property Name="LocalId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="GratitudeJournal">
+          <Key>
+            <PropertyRef Name="GratitudeJouralID" />
+          </Key>
+          <Property Name="GratitudeJouralID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="thingsiamgratfullfortoday" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="AddedDate" Type="DateTime" Precision="3" />
+          <Property Name="MarkAsCompleted" Type="Boolean" />
+          <Property Name="EditDate" Type="DateTime" Precision="3" />
+          <Property Name="CompletionDate" Type="DateTime" Precision="3" />
+          <Property Name="bDeleted" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Logs">
+          <Key>
+            <PropertyRef Name="localId" />
+          </Key>
+          <Property Name="localId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WaatsFormId" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="CreationDate" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="MemoryMaker">
+          <Key>
+            <PropertyRef Name="memoryId" />
+          </Key>
+          <Property Name="memoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="One" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="two" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="three" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="four" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="AddedDate" Type="DateTime" Precision="3" />
+          <Property Name="MarkAsCompleted" Type="Boolean" />
+          <Property Name="EditDate" Type="DateTime" Precision="3" />
+          <Property Name="CompletionDate" Type="DateTime" Precision="3" />
+          <Property Name="bDeleted" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="MindFullAttention">
+          <Key>
+            <PropertyRef Name="MindFulID" />
+          </Key>
+          <Property Name="MindFulID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="thepersonilistenedtospokeabout" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="AddedDate" Type="DateTime" Precision="3" />
+          <Property Name="MarkAsCompleted" Type="Boolean" />
+          <Property Name="EditDate" Type="DateTime" Precision="3" />
+          <Property Name="CompletionDate" Type="DateTime" Precision="3" />
+          <Property Name="bDeleted" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="ProfilePicT">
+          <Key>
+            <PropertyRef Name="LocalId" />
+          </Key>
+          <Property Name="LocalId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserGUID" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="FileData" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="FileName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="FileType" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="FileUploadDateTime" Type="DateTime" Precision="3" />
+          <Property Name="bDeleted" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="ScheduleTask">
+          <Key>
+            <PropertyRef Name="LocalID" />
+          </Key>
+          <Property Name="LocalID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AddedDate" Type="DateTime" Precision="3" />
+          <Property Name="MarkAsCompleted" Type="Boolean" />
+          <Property Name="EditDate" Type="DateTime" Precision="3" />
+          <Property Name="bDeleted" Type="Boolean" />
+          <Property Name="SubTask" Type="Boolean" />
+          <Property Name="CompletionDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="SubScheduleTask">
+          <Key>
+            <PropertyRef Name="SubLocalID" />
+          </Key>
+          <Property Name="SubLocalID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MainTaskID" Type="Int32" Nullable="false" />
+          <Property Name="Title" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AddedDate" Type="DateTime" Precision="3" />
+          <Property Name="MarkAsCompleted" Type="Boolean" />
+          <Property Name="EditDate" Type="DateTime" Precision="3" />
+          <Property Name="CompletionDate" Type="DateTime" Precision="3" />
+          <Property Name="bDeleted" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Trigger">
+          <Key>
+            <PropertyRef Name="TriggerID" />
+          </Key>
+          <Property Name="TriggerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="whatwasthetriggerevent" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="whatwastheemotionthatyoufelt" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="howdiditfeelinyourbody" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="whymightthisbeatriggerforyou_thinkaboutyourpast" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="howcanyouavoidthesituationand_ormanageyourresponsetoitinfuture" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="AddedDate" Type="DateTime" Precision="3" />
+          <Property Name="MarkAsCompleted" Type="Boolean" />
+          <Property Name="EditDate" Type="DateTime" Precision="3" />
+          <Property Name="CompletionDate" Type="DateTime" Precision="3" />
+          <Property Name="bDeleted" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="waatsForm">
+          <Key>
+            <PropertyRef Name="localID" />
+          </Key>
+          <Property Name="localID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Firstname" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Surname" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="DoB" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Age" Type="Int32" />
+          <Property Name="Gender" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GPName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HistoryofMentalIllness" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="ReferredtoMentalHealth" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="HaveYouEverHadAnyThoughtsorMadeAttemptstoHarmYourself" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="HaveYouCurrentlyorrecentlyAnyThoughtsorMadeAttemptstoHarmYourself" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="HaveYouCurrentlyorrecentlyAnyThoughtsorMadeAttemptstoHarmAnyoneElse" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="CompleteProjects" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RequiresOrganization" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="keepAppointments" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="StartTasksOnTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FidgetAndSquirm" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OverlyActiveAndCompelled" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MakeCarelessMistakes" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DifficultyKeepingMyAttention" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DifficultyConcentrating" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DifficultyFinding" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EasilyDistracted" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LeaveMySeatInMeetings" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DifficultyRelaxingOrUnwinding" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TalkingTooMuch" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FinishingTheSentences" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DifficultyWaitingMyTurn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InterruptOtherPeople" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ReceiveWarningsAndPersistent" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="DisciplinedOrAacked" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="EverExperiencedABreakdown" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Completedby" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="CompletionDate" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Action" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PracticeName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Postcode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="AspNetUserRoles">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="RoleId" />
+            <PropertyRef Name="localid" />
+          </Key>
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="RoleId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="localid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityContainer Name="waatsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" />
+          <EntitySet Name="BrainFitness" EntityType="Self.BrainFitness" />
+          <EntitySet Name="EOT" EntityType="Self.EOT" />
+          <EntitySet Name="EST" EntityType="Self.EST" />
+          <EntitySet Name="GenderT" EntityType="Self.GenderT" />
+          <EntitySet Name="GratitudeJournal" EntityType="Self.GratitudeJournal" />
+          <EntitySet Name="Logs" EntityType="Self.Logs" />
+          <EntitySet Name="MemoryMaker" EntityType="Self.MemoryMaker" />
+          <EntitySet Name="MindFullAttention" EntityType="Self.MindFullAttention" />
+          <EntitySet Name="ProfilePicT" EntityType="Self.ProfilePicT" />
+          <EntitySet Name="ScheduleTask" EntityType="Self.ScheduleTask" />
+          <EntitySet Name="SubScheduleTask" EntityType="Self.SubScheduleTask" />
+          <EntitySet Name="Trigger" EntityType="Self.Trigger" />
+          <EntitySet Name="waatsForm" EntityType="Self.waatsForm" />
+          <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" />
+          <EntitySet Name="AspNetRoles" EntityType="waatsModel.AspNetRoles" />
+          <EntitySet Name="AspNetUserClaims" EntityType="waatsModel.AspNetUserClaims" />
+          <EntitySet Name="AspNetUserLogins" EntityType="waatsModel.AspNetUserLogins" />
+          <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="waatsModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="waatsModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="AspNetRoles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="AspNetUserClaims">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUsers" Relationship="waatsModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUserClaims" ToRole="AspNetUsers" />
+        </EntityType>
+        <EntityType Name="AspNetUserLogins">
+          <Key>
+            <PropertyRef Name="LoginProvider" />
+            <PropertyRef Name="ProviderKey" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="LoginProvider" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ProviderKey" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUsers" Relationship="waatsModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUserLogins" ToRole="AspNetUsers" />
+        </EntityType>
+        <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+          <End Type="waatsModel.AspNetUsers" Role="AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="waatsModel.AspNetUserClaims" Role="AspNetUserClaims" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="AspNetUserClaims">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+          <End Type="waatsModel.AspNetUsers" Role="AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="waatsModel.AspNetUserLogins" Role="AspNetUserLogins" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="AspNetUserLogins">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="waatsModelStoreContainer" CdmEntityContainer="waatsEntities">
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="IsTypeOf(waatsModel.AspNetUsers)">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="Activationcode" ColumnName="Activationcode" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="Dob" ColumnName="Dob" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="EthnicOrigin" ColumnName="EthnicOrigin" />
+          <ScalarProperty Name="EmploymentStatus" ColumnName="EmploymentStatus" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ADUserName" ColumnName="ADUserName" />
+          <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+          <ScalarProperty Name="ConsentToSharedata" ColumnName="ConsentToSharedata" />
+          <ScalarProperty Name="ProfilePic" ColumnName="ProfilePic" />
+          <ScalarProperty Name="AgreeToADHD" ColumnName="AgreeToADHD" />
+          <ScalarProperty Name="Dateinserted" ColumnName="Dateinserted" />
+          <ScalarProperty Name="bDeleted" ColumnName="bDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BrainFitness">
+      <EntityTypeMapping TypeName="IsTypeOf(waatsModel.BrainFitness)">
+        <MappingFragment StoreEntitySet="BrainFitness">
+          <ScalarProperty Name="BrainFitnessID" ColumnName="BrainFitnessID" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="MarkAsCompleted" ColumnName="MarkAsCompleted" />
+          <ScalarProperty Name="CompletionDate" ColumnName="CompletionDate" />
+          <ScalarProperty Name="bDeleted" ColumnName="bDeleted" />
+          <ScalarProperty Name="StartingNumber" ColumnName="StartingNumber" />
+          <ScalarProperty Name="Q_Add" ColumnName="Q_Add" />
+          <ScalarProperty Name="Q_Take" ColumnName="Q_Take" />
+          <ScalarProperty Name="Q_A" ColumnName="Q_A" />
+          <ScalarProperty Name="Q_NoofAttempts" ColumnName="Q_NoofAttempts" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EOT">
+      <EntityTypeMapping TypeName="IsTypeOf(waatsModel.EOT)">
+        <MappingFragment StoreEntitySet="EOT">
+          <ScalarProperty Name="LocalId" ColumnName="LocalId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EST">
+      <EntityTypeMapping TypeName="IsTypeOf(waatsModel.EST)">
+        <MappingFragment StoreEntitySet="EST">
+          <ScalarProperty Name="LocalId" ColumnName="LocalId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GenderT">
+      <EntityTypeMapping TypeName="IsTypeOf(waatsModel.GenderT)">
+        <MappingFragment StoreEntitySet="GenderT">
+          <ScalarProperty Name="LocalId" ColumnName="LocalId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GratitudeJournal">
+      <EntityTypeMapping TypeName="IsTypeOf(waatsModel.GratitudeJournal)">
+        <MappingFragment StoreEntitySet="GratitudeJournal">
+          <ScalarProperty Name="GratitudeJouralID" ColumnName="GratitudeJouralID" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="thingsiamgratfullfortoday" ColumnName="thingsiamgratfullfortoday" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="MarkAsCompleted" ColumnName="MarkAsCompleted" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="CompletionDate" ColumnName="CompletionDate" />
+          <ScalarProperty Name="bDeleted" ColumnName="bDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Logs">
+      <EntityTypeMapping TypeName="IsTypeOf(waatsModel.Logs)">
+        <MappingFragment StoreEntitySet="Logs">
+          <ScalarProperty Name="localId" ColumnName="localId" />
+          <ScalarProperty Name="WaatsFormId" ColumnName="WaatsFormId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MemoryMaker">
+      <EntityTypeMapping TypeName="IsTypeOf(waatsModel.MemoryMaker)">
+        <MappingFragment StoreEntitySet="MemoryMaker">
+          <ScalarProperty Name="memoryId" ColumnName="memoryId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="One" ColumnName="One" />
+          <ScalarProperty Name="two" ColumnName="two" />
+          <ScalarProperty Name="three" ColumnName="three" />
+          <ScalarProperty Name="four" ColumnName="four" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="MarkAsCompleted" ColumnName="MarkAsCompleted" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="CompletionDate" ColumnName="CompletionDate" />
+          <ScalarProperty Name="bDeleted" ColumnName="bDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MindFullAttention">
+      <EntityTypeMapping TypeName="IsTypeOf(waatsModel.MindFullAttention)">
+        <MappingFragment StoreEntitySet="MindFullAttention">
+          <ScalarProperty Name="MindFulID" ColumnName="MindFulID" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="thepersonilistenedtospokeabout" ColumnName="thepersonilistenedtospokeabout" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="MarkAsCompleted" ColumnName="MarkAsCompleted" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="CompletionDate" ColumnName="CompletionDate" />
+          <ScalarProperty Name="bDeleted" ColumnName="bDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProfilePicT">
+      <EntityTypeMapping TypeName="IsTypeOf(waatsModel.ProfilePicT)">
+        <MappingFragment StoreEntitySet="ProfilePicT">
+          <ScalarProperty Name="LocalId" ColumnName="LocalId" />
+          <ScalarProperty Name="UserGUID" ColumnName="UserGUID" />
+          <ScalarProperty Name="FileData" ColumnName="FileData" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="FileType" ColumnName="FileType" />
+          <ScalarProperty Name="FileUploadDateTime" ColumnName="FileUploadDateTime" />
+          <ScalarProperty Name="bDeleted" ColumnName="bDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ScheduleTask">
+      <EntityTypeMapping TypeName="IsTypeOf(waatsModel.ScheduleTask)">
+        <MappingFragment StoreEntitySet="ScheduleTask">
+          <ScalarProperty Name="LocalID" ColumnName="LocalID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="MarkAsCompleted" ColumnName="MarkAsCompleted" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="bDeleted" ColumnName="bDeleted" />
+          <ScalarProperty Name="SubTask" ColumnName="SubTask" />
+          <ScalarProperty Name="CompletionDate" ColumnName="CompletionDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubScheduleTask">
+      <EntityTypeMapping TypeName="IsTypeOf(waatsModel.SubScheduleTask)">
+        <MappingFragment StoreEntitySet="SubScheduleTask">
+          <ScalarProperty Name="SubLocalID" ColumnName="SubLocalID" />
+          <ScalarProperty Name="MainTaskID" ColumnName="MainTaskID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="MarkAsCompleted" ColumnName="MarkAsCompleted" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="CompletionDate" ColumnName="CompletionDate" />
+          <ScalarProperty Name="bDeleted" ColumnName="bDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Trigger">
+      <EntityTypeMapping TypeName="IsTypeOf(waatsModel.Trigger)">
+        <MappingFragment StoreEntitySet="Trigger">
+          <ScalarProperty Name="TriggerID" ColumnName="TriggerID" />
+          <ScalarProperty Name="whatwasthetriggerevent" ColumnName="whatwasthetriggerevent" />
+          <ScalarProperty Name="whatwastheemotionthatyoufelt" ColumnName="whatwastheemotionthatyoufelt" />
+          <ScalarProperty Name="howdiditfeelinyourbody" ColumnName="howdiditfeelinyourbody" />
+          <ScalarProperty Name="whymightthisbeatriggerforyou_thinkaboutyourpast" ColumnName="whymightthisbeatriggerforyou_thinkaboutyourpast" />
+          <ScalarProperty Name="howcanyouavoidthesituationand_ormanageyourresponsetoitinfuture" ColumnName="howcanyouavoidthesituationand_ormanageyourresponsetoitinfuture" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="MarkAsCompleted" ColumnName="MarkAsCompleted" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="CompletionDate" ColumnName="CompletionDate" />
+          <ScalarProperty Name="bDeleted" ColumnName="bDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="waatsForm">
+      <EntityTypeMapping TypeName="IsTypeOf(waatsModel.waatsForm)">
+        <MappingFragment StoreEntitySet="waatsForm">
+          <ScalarProperty Name="localID" ColumnName="localID" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="DoB" ColumnName="DoB" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="GPName" ColumnName="GPName" />
+          <ScalarProperty Name="HistoryofMentalIllness" ColumnName="HistoryofMentalIllness" />
+          <ScalarProperty Name="ReferredtoMentalHealth" ColumnName="ReferredtoMentalHealth" />
+          <ScalarProperty Name="HaveYouEverHadAnyThoughtsorMadeAttemptstoHarmYourself" ColumnName="HaveYouEverHadAnyThoughtsorMadeAttemptstoHarmYourself" />
+          <ScalarProperty Name="HaveYouCurrentlyorrecentlyAnyThoughtsorMadeAttemptstoHarmYourself" ColumnName="HaveYouCurrentlyorrecentlyAnyThoughtsorMadeAttemptstoHarmYourself" />
+          <ScalarProperty Name="HaveYouCurrentlyorrecentlyAnyThoughtsorMadeAttemptstoHarmAnyoneElse" ColumnName="HaveYouCurrentlyorrecentlyAnyThoughtsorMadeAttemptstoHarmAnyoneElse" />
+          <ScalarProperty Name="CompleteProjects" ColumnName="CompleteProjects" />
+          <ScalarProperty Name="RequiresOrganization" ColumnName="RequiresOrganization" />
+          <ScalarProperty Name="keepAppointments" ColumnName="keepAppointments" />
+          <ScalarProperty Name="StartTasksOnTime" ColumnName="StartTasksOnTime" />
+          <ScalarProperty Name="FidgetAndSquirm" ColumnName="FidgetAndSquirm" />
+          <ScalarProperty Name="OverlyActiveAndCompelled" ColumnName="OverlyActiveAndCompelled" />
+          <ScalarProperty Name="MakeCarelessMistakes" ColumnName="MakeCarelessMistakes" />
+          <ScalarProperty Name="DifficultyKeepingMyAttention" ColumnName="DifficultyKeepingMyAttention" />
+          <ScalarProperty Name="DifficultyConcentrating" ColumnName="DifficultyConcentrating" />
+          <ScalarProperty Name="DifficultyFinding" ColumnName="DifficultyFinding" />
+          <ScalarProperty Name="EasilyDistracted" ColumnName="EasilyDistracted" />
+          <ScalarProperty Name="LeaveMySeatInMeetings" ColumnName="LeaveMySeatInMeetings" />
+          <ScalarProperty Name="DifficultyRelaxingOrUnwinding" ColumnName="DifficultyRelaxingOrUnwinding" />
+          <ScalarProperty Name="TalkingTooMuch" ColumnName="TalkingTooMuch" />
+          <ScalarProperty Name="FinishingTheSentences" ColumnName="FinishingTheSentences" />
+          <ScalarProperty Name="DifficultyWaitingMyTurn" ColumnName="DifficultyWaitingMyTurn" />
+          <ScalarProperty Name="InterruptOtherPeople" ColumnName="InterruptOtherPeople" />
+          <ScalarProperty Name="ReceiveWarningsAndPersistent" ColumnName="ReceiveWarningsAndPersistent" />
+          <ScalarProperty Name="DisciplinedOrAacked" ColumnName="DisciplinedOrAacked" />
+          <ScalarProperty Name="EverExperiencedABreakdown" ColumnName="EverExperiencedABreakdown" />
+          <ScalarProperty Name="Completedby" ColumnName="Completedby" />
+          <ScalarProperty Name="CompletionDate" ColumnName="CompletionDate" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="PracticeName" ColumnName="PracticeName" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserRoles">
+      <EntityTypeMapping TypeName="IsTypeOf(waatsModel.AspNetUserRoles)">
+        <MappingFragment StoreEntitySet="AspNetUserRoles">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="localid" ColumnName="localid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+          <EntitySetMapping Name="AspNetRoles">
+            <EntityTypeMapping TypeName="waatsModel.AspNetRoles">
+              <MappingFragment StoreEntitySet="AspNetRoles">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUserClaims">
+            <EntityTypeMapping TypeName="waatsModel.AspNetUserClaims">
+              <MappingFragment StoreEntitySet="AspNetUserClaims">
+                <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+                <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUserLogins">
+            <EntityTypeMapping TypeName="waatsModel.AspNetUserLogins">
+              <MappingFragment StoreEntitySet="AspNetUserLogins">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+                <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

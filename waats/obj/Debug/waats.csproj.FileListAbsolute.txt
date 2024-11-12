@@ -1,0 +1,511 @@
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\waats.dll.config
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\waats.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\waats.pdb
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\csc.exe
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\csc.exe.config
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\csc.rsp
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\csi.exe
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\csi.exe.config
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\csi.rsp
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\Microsoft.Managed.Core.targets
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\System.Buffers.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\System.Collections.Immutable.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\System.Memory.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\System.Numerics.Vectors.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\System.Reflection.Metadata.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\vbc.exe
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\vbc.exe.config
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\vbc.rsp
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\VBCSCompiler.exe
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\VBCSCompiler.exe.config
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Antlr3.Runtime.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\EntityFramework.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\EntityFramework.SqlServer.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\FoolproofValidation.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.AspNet.Identity.Core.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.Owin.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.Cookies.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.Facebook.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.Google.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.OAuth.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.Twitter.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.Web.Infrastructure.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Newtonsoft.Json.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Owin.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\System.Web.Helpers.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\System.Web.Mvc.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\System.Web.Optimization.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\System.Web.Razor.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\System.Web.WebPages.Deployment.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\System.Web.WebPages.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\System.Web.WebPages.Razor.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\WebGrease.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\EntityFramework.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\EntityFramework.SqlServer.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\System.Web.Helpers.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\System.Web.Mvc.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\System.Web.Razor.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\System.Web.WebPages.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\System.Web.WebPages.Deployment.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\System.Web.WebPages.Razor.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\System.Web.Optimization.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Newtonsoft.Json.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Antlr3.Runtime.pdb
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.AspNet.Identity.Core.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.Owin.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.Facebook.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.Cookies.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.Google.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.Twitter.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.OAuth.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\obj\Debug\waats.csproj.CoreCompileInputs.cache
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\obj\Debug\waats.csproj.CopyComplete
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\obj\Debug\waats.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\obj\Debug\waats.pdb
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS\waats_Poject\Waats_Auth\waats\waats\obj\Debug\waats.csprojAssemblyReference.cache
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\waats.dll.config
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\waats.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\waats.pdb
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\csc.exe
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\csc.exe.config
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\csc.rsp
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\csi.exe
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\csi.exe.config
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\csi.rsp
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\Microsoft.Managed.Core.targets
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\System.Buffers.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\System.Collections.Immutable.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\System.Memory.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\System.Numerics.Vectors.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\System.Reflection.Metadata.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\vbc.exe
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\vbc.exe.config
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\vbc.rsp
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\VBCSCompiler.exe
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\roslyn\VBCSCompiler.exe.config
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Antlr3.Runtime.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\EntityFramework.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\EntityFramework.SqlServer.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\FoolproofValidation.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.AspNet.Identity.Core.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.Owin.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.Cookies.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.Facebook.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.Google.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.OAuth.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.Twitter.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.Web.Infrastructure.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Newtonsoft.Json.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Owin.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\System.Web.Helpers.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\System.Web.Mvc.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\System.Web.Optimization.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\System.Web.Razor.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\System.Web.WebPages.Deployment.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\System.Web.WebPages.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\System.Web.WebPages.Razor.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\WebGrease.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\EntityFramework.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\EntityFramework.SqlServer.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\System.Web.Helpers.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\System.Web.Mvc.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\System.Web.Razor.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\System.Web.WebPages.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\System.Web.WebPages.Deployment.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\System.Web.WebPages.Razor.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\System.Web.Optimization.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Newtonsoft.Json.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Antlr3.Runtime.pdb
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.AspNet.Identity.Core.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.Owin.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.Facebook.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.Cookies.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.Google.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.Twitter.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.OAuth.xml
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\obj\Debug\waats.csproj.CoreCompileInputs.cache
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\obj\Debug\waats.csproj.CopyComplete
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\obj\Debug\waats.dll
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\obj\Debug\waats.pdb
+D:\UserFolders\ehsanf\Active Projects\Personal\WAATS_Transfer\WAATS\waats_Poject\Waats_Auth\waats\waats\obj\Debug\waats.csprojAssemblyReference.cache
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\waats.dll.config
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\waats.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\waats.pdb
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\roslyn\csc.exe
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\roslyn\csc.exe.config
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\roslyn\csc.rsp
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\roslyn\csi.exe
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\roslyn\csi.exe.config
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\roslyn\csi.rsp
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\roslyn\System.Buffers.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\roslyn\System.Collections.Immutable.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\roslyn\System.Memory.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\roslyn\System.Numerics.Vectors.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\roslyn\System.Reflection.Metadata.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\roslyn\vbc.exe
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\roslyn\vbc.exe.config
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\roslyn\vbc.rsp
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\roslyn\VBCSCompiler.exe
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\roslyn\VBCSCompiler.exe.config
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\Antlr3.Runtime.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\EntityFramework.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\EntityFramework.SqlServer.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\FoolproofValidation.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\Microsoft.Owin.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.Google.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\Microsoft.Web.Infrastructure.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\Newtonsoft.Json.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\Owin.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\System.Web.Helpers.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\System.Web.Mvc.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\System.Web.Optimization.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\System.Web.Razor.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\System.Web.WebPages.Deployment.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\System.Web.WebPages.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\System.Web.WebPages.Razor.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\WebGrease.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\EntityFramework.xml
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\EntityFramework.SqlServer.xml
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\System.Web.Helpers.xml
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\System.Web.Mvc.xml
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\System.Web.Razor.xml
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\System.Web.WebPages.xml
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\System.Web.WebPages.Deployment.xml
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\System.Web.WebPages.Razor.xml
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\System.Web.Optimization.xml
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\Newtonsoft.Json.xml
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\Antlr3.Runtime.pdb
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\Microsoft.Owin.xml
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.xml
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.Google.xml
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\obj\Debug\waats.csproj.AssemblyReference.cache
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\obj\Debug\waats.csproj.CoreCompileInputs.cache
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\obj\Debug\waats.csproj.Up2Date
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\obj\Debug\waats.dll
+D:\Project\Backup\Waats_Auth\Waats_Auth\waats\waats\obj\Debug\waats.pdb
+D:\Project\Source\Waats\waats\bin\waats.dll.config
+D:\Project\Source\Waats\waats\bin\waats.dll
+D:\Project\Source\Waats\waats\bin\waats.pdb
+D:\Project\Source\Waats\waats\bin\roslyn\csc.exe
+D:\Project\Source\Waats\waats\bin\roslyn\csc.exe.config
+D:\Project\Source\Waats\waats\bin\roslyn\csc.rsp
+D:\Project\Source\Waats\waats\bin\roslyn\csi.exe
+D:\Project\Source\Waats\waats\bin\roslyn\csi.exe.config
+D:\Project\Source\Waats\waats\bin\roslyn\csi.rsp
+D:\Project\Source\Waats\waats\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Project\Source\Waats\waats\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Project\Source\Waats\waats\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Project\Source\Waats\waats\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Project\Source\Waats\waats\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Project\Source\Waats\waats\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Project\Source\Waats\waats\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Project\Source\Waats\waats\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Project\Source\Waats\waats\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Project\Source\Waats\waats\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+D:\Project\Source\Waats\waats\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Project\Source\Waats\waats\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Project\Source\Waats\waats\bin\roslyn\System.Buffers.dll
+D:\Project\Source\Waats\waats\bin\roslyn\System.Collections.Immutable.dll
+D:\Project\Source\Waats\waats\bin\roslyn\System.Memory.dll
+D:\Project\Source\Waats\waats\bin\roslyn\System.Numerics.Vectors.dll
+D:\Project\Source\Waats\waats\bin\roslyn\System.Reflection.Metadata.dll
+D:\Project\Source\Waats\waats\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+D:\Project\Source\Waats\waats\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Project\Source\Waats\waats\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Project\Source\Waats\waats\bin\roslyn\vbc.exe
+D:\Project\Source\Waats\waats\bin\roslyn\vbc.exe.config
+D:\Project\Source\Waats\waats\bin\roslyn\vbc.rsp
+D:\Project\Source\Waats\waats\bin\roslyn\VBCSCompiler.exe
+D:\Project\Source\Waats\waats\bin\roslyn\VBCSCompiler.exe.config
+D:\Project\Source\Waats\waats\bin\Antlr3.Runtime.dll
+D:\Project\Source\Waats\waats\bin\DotNet.Highcharts.dll
+D:\Project\Source\Waats\waats\bin\EntityFramework.dll
+D:\Project\Source\Waats\waats\bin\EntityFramework.SqlServer.dll
+D:\Project\Source\Waats\waats\bin\FoolproofValidation.dll
+D:\Project\Source\Waats\waats\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Project\Source\Waats\waats\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Project\Source\Waats\waats\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Project\Source\Waats\waats\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Project\Source\Waats\waats\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Project\Source\Waats\waats\bin\Microsoft.Owin.dll
+D:\Project\Source\Waats\waats\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Project\Source\Waats\waats\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Project\Source\Waats\waats\bin\Microsoft.Owin.Security.dll
+D:\Project\Source\Waats\waats\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Project\Source\Waats\waats\bin\Microsoft.Owin.Security.Google.dll
+D:\Project\Source\Waats\waats\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Project\Source\Waats\waats\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Project\Source\Waats\waats\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Project\Source\Waats\waats\bin\Microsoft.Web.Infrastructure.dll
+D:\Project\Source\Waats\waats\bin\Newtonsoft.Json.dll
+D:\Project\Source\Waats\waats\bin\NReco.PdfGenerator.dll
+D:\Project\Source\Waats\waats\bin\Owin.dll
+D:\Project\Source\Waats\waats\bin\System.Buffers.dll
+D:\Project\Source\Waats\waats\bin\System.ClientModel.dll
+D:\Project\Source\Waats\waats\bin\System.Diagnostics.DiagnosticSource.dll
+D:\Project\Source\Waats\waats\bin\System.Memory.Data.dll
+D:\Project\Source\Waats\waats\bin\System.Memory.dll
+D:\Project\Source\Waats\waats\bin\System.Numerics.Vectors.dll
+D:\Project\Source\Waats\waats\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\Project\Source\Waats\waats\bin\System.Text.Encodings.Web.dll
+D:\Project\Source\Waats\waats\bin\System.Text.Json.dll
+D:\Project\Source\Waats\waats\bin\System.Threading.Tasks.Extensions.dll
+D:\Project\Source\Waats\waats\bin\System.ValueTuple.dll
+D:\Project\Source\Waats\waats\bin\System.Web.Helpers.dll
+D:\Project\Source\Waats\waats\bin\System.Web.Mvc.dll
+D:\Project\Source\Waats\waats\bin\System.Web.Optimization.dll
+D:\Project\Source\Waats\waats\bin\System.Web.Razor.dll
+D:\Project\Source\Waats\waats\bin\System.Web.WebPages.Deployment.dll
+D:\Project\Source\Waats\waats\bin\System.Web.WebPages.dll
+D:\Project\Source\Waats\waats\bin\System.Web.WebPages.Razor.dll
+D:\Project\Source\Waats\waats\bin\ToolBelt.dll
+D:\Project\Source\Waats\waats\bin\WebGrease.dll
+D:\Project\Source\Waats\waats\bin\EntityFramework.xml
+D:\Project\Source\Waats\waats\bin\EntityFramework.SqlServer.xml
+D:\Project\Source\Waats\waats\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Project\Source\Waats\waats\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Project\Source\Waats\waats\bin\NReco.PdfGenerator.xml
+D:\Project\Source\Waats\waats\bin\System.Buffers.xml
+D:\Project\Source\Waats\waats\bin\System.ClientModel.xml
+D:\Project\Source\Waats\waats\bin\System.Diagnostics.DiagnosticSource.xml
+D:\Project\Source\Waats\waats\bin\System.Memory.xml
+D:\Project\Source\Waats\waats\bin\System.Memory.Data.xml
+D:\Project\Source\Waats\waats\bin\System.Numerics.Vectors.xml
+D:\Project\Source\Waats\waats\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\Project\Source\Waats\waats\bin\System.Text.Encodings.Web.xml
+D:\Project\Source\Waats\waats\bin\System.Text.Json.xml
+D:\Project\Source\Waats\waats\bin\System.Threading.Tasks.Extensions.xml
+D:\Project\Source\Waats\waats\bin\System.ValueTuple.xml
+D:\Project\Source\Waats\waats\bin\System.Web.Helpers.xml
+D:\Project\Source\Waats\waats\bin\System.Web.Mvc.xml
+D:\Project\Source\Waats\waats\bin\System.Web.Razor.xml
+D:\Project\Source\Waats\waats\bin\System.Web.WebPages.xml
+D:\Project\Source\Waats\waats\bin\System.Web.WebPages.Deployment.xml
+D:\Project\Source\Waats\waats\bin\System.Web.WebPages.Razor.xml
+D:\Project\Source\Waats\waats\bin\System.Web.Optimization.xml
+D:\Project\Source\Waats\waats\bin\Newtonsoft.Json.xml
+D:\Project\Source\Waats\waats\bin\Antlr3.Runtime.pdb
+D:\Project\Source\Waats\waats\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Project\Source\Waats\waats\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Project\Source\Waats\waats\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Project\Source\Waats\waats\bin\Microsoft.Owin.xml
+D:\Project\Source\Waats\waats\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Project\Source\Waats\waats\bin\Microsoft.Owin.Security.xml
+D:\Project\Source\Waats\waats\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Project\Source\Waats\waats\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Project\Source\Waats\waats\bin\Microsoft.Owin.Security.Google.xml
+D:\Project\Source\Waats\waats\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Project\Source\Waats\waats\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Project\Source\Waats\waats\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Project\Source\Waats\waats\obj\Debug\waats.csproj.AssemblyReference.cache
+D:\Project\Source\Waats\waats\obj\Debug\waats.csproj.CoreCompileInputs.cache
+D:\Project\Source\Waats\waats\obj\Debug\waats.csproj.Up2Date
+D:\Project\Source\Waats\waats\obj\Debug\waats.dll
+D:\Project\Source\Waats\waats\obj\Debug\waats.pdb
+D:\Projects_Vaival\Waats\Waats\waats\bin\waats.dll.config
+D:\Projects_Vaival\Waats\Waats\waats\bin\waats.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\waats.pdb
+D:\Projects_Vaival\Waats\Waats\waats\bin\roslyn\csc.exe
+D:\Projects_Vaival\Waats\Waats\waats\bin\roslyn\csc.exe.config
+D:\Projects_Vaival\Waats\Waats\waats\bin\roslyn\csc.rsp
+D:\Projects_Vaival\Waats\Waats\waats\bin\roslyn\csi.exe
+D:\Projects_Vaival\Waats\Waats\waats\bin\roslyn\csi.exe.config
+D:\Projects_Vaival\Waats\Waats\waats\bin\roslyn\csi.rsp
+D:\Projects_Vaival\Waats\Waats\waats\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Projects_Vaival\Waats\Waats\waats\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+D:\Projects_Vaival\Waats\Waats\waats\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Projects_Vaival\Waats\Waats\waats\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Projects_Vaival\Waats\Waats\waats\bin\roslyn\System.Buffers.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\roslyn\System.Collections.Immutable.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\roslyn\System.Memory.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\roslyn\System.Numerics.Vectors.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\roslyn\System.Reflection.Metadata.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\roslyn\vbc.exe
+D:\Projects_Vaival\Waats\Waats\waats\bin\roslyn\vbc.exe.config
+D:\Projects_Vaival\Waats\Waats\waats\bin\roslyn\vbc.rsp
+D:\Projects_Vaival\Waats\Waats\waats\bin\roslyn\VBCSCompiler.exe
+D:\Projects_Vaival\Waats\Waats\waats\bin\roslyn\VBCSCompiler.exe.config
+D:\Projects_Vaival\Waats\Waats\waats\bin\Antlr3.Runtime.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\DotNet.Highcharts.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\EntityFramework.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\EntityFramework.SqlServer.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\FoolproofValidation.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\Microsoft.Owin.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\Microsoft.Owin.Security.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\Microsoft.Owin.Security.Google.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\Microsoft.Web.Infrastructure.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\Newtonsoft.Json.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\NReco.PdfGenerator.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\Owin.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\System.Buffers.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\System.ClientModel.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\System.Diagnostics.DiagnosticSource.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\System.Memory.Data.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\System.Memory.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\System.Numerics.Vectors.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\System.Text.Encodings.Web.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\System.Text.Json.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\System.Threading.Tasks.Extensions.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\System.ValueTuple.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\System.Web.Helpers.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\System.Web.Mvc.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\System.Web.Optimization.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\System.Web.Razor.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\System.Web.WebPages.Deployment.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\System.Web.WebPages.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\System.Web.WebPages.Razor.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\ToolBelt.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\WebGrease.dll
+D:\Projects_Vaival\Waats\Waats\waats\bin\EntityFramework.xml
+D:\Projects_Vaival\Waats\Waats\waats\bin\EntityFramework.SqlServer.xml
+D:\Projects_Vaival\Waats\Waats\waats\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Projects_Vaival\Waats\Waats\waats\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Projects_Vaival\Waats\Waats\waats\bin\NReco.PdfGenerator.xml
+D:\Projects_Vaival\Waats\Waats\waats\bin\System.Buffers.xml
+D:\Projects_Vaival\Waats\Waats\waats\bin\System.ClientModel.xml
+D:\Projects_Vaival\Waats\Waats\waats\bin\System.Diagnostics.DiagnosticSource.xml
+D:\Projects_Vaival\Waats\Waats\waats\bin\System.Memory.xml
+D:\Projects_Vaival\Waats\Waats\waats\bin\System.Memory.Data.xml
+D:\Projects_Vaival\Waats\Waats\waats\bin\System.Numerics.Vectors.xml
+D:\Projects_Vaival\Waats\Waats\waats\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\Projects_Vaival\Waats\Waats\waats\bin\System.Text.Encodings.Web.xml
+D:\Projects_Vaival\Waats\Waats\waats\bin\System.Text.Json.xml
+D:\Projects_Vaival\Waats\Waats\waats\bin\System.Threading.Tasks.Extensions.xml
+D:\Projects_Vaival\Waats\Waats\waats\bin\System.ValueTuple.xml
+D:\Projects_Vaival\Waats\Waats\waats\bin\System.Web.Helpers.xml
+D:\Projects_Vaival\Waats\Waats\waats\bin\System.Web.Mvc.xml
+D:\Projects_Vaival\Waats\Waats\waats\bin\System.Web.Razor.xml
+D:\Projects_Vaival\Waats\Waats\waats\bin\System.Web.WebPages.xml
+D:\Projects_Vaival\Waats\Waats\waats\bin\System.Web.WebPages.Deployment.xml
+D:\Projects_Vaival\Waats\Waats\waats\bin\System.Web.WebPages.Razor.xml
+D:\Projects_Vaival\Waats\Waats\waats\bin\System.Web.Optimization.xml
+D:\Projects_Vaival\Waats\Waats\waats\bin\Newtonsoft.Json.xml
+D:\Projects_Vaival\Waats\Waats\waats\bin\Antlr3.Runtime.pdb
+D:\Projects_Vaival\Waats\Waats\waats\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Projects_Vaival\Waats\Waats\waats\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Projects_Vaival\Waats\Waats\waats\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Projects_Vaival\Waats\Waats\waats\bin\Microsoft.Owin.xml
+D:\Projects_Vaival\Waats\Waats\waats\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Projects_Vaival\Waats\Waats\waats\bin\Microsoft.Owin.Security.xml
+D:\Projects_Vaival\Waats\Waats\waats\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Projects_Vaival\Waats\Waats\waats\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Projects_Vaival\Waats\Waats\waats\bin\Microsoft.Owin.Security.Google.xml
+D:\Projects_Vaival\Waats\Waats\waats\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Projects_Vaival\Waats\Waats\waats\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Projects_Vaival\Waats\Waats\waats\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Projects_Vaival\Waats\Waats\waats\obj\Debug\waats.csproj.AssemblyReference.cache
+D:\Projects_Vaival\Waats\Waats\waats\obj\Debug\waats.csproj.CoreCompileInputs.cache
+D:\Projects_Vaival\Waats\Waats\waats\obj\Debug\waats.csproj.Up2Date
+D:\Projects_Vaival\Waats\Waats\waats\obj\Debug\waats.dll
+D:\Projects_Vaival\Waats\Waats\waats\obj\Debug\waats.pdb

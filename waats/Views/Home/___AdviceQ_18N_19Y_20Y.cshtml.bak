@@ -1,0 +1,78 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<div class="container-fluid p-0 m-0 overlayDiv">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">ADVICE AND RESPONSES</h5>
+            <div class="row  no-gutters AvatarQ4">
+                <div class="card-header text-center" style="background-color: #f0f2f6">
+                    <video class="mycedio" id="Q18N1" width="70%" height="auto" onclick="this.paused ? this.play() : this.pause();">
+                        <source src="~/Media/eng/Q18N.mp4" type='video/mp4;'>
+                    </video>
+                    <br />
+                    <i class="fa fa-play-circle-o myHTMLvideo" id="Q18N" style="color: red;font-size: 2.5em;"></i>
+                    @*<Button class="animate-button btn-sm btn-close-white myHTMLvideo" id="Q18N">Please click on avatar to listen instructions</Button>*@
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-12">
+                    <div class="form-group">
+                        <div class="col-12">
+                            <p class="text-black lead">
+                                Based on your answers, I can say that it is highly unlikely that you meet the threshold for a diagnosis of ADHD.
+                                This is based on official national clinical guidelines and expert criteria that have been designed specialist Consultants.
+                                Not having a full diagnosis, however, does not mean that you don’t have some real issues and that you couldn’t do with some real help.
+                                You clearly have some traits of ADHD and this is inevitably something that inhibits you in your life,
+                                and something you can benefit from some help around, which I would like to set up for you today if you’d like.
+                                So now you have 2 choices.
+                                <i class="text-primary text-bg-light small blockquote-footer">One option is the immediate support that I can get for you right now.</i>
+                            </p>
+                            <p class="text-black lead">
+                                We have an <strong>app</strong> that has also been developed by specialists in the field. It is specifically designed to work on those traits
+                                that you have and help you live a more balanced, less stressed and better quality of life.
+                                All you have to do is click on the yes button below and we’ll take you off the waiting list and get you that support via
+                                our app today. The app will be like your daily companion and I’ll walk you through exactly how it works and how
+                                you can get the most out of it.
+                                <i class="text-primary text-bg-light small blockquote-footer">
+                                    Alternatively, if you prefer to continue on our waiting list to be seen by a clinician to get
+                                    another opinion then please email us at the address that will follow after you press “no” to confirm you want to
+                                    remain on our waiting list.
+                                </i>
+                                Please note our waiting list is currently.... (to be confirmed by Trust/ICB)
+                                long and it will likely be some months before you hear anything more from the team after that.
+                            </p>
+                            <p class="text-black lead">
+                                So please indicate your preference now by pressing one of the buttons below.
+                                <br /> <i class="text-primary text-bg-light small blockquote-footer">
+                                    “Yes” indicates you’d like to avoid any further time on the waiting list and receive specialist designed
+                                    support via our app from today and
+                                </i><br />
+                                <i class="text-primary text-bg-light small blockquote-footer">
+                                    “No” indicates you’d like to remain on the waiting list for another opinion from our team.
+                                </i>
+                            </p>
+                            <br /><br />
+                            <div class="row  text-center SectionEndSession">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    @using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data", id = "CRForm", @class = "form-horizontal", role = "form" }))
+                                    {
+                                        <input type="hidden" id="loclID" name="loclID" value="@ViewBag.loclID" />
+                                        <input type="hidden" id="loclID" name="loclID" value="@ViewBag.name" />
+                                        <input type="hidden" id="loclID" name="loclID" value="@ViewBag.Email" />
+                                        <input type="hidden" id="loclID" name="loclID" value="@ViewBag.DoB" />
+                                        <button name="submit" id="Yes" type="submit" class="btn btn-success btn-lg" value="Yes">Yes</button>
+                                        <button name="submit" id="No" type="submit" class="btn btn-info btn-lg" value="No">No</button>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts {
+    <script src="~/Scripts/site.js"></script>
+}

@@ -1,0 +1,169 @@
+﻿@model waats.ViewModel.WaatsFormVM
+@{
+    ViewBag.Title = "Home Page";
+    var flag = Model.flag;
+}
+<div class="row">
+    <!-- Video Section -->
+    <div class="col-md-6">
+        <div class="video-container">
+            <ul class="nav nav-pills nav-tabs mb-3 bg-light rounded p-2" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link text-secondary" onclick="window.location.href='index.html';">
+                        Intro
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link text-secondary active" id="sectionOne-tab" data-bs-toggle="tab"
+                            data-bs-target="#sectionOne-tab-pane" type="button" role="tab"
+                            aria-controls="sectionOne-tab-pane" aria-selected="false">
+                        Section 1
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link text-secondary" id="sectionTwo-tab" data-bs-toggle="tab"
+                            data-bs-target="#sectionTwo-tab-pane" type="button" role="tab"
+                            aria-controls="sectionTwo-tab-pane" aria-selected="false">
+                        Section 2
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link text-secondary" id="sectionThree-tab" data-bs-toggle="tab"
+                            data-bs-target="#sectionThree-tab-pane" type="button" role="tab"
+                            aria-controls="sectionThree-tab-pane" aria-selected="false">
+                        Section 3
+                    </button>
+                </li>
+
+            </ul>
+            <div class="video-frame rounded">
+                <video id="Intro1" style="width:70%;height:auto;border:none">
+                    <source src="~/Media/eng/Intro.mp4" type='video/mp4;'>
+                </video>
+                @*<iframe width="560" height="315"
+        src="https://www.youtube.com/embed/D0UnqGm_miA?si=er9nFlrp0E23vhuQ&amp;controls=0"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>*@
+            </div>
+        </div>
+    </div>
+
+    <!-- Form Section -->
+    <div class="col-md-6">
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="sectionOne-tab-pane" role="tabpanel"
+                 aria-labelledby="profile-tab" tabindex="0">
+                <div class="form-container pb-5">
+                    <h4>Form</h4>
+                    <form class="mt-3">
+                        <div class="mb-3">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="Value">
+                        </div>
+                        <div class="mb-3">
+                            <label for="labelSelect" class="form-label">Label</label>
+                            <select class="form-select" id="labelSelect">
+                                <option selected>Option</option>
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Address</label>
+                            <textarea class="form-control" id="address" rows="5"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="passcode" class="form-label">Passcode</label>
+                            <input type="password" class="form-control" id="passcode" placeholder="Value">
+                        </div>
+                        <button type="submit" class="btn btn-secondary p-3 w-100">Continue</button>
+                    </form>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="sectionTwo-tab-pane" role="tabpanel" aria-labelledby="contact-tab"
+                 tabindex="0">
+                <div class="form-container pb-5">
+                    <h4>Form</h4>
+                    <form class="mt-3">
+
+                        <div class="mb-3">
+                            <label for="labelSelect2" class="form-label">Label</label>
+                            <select class="form-select" id="labelSelect2">
+                                <option selected>Option</option>
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="labelSelect2" class="form-label">Label</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    Option 1
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Option 2
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
+                                <label class="form-check-label" for="flexRadioDefault3">
+                                    Option 3
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked>
+                                <label class="form-check-label" for="flexRadioDefault4">
+                                    Option 4
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault5" checked>
+                                <label class="form-check-label" for="flexRadioDefault5">
+                                    Option 5
+                                </label>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="mb-3">
+                            <label for="passcode2" class="form-label">Passcode</label>
+                            <input type="password" class="form-control" id="passcode2" placeholder="Value">
+                        </div>
+                        <button type="submit" class="btn btn-secondary p-3 w-100">Finish</button>
+                    </form>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="sectionThree-tab-pane" role="tabpanel" aria-labelledby="disabled-tab"
+                 tabindex="0">
+                sec 3
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+@section scripts {
+    <script src="~/Scripts/site.js"></script>
+    <script>
+        $(document).ready(function () {
+            let _flag = '@flag';
+            if (_flag == 'True') {
+                showall();
+            }
+            else {
+
+            }
+        });
+    </script>
+
+}

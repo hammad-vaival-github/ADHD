@@ -1,0 +1,46 @@
+﻿@model waats.Models.ScheduleTaskVM
+@{
+    ViewBag.Title = "Add new task";
+    Layout = "~/Views/Shared/_LayoutUnauthed.cshtml";
+}
+@using (Html.BeginForm(null,null, new { returnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form", @id = "staskForm" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.LocalID)
+    @Html.HiddenFor(model => model.UserId)
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Title, new { @class = "col-md-12 control-label" })
+        <div class="col-md-12">
+            @Html.TextBoxFor(m => m.Title, new { @class = "form-control", @placeholder = "Title" })
+            @Html.ValidationMessageFor(m => m.Title, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Description, new { @class = "col-md-12 control-label" })
+        <div class="col-md-12">
+            @Html.TextAreaFor(model => model.Description, new { @class = "form-control word_count", @rows = "3", @maxlength = "4000", placeholder = @Html.DisplayNameFor(m => m.Description) })
+            @Html.ValidationMessageFor(m => m.Description, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="spacer5"></div>
+    <div class="spacer5"></div>
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-8">
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+            <div class="container-fluid text-start">
+                @{
+                    if (Model != null && Model.UserId != null)
+                    {
+                        <input type="submit" value="Update task" class="btn btn-block   btn-sm btn-primary" />
+                    }
+                    else
+                    {
+                        <input type="submit" value="Add task" class="btn btn-block   btn-sm btn-primary" />
+                    }
+                }
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,69 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<div class="container-fluid p-0 m-0 overlayDiv">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">ADVICE AND RESPONSES</h5>
+            <div class="row  no-gutters AvatarAppInstr">
+                <div class="card-header text-center" style="background-color: #f0f2f6">
+                    <video class="mycedio" id="AppInstr1" width="70%" height="auto" onclick="this.paused ? this.play() : this.pause();">
+                        <source src="~/Media/eng/AppInstr.mp4" type='video/mp4;'>
+                    </video>
+                    <br />
+                    <i class="fa fa-play-circle-o myHTMLvideo" id="AppInstr" style="color: red;font-size: 2.5em;"></i>
+                    @*<Button class="animate-button btn-sm btn-close-white myHTMLvideo" id="AppInstr">Please click on avatar to listen instructions</Button>*@
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-12">
+                        <div class="form-group">
+                            <div class="col-12">
+                                <p class="text-black lead">
+                                    You will now receive a programme of structured psychological support from our specialist app;
+                                    ADHD Assistant. It is designed to help you work on the individual traits of ADHD,
+                                    that we believe you have, on an ongoing basis, and we hope you will be able to make good use of it.
+                                </p>
+                                <p class="text-black lead">
+                                    To do so, please go to one of the links below, depending on the device you use and from there, download the app.
+                                </p>
+                                <p class="text-black lead">
+                                    Once you have downloaded it, Enter the Activation Code:2023
+                                </p>
+                                <p class="text-black lead">
+                                    On first log in – and every few weeks thereafter – you will be asked to complete a 	test.
+                                    Please complete as instructed and, once you do, you will then be taken to the main app.
+                                </p>
+                                <p class="text-black lead">
+                                    Inside the app you will find a list of “7 Commitments”. These are exercises that
+                                    you should do every day and they are divided into morning and afternoon
+                                    exercises. As you complete the exercises, your performance will be recorded in
+                                    the stats tab. There,you can see how well you are doing in terms of completing the exercises each day.
+                                </p>
+                                <p class="text-black lead">
+                                    These exercises are specially designed to help you work on the core areas of deficit
+                                    that people who have ADHD Traits often demonstrate. By working on them 	in this way, every day,
+                                    you will likely reduce the impact these deficits have in your 	life over time, gradually rewiring and recalibrating your responses and behaviours.
+                                    The key is persistence. In order to help you keep on track, the app will send you notifications a couple of times a day and, for this reason,
+                                    we ask you to keep the 	app notifications on. If you work with it, you will start to notice a difference 	over time.
+                                </p>
+                                <p class="text-black lead">
+                                    I will also forward these instructions to you by email. Good luck and we very much
+                                    hope that you will be able to utilise and persevere with the support provided and
+                                    consequently see improvements in the future. Thank you again for taking the time
+                                    to engage in this assessment process and we wish you all the very best for the 	future.
+                                </p>
+                                <br /><br />
+                                <p class="text-black lead fw-normal">
+                                    <a class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="https://apps.apple.com/app/id6450215525">==>Download ADHD Assistant app</a>
+                                </p>
+                                <p class="text-black lead fw-normal">https://apps.apple.com/app/id6450215525</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @section scripts {
+        <script src="~/Scripts/site.js"></script>
+    }

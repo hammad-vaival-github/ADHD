@@ -1,0 +1,207 @@
+body {
+    font-family: 'Figtree', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+/* navbar */
+a {
+    text-decoration: none;
+}
+
+.total-wrapper {
+    padding: 24px;
+}
+
+.navbar {
+    padding: 16px 16px 16px 24px;
+    background-color: #e3e3e3;
+    border-radius: 16px;
+}
+
+.navbar-brand {
+    font-weight: 600;
+}
+
+.main-menu ul li {
+    padding: 0 5px;
+}
+
+    .main-menu ul li .nav-link {
+        color: #000;
+        font-size: 14px;
+        display:flex;
+    }
+/* video page on survey page*/
+.video-container {
+    background-color: #1a1a1a;
+    padding: 0 9px;
+    border-radius: 8px;
+}
+.video-container-dashboard {
+    background-color: #1a1a1a;
+    padding: 0px;
+    border-radius: 8px;
+}
+
+.bg-whole-wrapper {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.video-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    height: 80vh;
+}
+
+/*tabs*/
+.text-bg-light {
+    background-color: #ECEDF2 !important;
+}
+
+.video-container2 .nav-pills .nav-link.active, .video-container2 .nav-pills .show > .nav-link {
+    background-color: #ecedf2;
+    color: #23252E !important;
+}
+
+/*form*/
+.form-container {
+    background-color: #e3e3e3;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+
+.form-select, input.form-control {
+    border: 2px solid #8790A9;
+    outline: none;
+    box-shadow: none;
+    height: 48px;
+    border-radius: 6px;
+}
+
+textarea.form-control {
+    border: 2px solid #8790A9;
+    outline: none;
+    box-shadow: none;
+    border-radius: 6px;
+}
+
+.form-control, .form-select {
+    font-size: 0.9rem;
+}
+
+
+
+
+/*// login page  */
+.left-panel {
+    background-color: #0056ff;
+    color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: space-between;*/
+}
+
+.testimonial {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.right-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.login-btn {
+    background-color: #0056ff;
+    border: none;
+    border-radius: 15px;
+}
+
+    .login-btn:hover {
+        background-color: #0040cc;
+    }
+
+form.login-custom-page label {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+form.login-custom-page input.form-control {
+    border: 1px solid #8790A9;
+    outline: none;
+    box-shadow: none;
+    height: 48px;
+    border-radius: 15px;
+}
+
+.password-input {
+    font-size: 18px; /* Increase font size as needed */
+}
+
+.form-check a {
+    font-size: 12px;
+}
+
+.translate-wrapper {
+    list-style-type: none;
+    margin: 0;
+    padding: 13px;
+    position: relative;
+}
+.goog-te-gadget-simple {
+    border: 1px solid #8790A9 !important;
+    outline: none !important;
+    box-shadow: none !important;
+    height: 48px !important;
+    width: 209px !important;
+    border-radius: 6px !important;
+    background-color: transparent !important;
+    font-size: 14px !important;
+    display: flex !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    justify-content: space-evenly !important;
+}
+.iframe .VIpgJd-ZVi9od-xl07Ob-OEVmcd skiptranslate {
+    width: 209px !important;
+    background: red !important;
+    color: black !important;
+}
+body .VIpgJd-ZVi9od-vH1Gmf {
+    width: 209px !important;
+    background: red !important;
+    color: black !important;
+}
+.frame-low-vh {
+    height: unset !important;
+    margin: 20px auto 25px;
+}
+.disable-form {
+    opacity: 0.8;
+    pointer-events: none;
+}
+#sectionThree-tab-pane h6 label {
+    font-weight: bold;
+    padding: 12px 0 10px;
+}
+#sectionThree-tab-pane h6 span {
+    font-weight: bold;
+}
+.form-check-input[type=radio] {
+    border-radius: 50%;
+    border: 1px solid;
+}

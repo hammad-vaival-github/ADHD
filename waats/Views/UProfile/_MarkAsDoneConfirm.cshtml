@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Complete confirm";
+    Layout = "~/Views/Shared/_LayoutUnauthed.cshtml";
+}
+
+<h6 class="card-title">Are you sure you want to mark following task as completed</h6>
+<br />
+ <span class="h6">Title :</span>@ViewBag.TaskTitle
+<br/>
+<span class="h6">Creation date :</span>@ViewBag.dat
+
+<div class="row">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+    </div>
+    <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+        <div class="container-fluid text-start">
+            <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+            @{
+                if (ViewBag.MainTaskID != null && ViewBag.MainTaskID > -1 && @ViewBag.SubLocalID!=null)
+                {
+                    <button type="button" id="@ViewBag.SubLocalID" data-bs-dismiss="modal" class="btn btn-primary  btn-sm SaveCompletedSubTask">Yes</button>
+                }
+                else
+                {
+                    <button type="button" id="@ViewBag.localID" data-bs-dismiss="modal" class="btn btn-primary  btn-sm SaveCompletedTask">Yes</button>
+                }
+            }
+
+        </div>
+    </div>
+</div>

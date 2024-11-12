@@ -1,0 +1,220 @@
+﻿
+
+@{
+    var fullUrl = Request.Url?.AbsoluteUri;
+    var scheme = Request.Url?.Scheme;              // e.g., "http" or "https"
+    var host = Request.Url?.Host;                  // e.g., "www.example.com"
+    var path = Request.Url?.AbsolutePath;          // e.g., "/home/index"
+    var queryString = Request.Url?.Query;
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cache-control" content="no-cache, must-revalidate, post-check=0, pre-check=0" />
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <title>
+        @ViewBag.Title -
+    </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/datatablescss")
+    @Styles.Render("~/Content/toastrcss")
+    @Scripts.Render("~/bundles/modernizr")
+    <script type="text/javascript"> var baseUrl = "@Url.Content("~")";</script>
+    @*@{
+            var scheme = Context.Request.Scheme;             // e.g., http or https
+            var host = Context.Request.Host.Value;           // e.g., www.example.com
+            var path = Context.Request.Path;                 // e.g., /home/index
+            var queryString = Context.Request.QueryString;   // e.g., ?id=1
+        }
+
+        <p>Scheme: @scheme</p>
+        <p>Host: @host</p>
+        <p>Path: @path</p>
+        <p>Query String: @queryString</p>*@
+</head>
+<body>
+    @if (path == "/")
+    {
+        <!--translation dropdown-->
+        <div class="translation-wrapper">
+            <div class="container-fluid">
+                <div class="d-flex justify-content-end">
+                    <div>
+                        @Html.Partial("_Translator")
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    @{ if (User.Identity.IsAuthenticated)
+        {
+            if (path == "/")
+            {
+                <div class="total-wrapper">
+                    <nav class="navbar navbar-expand-lg main-menu">
+                        <div class="container-fluid p-0">
+                            @*<a class="navbar-brand" href="#">TEMPLATE<span style="color: #007bff;">LOGO</span></a>*@
+                            <img class="navbar-brand p-0 m-0" src="~/images/adhd.png" style="height:70px;" />
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav ms-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="@Url.Action("SchedulingTasksList", "UProfile")">
+                                            <div>
+                                                <i class="fa-regular fa-calendar-days pe-2" aria-hidden="true"></i>
+                                            </div>
+                                            Scheduling tasks
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="@Url.Action("MindMeditation", "UProfile")">
+                                            <div>
+                                                <i class="fa-solid fa-brain pe-2" aria-hidden="true"> </i>
+                                            </div>
+                                            Mindfullness meditation
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="@Url.Action("brainFitness", "UProfile")">
+                                            <i class="fa-solid fa-brain pe-2"></i> Brain Fitness
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="@Url.Action("SpottingTriggers", "UProfile")">
+                                            <div>
+                                                <i class="fa-solid fa-triangle-exclamation pe-2" aria-hidden="true"></i>
+                                            </div>
+                                            Spotting triggers
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="@Url.Action("MemoryMaker", "UProfile")">
+                                            <div>
+                                                <i class="fa-solid fa-eye pe-2" aria-hidden="true"> </i>
+                                            </div>
+                                            Memory maker
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="@Url.Action("MindfullAttention", "UProfile")">
+                                            <i class="fa-regular fa-comment-dots pe-2" aria-hidden="true"></i>
+                                            Mindfull attention
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="@Url.Action("GratitudeJournal", "UProfile")">
+                                            <div>
+                                                <i class="fa-regular fa-heart pe-2" aria-hidden="true"></i>
+                                            </div>
+                                            Gratitude journal
+                                        </a>
+                                    </li>
+                                    @*</ul>*@
+                                    @*<ul class="navbar-nav d-flex flex-row">*@
+                                    <li class="nav-item text-center">
+                                        @Html.Partial("_LoginPartial")
+                                    </li>
+                                    @*</ul>*@
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            }
+            else
+            {
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- Sidebar -->
+                        <div class="col-md-3 col-lg-2 sidebar">
+                            <div class="text-left mb-4">
+                                                @*<img src="" alt="Profile" class="profile-image">*@
+                                                <img src="~/Content/images/ADHD-Logo.png" class="img-fluid w-75"/>
+                                @*<h6 class="text-uppercase text-primary fw-bold">ADHD</h6>*@
+                                <!--                <div class="m-3">-->
+                                <!--                    <select class="form-select" aria-label="Default select example">-->
+                                <!--                        <option selected>Open this select menu</option>-->
+                                <!--                        <option value="1">One</option>-->
+                                <!--                        <option value="2">Two</option>-->
+                                <!--                        <option value="3">Three</option>-->
+                                <!--                    </select>-->
+                                <!--                </div>-->
+                            </div>
+                            <div class="d-flex sidebar-wrapper">
+                                <nav class="nav flex-column w-100">
+                                    <a class="nav-link active" href="#"><i class="fa-solid fa-table-columns "></i>Dashboard</a>
+                                    <a class="nav-link" href="@Url.Action("SchedulingTasksList", "UProfile")"><i class="fa-regular fa-calendar-days "></i>Schedule</a>
+                                    <a class="nav-link" href="@Url.Action("MindMeditation", "UProfile")"><i class="fa-solid fa-brain "></i>Mindfulness Meditation</a>
+                                    <a class="nav-link" href="@Url.Action("brainFitness", "UProfile")"><i class="fa-solid fa-brain "></i>Brain Fitness</a>
+                                    <a class="nav-link" href="@Url.Action("SpottingTriggers", "UProfile")">
+                                        <i class="fa-solid fa-triangle-exclamation "></i>Spotting Triggers</a>
+                                    <a class="nav-link" href="@Url.Action("MemoryMaker", "UProfile")"><i class="fa-solid fa-eye "></i>Memory Maker</a>
+                                    <a class="nav-link" href="@Url.Action("MindfullAttention", "UProfile")">
+                                        <i class="fa-regular fa-comment-dots "></i>Mindful Attention</a>
+                                    <a class="nav-link" href="@Url.Action("GratitudeJournal", "UProfile")"><i class="fa-regular fa-heart "></i>Gratitude Journal</a>
+                                </nav>
+                                @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                                {
+                                    @Html.AntiForgeryToken()
+                                    <nav class="nav flex-column w-100">
+
+                                        <a class="nav-link" href="javascript:document.getElementById('logoutForm').submit()"><i class="fa-solid fa-arrow-right-from-bracket "></i> Logout</a>
+                                    </nav>
+                                }
+                            </div>
+
+                        </div>
+                        <!-- Main Content -->
+                        <div class="col-md-9 col-lg-10 p-4">
+                            @*<h4 class="fw-bold py-3">Good morning, <span class="text-primary">@User.Identity.Name !</span></h4>*@
+                            <!-- Current Task -->
+                            @RenderBody()
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    }
+
+
+    <!-- Navbar -->
+    <!-- Content -->
+    @if (path == "/")
+    {
+        <div class="total-wrapper pt-0">
+            <div class="container-fluid bg-whole-wrapper">
+                @RenderBody()
+            </div>
+        </div>
+    }
+    else
+    {
+
+    }
+    @Html.Partial("_Modal")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/dataTables")
+    @Scripts.Render("~/bundles/toastr")
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ includedLanguages: 'en,es,fr,ur,hi', autoDisplay: true, layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+            ///new google.translate.TranslateElement({ autoDisplay: true, layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+@Html.Partial("_Toastr")

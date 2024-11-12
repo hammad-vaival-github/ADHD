@@ -1,0 +1,40 @@
+﻿@model waats.Models.MindFullAttentionVM
+@{
+    ViewBag.Title = "Add new task";
+    Layout = "~/Views/Shared/_LayoutUnauthed.cshtml";
+}
+@using (Html.BeginForm(null, null, new { returnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form", @id = "MindFullAttentionForm" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.MindFulID)
+    @Html.HiddenFor(model => model.UserId)
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.thepersonilistenedtospokeabout, new { @class = "col-md-12 control-label" })
+        <div class="col-md-12">
+            @Html.TextAreaFor(model => model.thepersonilistenedtospokeabout, new { @class = "form-control word_count", @rows = "3", @maxlength = "4000" })
+            @Html.ValidationMessageFor(m => m.thepersonilistenedtospokeabout, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    
+    <div class="spacer5"></div>
+    <div class="spacer5"></div>
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-9">
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-3">
+            <div class="container-fluid text-start">
+                @{
+                    if (Model != null && Model.UserId != null)
+                    {
+                        <input type="submit" value="Update task" class="btn btn-block   btn-sm btn-primary" />
+                    }
+                    else
+                    {
+                        <input type="submit" value="Add task" class="btn btn-block   btn-sm btn-primary" />
+                    }
+                }
+            </div>
+        </div>
+    </div>
+}

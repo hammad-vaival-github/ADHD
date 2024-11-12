@@ -1,0 +1,29 @@
+﻿@using waats.Classes
+@helper ShowToastMessages(Toastr toastr)
+{
+    if (toastr != null)
+    {
+        <script>
+            $(document).ready(function () {
+                toastr.options.closeButton = '@toastr.ShowCloseButton'; // to display the close button
+                toastr.options.newestOnTop = '@toastr.ShowNewestOnTop'; // to stack notifications newest at top
+                toastr.options.timeOut = 10000; // to autoclose after 10 seconds
+                //toastr.options.timeOut = 0; // 0 to not autoclose – user required to mouse over
+
+                @foreach (ToastMessage message in toastr.ToastMessages)
+                {
+                    string toastTypeValue = message.ToastType.ToString("F").ToLower();
+                    @: var optionsOverride = { /* Add message specific options here */ };
+
+                    if (message.IsSticky)
+                    {
+                        @:optionsOverride.timeOut = 0;
+                        @:optionsOverride.extendedTimeout = 0;
+                    }
+
+                    @:toastr['@toastTypeValue']('@message.Message', '@message.Title', optionsOverride);
+                }
+            });
+        </script>
+    }
+}

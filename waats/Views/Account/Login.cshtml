@@ -1,0 +1,168 @@
+﻿@using waats.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Log in";
+    Layout = "~/Views/Shared/_LayoutUnauthed.cshtml";
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+@*<div class="container-fluid">
+        <div class="row">
+            <div class="d-none d-sm-block col-sm-2 col-md-3"></div>
+            <div class="col-12 col-sm-8 col-md-6">
+                <div class="spacer20"></div>
+                <div id="logbox" class="card mt-0">
+                    <div class="card-body">
+                        <div class="row">
+                            <div id="clientDisplay" class="col-xs-12 col-sm-12">
+                                <div class="outframe">
+                                    <div style="background-color: #ffffff; border: 1px solid #c6cbd2; padding: 0 0; min-height: 350px;">
+                                        <div class="alert alert-info" role="alert" style="margin-bottom:5px;">
+                                            <h6 class="fw-semibold">Enter your registered details for access.</h6>
+                                        </div>
+                                        <div style="padding: 10px 10px;">
+                                            @using (Html.BeginForm("Login", "Account", new { returnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form", @id = "loginform" }))
+                                            {
+                                                @Html.AntiForgeryToken()
+
+                                                <div class="form-group">
+                                                    @Html.LabelFor(m => m.Email, new { @class = "col-md-12 control-label" })
+                                                    <div class="col-md-12">
+                                                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "Email" })
+                                                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    @Html.LabelFor(m => m.Password, new { @class = "col-md-12 control-label" })
+                                                    <div class="col-md-12">
+                                                        @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Password", @autocomplete = "off" })
+                                                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                                                    </div>
+                                                </div>
+                                                <div class="spacer5"></div>
+                                                <div class="spacer5"></div>
+                                                <div class="row">
+                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-5">
+                                                        <div class="container-fluid">
+                                                            <div class="text-start">
+                                                                <span class="forgot">&raquo; @Html.ActionLink("Forgotten your password?", "ForgotPassword", "Account", new { @class = "fw-medium" })</span>
+                                                                <div class="spacer5"></div>
+                                                                <span class="forgot">&raquo; @Html.ActionLink("Need to create an account", "Register", "Account", new { @class = "fw-medium" })</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-7">
+                                                        <div class="container-fluid text-start">
+                                                            <input type="submit" value="Sign In" class="btn btn-block btn-lg btn-primary" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spacer50"></div>
+                </div>
+                <div class="d-none d-sm-block col-sm-2 col-md-3"></div>
+            </div>
+        </div>
+    </div>*@
+@using (Html.BeginForm("Login", "Account", new { returnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form", @id = "loginform" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="container-fluid vh-100">
+        <div class="row p-3 h-100">
+
+            <!-- Left Panel -->
+            <div class="col-md-4 left-panel">
+                @*<img src="~/Content/images/ADHD-Logo.png" class="img-fluid w-50" />*@
+                <img src="~/Content/images/ADHD-InvertLogo.png" class="img-fluid w-50" />
+                @*<h5 class="text-uppercase">ADHD</h5>*@
+                <div class="description mt-5">
+                    <h1 class="fw-bold">Let's set up your daily boost to a healthier You!</h1>
+                    <p>
+                        Each day, we will help you complete a set of tasks, designed to help reduce any symptoms or
+                        trails.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Panel -->
+            <div class="col-md-8 right-panel">
+                <div class="row justify-content-center">
+                    <div class="col-md-9 mb-5 pb-5">
+                        <h2 class="fw-bold">Welcome back!</h2>
+                        <form class="login-custom-page py-5">
+                            <div class="mb-3">
+                                @Html.LabelFor(m => m.Email, new { @class = "form-label" })
+                                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "Email" })
+                                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="mb-3">
+                                @Html.LabelFor(m => m.Password, new { @class = "form-label" })
+                                <div class="col-md-12">
+                                    @Html.PasswordFor(m => m.Password, new { @class = "form-control password-input", @placeholder = "Password", @autocomplete = "off" })
+                                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="form-check">
+                                </div>
+                                <div class="form-check">
+                                    @Html.ActionLink("Forgot your password?", "ForgotPassword", "Account", new { @class = "fw-muted" })
+                                </div>
+                            </div>
+                            <button class="btn login-btn  p-3 w-100 text-light">Login 
+                                <i class="fa-solid fa-arrow-right-long ps-2"></i>
+                            @*&nbsp; →*@
+                            </button>
+                            
+                            <p class="text-center  mt-5">
+                                @Html.ActionLink("Don’t have an account? Let’s get\r\nstarted!", "Register", "Account", new { @class = "text-primary py-3" })
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    @*<div class="demo-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-12 mx-auto">
+                        <div class="text-center pb-5"><br/> <img src="~/images/adhd.png"  style="width:200px;height:90px;"> </div>
+                        <div class="p-5 bg-white rounded shadow-lg">
+                            <h2 class="mb-2 text-center">Sign In</h2>
+                            <h6>Please login to your account</h6>
+                            <div data-mdb-input-init class="form-outline mb-4 form-group">
+                                @Html.LabelFor(m => m.Email, new { @class = "col-md-12 control-label" })
+                                <div class="col-md-12">
+                                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "Email" })
+                                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div data-mdb-input-init class="form-outline mb-4 form-group">
+                                @Html.LabelFor(m => m.Password, new { @class = "col-md-12 control-label" })
+                                <div class="col-md-12">
+                                    @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Password", @autocomplete = "off" })
+                                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <button class="btn btn-success btn-lg w-100 shadow-lg">SIGN IN</button>
+
+                            <div class="text-center pt-4">
+                                @Html.ActionLink("Forgotten your password?", "ForgotPassword", "Account", new { @class = "fw-medium text-muted" })
+                                <div class="d-flex align-items-center justify-content-center pb-4">
+                                    @Html.ActionLink("Create new account", "Register", "Account", new { @class = "text-dark-emphasis fw-medium" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+}

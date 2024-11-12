@@ -1,0 +1,600 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Projects_Vaival\\Waats\\Waats\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|d:\\projects_vaival\\waats\\waats\\waats\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|solutionrelative:waats\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|D:\\Projects_Vaival\\Waats\\Waats\\waats\\content\\font-awesome.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|solutionrelative:waats\\content\\font-awesome.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|D:\\Projects_Vaival\\Waats\\Waats\\waats\\content\\font-awesome.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|solutionrelative:waats\\content\\font-awesome.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|D:\\Projects_Vaival\\Waats\\Waats\\waats\\app_start\\bundleconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|solutionrelative:waats\\app_start\\bundleconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|D:\\Projects_Vaival\\Waats\\Waats\\waats\\views\\shared\\_layoutunauthed.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|solutionrelative:waats\\views\\shared\\_layoutunauthed.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|D:\\Projects_Vaival\\Waats\\Waats\\waats\\content\\css\\dashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|solutionrelative:waats\\content\\css\\dashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|D:\\Projects_Vaival\\Waats\\Waats\\waats\\views\\shared\\_index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|solutionrelative:waats\\views\\shared\\_index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|D:\\Projects_Vaival\\Waats\\Waats\\waats\\content\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|solutionrelative:waats\\content\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|D:\\Projects_Vaival\\Waats\\Waats\\waats\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|solutionrelative:waats\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|D:\\Projects_Vaival\\Waats\\Waats\\waats\\views\\uprofile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|solutionrelative:waats\\views\\uprofile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|D:\\Projects_Vaival\\Waats\\Waats\\waats\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|solutionrelative:waats\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|D:\\Projects_Vaival\\Waats\\Waats\\waats\\scripts\\uprofile.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|solutionrelative:waats\\scripts\\uprofile.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|D:\\Projects_Vaival\\Waats\\Waats\\waats\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|solutionrelative:waats\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|D:\\Projects_Vaival\\Waats\\Waats\\waats\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|solutionrelative:waats\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|D:\\Projects_Vaival\\Waats\\Waats\\waats\\content\\css\\responsive.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|solutionrelative:waats\\content\\css\\responsive.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|D:\\Projects_Vaival\\Waats\\Waats\\waats\\classes\\waatsformvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|solutionrelative:waats\\classes\\waatsformvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|D:\\Projects_Vaival\\Waats\\Waats\\waats\\app_start\\identityconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|solutionrelative:waats\\app_start\\identityconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|D:\\Projects_Vaival\\Waats\\Waats\\waats\\app_start\\filterconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|solutionrelative:waats\\app_start\\filterconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|D:\\Projects_Vaival\\Waats\\Waats\\waats\\views\\shared\\_index_withsubsections - copy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|solutionrelative:waats\\views\\shared\\_index_withsubsections - copy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|D:\\Projects_Vaival\\Waats\\Waats\\waats\\classes\\managequeries.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|solutionrelative:waats\\classes\\managequeries.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|D:\\Projects_Vaival\\Waats\\Waats\\waats\\scripts\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|solutionrelative:waats\\scripts\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|D:\\Projects_Vaival\\Waats\\Waats\\waats\\controllers\\uprofilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|solutionrelative:waats\\controllers\\uprofilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|D:\\Projects_Vaival\\Waats\\Waats\\waats\\controllers\\graphcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|solutionrelative:waats\\controllers\\graphcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|D:\\Projects_Vaival\\Waats\\Waats\\waats\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|solutionrelative:waats\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|D:\\Projects_Vaival\\Waats\\Waats\\waats\\views\\graph\\cgraph.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|solutionrelative:waats\\views\\graph\\cgraph.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|D:\\Projects_Vaival\\Waats\\Waats\\waats\\views\\uprofile\\_schedulingtaskslist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|solutionrelative:waats\\views\\uprofile\\_schedulingtaskslist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|D:\\Projects_Vaival\\Waats\\Waats\\waats\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|solutionrelative:waats\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|D:\\Projects_Vaival\\Waats\\Waats\\waats\\content\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|solutionrelative:waats\\content\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|D:\\Projects_Vaival\\Waats\\Waats\\waats\\views\\shared\\_translator.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|solutionrelative:waats\\views\\shared\\_translator.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|D:\\Projects_Vaival\\Waats\\Waats\\waats\\views\\home\\adviceq_18n_19y_20y.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|solutionrelative:waats\\views\\home\\adviceq_18n_19y_20y.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|D:\\Projects_Vaival\\Waats\\Waats\\waats\\views\\shared\\_index - copy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|solutionrelative:waats\\views\\shared\\_index - copy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|D:\\Projects_Vaival\\Waats\\Waats\\waats\\views\\shared\\_layout - copy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|solutionrelative:waats\\views\\shared\\_layout - copy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|D:\\Projects_Vaival\\Waats\\Waats\\waats\\views\\uprofile\\_memorymaker.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|solutionrelative:waats\\views\\uprofile\\_memorymaker.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|D:\\Projects_Vaival\\Waats\\Waats\\waats\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|solutionrelative:waats\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|D:\\Projects_Vaival\\Waats\\Waats\\waats\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|solutionrelative:waats\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|D:\\Projects_Vaival\\Waats\\Waats\\waats\\models\\data\\model.edmx.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{4C091C10-B9B1-4D9E-80E3-3C6CB5192C17}|waats\\waats.csproj|solutionrelative:waats\\models\\data\\model.edmx.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "waats\\Views\\Account\\Register.cshtml",
+              "ToolTip": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "waats\\Views\\Account\\Register.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-23T08:07:48.839Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "waats\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "waats\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAAN8BAAAAAAAAAAAqwAQCAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T08:05:48.893Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "font-awesome.min.css",
+              "DocumentMoniker": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Content\\font-awesome.min.css",
+              "RelativeDocumentMoniker": "waats\\Content\\font-awesome.min.css",
+              "ToolTip": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Content\\font-awesome.min.css",
+              "RelativeToolTip": "waats\\Content\\font-awesome.min.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAABRAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-11-11T12:14:06.317Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "font-awesome.css",
+              "DocumentMoniker": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Content\\font-awesome.css",
+              "RelativeDocumentMoniker": "waats\\Content\\font-awesome.css",
+              "ToolTip": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Content\\font-awesome.css",
+              "RelativeToolTip": "waats\\Content\\font-awesome.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-11-11T12:14:00.621Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_LayoutUnauthed.cshtml",
+              "DocumentMoniker": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Views\\Shared\\_LayoutUnauthed.cshtml",
+              "RelativeDocumentMoniker": "waats\\Views\\Shared\\_LayoutUnauthed.cshtml",
+              "ToolTip": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Views\\Shared\\_LayoutUnauthed.cshtml",
+              "RelativeToolTip": "waats\\Views\\Shared\\_LayoutUnauthed.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-11T12:11:04.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "dashboard.css",
+              "DocumentMoniker": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Content\\css\\dashboard.css",
+              "RelativeDocumentMoniker": "waats\\Content\\css\\dashboard.css",
+              "ToolTip": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Content\\css\\dashboard.css",
+              "RelativeToolTip": "waats\\Content\\css\\dashboard.css",
+              "ViewState": "AQIAACMAAAAAAAAAAAAAACoAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-11-08T09:56:21.38Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "_SchedulingtasksList.cshtml",
+              "DocumentMoniker": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Views\\UProfile\\_SchedulingtasksList.cshtml",
+              "RelativeDocumentMoniker": "waats\\Views\\UProfile\\_SchedulingtasksList.cshtml",
+              "ToolTip": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Views\\UProfile\\_SchedulingtasksList.cshtml",
+              "RelativeToolTip": "waats\\Views\\UProfile\\_SchedulingtasksList.cshtml",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAEwEwAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-06T08:19:40.605Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UProfile.js",
+              "DocumentMoniker": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Scripts\\UProfile.js",
+              "RelativeDocumentMoniker": "waats\\Scripts\\UProfile.js",
+              "ToolTip": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Scripts\\UProfile.js",
+              "RelativeToolTip": "waats\\Scripts\\UProfile.js",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAUwCcAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-11-06T08:18:51.937Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Views\\UProfile\\Index.cshtml",
+              "RelativeDocumentMoniker": "waats\\Views\\UProfile\\Index.cshtml",
+              "ToolTip": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Views\\UProfile\\Index.cshtml",
+              "RelativeToolTip": "waats\\Views\\UProfile\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAAB7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-06T08:18:29.64Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "waats\\Views\\Account\\Login.cshtml",
+              "ToolTip": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "waats\\Views\\Account\\Login.cshtml",
+              "ViewState": "AQIAAGYAAAAAAAAAAAAAAHUAAABRAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-05T07:33:12.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "responsive.css",
+              "DocumentMoniker": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Content\\css\\responsive.css",
+              "RelativeDocumentMoniker": "waats\\Content\\css\\responsive.css",
+              "ToolTip": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Content\\css\\responsive.css",
+              "RelativeToolTip": "waats\\Content\\css\\responsive.css",
+              "ViewState": "AQIAACsAAAAAAAAAAAAmwDMAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-11-04T12:31:42.985Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "waats\\Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "waats\\Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T11:32:38.076Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "style.css",
+              "DocumentMoniker": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Content\\css\\style.css",
+              "RelativeDocumentMoniker": "waats\\Content\\css\\style.css",
+              "ToolTip": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Content\\css\\style.css",
+              "RelativeToolTip": "waats\\Content\\css\\style.css",
+              "ViewState": "AQIAABUAAAAAAAAAAAAEwCQAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-11-04T10:50:46.976Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "_Translator.cshtml",
+              "DocumentMoniker": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Views\\Shared\\_Translator.cshtml",
+              "RelativeDocumentMoniker": "waats\\Views\\Shared\\_Translator.cshtml",
+              "ToolTip": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Views\\Shared\\_Translator.cshtml",
+              "RelativeToolTip": "waats\\Views\\Shared\\_Translator.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T10:39:55.46Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "AdviceQ_18N_19Y_20Y.cshtml",
+              "DocumentMoniker": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Views\\Home\\AdviceQ_18N_19Y_20Y.cshtml",
+              "RelativeDocumentMoniker": "waats\\Views\\Home\\AdviceQ_18N_19Y_20Y.cshtml",
+              "ToolTip": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Views\\Home\\AdviceQ_18N_19Y_20Y.cshtml",
+              "RelativeToolTip": "waats\\Views\\Home\\AdviceQ_18N_19Y_20Y.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBZwAsAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T10:34:43.473Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "site.js",
+              "DocumentMoniker": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Scripts\\site.js",
+              "RelativeDocumentMoniker": "waats\\Scripts\\site.js",
+              "ToolTip": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Scripts\\site.js",
+              "RelativeToolTip": "waats\\Scripts\\site.js",
+              "ViewState": "AQIAAIIBAAAAAAAAAIAwwI8BAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-10-24T12:19:57.312Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "_Index_WithSubSections - Copy.cshtml",
+              "DocumentMoniker": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Views\\Shared\\_Index_WithSubSections - Copy.cshtml",
+              "RelativeDocumentMoniker": "waats\\Views\\Shared\\_Index_WithSubSections - Copy.cshtml",
+              "ToolTip": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Views\\Shared\\_Index_WithSubSections - Copy.cshtml",
+              "RelativeToolTip": "waats\\Views\\Shared\\_Index_WithSubSections - Copy.cshtml",
+              "ViewState": "AQIAAFoAAAAAAAAAAAAAAGAAAABgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-01T05:30:59.922Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_Index.cshtml",
+              "DocumentMoniker": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Views\\Shared\\_Index.cshtml",
+              "RelativeDocumentMoniker": "waats\\Views\\Shared\\_Index.cshtml",
+              "ToolTip": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Views\\Shared\\_Index.cshtml",
+              "RelativeToolTip": "waats\\Views\\Shared\\_Index.cshtml",
+              "ViewState": "AQIAAOEAAAAAAAAAAAAEwO0AAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-08T14:13:55.187Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "waats\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "waats\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAI0AAAAAAAAAAAAAAJ8AAACGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-30T10:34:52.652Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "WaatsFormVM.cs",
+              "DocumentMoniker": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Classes\\WaatsFormVM.cs",
+              "RelativeDocumentMoniker": "waats\\Classes\\WaatsFormVM.cs",
+              "ToolTip": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Classes\\WaatsFormVM.cs",
+              "RelativeToolTip": "waats\\Classes\\WaatsFormVM.cs",
+              "ViewState": "AQIAAKkAAAAAAAAAAAAAwLgAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T07:41:15.653Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "_Layout - Copy.cshtml",
+              "DocumentMoniker": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Views\\Shared\\_Layout - Copy.cshtml",
+              "RelativeDocumentMoniker": "waats\\Views\\Shared\\_Layout - Copy.cshtml",
+              "ToolTip": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Views\\Shared\\_Layout - Copy.cshtml",
+              "RelativeToolTip": "waats\\Views\\Shared\\_Layout - Copy.cshtml",
+              "ViewState": "AQIAABYAAAAAAAAAAMBtwGcAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-31T05:56:53.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Site.css",
+              "DocumentMoniker": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Content\\Site.css",
+              "RelativeDocumentMoniker": "waats\\Content\\Site.css",
+              "ToolTip": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Content\\Site.css",
+              "RelativeToolTip": "waats\\Content\\Site.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-09-18T17:49:15.518Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "waats\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "waats\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAiwIQAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T18:12:37.488Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "_Index - Copy.cshtml",
+              "DocumentMoniker": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Views\\Shared\\_Index - Copy.cshtml",
+              "RelativeDocumentMoniker": "waats\\Views\\Shared\\_Index - Copy.cshtml",
+              "ToolTip": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Views\\Shared\\_Index - Copy.cshtml",
+              "RelativeToolTip": "waats\\Views\\Shared\\_Index - Copy.cshtml",
+              "ViewState": "AQIAAPEDAAAAAAAAAOBvwP8DAACGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-01T06:20:42.176Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "waats\\Views\\_ViewStart.cshtml",
+              "ToolTip": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "waats\\Views\\_ViewStart.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-30T10:34:45.972Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "waats\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "waats\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-24T10:46:23.867Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IdentityConfig.cs",
+              "DocumentMoniker": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\App_Start\\IdentityConfig.cs",
+              "RelativeDocumentMoniker": "waats\\App_Start\\IdentityConfig.cs",
+              "ToolTip": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\App_Start\\IdentityConfig.cs",
+              "RelativeToolTip": "waats\\App_Start\\IdentityConfig.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAuwEQAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T08:14:33.329Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "FilterConfig.cs",
+              "DocumentMoniker": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\App_Start\\FilterConfig.cs",
+              "RelativeDocumentMoniker": "waats\\App_Start\\FilterConfig.cs",
+              "ToolTip": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\App_Start\\FilterConfig.cs",
+              "RelativeToolTip": "waats\\App_Start\\FilterConfig.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T08:14:32.06Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BundleConfig.cs",
+              "DocumentMoniker": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\App_Start\\BundleConfig.cs",
+              "RelativeDocumentMoniker": "waats\\App_Start\\BundleConfig.cs",
+              "ToolTip": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\App_Start\\BundleConfig.cs",
+              "RelativeToolTip": "waats\\App_Start\\BundleConfig.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwBgAAABZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T08:14:29.65Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ManageQueries.cs",
+              "DocumentMoniker": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Classes\\ManageQueries.cs",
+              "RelativeDocumentMoniker": "waats\\Classes\\ManageQueries.cs",
+              "ToolTip": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Classes\\ManageQueries.cs",
+              "RelativeToolTip": "waats\\Classes\\ManageQueries.cs",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAjwBIAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T19:58:36.054Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "_MemoryMaker.cshtml",
+              "DocumentMoniker": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Views\\UProfile\\_MemoryMaker.cshtml",
+              "RelativeDocumentMoniker": "waats\\Views\\UProfile\\_MemoryMaker.cshtml",
+              "ToolTip": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Views\\UProfile\\_MemoryMaker.cshtml",
+              "RelativeToolTip": "waats\\Views\\UProfile\\_MemoryMaker.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBJwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-23T08:13:39.526Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "CGraph.cshtml",
+              "DocumentMoniker": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Views\\Graph\\CGraph.cshtml",
+              "RelativeDocumentMoniker": "waats\\Views\\Graph\\CGraph.cshtml",
+              "ToolTip": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Views\\Graph\\CGraph.cshtml",
+              "RelativeToolTip": "waats\\Views\\Graph\\CGraph.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-23T08:13:25.33Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "GraphController.cs",
+              "DocumentMoniker": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Controllers\\GraphController.cs",
+              "RelativeDocumentMoniker": "waats\\Controllers\\GraphController.cs",
+              "ToolTip": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Controllers\\GraphController.cs",
+              "RelativeToolTip": "waats\\Controllers\\GraphController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T06:35:31.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Model.edmx.sql ",
+              "DocumentMoniker": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Models\\data\\Model.edmx.sql",
+              "RelativeDocumentMoniker": "waats\\Models\\data\\Model.edmx.sql",
+              "ToolTip": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Models\\data\\Model.edmx.sql",
+              "RelativeToolTip": "waats\\Models\\data\\Model.edmx.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-10-23T06:32:58.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "UProfileController.cs",
+              "DocumentMoniker": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Controllers\\UProfileController.cs",
+              "RelativeDocumentMoniker": "waats\\Controllers\\UProfileController.cs",
+              "ToolTip": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Controllers\\UProfileController.cs",
+              "RelativeToolTip": "waats\\Controllers\\UProfileController.cs",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAiwFAAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T19:57:56.261Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Web.config",
+              "DocumentMoniker": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Web.config",
+              "RelativeDocumentMoniker": "waats\\Web.config",
+              "ToolTip": "D:\\Projects_Vaival\\Waats\\Waats\\waats\\Web.config",
+              "RelativeToolTip": "waats\\Web.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-09-18T19:20:56.931Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

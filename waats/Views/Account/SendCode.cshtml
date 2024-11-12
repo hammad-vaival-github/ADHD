@@ -1,0 +1,43 @@
+﻿@model waats.Models.SendCodeViewModel
+@{
+    ViewBag.Title = "Send";
+    Layout = "~/Views/Shared/_LayoutUnauthed.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="d-none d-sm-block col-sm-2 col-md-3"></div>
+        <div class="col-12 col-sm-8 col-md-6">
+            <div class="spacer20"></div>
+            <div id="logbox" class="card mt-0">
+                <div class="card-body">
+                    @*<div class="text-center">
+                        @Html.ActionLink("Wholly Automated ADHD Triage Service", "Index", "Home", new { area = "" }, new { @class = "navbar-brand fw-semibold" })<br />
+                    </div>
+                    <hr />*@
+                    @using (Html.BeginForm("SendCode", "Account", new { ReturnUrl = Model.ReturnUrl }, FormMethod.Post, new { role = "form" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.Hidden("rememberMe", @Model.RememberMe)
+                        <div class="alert alert-info" role="alert" style="margin-bottom:5px;">
+                            <h6 class="fw-semibold">Send verification code</h6>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <div class="col-md-8">
+                                Select Two-Factor Authentication Provider:
+                                @Html.DropDownListFor(model => model.SelectedProvider, Model.Providers)
+                                <br /><br />
+                                <input type="submit" value="Submit" class="btn btn-primary" />
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

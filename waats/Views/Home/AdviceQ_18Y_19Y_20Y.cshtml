@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<div class="container-fluid p-0 m-0 overlayDiv">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">ADVICE AND RESPONSES</h5>
+            <div class="row  no-gutters AvatarAppInstr">
+                <div class="card-header text-center" style="background-color: #f0f2f6">
+                    <video class="mycedio" id="Q18YYY1" width="70%" height="auto" onclick="this.paused ? this.play() : this.pause();">
+                        <source src="~/Media/eng/Q18YYY.mp4" type='video/mp4;'>
+                    </video>
+                    <br />
+                    <i class="fa fa-play-circle-o myHTMLvideo" id="Q18YYY" style="color: red;font-size: 2.5em;"></i>
+                    @*<Button class="animate-button btn-sm btn-close-white myHTMLvideo" id="Q18YYY">Please click on avatar to listen instructions</button/>*@
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-12">
+                    <div class="form-group">
+                        <div class="col-12">
+                            <p class="text-black lead">
+                                There is a significant possibility that you may indeed meet the threshold for a diagnosis of ADHD.
+                                This will need to be confirmed by further professional assessments by our clinical team.
+                                I will therefore keep you listed on the waiting list and a member of the team will be in touch with you in due course to book your appointment.
+                                Please note that the waiting list is currently a number of months and so it may be several months before you hear back from the team.
+                                I’d like to assure you, however, that you’re in the right place and you likely will indeed benefit from a professional opinion.
+                                I wish you all the best and good luck in your next stage assessment.
+
+                            </p>
+                            <p class="text-black lead">
+                                Thank You. Session now complete
+                            </p>
+                            @*<br /><br />
+                                <div class="row  text-center SectionEndSession">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <button id="EndSession" type="button" class="btn btn-info btn-lg" name="submit">End Session</button>
+                                    </div>
+                                </div>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts {
+    <script src="~/Scripts/site.js"></script>
+}

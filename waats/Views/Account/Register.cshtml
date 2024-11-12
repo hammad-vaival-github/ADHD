@@ -1,0 +1,234 @@
+﻿@model waats.Models.RegisterViewModel
+@{
+    ViewBag.Title = "New user - Register";
+    Layout = "~/Views/Shared/_LayoutUnauthed.cshtml";
+}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="d-none d-sm-block col-sm-2 col-md-3"></div>
+            <div class="col-12 col-sm-8 col-md-6">
+                <div class="spacer20"></div>
+                <div id="logbox" class="card mt-0">
+                    <div class="card-body">
+                        <div class="text-center">
+                            @*@Html.ActionLink("Wholly Automated ADHD Triage Service", "Index", "Home", new { area = "" }, new { @class = "navbar-brand fw-semibold" })<br />*@
+                            @Html.HiddenFor(model => model.ProfilePic)
+                            @Html.ValidationSummary("", new { @class = "text-danger" })
+                        </div>
+                        @*<hr />*@
+                        <div class="row">
+                            <div id="clientDisplay" class="col-xs-12 col-sm-12">
+                                <div class="outframe">
+                                    <div style="background-color: #ffffff; border: 1px solid #c6cbd2; padding: 0 0; min-height: 350px;">
+                                        <div class="alert alert-info" role="alert" style="margin-bottom:5px;">
+                                            <h6 class="fw-semibold">Register User</h6>
+                                        </div>
+                                        <div style="padding: 10px 10px;">
+                                            @using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data", id = "Rform", @class = "form-horizontal", role = "form", novalidate = "novalidate" }))
+                                            {
+                                                @Html.AntiForgeryToken()
+                                                @Html.HiddenFor(m => m.UserGUID)
+                                                <hr />
+                                                <div class="row  no-gutters">
+
+                                                </div>
+                                                <div class="row  no-gutters">
+                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                        <div class="form-group">
+                                                            @Html.LabelFor(m => m.FirstName, new { @class = "col-md-12 control-label" })
+                                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control", @placeholder = "First name" })
+                                                                @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row  no-gutters">
+                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                        <div class="form-group">
+                                                            @Html.LabelFor(m => m.Surname, new { @class = "col-md-12 control-label" })
+                                                            <div class="col-md-12">
+                                                                @Html.TextBoxFor(m => m.Surname, new { @class = "form-control", @placeholder = "Surname" })
+                                                                @Html.ValidationMessageFor(model => model.Surname, "", new { @class = "text-danger" })
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row  no-gutters">
+                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                        <div class="form-group">
+                                                            @Html.LabelFor(m => m.Dob, new { @class = "col-md-12 control-label" })
+                                                            <div class="col-md-12">
+                                                                @Html.EditorFor(m => m.Dob, new { htmlAttributes = new { @class = "form-control", @min = DateTime.Now.Date.AddYears(-100).ToString("yyyy-MM-dd"), @max = DateTime.Now.AddYears(0).ToString("yyyy-MM-dd"), @placeholder = "Date of birth" }})
+                                                                @Html.ValidationMessageFor(model => model.Dob, "", new { @class = "text-danger" })
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row  no-gutters">
+                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                        <div class="form-group">
+                                                            @Html.LabelFor(m => m.Email, new { @class = "col-md-12 control-label" })
+                                                            <div class="col-md-12">
+                                                                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "Email" })
+                                                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row  no-gutters">
+                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                                                        <div class="form-group">
+                                                            @Html.LabelFor(m => m.Gender, new { @class = "col-md-12 control-label" })
+                                                            <div class="col-md-12">
+                                                                @Html.DropDownListFor(model => model.Gender, Model.GenderList, "Please Select", new { @class = "form-control" })
+                                                                @Html.ValidationMessageFor(model => model.Gender, "", new { @class = "text-danger" })
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                                                        <div class="form-group">
+                                                            @Html.LabelFor(model => model.EthnicOrigin, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                            <div class="col-md-12">
+                                                                @Html.DropDownListFor(model => model.EthnicOrigin, Model.EthnicOriginList, "Please Select", new { @class = "form-control" })
+                                                                @Html.ValidationMessageFor(model => model.EthnicOrigin, "", new { @class = "text-danger" })
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row  no-gutters">
+
+                                                </div>
+                                                <div class="row  no-gutters">
+                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                                                        <div class="form-group">
+                                                            @Html.LabelFor(model => model.EmploymentStatus, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                            <div class="col-md-12">
+                                                                @Html.DropDownListFor(model => model.EmploymentStatus, Model.EmploymentStatusList, "Please Select", new { @class = "form-control" })
+                                                                @Html.ValidationMessageFor(model => model.EmploymentStatus, "", new { @class = "text-danger" })
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                                                        <div class="form-group">
+                                                            @Html.LabelFor(m => m.Activationcode, new { @class = "col-md-12 control-label" })
+                                                            <div class="col-md-12">
+                                                                @Html.TextBoxFor(m => m.Activationcode, new { @class = "form-control", @placeholder = "Activation code" })
+                                                                @Html.ValidationMessageFor(model => model.Activationcode, "", new { @class = "text-danger" })
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-12">
+                                                        <div class="form-group">
+                                                            <div class="col-12">
+                                                                <div class="card">
+                                                                    <div class="card-header">
+                                                                        <strong>@Html.LabelFor(model => model.ProfilePic, htmlAttributes: new { @class = "control-label col-md-12" })</strong>
+                                                                    </div>
+                                                                    <div class="card-body">
+                                                                        <h5 class="card-title">Permitted files</h5>
+                                                                        <p class="card-text">
+                                                                            Only the following file types are permitted.Other files will be removed on submission.<br />
+                                                                            *.jpg *.png *.gif *.jpeg
+                                                                        </p>
+                                                                        @if (Model.ProfilePic != true)
+                                                                        {
+                                                                            <div class="row">
+                                                                                <div class="col-8">
+                                                                                    <strong>Please attach any relevent documents(e.g word documents, text)</strong>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="alert alert-warning" role="alert">
+                                                                                <div id="FileData" style="padding-left:14px;padding-right:14px;">
+                                                                                    <div class="row">
+                                                                                        <div class="col-12">
+                                                                                            <div class="form-group">
+                                                                                                <label><strong>Documents/Files</strong></label>
+                                                                                                <div class="col-12">
+                                                                                                    <input id="ProfilePicfile" name="ProfilePicfile" type="file" class="FileUpload" />
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        }
+                                                                        @if (Model.ProfilePic != null || Model.ProfilePic == true)
+                                                                        {
+                                                                            <div class="row">
+                                                                                <div class="col-12">
+                                                                                    <ul>
+                                                                                        @*@{ string[] fileList = Model.CRFileDetails.Split(';');
+                                                                                            foreach (string g in fileList)
+                                                                                            {
+                                                                                                string[] temp = g.Split(',');
+                                                                                                <li id="docAttachment@(temp[1].ToString())">
+                                                                                                    <h6>
+                                                                                                        <strong>@temp[0] &nbsp;&nbsp;</strong>
+                                                                                                        @if (!Model.Flag1)
+                                                                                                        {
+                                                                                                            <a data-docid="@temp[1]" class="btn btn-outline-danger deleteAttachmentBtn">Click to delete</a>}
+                                                                                                        <a href="@Url.Action("ReadFile", "Home", new { id = temp[1] })" class="btn btn-outline-info" target="_blank">Click to view</a>
+                                                                                                    </h6>
+                                                                                                </li>
+                                                                                            }
+                                                                                        }*@
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        }
+                                                                        <br />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="spacer5"></div>
+                                                <div class="spacer5"></div>
+                                                <div class="row  no-gutters">
+                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                        <div class="form-check">
+                                                            <div class="col-md-12">
+                                                                @Html.CheckBoxFor(model => model.AgreeToADHD, new { @class = "form-check-input" })
+                                                                @Html.LabelFor(model => model.AgreeToADHD, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                                @Html.ValidationMessageFor(model => model.AgreeToADHD, "", new { @class = "text-danger" })
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row  no-gutters">
+                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                        <div class="form-check">
+
+                                                            <div class="col-md-12">
+                                                                @Html.CheckBoxFor(model => model.ConsentToSharedata, new { @class = "form-check-input" })
+                                                                @Html.LabelFor(model => model.ConsentToSharedata, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                                @Html.ValidationMessageFor(model => model.ConsentToSharedata, "", new { @class = "text-danger" })
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--Change above to ListBoxFor in case switch to all multiple add class multi-->
+                                                <br /><br />
+                                                <div class="form-group">
+                                                    <div class="col-md-offset-2 col-md-10">
+                                                        <button id="saveBtn" type="submit" class="btn btn-success" name="submit" value="Save">Save</button>
+                                                    </div>
+                                                </div>
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /Display -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+

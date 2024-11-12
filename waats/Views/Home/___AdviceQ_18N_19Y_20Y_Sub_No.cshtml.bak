@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<div class="container-fluid p-0 m-0 overlayDiv">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">ADVICE AND RESPONSES</h5>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-12">
+                    <div class="form-group">
+                        <div class="col-12">
+                            <p class="text-black lead">
+                                Thank you. Please now confirm you wish to remain on our waiting list by sending an email to
+                                <i class="text-primary text-bg-light small blockquote-footer">
+                                    <a href="mailto:@ViewBag.EmailTo_No_Button">@ViewBag.EmailTo_No_Button</a>
+                                </i>
+                            </p>
+                            <div class="row  text-center SectionEndSession">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    @using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data", id = "CRForm", @class = "form-horizontal", role = "form" }))
+                                    {
+                                        <input type="hidden" id="loclID" name="loclID" value="@ViewBag.loclID" />
+                                        <input type="hidden" id="loclID" name="loclID" value="@ViewBag.name" />
+                                        <input type="hidden" id="loclID" name="loclID" value="@ViewBag.Email" />
+                                        <input type="hidden" id="loclID" name="loclID" value="@ViewBag.DoB" />
+                                        <button name="submit" id="Yes" type="submit" class="btn btn-success btn-lg" value="Yes">I wish to remain on the waiting list</button>
+                                        @*<button name="submit" id="No" type="submit" class="btn btn-info btn-lg" value="No">No</button>*@
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts {
+    <script src="~/Scripts/site.js"></script>
+}

@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<div class="container-fluid p-0 m-0 overlayDiv">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">ADVICE AND RESPONSES</h5>
+            <div class="row  no-gutters AvatarQ4">
+                <div class="card-header text-center" style="background-color: #f0f2f6">
+                    <video class="mycedio" id="Q18N1" width="70%" height="auto" onclick="this.paused ? this.play() : this.pause();">
+                        <source src="~/Media/eng/Q18N.mp4" type='video/mp4;'>
+                    </video>
+                    <br />
+                    <i class="fa fa-play-circle-o myHTMLvideo" id="Q18N" style="color: red;font-size: 2.5em;"></i>
+                    @*<Button class="animate-button btn-sm btn-close-white myHTMLvideo" id="Q18N">Please click on avatar to listen instructions</Button>*@
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-12">
+                    <div class="form-group">
+                        <div class="col-12">
+                            <p class="text-black lead">
+                                Thank you for your answers. Your details will now be forwarded to one of our specialist, qualified clinicians who will assess them 
+                                and determine the appropriate pathway for you. You should expect to hear back within the next 2-4 weeks to outline the best 
+                                next steps for you to take.
+                            </p>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts {
+    <script src="~/Scripts/site.js"></script>
+}

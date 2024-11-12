@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="waatsModelStoreContainer" CdmEntityContainer="waatsEntities">
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="IsTypeOf(waatsModel.AspNetUsers)">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="Activationcode" ColumnName="Activationcode" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="Dob" ColumnName="Dob" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="EthnicOrigin" ColumnName="EthnicOrigin" />
+          <ScalarProperty Name="EmploymentStatus" ColumnName="EmploymentStatus" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ADUserName" ColumnName="ADUserName" />
+          <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+          <ScalarProperty Name="ConsentToSharedata" ColumnName="ConsentToSharedata" />
+          <ScalarProperty Name="ProfilePic" ColumnName="ProfilePic" />
+          <ScalarProperty Name="AgreeToADHD" ColumnName="AgreeToADHD" />
+          <ScalarProperty Name="Dateinserted" ColumnName="Dateinserted" />
+          <ScalarProperty Name="bDeleted" ColumnName="bDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BrainFitness">
+      <EntityTypeMapping TypeName="IsTypeOf(waatsModel.BrainFitness)">
+        <MappingFragment StoreEntitySet="BrainFitness">
+          <ScalarProperty Name="BrainFitnessID" ColumnName="BrainFitnessID" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="MarkAsCompleted" ColumnName="MarkAsCompleted" />
+          <ScalarProperty Name="CompletionDate" ColumnName="CompletionDate" />
+          <ScalarProperty Name="bDeleted" ColumnName="bDeleted" />
+          <ScalarProperty Name="StartingNumber" ColumnName="StartingNumber" />
+          <ScalarProperty Name="Q_Add" ColumnName="Q_Add" />
+          <ScalarProperty Name="Q_Take" ColumnName="Q_Take" />
+          <ScalarProperty Name="Q_A" ColumnName="Q_A" />
+          <ScalarProperty Name="Q_NoofAttempts" ColumnName="Q_NoofAttempts" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EOT">
+      <EntityTypeMapping TypeName="IsTypeOf(waatsModel.EOT)">
+        <MappingFragment StoreEntitySet="EOT">
+          <ScalarProperty Name="LocalId" ColumnName="LocalId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EST">
+      <EntityTypeMapping TypeName="IsTypeOf(waatsModel.EST)">
+        <MappingFragment StoreEntitySet="EST">
+          <ScalarProperty Name="LocalId" ColumnName="LocalId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GenderT">
+      <EntityTypeMapping TypeName="IsTypeOf(waatsModel.GenderT)">
+        <MappingFragment StoreEntitySet="GenderT">
+          <ScalarProperty Name="LocalId" ColumnName="LocalId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GratitudeJournal">
+      <EntityTypeMapping TypeName="IsTypeOf(waatsModel.GratitudeJournal)">
+        <MappingFragment StoreEntitySet="GratitudeJournal">
+          <ScalarProperty Name="GratitudeJouralID" ColumnName="GratitudeJouralID" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="thingsiamgratfullfortoday" ColumnName="thingsiamgratfullfortoday" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="MarkAsCompleted" ColumnName="MarkAsCompleted" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="CompletionDate" ColumnName="CompletionDate" />
+          <ScalarProperty Name="bDeleted" ColumnName="bDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Logs">
+      <EntityTypeMapping TypeName="IsTypeOf(waatsModel.Logs)">
+        <MappingFragment StoreEntitySet="Logs">
+          <ScalarProperty Name="localId" ColumnName="localId" />
+          <ScalarProperty Name="WaatsFormId" ColumnName="WaatsFormId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MemoryMaker">
+      <EntityTypeMapping TypeName="IsTypeOf(waatsModel.MemoryMaker)">
+        <MappingFragment StoreEntitySet="MemoryMaker">
+          <ScalarProperty Name="memoryId" ColumnName="memoryId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="One" ColumnName="One" />
+          <ScalarProperty Name="two" ColumnName="two" />
+          <ScalarProperty Name="three" ColumnName="three" />
+          <ScalarProperty Name="four" ColumnName="four" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="MarkAsCompleted" ColumnName="MarkAsCompleted" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="CompletionDate" ColumnName="CompletionDate" />
+          <ScalarProperty Name="bDeleted" ColumnName="bDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MindFullAttention">
+      <EntityTypeMapping TypeName="IsTypeOf(waatsModel.MindFullAttention)">
+        <MappingFragment StoreEntitySet="MindFullAttention">
+          <ScalarProperty Name="MindFulID" ColumnName="MindFulID" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="thepersonilistenedtospokeabout" ColumnName="thepersonilistenedtospokeabout" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="MarkAsCompleted" ColumnName="MarkAsCompleted" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="CompletionDate" ColumnName="CompletionDate" />
+          <ScalarProperty Name="bDeleted" ColumnName="bDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProfilePicT">
+      <EntityTypeMapping TypeName="IsTypeOf(waatsModel.ProfilePicT)">
+        <MappingFragment StoreEntitySet="ProfilePicT">
+          <ScalarProperty Name="LocalId" ColumnName="LocalId" />
+          <ScalarProperty Name="UserGUID" ColumnName="UserGUID" />
+          <ScalarProperty Name="FileData" ColumnName="FileData" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="FileType" ColumnName="FileType" />
+          <ScalarProperty Name="FileUploadDateTime" ColumnName="FileUploadDateTime" />
+          <ScalarProperty Name="bDeleted" ColumnName="bDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ScheduleTask">
+      <EntityTypeMapping TypeName="IsTypeOf(waatsModel.ScheduleTask)">
+        <MappingFragment StoreEntitySet="ScheduleTask">
+          <ScalarProperty Name="LocalID" ColumnName="LocalID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="MarkAsCompleted" ColumnName="MarkAsCompleted" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="bDeleted" ColumnName="bDeleted" />
+          <ScalarProperty Name="SubTask" ColumnName="SubTask" />
+          <ScalarProperty Name="CompletionDate" ColumnName="CompletionDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubScheduleTask">
+      <EntityTypeMapping TypeName="IsTypeOf(waatsModel.SubScheduleTask)">
+        <MappingFragment StoreEntitySet="SubScheduleTask">
+          <ScalarProperty Name="SubLocalID" ColumnName="SubLocalID" />
+          <ScalarProperty Name="MainTaskID" ColumnName="MainTaskID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="MarkAsCompleted" ColumnName="MarkAsCompleted" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="CompletionDate" ColumnName="CompletionDate" />
+          <ScalarProperty Name="bDeleted" ColumnName="bDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Trigger">
+      <EntityTypeMapping TypeName="IsTypeOf(waatsModel.Trigger)">
+        <MappingFragment StoreEntitySet="Trigger">
+          <ScalarProperty Name="TriggerID" ColumnName="TriggerID" />
+          <ScalarProperty Name="whatwasthetriggerevent" ColumnName="whatwasthetriggerevent" />
+          <ScalarProperty Name="whatwastheemotionthatyoufelt" ColumnName="whatwastheemotionthatyoufelt" />
+          <ScalarProperty Name="howdiditfeelinyourbody" ColumnName="howdiditfeelinyourbody" />
+          <ScalarProperty Name="whymightthisbeatriggerforyou_thinkaboutyourpast" ColumnName="whymightthisbeatriggerforyou_thinkaboutyourpast" />
+          <ScalarProperty Name="howcanyouavoidthesituationand_ormanageyourresponsetoitinfuture" ColumnName="howcanyouavoidthesituationand_ormanageyourresponsetoitinfuture" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="MarkAsCompleted" ColumnName="MarkAsCompleted" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="CompletionDate" ColumnName="CompletionDate" />
+          <ScalarProperty Name="bDeleted" ColumnName="bDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="waatsForm">
+      <EntityTypeMapping TypeName="IsTypeOf(waatsModel.waatsForm)">
+        <MappingFragment StoreEntitySet="waatsForm">
+          <ScalarProperty Name="localID" ColumnName="localID" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="DoB" ColumnName="DoB" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="GPName" ColumnName="GPName" />
+          <ScalarProperty Name="HistoryofMentalIllness" ColumnName="HistoryofMentalIllness" />
+          <ScalarProperty Name="ReferredtoMentalHealth" ColumnName="ReferredtoMentalHealth" />
+          <ScalarProperty Name="HaveYouEverHadAnyThoughtsorMadeAttemptstoHarmYourself" ColumnName="HaveYouEverHadAnyThoughtsorMadeAttemptstoHarmYourself" />
+          <ScalarProperty Name="HaveYouCurrentlyorrecentlyAnyThoughtsorMadeAttemptstoHarmYourself" ColumnName="HaveYouCurrentlyorrecentlyAnyThoughtsorMadeAttemptstoHarmYourself" />
+          <ScalarProperty Name="HaveYouCurrentlyorrecentlyAnyThoughtsorMadeAttemptstoHarmAnyoneElse" ColumnName="HaveYouCurrentlyorrecentlyAnyThoughtsorMadeAttemptstoHarmAnyoneElse" />
+          <ScalarProperty Name="CompleteProjects" ColumnName="CompleteProjects" />
+          <ScalarProperty Name="RequiresOrganization" ColumnName="RequiresOrganization" />
+          <ScalarProperty Name="keepAppointments" ColumnName="keepAppointments" />
+          <ScalarProperty Name="StartTasksOnTime" ColumnName="StartTasksOnTime" />
+          <ScalarProperty Name="FidgetAndSquirm" ColumnName="FidgetAndSquirm" />
+          <ScalarProperty Name="OverlyActiveAndCompelled" ColumnName="OverlyActiveAndCompelled" />
+          <ScalarProperty Name="MakeCarelessMistakes" ColumnName="MakeCarelessMistakes" />
+          <ScalarProperty Name="DifficultyKeepingMyAttention" ColumnName="DifficultyKeepingMyAttention" />
+          <ScalarProperty Name="DifficultyConcentrating" ColumnName="DifficultyConcentrating" />
+          <ScalarProperty Name="DifficultyFinding" ColumnName="DifficultyFinding" />
+          <ScalarProperty Name="EasilyDistracted" ColumnName="EasilyDistracted" />
+          <ScalarProperty Name="LeaveMySeatInMeetings" ColumnName="LeaveMySeatInMeetings" />
+          <ScalarProperty Name="DifficultyRelaxingOrUnwinding" ColumnName="DifficultyRelaxingOrUnwinding" />
+          <ScalarProperty Name="TalkingTooMuch" ColumnName="TalkingTooMuch" />
+          <ScalarProperty Name="FinishingTheSentences" ColumnName="FinishingTheSentences" />
+          <ScalarProperty Name="DifficultyWaitingMyTurn" ColumnName="DifficultyWaitingMyTurn" />
+          <ScalarProperty Name="InterruptOtherPeople" ColumnName="InterruptOtherPeople" />
+          <ScalarProperty Name="ReceiveWarningsAndPersistent" ColumnName="ReceiveWarningsAndPersistent" />
+          <ScalarProperty Name="DisciplinedOrAacked" ColumnName="DisciplinedOrAacked" />
+          <ScalarProperty Name="EverExperiencedABreakdown" ColumnName="EverExperiencedABreakdown" />
+          <ScalarProperty Name="Completedby" ColumnName="Completedby" />
+          <ScalarProperty Name="CompletionDate" ColumnName="CompletionDate" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="PracticeName" ColumnName="PracticeName" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserRoles">
+      <EntityTypeMapping TypeName="IsTypeOf(waatsModel.AspNetUserRoles)">
+        <MappingFragment StoreEntitySet="AspNetUserRoles">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="localid" ColumnName="localid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetRoles">
+      <EntityTypeMapping TypeName="waatsModel.AspNetRoles">
+        <MappingFragment StoreEntitySet="AspNetRoles">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserClaims">
+      <EntityTypeMapping TypeName="waatsModel.AspNetUserClaims">
+        <MappingFragment StoreEntitySet="AspNetUserClaims">
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserLogins">
+      <EntityTypeMapping TypeName="waatsModel.AspNetUserLogins">
+        <MappingFragment StoreEntitySet="AspNetUserLogins">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

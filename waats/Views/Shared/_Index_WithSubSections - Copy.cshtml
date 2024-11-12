@@ -1,0 +1,1787 @@
+﻿@model waats.ViewModel.WaatsFormVM
+@{
+    ViewBag.Title = "Home Page";
+    var flag = Model.flag;
+}
+    <div class="container-fluid p-0 m-0 overlayDiv accordion" id="accordionExample">
+        <div class="card AvatarIntro">
+            <h2 class="accordion-header" id="headingIntro">
+                <button class="accordion-button collapsed" id="section0"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseZero" aria-expanded="false" aria-controls="collapseZero">
+                    Section-Intro
+                </button>
+            </h2>
+            <div id="collapseZero" class="accordion-collapse collapse show" aria-labelledby="headingIntro" data-bs-parent="#accordionExample">
+                <div class="row accordion-body">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-12">
+                        <div class="row form-group">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-12">
+                                @*<p class="text-black lead">
+                                    Welcome to your ADHD Assessment Assistant. My name is Wats and this service has been designed by Consultant
+                                    Psychiatrists and NHS
+                                    specialists with many years
+                                    expertise in the assessment and diagnosis of ADHD. In this session I will guide you through your online preliminary
+                                    ADHD assessment and at the end of it I can give you a strong indication as to whether or not you’re likely to have
+                                    ADHD. Then, based on that, I can give you some clear options as to how best to proceed. If that all sounds
+                                    good to you then click below and let’s begin.”
+                                </p>
+                                <p class="text-black lead">
+                                    I am going to go through some questions with you now and, to ensure we get your full
+                                    and accurate answers, I’ll ask you to type your responses into the page, if that’s ok. The first items are your
+                                    personal details, so please now enter your name, DOB, age, gender, email address and GP details
+                                </p>*@
+                                <div class="text-center">
+                                    <video id="Intro1" style="width:70%;height:auto;border:none">
+                                        <source src="~/Media/eng/Intro.mp4" type='video/mp4;'>
+                                    </video>
+                                    <br />
+                                    <i class="fa fa-play-circle-o myHTMLvideo small fw-semibold" id="Intro">&nbsp;click here to play intro</i>
+                                </div>
+                                <br /><br />
+                                <div class="row  text-center Section1Btn">
+                                    @*style="display:none;">*@
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <button id="Section0BtnID" type="button" class="btn btn-success btn-lg" name="submit">Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data", id = "CRForm", @class = "form-horizontal", role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(x => x.flag)
+            <div class="card Section1" style="background-color: #f0f2f6">
+                <h2 class="accordion-header" id="headingOne">
+                    <button id="section1" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Section-1
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="row  no-gutters AvatarSection1">
+                            @*<div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                <div class="card-body text-center">
+                                    <video class="mycedio" id="Demo1"  width="100%" height="auto">
+                                        <source src="~/Media/eng/Demo.mp4" type='video/mp4;'>
+                                    </video>
+                                    <br />
+                                    <i class="fa fa-play-circle-o myHTMLvideo" id="Demo" style="color: red;font-size: 2.5em;"></i>                                  
+                                </div>
+                            </div>*@
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="row no-gutters">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <div class="col-12">
+                                                <strong>@Html.LabelFor(model => model.Firstname, htmlAttributes: new { @class = "control-label col-md-12" })</strong>
+                                                @Html.EditorFor(model => model.Firstname, new { htmlAttributes = new { @class = "form-control section1C", placeholder = @Html.DisplayNameFor(m => m.Firstname) } })
+                                                @Html.ValidationMessageFor(model => model.Firstname, "", new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <strong>@Html.LabelFor(model => model.Surname, htmlAttributes: new { @class = "control-label col-md-12" })</strong>
+                                            <div class="col-12">
+                                                @Html.EditorFor(model => model.Surname, new { htmlAttributes = new { @class = "form-control section1C", placeholder = @Html.DisplayNameFor(m => m.Surname) } })
+                                                @Html.ValidationMessageFor(model => model.Surname, "", new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                                        <div class="form-group">
+                                            <strong>@Html.LabelFor(model => model.DoB, htmlAttributes: new { @class = "control-label col-md-12" })</strong>
+                                            <div class="col-12">
+                                                @Html.EditorFor(model => model.DoB, new
+                                                {
+                                                    htmlAttributes = new
+                                                    {
+                                                        @class = "form-control section1C",
+                                                        @min = DateTime.Now.AddYears(-100).ToString("yyyy-MM-dd"),
+                                                        @max = DateTime.Now.AddDays(0).ToString("yyyy-MM-dd"),
+                                                        placeholder = @Html.DisplayNameFor(m => m.DoB),
+                                                onchange = "myFunction('DoB');"
+                                                    }
+                                                })
+                                                @Html.ValidationMessageFor(model => model.DoB, "", new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                                        <div class="form-group">
+                                            <div class="col-12">
+                                                <strong>@Html.LabelFor(model => model.Age, htmlAttributes: new { @class = "control-label col-md-12" })</strong>
+                                                @Html.EditorFor(model => model.Age, new { htmlAttributes = new { @class = "form-control section1C", maxlength = "3", placeholder = @Html.DisplayNameFor(m => m.Age), @ReadOnly = "ReadOnly" } })
+                                                @Html.ValidationMessageFor(model => model.Age, "", new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                                        <div class="form-group">
+                                            <strong>@Html.LabelFor(model => model.Gender, htmlAttributes: new { @class = "control-label col-md-12" })</strong>
+                                            <div class="col-12">
+                                                @Html.DropDownListFor(model => model.Gender, new List<SelectListItem> {
+                                                                new SelectListItem() { Text= "Female", Value = "Female" },
+                                                                new SelectListItem() { Text= "Male", Value = "Male" },
+                                                                new SelectListItem() { Text= "Other", Value = "Other" }
+                                                            }, "Please select", new { @class = "form-control section1C" })
+                                                @Html.ValidationMessageFor(model => model.Gender, "", new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <strong>@Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-12" })</strong>
+                                            <div class="col-12">
+                                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control section1C", placeholder = @Html.DisplayNameFor(m => m.Email) } })
+                                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <strong>@Html.LabelFor(model => model.GPName, htmlAttributes: new { @class = "control-label col-md-12" })</strong>
+                                            <div class="col-12">
+                                                @Html.EditorFor(model => model.GPName, new { htmlAttributes = new { @class = "form-control section1C", placeholder = @Html.DisplayNameFor(m => m.GPName) } })
+                                                @Html.ValidationMessageFor(model => model.GPName, "", new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <strong>@Html.LabelFor(model => model.PracticeName, htmlAttributes: new { @class = "control-label col-md-12" })</strong>
+                                            <div class="col-12">
+                                                @Html.EditorFor(model => model.PracticeName, new { htmlAttributes = new { @class = "form-control section1C", placeholder = @Html.DisplayNameFor(m => m.PracticeName) } })
+                                                @Html.ValidationMessageFor(model => model.PracticeName, "", new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-12">
+                                        <div class="form-group">
+                                            <strong>@Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-md-12" })</strong>
+                                            <div class="col-12">
+                                                @Html.TextAreaFor(model => model.Address, new { @class = "form-control section1C", @rows = "3", @maxlength = "4000", placeholder = @Html.DisplayNameFor(m => m.Address) })
+                                                @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-12">
+                                        <div class="form-group">
+                                            <strong>@Html.LabelFor(model => model.Postcode, htmlAttributes: new { @class = "control-label col-md-12" })</strong>
+                                            <div class="col-12">
+                                                @Html.EditorFor(model => model.Postcode, new { htmlAttributes = new { @class = "form-control section1C", placeholder = @Html.DisplayNameFor(m => m.Postcode) } })
+                                                @Html.ValidationMessageFor(model => model.Postcode, "", new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <br />
+                                        <button id="Section1BtnID" type="button" class="btn btn-success" name="submit">Next</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card Section2">                           
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" id="section2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Section-2
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="card-body">
+                            <div class="accordion" id="sub-accordionExample">
+                                <div class="accordion-item section2_subIntro"  style="background-color: #f0f2f6">
+                                    <h2 class="accordion-header" id="sub-headingIntro">
+                                        <button id="section2_subIntro" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseIntro" aria-expanded="true" aria-controls="collapseIntro">
+                                            Section-2 Intro
+                                        </button>
+                                    </h2>
+                                    <div id="sub-collapseIntro" class="accordion-collapse collapse show" aria-labelledby="sub-headingIntro" data-bs-parent="#sub-accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="row  no-gutters">
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                    <div class="card-body  text-center">
+                                                        <video class="mycedio" id="Q3Intro-1" style="width:70%;height:auto;border:none">
+                                                            <source src="~/Media/eng/Q3-Intro.mp4" type='video/mp4;'>
+                                                        </video>
+                                                        <br />
+                                                        @*<i class="fa fa-play-circle-o myHTMLvideo" id="Q3Intro-" style="color: red;font-size: 2.5em;"></i>*@
+                                                        <i class="fa fa-play-circle-o myHTMLvideo small fw-semibold"  id="Q3Intro-">&nbsp;click here to play intro</i>
+                                                    </div>                                               
+                                                    <div class="row section2_subIntroBtn text-center">
+                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                            <br />
+                                                            <button id="section2_subIntroBtn" type="button" class="btn btn-success" name="submit">Next</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item section2_sub1" style="background-color: #f0f2f6">
+                                    <h2 class="accordion-header" id="sub-headingOne">                                       
+                                        <button id="section2_sub1" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Sub Section-2-1
+                                        </button>
+                                    </h2>
+                                    <div id="sub-collapseOne" class="accordion-collapse collapse" aria-labelledby="sub-headingOne" data-bs-parent="#sub-accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="row  no-gutters AvatarSection1">
+                                                @*<div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="card-body  text-center">
+                                                        <video class="mycedio" id="Q3a-1"  width="70%" height="auto">
+                                                            <source src="~/Media/eng/Q3-a.mp4" type='video/mp4;'>
+                                                        </video>
+                                                        <br />
+                                                        <i class="fa fa-play-circle-o myHTMLvideo" id="Q3a-" style="color: red;font-size: 2.5em;"></i>
+                                                    </div>
+                                                </div>*@
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                    <div class="row  no-gutters">
+                                                        <div class="col-12 col-sm-12 col-md-6 col-lg-12">
+                                                            <div class="form-group">
+                                                                <div class="col-12">
+                                                                    <strong>@Html.LabelFor(model => model.HistoryofMentalIllness, htmlAttributes: new { @class = "control-label col-md-12" })</strong>
+                                                                    @Html.TextAreaFor(model => model.HistoryofMentalIllness, new { @class = "form-control section2a", @rows = "3", @maxlength = "4000", placeholder = @Html.DisplayNameFor(m => m.HistoryofMentalIllness) })
+                                                                    @Html.ValidationMessageFor(model => model.HistoryofMentalIllness, "", new { @class = "text-danger" })
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row section2_sub1Btn">
+                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                            <br />
+                                                            <button id="section2_sub1Btn" type="button" class="btn btn-success" name="submit">Next</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item  section2_sub2" style="background-color: #f0f2f6">
+                                    <h2 class="accordion-header" id="sub-headingTwo">
+                                        <button class="accordion-button collapsed" type="button"  id="section2_sub2"  data-bs-toggle="collapse" data-bs-target="#sub-collapseTwo" aria-expanded="false" aria-controls="sub-collapseTwo">
+                                            Sub Section-2-2
+                                        </button>
+                                    </h2>
+                                    <div id="sub-collapseTwo" class="accordion-collapse collapse" aria-labelledby="sub-headingTwo" data-bs-parent="#sub-accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="row  no-gutters AvatarSection1">
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="card-body text-center">
+                                                        <video class="mycedio" id="Q3b-1"  width="70%" height="auto">
+                                                            <source src="~/Media/eng/Q3-b.mp4" type='video/mp4;'>
+                                                        </video>
+                                                        <br />
+                                                        <i class="fa fa-play-circle-o myHTMLvideo" id="Q3b-" style="color: red;font-size: 2.5em;"></i>
+                                                        @*<Button type="button" class="animate-button btn-sm btn-close-white myHTMLvideo" id="Q3-">Click here to listen instructions</Button>*@
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="row  no-gutters">
+                                                        <div class="col-12 col-sm-12 col-md-6 col-lg-12">
+                                                            <div class="form-group">
+                                                                <div class="col-12">
+                                                                    <strong>@Html.LabelFor(model => model.ReferredtoMentalHealth, htmlAttributes: new { @class = "control-label col-md-12" })</strong>
+                                                                    @Html.TextAreaFor(model => model.ReferredtoMentalHealth, new { @class = "form-control section2b", @rows = "3", @maxlength = "4000", placeholder = @Html.DisplayNameFor(m => m.ReferredtoMentalHealth) })
+                                                                    @Html.ValidationMessageFor(model => model.ReferredtoMentalHealth, "", new { @class = "text-danger" })
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row section2_sub2Btn">
+                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12"><br />
+                                                            <button id="section2_sub2Btn" type="button" class="btn btn-success" name="submit">Next</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>                                           
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item  section2_sub3"  style="background-color: #f0f2f6">
+                                    <h2 class="accordion-header" id="sub-headingThree">
+                                        <button class="accordion-button collapsed"  id="section2_sub3"  type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseThree" aria-expanded="false" aria-controls="sub-collapseThree">
+                                            Sub Section-2-3
+                                        </button>
+                                    </h2>
+                                    <div id="sub-collapseThree" class="accordion-collapse collapse" aria-labelledby="sub-headingThree" data-bs-parent="#sub-accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="row  no-gutters AvatarSection1">
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="card-body  text-center">
+                                                        <video class="mycedio" id="Q3c-1"  width="70%" height="auto">
+                                                            <source src="~/Media/eng/Q3-c.mp4" type='video/mp4;'>
+                                                        </video>
+                                                        <br />
+                                                        <i class="fa fa-play-circle-o myHTMLvideo" id="Q3c-" style="color: red;font-size: 2.5em;"></i>
+                                                        @*<Button type="button" class="animate-button btn-sm btn-close-white myHTMLvideo" id="Q3-">Click here to listen instructions</Button>*@
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="row  no-gutters">
+                                                        <div class="col-12 col-sm-12 col-md-6 col-lg-12">
+                                                            <div class="form-group">
+                                                                <strong>@Html.LabelFor(model => model.HaveYouEverHadAnyThoughtsorMadeAttemptstoHarmYourself, htmlAttributes: new { @class = "control-label col-md-12" })</strong>
+                                                                <div class="col-12">
+                                                                    @Html.DropDownListFor(model => model.HaveYouEverHadAnyThoughtsorMadeAttemptstoHarmYourself, new List<SelectListItem> {
+                                                                                    new SelectListItem() { Text= "No", Value = "No" },
+                                                                                    new SelectListItem() { Text= "Yes", Value = "Yes" }
+                                                                                }, "Please select Yes/No", new { @class = "form-control section2cc" })
+                                                                    @Html.ValidationMessageFor(model => model.HaveYouEverHadAnyThoughtsorMadeAttemptstoHarmYourself, "", new { @class = "text-danger" })
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row section2_sub3Btn">
+                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12"><br />
+                                                            <button id="section2_sub3Btn" type="button" class="btn btn-success" name="submit">Next</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item section2_sub4"  style="background-color: #f0f2f6">
+                                    <h2 class="accordion-header" id="sub-headingFour">
+                                        <button class="accordion-button collapsed"  id="section2_sub4" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseFour" aria-expanded="false" aria-controls="sub-collapseFour">
+                                            Sub Section-2-4
+                                        </button>
+                                    </h2>
+                                    <div id="sub-collapseFour" class="accordion-collapse collapse" aria-labelledby="sub-headingFour" data-bs-parent="#sub-accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="row  no-gutters AvatarSection1">
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="card-body  text-center">
+                                                        <video class="mycedio" id="Q3d-1"  width="70%" height="auto">
+                                                            <source src="~/Media/eng/Q3-d.mp4" type='video/mp4;'>
+                                                        </video>
+                                                        <br />
+                                                        <i class="fa fa-play-circle-o myHTMLvideo" id="Q3d-" style="color: red;font-size: 2.5em;"></i>
+                                                        @*<Button type="button" class="animate-button btn-sm btn-close-white myHTMLvideo" id="Q3-">Click here to listen instructions</Button>*@
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="row  no-gutters">
+                                                        <div class="col-12 col-sm-12 col-md-6 col-lg-12">
+                                                            <div class="form-group">
+                                                                <strong>@Html.LabelFor(model => model.HaveYouCurrentlyorrecentlyAnyThoughtsorMadeAttemptstoHarmYourself, htmlAttributes: new { @class = "control-label col-md-12" })</strong>
+                                                                <div class="col-12">
+                                                                    @Html.DropDownListFor(model => model.HaveYouCurrentlyorrecentlyAnyThoughtsorMadeAttemptstoHarmYourself, new List<SelectListItem> {
+                                                                                    new SelectListItem() { Text= "No", Value = "No" },
+                                                                                    new SelectListItem() { Text= "Yes", Value = "Yes" }
+                                                                                }, "Please select Yes/No", new { @class = "form-control section2d" })
+                                                                    @Html.ValidationMessageFor(model => model.HaveYouCurrentlyorrecentlyAnyThoughtsorMadeAttemptstoHarmYourself, "", new { @class = "text-danger" })
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row section2_sub4Btn">
+                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12"><br />
+                                                            <button id="section2_sub4Btn" type="button" class="btn btn-success" name="submit">Next</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>                                           
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item  section2_sub5"  style="background-color: #f0f2f6">
+                                    <h2 class="accordion-header" id="sub-headingFive">
+                                        <button class="accordion-button collapsed"  id="section2_sub5"  type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseFive" aria-expanded="false" aria-controls="sub-collapseFive">
+                                            Sub Section-2-5
+                                        </button>
+                                    </h2>
+                                    <div id="sub-collapseFive" class="accordion-collapse collapse" aria-labelledby="sub-headingFive" data-bs-parent="#sub-accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="row  no-gutters AvatarSection1">
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="card-body  text-center">
+                                                        <video class="mycedio" id="Q3e-1"  width="70%" height="auto">
+                                                            <source src="~/Media/eng/Q3-e.mp4" type='video/mp4;'>
+                                                        </video>
+                                                        <br />
+                                                        <i class="fa fa-play-circle-o myHTMLvideo" id="Q3e-" style="color: red;font-size: 2.5em;"></i>
+                                                        @*<Button type="button" class="animate-button btn-sm btn-close-white myHTMLvideo" id="Q3-">Click here to listen instructions</Button>*@
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="row  no-gutters">
+                                                        <div class="col-12 col-sm-12 col-md-6 col-lg-12">
+                                                            <div class="form-group">
+                                                                <strong>@Html.LabelFor(model => model.HaveYouCurrentlyorrecentlyAnyThoughtsorMadeAttemptstoHarmAnyoneElse, htmlAttributes: new { @class = "control-label col-md-12" })</strong>
+                                                                <div class="col-12">
+                                                                    @Html.DropDownListFor(model => model.HaveYouCurrentlyorrecentlyAnyThoughtsorMadeAttemptstoHarmAnyoneElse, new List<SelectListItem> {
+                                                                                    new SelectListItem() { Text= "No", Value = "No" },
+                                                                                    new SelectListItem() { Text= "Yes", Value = "Yes" }
+                                                                                }, "Please select Yes/No", new { @class = "form-control section2e" })
+                                                                    @Html.ValidationMessageFor(model => model.HaveYouCurrentlyorrecentlyAnyThoughtsorMadeAttemptstoHarmAnyoneElse, "", new { @class = "text-danger" })
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row section2_sub5Btn">
+                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12"><br />
+                                                            <button id="section2_sub5Btn" type="button" class="btn btn-success" name="submit">Next</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card Section3">                
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" id="section3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Section-3
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="card-body">
+                            <div class="accordion" id="sub-Section3-accordionExample">
+                                <div class="accordion-item sub-Section3_Intro" style="background-color: #f0f2f6">
+                                        <h2 class="accordion-header" id="sub-Section3-headingIntro">
+                                            <button class="accordion-button" id="sub-Section3_Intro" type="button" data-bs-toggle="collapse" data-bs-target="#sub-Section3-collapseIntro" aria-expanded="true" aria-controls="collapseIntro">
+                                                Section3-Intro
+                                            </button>
+                                        </h2>
+                                        <div id="sub-Section3-collapseIntro" class="accordion-collapse collapse show" aria-labelledby="sub-Section3-headingIntro" data-bs-parent="#sub-Section3-accordionExample">
+                                            <div class="accordion-body">
+                                                <div class="row  no-gutters AvatarSection3">
+                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                        <div class="card-body  text-center">
+                                                            <video class="mycedio" id="Q4Intro-1" width="70%" height="auto">
+                                                                <source src="~/Media/eng/Q4-Intro.mp4" type='video/mp4;'>
+                                                            </video>
+                                                            <br />
+                                                            <i class="fa fa-play-circle-o myHTMLvideo" id="Q4Intro-" style="color: red;font-size: 2.5em;"></i>
+                                                            @*<Button type="button" class="animate-button btn-sm btn-close-white myHTMLvideo" id="Q3-">Click here to listen instructions</Button>*@
+                                                        </div>
+                                                    </div>
+                                                    <div class="row sub-Section3_IntroBtn text-center">
+                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                            <br />
+                                                            <button id="sub-Section3_IntroBtn" type="button" class="btn btn-success" name="submit">Next</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                             
+                                    <div class="accordion-item sub-Section3_1" style="background-color: #f0f2f6">
+                                        <h2 class="accordion-header" id="sub-Section3-heading1">
+                                            <button class="accordion-button collapsed" id="sub-Section3_1" type="button" data-bs-toggle="collapse" data-bs-target="#sub-Section3-collapse1" aria-expanded="true" aria-controls="collapse1">
+                                                Section3-1
+                                            </button>
+                                        </h2>
+                                        <div id="sub-Section3-collapse1" class="accordion-collapse collapse" aria-labelledby="sub-Section3-heading1" data-bs-parent="#sub-Section3-accordionExample">
+                                            <div class="accordion-body">
+                                                <div class="row  no-gutters AvatarSection3">
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="card-body  text-center">
+                                                            <video class="mycedio" id="Q41-1" width="70%" height="auto">
+                                                                <source src="~/Media/eng/Q4-1.mp4" type='video/mp4;'>
+                                                            </video>
+                                                            <br />
+                                                            <i class="fa fa-play-circle-o myHTMLvideo" id="Q41-" style="color: red;font-size: 2.5em;"></i>
+                                                            @*<Button type="button" class="animate-button btn-sm btn-close-white myHTMLvideo" id="Q3-">Click here to listen instructions</Button>*@
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="row  no-gutters">
+                                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                <div class="form-group">
+                                                                    <div class="col-12">
+                                                                        <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                                            <div class="card-body">
+                                                                                <h6 class="card-title">
+                                                                                    @Html.LabelFor(model => model.CompleteProjects, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                                                </h6>
+                                                                                @Html.ValidationMessageFor(model => model.CompleteProjects, "", new { @class = "text-danger" })
+
+                                                                            </div>
+                                                                            <div class="card-footer bg-transparent border-info">
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="CompleteProjects" id="inlineRadio1" value="Never" @(Model.CompleteProjects != null && Model.CompleteProjects == "Never" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio1">Never</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="CompleteProjects" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.CompleteProjects != null && Model.CompleteProjects == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="CompleteProjects" id="inlineRadio3" value="Often" @(Model.CompleteProjects != null && Model.CompleteProjects == "Often" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio3">Often</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="CompleteProjects" id="inlineRadio3" value="Always" @(Model.CompleteProjects != null && Model.CompleteProjects == "Always" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio3">Always</label>
+                                                                                </div>
+                                                                                <div class="row sub-Section3_1Btn">
+                                                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                                        <br />
+                                                                                        <button id="sub-Section3_1Btn" type="button" class="btn btn-success" value="CompleteProjects" name="submit">Next</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                             
+                                    <div class="accordion-item sub-Section3_2" style="background-color: #f0f2f6">
+                                        <h2 class="accordion-header" id="sub-Section3-heading2">
+                                            <button class="accordion-button collapsed" id="sub-Section3_2" type="button" data-bs-toggle="collapse" data-bs-target="#sub-Section3-collapse2" aria-expanded="false" aria-controls="sub-Section3-collapse2">
+                                                Section3-2
+                                            </button>
+                                        </h2>
+                                        <div id="sub-Section3-collapse2" class="accordion-collapse collapse" aria-labelledby="sub-Section3-heading2" data-bs-parent="#sub-Section3-accordionExample">
+                                            <div class="accordion-body">
+                                                <div class="row  no-gutters AvatarSection1">
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="card-body  text-center">
+                                                            <video class="mycedio" id="Q42-1" width="70%" height="auto">
+                                                                <source src="~/Media/eng/Q4-2.mp4" type='video/mp4;'>
+                                                            </video>
+                                                            <br />
+                                                            <i class="fa fa-play-circle-o myHTMLvideo" id="Q42-" style="color: red;font-size: 2.5em;"></i>
+                                                            @*<Button type="button" class="animate-button btn-sm btn-close-white myHTMLvideo" id="Q3-">Click here to listen instructions</Button>*@
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="row  no-gutters">
+                                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                <div class="form-group">
+                                                                    <div class="col-12">
+                                                                        <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                                            <div class="card-body">
+                                                                                <h6 class="card-title">
+                                                                                    @Html.LabelFor(model => model.RequiresOrganization, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                                                </h6>  @Html.ValidationMessageFor(model => model.RequiresOrganization, "", new { @class = "text-danger" })
+
+                                                                            </div>
+                                                                            <div class="card-footer bg-transparent border-info">
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="RequiresOrganization" id="inlineRadio1" value="Never" @(Model.RequiresOrganization != null && Model.RequiresOrganization == "Never" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio1">Never</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="RequiresOrganization" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.RequiresOrganization != null && Model.RequiresOrganization == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="RequiresOrganization" id="inlineRadio3" value="Often" @(Model.RequiresOrganization != null && Model.RequiresOrganization == "Often" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio3">Often</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="RequiresOrganization" id="inlineRadio3" value="Always" @(Model.RequiresOrganization != null && Model.RequiresOrganization == "Always" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio3">Always</label>
+                                                                                </div>
+                                                                                <div class="row sub-Section3_2Btn">
+                                                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                                        <br />
+                                                                                        <button id="sub-Section3_2Btn" type="button" class="btn btn-success" value="RequiresOrganization" name="submit">Next</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                           
+                                    <div class="accordion-item sub-Section3_3" style="background-color: #f0f2f6">
+                                        <h2 class="accordion-header" id="sub-Section3-heading3">
+                                            <button class="accordion-button collapsed" id="sub-Section3_3" type="button" data-bs-toggle="collapse" data-bs-target="#sub-Section3-collapse3" aria-expanded="false" aria-controls="sub-Section3-collapse3">
+                                                Section3-3
+                                            </button>
+                                        </h2>
+                                        <div id="sub-Section3-collapse3" class="accordion-collapse collapse" aria-labelledby="sub-Section3-heading3" data-bs-parent="#sub-Section3-accordionExample">
+                                            <div class="accordion-body">
+                                                <div class="row  no-gutters AvatarSection1">
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="card-body  text-center">
+                                                            <video class="mycedio" id="Q43-1" width="70%" height="auto">
+                                                                <source src="~/Media/eng/Q4-3.mp4" type='video/mp4;'>
+                                                            </video>
+                                                            <br />
+                                                            <i class="fa fa-play-circle-o myHTMLvideo" id="Q43-" style="color: red;font-size: 2.5em;"></i>
+                                                            @*<Button type="button" class="animate-button btn-sm btn-close-white myHTMLvideo" id="Q3-">Click here to listen instructions</Button>*@
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="row  no-gutters">
+                                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                <div class="form-group">
+                                                                    <div class="col-12">
+                                                                        <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                                            <div class="card-body">
+                                                                                <h6 class="card-title">
+                                                                                    @Html.LabelFor(model => model.keepAppointments, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                                                </h6>  @Html.ValidationMessageFor(model => model.keepAppointments, "", new { @class = "text-danger" })
+                                                                            </div>
+                                                                            <div class="card-footer bg-transparent border-info">
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="keepAppointments" id="inlineRadio1" value="Never" @(Model.keepAppointments != null && Model.keepAppointments == "Never" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio1">Never</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="keepAppointments" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.keepAppointments != null && Model.keepAppointments == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="keepAppointments" id="inlineRadio3" value="Often" @(Model.keepAppointments != null && Model.keepAppointments == "Often" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio3">Often</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="keepAppointments" id="inlineRadio3" value="Always" @(Model.keepAppointments != null && Model.keepAppointments == "Always" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio3">Always</label>
+                                                                                </div>
+                                                                                <div class="row sub-Section3_3Btn">
+                                                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                                        <br />
+                                                                                        <button id="sub-Section3_3Btn" type="button" class="btn btn-success" value="keepAppointments" name="submit">Next</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                               
+                                    <div class="accordion-item sub-Section3_4" style="background-color: #f0f2f6">
+                                        <h2 class="accordion-header" id="sub-Section3-heading4">
+                                            <button class="accordion-button collapsed" id="sub-Section3_4" type="button" data-bs-toggle="collapse" data-bs-target="#sub-Section3-collapse4" aria-expanded="false" aria-controls="sub-Section3-collapse4">
+                                                Section3-4
+                                            </button>
+                                        </h2>
+                                        <div id="sub-Section3-collapse4" class="accordion-collapse collapse" aria-labelledby="sub-Section3-heading4" data-bs-parent="#sub-Section3-accordionExample">
+                                            <div class="accordion-body">
+                                                <div class="row  no-gutters AvatarSection1">
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="card-body  text-center">
+                                                            <video class="mycedio" id="Q44-1" width="70%" height="auto">
+                                                                <source src="~/Media/eng/Q4-4.mp4" type='video/mp4;'>
+                                                            </video>
+                                                            <br />
+                                                            <i class="fa fa-play-circle-o myHTMLvideo" id="Q44-" style="color: red;font-size: 2.5em;"></i>
+                                                            @*<Button type="button" class="animate-button btn-sm btn-close-white myHTMLvideo" id="Q3-">Click here to listen instructions</Button>*@
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="row  no-gutters">
+                                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                <div class="form-group">
+                                                                    <div class="col-12">
+                                                                        <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                                            <div class="card-body">
+                                                                                <h6 class="card-title">
+                                                                                    @Html.LabelFor(model => model.StartTasksOnTime, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                                                </h6>   @Html.ValidationMessageFor(model => model.StartTasksOnTime, "", new { @class = "text-danger" })
+
+                                                                            </div>
+                                                                            <div class="card-footer bg-transparent border-info">
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="StartTasksOnTime" id="inlineRadio1" value="Never" @(Model.StartTasksOnTime != null && Model.StartTasksOnTime == "Never" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio1">Never</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="StartTasksOnTime" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.StartTasksOnTime != null && Model.StartTasksOnTime == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="StartTasksOnTime" id="inlineRadio3" value="Often" @(Model.StartTasksOnTime != null && Model.StartTasksOnTime == "Often" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio3">Often</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="StartTasksOnTime" id="inlineRadio3" value="Always" @(Model.StartTasksOnTime != null && Model.StartTasksOnTime == "Always" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio3">Always</label>
+                                                                                </div>
+                                                                                <div class="row sub-Section3_4Btn">
+                                                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                                        <br />
+                                                                                        <button id="sub-Section3_4Btn" type="button" value="StartTasksOnTime" class="btn btn-success" name="submit">Next</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                              
+                                    <div class="accordion-item sub-Section3_5" style="background-color: #f0f2f6">
+                                        <h2 class="accordion-header" id="sub-Section3-heading5">
+                                            <button class="accordion-button collapsed" id="sub-Section3_5" type="button" data-bs-toggle="collapse" data-bs-target="#sub-Section3-collapse5" aria-expanded="false" aria-controls="sub-Section3-collapse5">
+                                                Section3-5
+                                            </button>
+                                        </h2>
+                                        <div id="sub-Section3-collapse5" class="accordion-collapse collapse" aria-labelledby="sub-Section3-heading5" data-bs-parent="#sub-Section3-accordionExample">
+                                            <div class="accordion-body">
+                                                <div class="row  no-gutters AvatarSection1">
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="card-body  text-center">
+                                                            <video class="mycedio" id="Q45-1" width="70%" height="auto">
+                                                                <source src="~/Media/eng/Q4-5.mp4" type='video/mp4;'>
+                                                            </video>
+                                                            <br />
+                                                            <i class="fa fa-play-circle-o myHTMLvideo" id="Q45-" style="color: red;font-size: 2.5em;"></i>
+                                                            @*<Button type="button" class="animate-button btn-sm btn-close-white myHTMLvideo" id="Q3-">Click here to listen instructions</Button>*@
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="row  no-gutters">
+                                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                <div class="form-group">
+                                                                    <div class="col-12">
+                                                                        <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                                            <div class="card-body">
+                                                                                <h6 class="card-title">
+                                                                                    @Html.LabelFor(model => model.FidgetAndSquirm, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                                                </h6>  @Html.ValidationMessageFor(model => model.FidgetAndSquirm, "", new { @class = "text-danger" })
+                                                                            </div>
+                                                                            <div class="card-footer bg-transparent border-info">
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="FidgetAndSquirm" id="inlineRadio1" value="Never" @(Model.FidgetAndSquirm != null && Model.FidgetAndSquirm == "Never" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio1">Never</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="FidgetAndSquirm" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.FidgetAndSquirm != null && Model.FidgetAndSquirm == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="FidgetAndSquirm" id="inlineRadio3" value="Often" @(Model.FidgetAndSquirm != null && Model.FidgetAndSquirm == "Often" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio3">Often</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="FidgetAndSquirm" id="inlineRadio3" value="Always" @(Model.FidgetAndSquirm != null && Model.FidgetAndSquirm == "Always" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio3">Always</label>
+                                                                                </div>
+                                                                                <div class="row sub-Section3_5Btn">
+                                                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                                        <br />
+                                                                                        <button id="sub-Section3_5Btn" type="button" value="FidgetAndSquirm" class="btn btn-success" name="submit">Next</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                              
+                                    <div class="accordion-item sub-Section3_6" style="background-color: #f0f2f6">
+                                        <h2 class="accordion-header" id="sub-Section3-heading6">
+                                            <button class="accordion-button collapsed" id="sub-Section3_6" type="button" data-bs-toggle="collapse" data-bs-target="#sub-Section3-collapse6" aria-expanded="false" aria-controls="sub-Section3-collapse6">
+                                                Section3-6
+                                            </button>
+                                        </h2>
+                                        <div id="sub-Section3-collapse6" class="accordion-collapse collapse" aria-labelledby="sub-Section3-heading6" data-bs-parent="#sub-Section3-accordionExample">
+                                            <div class="accordion-body">
+                                                <div class="row  no-gutters AvatarSection1">
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="card-body  text-center">
+                                                            <video class="mycedio" id="Q46-1" width="70%" height="auto">
+                                                                <source src="~/Media/eng/Q4-6.mp4" type='video/mp4;'>
+                                                            </video>
+                                                            <br />
+                                                            <i class="fa fa-play-circle-o myHTMLvideo" id="Q46-" style="color: red;font-size: 2.5em;"></i>
+                                                            @*<Button type="button" class="animate-button btn-sm btn-close-white myHTMLvideo" id="Q3-">Click here to listen instructions</Button>*@
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="row  no-gutters">
+                                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                <div class="form-group">
+                                                                    <div class="col-12">
+                                                                        <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                                            <div class="card-body">
+                                                                                <h6 class="card-title">
+                                                                                    @Html.LabelFor(model => model.OverlyActiveAndCompelled, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                                                </h6>   @Html.ValidationMessageFor(model => model.OverlyActiveAndCompelled, "", new { @class = "text-danger" })
+
+
+                                                                            </div>
+                                                                            <div class="card-footer bg-transparent border-info">
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="OverlyActiveAndCompelled" id="inlineRadio1" value="Never" @(Model.OverlyActiveAndCompelled != null && Model.OverlyActiveAndCompelled == "Never" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio1">Never</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="OverlyActiveAndCompelled" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.OverlyActiveAndCompelled != null && Model.OverlyActiveAndCompelled == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="OverlyActiveAndCompelled" id="inlineRadio3" value="Often" @(Model.OverlyActiveAndCompelled != null && Model.OverlyActiveAndCompelled == "Often" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio3">Often</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="OverlyActiveAndCompelled" id="inlineRadio3" value="Always" @(Model.OverlyActiveAndCompelled != null && Model.OverlyActiveAndCompelled == "Always" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio3">Always</label>
+                                                                                </div>
+                                                                                <div class="row sub-Section3_6Btn">
+                                                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                                        <br />
+                                                                                        <button id="sub-Section3_6Btn" type="button"  value="OverlyActiveAndCompelled" class="btn btn-success" name="submit">Next</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                              
+                                    <div class="accordion-item sub-Section3_7" style="background-color: #f0f2f6">
+                                        <h2 class="accordion-header" id="sub-Section3-heading7">
+                                            <button class="accordion-button collapsed" id="sub-Section3_7" type="button" data-bs-toggle="collapse" data-bs-target="#sub-Section3-collapse7" aria-expanded="false" aria-controls="sub-Section3-collapse7">
+                                                Section3-7
+                                            </button>
+                                        </h2>
+                                        <div id="sub-Section3-collapse7" class="accordion-collapse collapse" aria-labelledby="sub-Section3-heading7" data-bs-parent="#sub-Section3-accordionExample">
+                                            <div class="accordion-body">
+                                                <div class="row  no-gutters AvatarSection1">
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="card-body  text-center">
+                                                            <video class="mycedio" id="Q47-1" width="70%" height="auto">
+                                                                <source src="~/Media/eng/Q4-7.mp4" type='video/mp4;'>
+                                                            </video>
+                                                            <br />
+                                                            <i class="fa fa-play-circle-o myHTMLvideo" id="Q47-" style="color: red;font-size: 2.5em;"></i>
+                                                            @*<Button type="button" class="animate-button btn-sm btn-close-white myHTMLvideo" id="Q3-">Click here to listen instructions</Button>*@
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="row  no-gutters">
+                                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                <div class="form-group">
+                                                                    <div class="col-12">
+                                                                        <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                                            <div class="card-body">
+                                                                                <h6 class="card-title">
+                                                                                    @Html.LabelFor(model => model.MakeCarelessMistakes, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                                                </h6>   @Html.ValidationMessageFor(model => model.MakeCarelessMistakes, "", new { @class = "text-danger" })
+
+
+                                                                            </div>
+                                                                            <div class="card-footer bg-transparent border-info">
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="MakeCarelessMistakes" id="inlineRadio1" value="Never" @(Model.MakeCarelessMistakes != null && Model.MakeCarelessMistakes == "Never" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio1">Never</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="MakeCarelessMistakes" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.MakeCarelessMistakes != null && Model.MakeCarelessMistakes == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="MakeCarelessMistakes" id="inlineRadio3" value="Often" @(Model.MakeCarelessMistakes != null && Model.MakeCarelessMistakes == "Often" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio3">Often</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="MakeCarelessMistakes" id="inlineRadio3" value="Always" @(Model.MakeCarelessMistakes != null && Model.MakeCarelessMistakes == "Always" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio3">Always</label>
+                                                                                </div>
+                                                                                <div class="row sub-Section3_7Btn">
+                                                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                                        <br />
+                                                                                        <button id="sub-Section3_7Btn" type="button" value="MakeCarelessMistakes" class="btn btn-success" name="submit">Next</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            
+                                    <div class="accordion-item sub-Section3_8" style="background-color: #f0f2f6">
+                                        <h2 class="accordion-header" id="sub-Section3-heading8">
+                                            <button class="accordion-button collapsed" id="sub-Section3_8" type="button" data-bs-toggle="collapse" data-bs-target="#sub-Section3-collapse8" aria-expanded="false" aria-controls="sub-Section3-collapse8">
+                                                Section3-8
+                                            </button>
+                                        </h2>
+                                        <div id="sub-Section3-collapse8" class="accordion-collapse collapse" aria-labelledby="sub-Section3-heading8" data-bs-parent="#sub-Section3-accordionExample">
+                                            <div class="accordion-body">
+                                                <div class="row  no-gutters AvatarSection1">
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="card-body  text-center">
+                                                            <video class="mycedio" id="Q48-1" width="70%" height="auto">
+                                                                <source src="~/Media/eng/Q4-8.mp4" type='video/mp4;'>
+                                                            </video>
+                                                            <br />
+                                                            <i class="fa fa-play-circle-o myHTMLvideo" id="Q48-" style="color: red;font-size: 2.5em;"></i>
+                                                            @*<Button type="button" class="animate-button btn-sm btn-close-white myHTMLvideo" id="Q3-">Click here to listen instructions</Button>*@
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="row  no-gutters">
+                                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                <div class="form-group">
+                                                                    <div class="col-12">
+                                                                        <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                                            <div class="card-body">
+                                                                                <h6 class="card-title">
+                                                                                    @Html.LabelFor(model => model.DifficultyKeepingMyAttention, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                                                </h6>    @Html.ValidationMessageFor(model => model.DifficultyKeepingMyAttention, "", new { @class = "text-danger" })
+
+
+                                                                            </div>
+                                                                            <div class="card-footer bg-transparent border-info">
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="DifficultyKeepingMyAttention" id="inlineRadio1" value="Never" @(Model.DifficultyKeepingMyAttention != null && Model.DifficultyKeepingMyAttention == "Never" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio1">Never</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="DifficultyKeepingMyAttention" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.DifficultyKeepingMyAttention != null && Model.DifficultyKeepingMyAttention == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="DifficultyKeepingMyAttention" id="inlineRadio3" value="Often" @(Model.DifficultyKeepingMyAttention != null && Model.DifficultyKeepingMyAttention == "Often" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio3">Often</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="DifficultyKeepingMyAttention" id="inlineRadio3" value="Always" @(Model.DifficultyKeepingMyAttention != null && Model.DifficultyKeepingMyAttention == "Always" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio3">Always</label>
+                                                                                </div>
+                                                                                <div class="row sub-Section3_8Btn">
+                                                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                                        <br />
+                                                                                        <button id="sub-Section3_8Btn" type="button" value="DifficultyKeepingMyAttention" class="btn btn-success" name="submit">Next</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                               
+                                    <div class="accordion-item sub-Section3_9" style="background-color: #f0f2f6">
+                                        <h2 class="accordion-header" id="sub-Section3-heading9">
+                                            <button class="accordion-button collapsed" id="sub-Section3_9" type="button" data-bs-toggle="collapse" data-bs-target="#sub-Section3-collapse9" aria-expanded="false" aria-controls="sub-Section3-collapse9">
+                                                Section3-9
+                                            </button>
+                                        </h2>
+                                        <div id="sub-Section3-collapse9" class="accordion-collapse collapse" aria-labelledby="sub-Section3-heading9" data-bs-parent="#sub-Section3-accordionExample">
+                                            <div class="accordion-body">
+                                                <div class="row  no-gutters AvatarSection1">
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="card-body  text-center">
+                                                            <video class="mycedio" id="Q49-1" width="70%" height="auto">
+                                                                <source src="~/Media/eng/Q4-9.mp4" type='video/mp4;'>
+                                                            </video>
+                                                            <br />
+                                                            <i class="fa fa-play-circle-o myHTMLvideo" id="Q49-" style="color: red;font-size: 2.5em;"></i>
+                                                            @*<Button type="button" class="animate-button btn-sm btn-close-white myHTMLvideo" id="Q3-">Click here to listen instructions</Button>*@
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="row  no-gutters">
+                                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                <div class="form-group">
+                                                                    <div class="col-12">
+                                                                        <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                                            <div class="card-body">
+                                                                                <h6 class="card-title">
+                                                                                    @Html.LabelFor(model => model.DifficultyConcentrating, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                                                </h6>  @Html.ValidationMessageFor(model => model.DifficultyConcentrating, "", new { @class = "text-danger" })
+
+
+                                                                            </div>
+                                                                            <div class="card-footer bg-transparent border-info">
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="DifficultyConcentrating" id="inlineRadio1" value="Never" @(Model.DifficultyConcentrating != null && Model.DifficultyConcentrating == "Never" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio1">Never</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="DifficultyConcentrating" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.DifficultyConcentrating != null && Model.DifficultyConcentrating == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="DifficultyConcentrating" id="inlineRadio3" value="Often" @(Model.DifficultyConcentrating != null && Model.DifficultyConcentrating == "Often" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio3">Often</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="DifficultyConcentrating" id="inlineRadio3" value="Always" @(Model.DifficultyConcentrating != null && Model.DifficultyConcentrating == "Always" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio3">Always</label>
+                                                                                </div>
+                                                                                <div class="row sub-Section3_9Btn">
+                                                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                                        <br />
+                                                                                        <button id="sub-Section3_9Btn" value="DifficultyConcentrating" type="button" class="btn btn-success" name="submit">Next</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            
+                                    <div class="accordion-item sub-Section3_10" style="background-color: #f0f2f6">
+                                        <h2 class="accordion-header" id="sub-Section3-heading10">
+                                            <button class="accordion-button collapsed" id="sub-Section3_10" type="button" data-bs-toggle="collapse" data-bs-target="#sub-Section3-collapse10" aria-expanded="false" aria-controls="sub-Section3-collapse10">
+                                                Section3-10
+                                            </button>
+                                        </h2>
+                                        <div id="sub-Section3-collapse10" class="accordion-collapse collapse" aria-labelledby="sub-Section3-heading10" data-bs-parent="#sub-Section3-accordionExample">
+                                            <div class="accordion-body">
+                                                <div class="row  no-gutters AvatarSection1">
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="card-body  text-center">
+                                                            <video class="mycedio" id="Q410-1" width="70%" height="auto">
+                                                                <source src="~/Media/eng/Q4-10.mp4" type='video/mp4;'>
+                                                            </video>
+                                                            <br />
+                                                            <i class="fa fa-play-circle-o myHTMLvideo" id="Q410-" style="color: red;font-size: 2.5em;"></i>
+                                                            @*<Button type="button" class="animate-button btn-sm btn-close-white myHTMLvideo" id="Q3-">Click here to listen instructions</Button>*@
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="row  no-gutters">
+                                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                <div class="form-group">
+                                                                    <div class="col-12">
+                                                                        <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                                            <div class="card-body">
+                                                                                <h6 class="card-title">
+                                                                                    @Html.LabelFor(model => model.DifficultyFinding, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                                                </h6>   @Html.ValidationMessageFor(model => model.DifficultyFinding, "", new { @class = "text-danger" })
+
+
+                                                                            </div>
+                                                                            <div class="card-footer bg-transparent border-info">
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="DifficultyFinding" id="inlineRadio1" value="Never" @(Model.DifficultyFinding != null && Model.DifficultyFinding == "Never" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio1">Never</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="DifficultyFinding" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.DifficultyFinding != null && Model.DifficultyFinding == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="DifficultyFinding" id="inlineRadio3" value="Often" @(Model.DifficultyFinding != null && Model.DifficultyFinding == "Often" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio3">Often</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="DifficultyFinding" id="inlineRadio3" value="Always" @(Model.DifficultyFinding != null && Model.DifficultyFinding == "Always" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio3">Always</label>
+                                                                                </div>
+                                                                                <div class="row sub-Section3_10Btn">
+                                                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                                        <br />
+                                                                                        <button id="sub-Section3_10Btn"  value="DifficultyFinding" type="button" class="btn btn-success" name="submit">Next</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            
+                                    <div class="accordion-item  sub-Section3_11" style="background-color: #f0f2f6">
+                                        <h2 class="accordion-header" id="sub-Section3-heading11">
+                                            <button class="accordion-button collapsed" id="sub-Section3_11" type="button" data-bs-toggle="collapse" data-bs-target="#sub-Section3-collapse11" aria-expanded="false" aria-controls="sub-Section3-collapse11">
+                                                Section3-11
+                                            </button>
+                                        </h2>
+                                        <div id="sub-Section3-collapse11" class="accordion-collapse collapse" aria-labelledby="sub-Section3-heading11" data-bs-parent="#sub-Section3-accordionExample">
+                                            <div class="accordion-body">
+                                                <div class="row  no-gutters AvatarSection1">
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="card-body  text-center">
+                                                            <video class="mycedio" id="Q411-1" width="70%" height="auto">
+                                                                <source src="~/Media/eng/Q4-11.mp4" type='video/mp4;'>
+                                                            </video>
+                                                            <br />
+                                                            <i class="fa fa-play-circle-o myHTMLvideo" id="Q411-" style="color: red;font-size: 2.5em;"></i>
+                                                            @*<Button type="button" class="animate-button btn-sm btn-close-white myHTMLvideo" id="Q3-">Click here to listen instructions</Button>*@
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="row  no-gutters">
+                                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                <div class="form-group">
+                                                                    <div class="col-12">
+                                                                        <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                                            <div class="card-body">
+                                                                                <h6 class="card-title">
+                                                                                    @Html.LabelFor(model => model.EasilyDistracted, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                                                </h6>   @Html.ValidationMessageFor(model => model.EasilyDistracted, "", new { @class = "text-danger" })
+
+
+                                                                            </div>
+                                                                            <div class="card-footer bg-transparent border-info">
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="EasilyDistracted" id="inlineRadio1" value="Never" @(Model.EasilyDistracted != null && Model.EasilyDistracted == "Never" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio1">Never</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="EasilyDistracted" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.EasilyDistracted != null && Model.EasilyDistracted == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="EasilyDistracted" id="inlineRadio3" value="Often" @(Model.EasilyDistracted != null && Model.EasilyDistracted == "Often" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio3">Often</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="EasilyDistracted" id="inlineRadio3" value="Always" @(Model.EasilyDistracted != null && Model.EasilyDistracted == "Always" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio3">Always</label>
+                                                                                </div>
+                                                                                <div class="row sub-Section3_11Btn">
+                                                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                                        <br />
+                                                                                        <button id="sub-Section3_11Btn"  value="EasilyDistracted" type="button" class="btn btn-success" name="submit">Next</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                              
+                                    <div class="accordion-item  sub-Section3_12" style="background-color: #f0f2f6">
+                                        <h2 class="accordion-header" id="sub-Section3-heading12">
+                                            <button class="accordion-button collapsed" id="sub-Section3_12" type="button" data-bs-toggle="collapse" data-bs-target="#sub-Section3-collapse12" aria-expanded="false" aria-controls="sub-Section3-collapse12">
+                                                Section3-12
+                                            </button>
+                                        </h2>
+                                        <div id="sub-Section3-collapse12" class="accordion-collapse collapse" aria-labelledby="sub-Section3-heading12" data-bs-parent="#sub-Section3-accordionExample">
+                                            <div class="accordion-body">
+                                                <div class="row  no-gutters AvatarSection1">
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="card-body  text-center">
+                                                            <video class="mycedio" id="Q412-1" width="70%" height="auto">
+                                                                <source src="~/Media/eng/Q4-12.mp4" type='video/mp4;'>
+                                                            </video>
+                                                            <br />
+                                                            <i class="fa fa-play-circle-o myHTMLvideo" id="Q412-" style="color: red;font-size: 2.5em;"></i>
+                                                            @*<Button type="button" class="animate-button btn-sm btn-close-white myHTMLvideo" id="Q3-">Click here to listen instructions</Button>*@
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="row  no-gutters">
+                                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                <div class="form-group">
+                                                                    <div class="col-12">
+                                                                        <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                                            <div class="card-body">
+                                                                                <h6 class="card-title">
+                                                                                    @Html.LabelFor(model => model.LeaveMySeatInMeetings, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                                                </h6>  @Html.ValidationMessageFor(model => model.LeaveMySeatInMeetings, "", new { @class = "text-danger" })
+
+
+                                                                            </div>
+                                                                            <div class="card-footer bg-transparent border-info">
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="LeaveMySeatInMeetings" id="inlineRadio1" value="Never" @(Model.LeaveMySeatInMeetings != null && Model.LeaveMySeatInMeetings == "Never" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio1">Never</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="LeaveMySeatInMeetings" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.LeaveMySeatInMeetings != null && Model.LeaveMySeatInMeetings == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="LeaveMySeatInMeetings" id="inlineRadio3" value="Often" @(Model.LeaveMySeatInMeetings != null && Model.LeaveMySeatInMeetings == "Often" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio3">Often</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="LeaveMySeatInMeetings" id="inlineRadio3" value="Always" @(Model.LeaveMySeatInMeetings != null && Model.LeaveMySeatInMeetings == "Always" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio3">Always</label>
+                                                                                </div>
+                                                                                <div class="row sub-Section3_12Btn">
+                                                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                                        <br />
+                                                                                        <button id="sub-Section3_12Btn"  value="LeaveMySeatInMeetings" type="button" class="btn btn-success" name="submit">Next</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                              
+                                    <div class="accordion-item  sub-Section3_13" style="background-color: #f0f2f6">
+                                        <h2 class="accordion-header" id="sub-Section3-heading13">
+                                            <button class="accordion-button collapsed" id="sub-Section3_13" type="button" data-bs-toggle="collapse" data-bs-target="#sub-Section3-collapse13" aria-expanded="false" aria-controls="sub-Section3-collapse13">
+                                                Section3-13
+                                            </button>
+                                        </h2>
+                                        <div id="sub-Section3-collapse13" class="accordion-collapse collapse" aria-labelledby="sub-Section3-heading13" data-bs-parent="#sub-Section3-accordionExample">
+                                            <div class="accordion-body">
+                                                <div class="row  no-gutters AvatarSection1">
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="card-body  text-center">
+                                                            <video class="mycedio" id="Q413-1" width="70%" height="auto">
+                                                                <source src="~/Media/eng/Q4-13.mp4" type='video/mp4;'>
+                                                            </video>
+                                                            <br />
+                                                            <i class="fa fa-play-circle-o myHTMLvideo" id="Q413-" style="color: red;font-size: 2.5em;"></i>
+                                                            @*<Button type="button" class="animate-button btn-sm btn-close-white myHTMLvideo" id="Q3-">Click here to listen instructions</Button>*@
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="row  no-gutters">
+                                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                <div class="form-group">
+                                                                    <div class="col-12">
+                                                                        <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                                            <div class="card-body">
+                                                                                <h6 class="card-title">
+                                                                                    @Html.LabelFor(model => model.DifficultyRelaxingOrUnwinding, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                                                </h6>  @Html.ValidationMessageFor(model => model.DifficultyRelaxingOrUnwinding, "", new { @class = "text-danger" })
+
+                                                                            </div>
+                                                                            <div class="card-footer bg-transparent border-info">
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="DifficultyRelaxingOrUnwinding" id="inlineRadio1" value="Never" @(Model.DifficultyRelaxingOrUnwinding != null && Model.DifficultyRelaxingOrUnwinding == "Never" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio1">Never</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="DifficultyRelaxingOrUnwinding" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.DifficultyRelaxingOrUnwinding != null && Model.DifficultyRelaxingOrUnwinding == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="DifficultyRelaxingOrUnwinding" id="inlineRadio3" value="Often" @(Model.DifficultyRelaxingOrUnwinding != null && Model.DifficultyRelaxingOrUnwinding == "Often" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio3">Often</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="DifficultyRelaxingOrUnwinding" id="inlineRadio3" value="Always" @(Model.DifficultyRelaxingOrUnwinding != null && Model.DifficultyRelaxingOrUnwinding == "Always" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio3">Always</label>
+                                                                                </div>
+                                                                                <div class="row sub-Section3_13Btn">
+                                                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                                        <br />
+                                                                                        <button id="sub-Section3_13Btn" value="DifficultyRelaxingOrUnwinding" type="button" class="btn btn-success" name="submit">Next</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            
+                                    <div class="accordion-item sub-Section3_14" style="background-color: #f0f2f6">
+                                        <h2 class="accordion-header" id="sub-Section3-heading14">
+                                            <button class="accordion-button collapsed" id="sub-Section3_14" type="button" data-bs-toggle="collapse" data-bs-target="#sub-Section3-collapse14" aria-expanded="false" aria-controls="sub-Section3-collapse14">
+                                                Section3-14
+                                            </button>
+                                        </h2>
+                                        <div id="sub-Section3-collapse14" class="accordion-collapse collapse" aria-labelledby="sub-Section3-heading14" data-bs-parent="#sub-Section3-accordionExample">
+                                            <div class="accordion-body">
+                                                <div class="row  no-gutters AvatarSection1">
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="card-body  text-center">
+                                                            <video class="mycedio" id="Q414-1" width="70%" height="auto">
+                                                                <source src="~/Media/eng/Q4-14.mp4" type='video/mp4;'>
+                                                            </video>
+                                                            <br />
+                                                            <i class="fa fa-play-circle-o myHTMLvideo" id="Q414-" style="color: red;font-size: 2.5em;"></i>
+                                                            @*<Button type="button" class="animate-button btn-sm btn-close-white myHTMLvideo" id="Q3-">Click here to listen instructions</Button>*@
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="row  no-gutters">
+                                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                <div class="form-group">
+                                                                    <div class="col-12">
+                                                                        <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                                            <div class="card-body">
+                                                                                <h6 class="card-title">
+                                                                                    @Html.LabelFor(model => model.TalkingTooMuch, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                                                </h6>  @Html.ValidationMessageFor(model => model.TalkingTooMuch, "", new { @class = "text-danger" })
+
+                                                                            </div>
+                                                                            <div class="card-footer bg-transparent border-info">
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="TalkingTooMuch" id="inlineRadio1" value="Never" @(Model.TalkingTooMuch != null && Model.TalkingTooMuch == "Never" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio1">Never</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="TalkingTooMuch" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.TalkingTooMuch != null && Model.TalkingTooMuch == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="TalkingTooMuch" id="inlineRadio3" value="Often" @(Model.TalkingTooMuch != null && Model.TalkingTooMuch == "Often" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio3">Often</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="TalkingTooMuch" id="inlineRadio3" value="Always" @(Model.TalkingTooMuch != null && Model.TalkingTooMuch == "Always" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio3">Always</label>
+                                                                                </div>
+                                                                                <div class="row sub-Section3_14Btn">
+                                                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                                        <br />
+                                                                                        <button id="sub-Section3_14Btn"  value="TalkingTooMuch" type="button" class="btn btn-success" name="submit">Next</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                               
+                                    <div class="accordion-item sub-Section3_15" style="background-color: #f0f2f6">
+                                        <h2 class="accordion-header" id="sub-Section3-heading15">
+                                            <button class="accordion-button collapsed" id="sub-Section3_15" type="button" data-bs-toggle="collapse" data-bs-target="#sub-Section3-collapse15" aria-expanded="false" aria-controls="sub-Section3-collapse15">
+                                                Section3-15
+                                            </button>
+                                        </h2>
+                                        <div id="sub-Section3-collapse15" class="accordion-collapse collapse" aria-labelledby="sub-Section3-heading15" data-bs-parent="#sub-Section3-accordionExample">
+                                            <div class="accordion-body">
+                                                <div class="row  no-gutters AvatarSection1">
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="card-body  text-center">
+                                                            <video class="mycedio" id="Q415-1" width="70%" height="auto">
+                                                                <source src="~/Media/eng/Q4-15.mp4" type='video/mp4;'>
+                                                            </video>
+                                                            <br />
+                                                            <i class="fa fa-play-circle-o myHTMLvideo" id="Q415-" style="color: red;font-size: 2.5em;"></i>
+                                                            @*<Button type="button" class="animate-button btn-sm btn-close-white myHTMLvideo" id="Q3-">Click here to listen instructions</Button>*@
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="row  no-gutters">
+                                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                <div class="form-group">
+                                                                    <div class="col-12">
+                                                                        <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                                            <div class="card-body">
+                                                                                <h6 class="card-title">
+                                                                                    @Html.LabelFor(model => model.FinishingTheSentences, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                                                </h6>  @Html.ValidationMessageFor(model => model.FinishingTheSentences, "", new { @class = "text-danger" })
+                                                                            </div>
+                                                                            <div class="card-footer bg-transparent border-info">
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="FinishingTheSentences" id="inlineRadio1" value="Never" @(Model.FinishingTheSentences != null && Model.FinishingTheSentences == "Never" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio1">Never</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="FinishingTheSentences" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.FinishingTheSentences != null && Model.FinishingTheSentences == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="FinishingTheSentences" id="inlineRadio3" value="Often" @(Model.FinishingTheSentences != null && Model.FinishingTheSentences == "Often" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio3">Often</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="FinishingTheSentences" id="inlineRadio3" value="Always" @(Model.FinishingTheSentences != null && Model.FinishingTheSentences == "Always" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio3">Always</label>
+                                                                                </div>
+                                                                                <div class="row sub-Section3_15Btn">
+                                                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                                        <br />
+                                                                                        <button id="sub-Section3_15Btn"  value="FinishingTheSentences" type="button" class="btn btn-success" name="submit">Next</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            
+                                    <div class="accordion-item sub-Section3_16" style="background-color: #f0f2f6">
+                                        <h2 class="accordion-header" id="sub-Section3-heading16">
+                                            <button class="accordion-button collapsed" id="sub-Section3_16" type="button" data-bs-toggle="collapse" data-bs-target="#sub-Section3-collapse16" aria-expanded="false" aria-controls="sub-Section3-collapse16">
+                                                Section3-16
+                                            </button>
+                                        </h2>
+                                        <div id="sub-Section3-collapse16" class="accordion-collapse collapse" aria-labelledby="sub-Section3-heading16" data-bs-parent="#sub-Section3-accordionExample">
+                                            <div class="accordion-body">
+                                                <div class="row  no-gutters AvatarSection1">
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="card-body  text-center">
+                                                            <video class="mycedio" id="Q416-1" width="70%" height="auto">
+                                                                <source src="~/Media/eng/Q4-16.mp4" type='video/mp4;'>
+                                                            </video>
+                                                            <br />
+                                                            <i class="fa fa-play-circle-o myHTMLvideo" id="Q416-" style="color: red;font-size: 2.5em;"></i>
+                                                            @*<Button type="button" class="animate-button btn-sm btn-close-white myHTMLvideo" id="Q3-">Click here to listen instructions</Button>*@
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="row  no-gutters">
+                                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                <div class="form-group">
+                                                                    <div class="col-12">
+                                                                        <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                                            <div class="card-body">
+                                                                                <h6 class="card-title">
+                                                                                    @Html.LabelFor(model => model.DifficultyWaitingMyTurn, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                                                </h6>  @Html.ValidationMessageFor(model => model.DifficultyWaitingMyTurn, "", new { @class = "text-danger" })
+                                                                            </div>
+                                                                            <div class="card-footer bg-transparent border-info">
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="DifficultyWaitingMyTurn" id="inlineRadio1" value="Never" @(Model.DifficultyWaitingMyTurn != null && Model.DifficultyWaitingMyTurn == "Never" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio1">Never</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="DifficultyWaitingMyTurn" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.DifficultyWaitingMyTurn != null && Model.DifficultyWaitingMyTurn == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="DifficultyWaitingMyTurn" id="inlineRadio3" value="Often" @(Model.DifficultyWaitingMyTurn != null && Model.DifficultyWaitingMyTurn == "Often" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio3">Often</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="DifficultyWaitingMyTurn" id="inlineRadio3" value="Always" @(Model.DifficultyWaitingMyTurn != null && Model.DifficultyWaitingMyTurn == "Always" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio3">Always</label>
+                                                                                </div>
+                                                                                <div class="row sub-Section3_16Btn">
+                                                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                                        <br />
+                                                                                        <button id="sub-Section3_16Btn"  value="DifficultyWaitingMyTurn" type="button" class="btn btn-success" name="submit">Next</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                              
+                                    <div class="accordion-item sub-Section3_17" style="background-color: #f0f2f6">
+                                        <h2 class="accordion-header" id="sub-Section3-heading17">
+                                            <button class="accordion-button collapsed" id="sub-Section3_17" type="button" data-bs-toggle="collapse" data-bs-target="#sub-Section3-collapse17" aria-expanded="false" aria-controls="sub-Section3-collapse17">
+                                                Section3-17
+                                            </button>
+                                        </h2>
+                                        <div id="sub-Section3-collapse17" class="accordion-collapse collapse" aria-labelledby="sub-Section3-heading17" data-bs-parent="#sub-Section3-accordionExample">
+                                            <div class="accordion-body">
+                                                <div class="row  no-gutters AvatarSection1">
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="card-body  text-center">
+                                                            <video class="mycedio" id="Q417-1" width="70%" height="auto">
+                                                                <source src="~/Media/eng/Q4-17.mp4" type='video/mp4;'>
+                                                            </video>
+                                                            <br />
+                                                            <i class="fa fa-play-circle-o myHTMLvideo" id="Q417-" style="color: red;font-size: 2.5em;"></i>
+                                                            @*<Button type="button" class="animate-button btn-sm btn-close-white myHTMLvideo" id="Q3-">Click here to listen instructions</Button>*@
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="row  no-gutters">
+                                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                <div class="form-group">
+                                                                    <div class="col-12">
+                                                                        <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                                            <div class="card-body">
+                                                                                <h6 class="card-title">
+                                                                                    @Html.LabelFor(model => model.InterruptOtherPeople, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                                                </h6>
+                                                                                @Html.ValidationMessageFor(model => model.InterruptOtherPeople, "", new { @class = "text-danger" })
+                                                                            </div>
+                                                                            <div class="card-footer bg-transparent border-info">
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="InterruptOtherPeople" id="inlineRadio1" value="Never" @(Model.InterruptOtherPeople != null && Model.InterruptOtherPeople == "Never" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio1">Never</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="InterruptOtherPeople" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.InterruptOtherPeople != null && Model.InterruptOtherPeople == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="InterruptOtherPeople" id="inlineRadio3" value="Often" @(Model.InterruptOtherPeople != null && Model.InterruptOtherPeople == "Often" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio3">Often</label>
+                                                                                </div>
+                                                                                <div class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="InterruptOtherPeople" id="inlineRadio3" value="Always" @(Model.InterruptOtherPeople != null && Model.InterruptOtherPeople == "Always" ? new { @checked = "checked" } : null)>
+                                                                                    <label class="form-check-label" for="inlineRadio3">Always</label>
+                                                                                </div>
+                                                                                <div class="row sub-Section3_17Btn">
+                                                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                                        <br />
+                                                                                        <button id="sub-Section3_17Btn"  value="InterruptOtherPeople" type="button" class="btn btn-success" name="submit">Next</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item sub-Section3_18" style="background-color: #f0f2f6">
+                                        <h2 class="accordion-header" id="sub-Section3-heading18">
+                                            <button class="accordion-button collapsed" id="sub-Section3_18" type="button" data-bs-toggle="collapse" data-bs-target="#sub-Section3-collapse18" aria-expanded="false" aria-controls="sub-Section3-collapse18">
+                                                Section3-18
+                                            </button>
+                                        </h2>
+                                        <div id="sub-Section3-collapse18" class="accordion-collapse collapse" aria-labelledby="sub-Section3-heading18" data-bs-parent="#sub-Section3-accordionExample">
+                                            <div class="accordion-body">
+                                                <div class="row  no-gutters AvatarSection1">
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="card-body  text-center">
+                                                            <video class="mycedio" id="Q18-1" width="70%" height="auto">
+                                                                <source src="~/Media/eng/Q18.mp4" type='video/mp4;'>
+                                                            </video>
+                                                            <br />
+                                                            <i class="fa fa-play-circle-o myHTMLvideo" id="Q18-" style="color: red;font-size: 2.5em;"></i>
+                                                            @*<Button type="button" class="animate-button btn-sm btn-close-white myHTMLvideo" id="Q3-">Click here to listen instructions</Button>*@
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="row  no-gutters">
+                                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                <div class="form-group">
+                                                                    <strong>@Html.LabelFor(model => model.ReceiveWarningsAndPersistent, htmlAttributes: new { @class = "control-label col-md-12" })</strong>
+                                                                    <div class="col-12">
+                                                                        @Html.DropDownListFor(model => model.ReceiveWarningsAndPersistent, new List<SelectListItem> {
+                                                                                        new SelectListItem() { Text= "No", Value = "No" },
+                                                                                        new SelectListItem() { Text= "Yes", Value = "Yes" }
+                                                                                    }, "Please select Yes/No", new { @class = "form-control section18C" })
+                                                                        @Html.ValidationMessageFor(model => model.ReceiveWarningsAndPersistent, "", new { @class = "text-danger" })
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row sub-Section3_18Btn">
+                                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                <br />
+                                                                <button id="sub-Section3_18Btn" type="button" class="btn btn-success" name="submit">Next</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                               
+                                    <div class="accordion-item sub-Section3_19" style="background-color: #f0f2f6">
+                                        <h2 class="accordion-header" id="sub-Section3-heading19">
+                                            <button class="accordion-button collapsed" id="sub-Section3_19" type="button" data-bs-toggle="collapse" data-bs-target="#sub-Section3-collapse19" aria-expanded="false" aria-controls="sub-Section3-collapse19">
+                                                Section3-19
+                                            </button>
+                                        </h2>
+                                        <div id="sub-Section3-collapse19" class="accordion-collapse collapse" aria-labelledby="sub-Section3-heading19" data-bs-parent="#sub-Section3-accordionExample">
+                                            <div class="accordion-body">
+                                                <div class="row  no-gutters AvatarSection1">
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="card-body  text-center">
+                                                            <video class="mycedio" id="Q419-1" width="70%" height="auto">
+                                                                <source src="~/Media/eng/Q19.mp4" type='video/mp4;'>
+                                                            </video>
+                                                            <br />
+                                                            <i class="fa fa-play-circle-o myHTMLvideo" id="Q419-" style="color: red;font-size: 2.5em;"></i>
+                                                            @*<Button type="button" class="animate-button btn-sm btn-close-white myHTMLvideo" id="Q3-">Click here to listen instructions</Button>*@
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="row  no-gutters">
+                                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                <div class="form-group">
+                                                                    <strong>@Html.LabelFor(model => model.DisciplinedOrAacked, htmlAttributes: new { @class = "control-label col-md-12" })</strong>
+                                                                    <div class="col-12">
+                                                                        @Html.DropDownListFor(model => model.DisciplinedOrAacked, new List<SelectListItem> {
+                                                                                        new SelectListItem() { Text= "No", Value = "No" },
+                                                                                        new SelectListItem() { Text= "Yes", Value = "Yes" }
+                                                                                    }, "Please select Yes/No", new { @class = "form-control section19C" })
+                                                                        @Html.ValidationMessageFor(model => model.DisciplinedOrAacked, "", new { @class = "text-danger" })
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row sub-Section3_19Btn">
+                                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                <br />
+                                                                <button id="sub-Section3_19Btn" type="button" class="btn btn-success" name="submit">Next</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                              
+                                    <div class="accordion-item sub-Section3_20" style="background-color: #f0f2f6">
+                                        <h2 class="accordion-header" id="sub-Section3-headingTwo">
+                                            <button class="accordion-button collapsed" id="sub-Section3_20" type="button" data-bs-toggle="collapse" data-bs-target="#sub-Section3-collapseTwo" aria-expanded="false" aria-controls="sub-Section3-collapseTwo">
+                                                Section3-20
+                                            </button>
+                                        </h2>
+
+                                        <div id="sub-Section3-collapseTwo" class="accordion-collapse collapse" aria-labelledby="sub-Section3-headingTwo" data-bs-parent="#sub-Section3-accordionExample">
+                                            <div class="accordion-body">
+                                                <div class="row  no-gutters AvatarSection1">
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="card-body text-center">
+                                                            <video class="mycedio" id="Q420-1" width="70%" height="auto">
+                                                                <source src="~/Media/eng/Q20.mp4" type='video/mp4;'>
+                                                            </video>
+                                                            <br />
+                                                            <i class="fa fa-play-circle-o myHTMLvideo" id="Q420-" style="color: red;font-size: 2.5em;"></i>
+                                                            @*<Button type="button" class="animate-button btn-sm btn-close-white myHTMLvideo" id="Q3-">Click here to listen instructions</Button>*@
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                        <div class="row  no-gutters">
+                                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                <div class="form-group">
+                                                                    <strong>@Html.LabelFor(model => model.EverExperiencedABreakdown, htmlAttributes: new { @class = "control-label col-md-12" })</strong>
+                                                                    <div class="col-12">
+                                                                        @Html.DropDownListFor(model => model.EverExperiencedABreakdown, new List<SelectListItem> {
+                                                                                        new SelectListItem() { Text= "No", Value = "No" },
+                                                                                        new SelectListItem() { Text= "Yes", Value = "Yes" }
+                                                                                    }, "Please select Yes/No", new { @class = "form-control section20C" })
+                                                                        @Html.ValidationMessageFor(model => model.EverExperiencedABreakdown, "", new { @class = "text-danger" })
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row sub-Section3_20Btn">
+                                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                                <br />
+                                                                <button id="sub-Section3_20Btn" type="button" class="btn btn-success" name="submit">Next</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                            <br />
+                            <div class="row  text-center">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    <button id="saveBtn" type="submit" class="btn btn-success" name="submit" value="Save_Completed">Submit</button>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+@section scripts {
+    <script src="~/Scripts/site.js"></script>
+    <script>
+        $(document).ready(function () {
+            let _flag = '@flag';
+            if (_flag == 'True') {
+                showall();
+            }
+            else {
+
+            }
+        });
+    </script>
+    
+}

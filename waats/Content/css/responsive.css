@@ -1,0 +1,55 @@
+@media screen and (max-width: 1440px) {
+    .total-wrapper {
+        padding: 24px 0;
+    }
+
+    .navbar {
+        padding: 0 10px;
+        background-color: #F6F7F9;
+        border-radius: 16px;
+    }
+
+    .main-menu ul li .nav-link {
+        font-size: 12px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .video-container ul li a {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .total-wrapper {
+        padding: 10px 0;
+    }
+
+    .video-frame video {
+        width: 300px !important;
+        height: 200px;
+    }
+
+    .video-frame {
+        height: 36vh;
+    }
+
+    .video-container ul li a {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}
+
+
+
+@media screen and (max-width:380px) {
+
+    .video-frame video {
+        width: 280px !important;
+        height: 180px;
+    }
+
+    .video-container {
+        margin: 10px 0;
+    }
+}

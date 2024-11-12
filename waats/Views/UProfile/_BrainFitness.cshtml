@@ -1,0 +1,63 @@
+﻿@model waats.Models.BrainFitnessVM
+@{
+    ViewBag.Title = "Add new brain fitness";
+    Layout = "~/Views/Shared/_LayoutUnauthed.cshtml";
+}
+@using (Html.BeginForm(null, null, new { returnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form", @id = "BrainFitnessForm" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.BrainFitnessID)
+    @Html.HiddenFor(model => model.UserId)
+    @Html.HiddenFor(model => model.StartingNumber)
+    @Html.HiddenFor(model => model.Q_Add)
+    @Html.HiddenFor(model => model.Q_Take)
+    @Html.HiddenFor(model => model.Q_A)
+    @Html.HiddenFor(model => model.Q_NoofAttempts)
+<strong>
+    This is a mental exercis please do math/calculation
+    in you head.
+</strong><br/>
+    <div class="card-body text-dark-emphasis">
+        <div class="form-group">
+            <label class="control-label col-md-12 text-primary"> Starting Number </label>
+            <div class="col-md-12">
+                <span class="h5 text-bg-light text-primary">@Model.StartingNumber</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-12"> </label>
+            <div class="col-md-12">
+                <span class="text-bg-light text-primary text-lg-center">@Model._a</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-12">  </label>
+            <div class="col-md-12">
+                <span class="text-bg-light  text-primary">@Model._t</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-12"> </label>
+            <div class="col-md-12">
+                @Html.EditorFor(model => model._UI, new { htmlAttributes = new { @class = "form-control section1C", id = "_UI" } })
+                @Html.ValidationMessageFor(model => model._UI, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+    <div class="spacer5"></div>
+    <div class="spacer5"></div>
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-9">
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-3">
+            <div class="container-fluid text-start">
+                @{
+                    if (Model != null)
+                    {
+                        <input type="submit" value="Submit" class="btn btn-block btn-sm btn-primary" />
+                    }
+                }
+            </div>
+        </div>
+    </div>
+}

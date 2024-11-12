@@ -1,0 +1,101 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-sm-8 col-md-12">
+            <div class="spacer20"></div>
+            <div id="logbox" class="card mt-0">
+                <div class="card-body">
+                    <div class="text-center fw-semibold">
+                        @Html.ValidationSummary("", new { @class = "text-danger" })
+                    </div>
+                    <div class="row">
+                        <div id="clientDisplay" class="col-xs-12 col-sm-12">
+                            <div class="outframe">
+                                <div style="padding: -10px 10px;">
+                                    <div class="card text-white bg-dark mb-3">
+                                        <div class="card-header text-lg-center">
+                                            <a href="@Url.Action("Index", "UProfile")" class="alert-link">
+                                                <i style="float: left;">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+                                                    </svg>
+                                                    My Tasks
+                                                </i>
+                                            </a>
+                                            <span class="h5 card-title">&nbsp;Commitment 7</span>
+                                        </div>
+                                        <div class="card-body text-primary">
+                                            <h6 class="card-subtitle mb-2 text-white">
+                                                <i class="fa fa-heart-o fw-semibold fa-2x" aria-hidden="true"></i>&nbsp;Gratitude Journal
+                                                <button class="btn btn-primary btn-sm " id="AboutCom">
+                                                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                                    &nbsp;About this commitmnet
+                                                </button>
+                                            </h6>
+                                            <p class="card-text">
+                                                <div class="alert text-white bg-dark" role="alert">
+                                                    <div class="row">
+                                                        <div class="col-sm-12 mb-6 mb-sm-12 col-lg-7">
+                                                            <h6 class="card-title">WHAT TO DO</h6>
+                                                            <span class="card-text">Complete a few sentenses on what you have been gratful for this day.</span>
+                                                        </div>
+                                                        <div class="col-sm-12 mb-6 mb-sm-12 col-lg-5">
+                                                            <span class="card-title">
+                                                               
+                                                                <button href="javascript:void(0)" class="btn btn-primary  btn-sm  float-end" id="AddGratitudeJournal">
+                                                                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                                                    &nbsp;Add new Gratitude Journal
+                                                                </button> 
+                                                                
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12 mb-3 mb-sm-0">
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <div class="container-fluid" style="padding: 0 5px;">
+                                                                    <div class="table-responsive bluetablebackgrounds">
+                                                                        <table id="tbGratitudeJournal" class="table table-bordered table-responsive">
+                                                                            <thead>
+                                                                                <tr role="row">
+                                                                                    <th class="small">
+                                                                                        <button href="javascript:void(0)" class="btn btn-outline-dark  btn-sm" id="AllGratitudeJournal">
+                                                                                            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                                                                            &nbsp;Timeline of all Mindful attention added
+                                                                                        </button>
+                                                                                        <button href="javascript:void(0)" class="btn btn-outline-dark  btn-sm" id="reset">
+                                                                                            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                                                                            &nbsp;Reset
+                                                                                        </button>
+                                                                                    </th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts {
+    <script src="~/Scripts/GratitudeJournal.js"></script>
+}

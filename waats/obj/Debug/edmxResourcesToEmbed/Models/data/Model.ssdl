@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="waatsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AspNetRoles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaims">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ClaimType" Type="nvarchar(max)" />
+    <Property Name="ClaimValue" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogins">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+      <PropertyRef Name="localid" />
+    </Key>
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="localid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUsers">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+    <Property Name="Activationcode" Type="nvarchar" MaxLength="256" />
+    <Property Name="Firstname" Type="nvarchar" MaxLength="256" />
+    <Property Name="Lastname" Type="nvarchar" MaxLength="256" />
+    <Property Name="Dob" Type="nvarchar" MaxLength="25" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="25" />
+    <Property Name="EthnicOrigin" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmploymentStatus" Type="nvarchar" MaxLength="50" />
+    <Property Name="PasswordHash" Type="nvarchar(max)" />
+    <Property Name="SecurityStamp" Type="nvarchar(max)" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" />
+    <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="datetime" />
+    <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="ADUserName" Type="nvarchar" MaxLength="256" />
+    <Property Name="AccountType" Type="int" Nullable="false" />
+    <Property Name="ConsentToSharedata" Type="bit" />
+    <Property Name="ProfilePic" Type="bit" />
+    <Property Name="AgreeToADHD" Type="bit" />
+    <Property Name="Dateinserted" Type="datetime" />
+    <Property Name="bDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="BrainFitness">
+    <Key>
+      <PropertyRef Name="BrainFitnessID" />
+    </Key>
+    <Property Name="BrainFitnessID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" />
+    <Property Name="MarkAsCompleted" Type="bit" />
+    <Property Name="CompletionDate" Type="datetime" />
+    <Property Name="bDeleted" Type="bit" />
+    <Property Name="StartingNumber" Type="int" />
+    <Property Name="Q_Add" Type="int" />
+    <Property Name="Q_Take" Type="int" />
+    <Property Name="Q_A" Type="int" />
+    <Property Name="Q_NoofAttempts" Type="int" />
+  </EntityType>
+  <EntityType Name="EOT">
+    <Key>
+      <PropertyRef Name="LocalId" />
+    </Key>
+    <Property Name="LocalId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="EST">
+    <Key>
+      <PropertyRef Name="LocalId" />
+    </Key>
+    <Property Name="LocalId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="GenderT">
+    <Key>
+      <PropertyRef Name="LocalId" />
+    </Key>
+    <Property Name="LocalId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="GratitudeJournal">
+    <Key>
+      <PropertyRef Name="GratitudeJouralID" />
+    </Key>
+    <Property Name="GratitudeJouralID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" />
+    <Property Name="thingsiamgratfullfortoday" Type="nvarchar" MaxLength="4000" />
+    <Property Name="AddedDate" Type="datetime" />
+    <Property Name="MarkAsCompleted" Type="bit" />
+    <Property Name="EditDate" Type="datetime" />
+    <Property Name="CompletionDate" Type="datetime" />
+    <Property Name="bDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="Logs">
+    <Key>
+      <PropertyRef Name="localId" />
+    </Key>
+    <Property Name="localId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WaatsFormId" Type="nchar" MaxLength="10" />
+    <Property Name="Description" Type="nvarchar" MaxLength="4000" />
+    <Property Name="CreationDate" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="MemoryMaker">
+    <Key>
+      <PropertyRef Name="memoryId" />
+    </Key>
+    <Property Name="memoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" />
+    <Property Name="One" Type="nvarchar" MaxLength="4000" />
+    <Property Name="two" Type="nvarchar" MaxLength="4000" />
+    <Property Name="three" Type="nvarchar" MaxLength="4000" />
+    <Property Name="four" Type="nvarchar" MaxLength="4000" />
+    <Property Name="AddedDate" Type="datetime" />
+    <Property Name="MarkAsCompleted" Type="bit" />
+    <Property Name="EditDate" Type="datetime" />
+    <Property Name="CompletionDate" Type="datetime" />
+    <Property Name="bDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="MindFullAttention">
+    <Key>
+      <PropertyRef Name="MindFulID" />
+    </Key>
+    <Property Name="MindFulID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" />
+    <Property Name="thepersonilistenedtospokeabout" Type="nvarchar" MaxLength="4000" />
+    <Property Name="AddedDate" Type="datetime" />
+    <Property Name="MarkAsCompleted" Type="bit" />
+    <Property Name="EditDate" Type="datetime" />
+    <Property Name="CompletionDate" Type="datetime" />
+    <Property Name="bDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="ProfilePicT">
+    <Key>
+      <PropertyRef Name="LocalId" />
+    </Key>
+    <Property Name="LocalId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserGUID" Type="nvarchar" MaxLength="128" />
+    <Property Name="FileData" Type="varbinary(max)" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="200" />
+    <Property Name="FileType" Type="nvarchar" MaxLength="200" />
+    <Property Name="FileUploadDateTime" Type="datetime" />
+    <Property Name="bDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="ScheduleTask">
+    <Key>
+      <PropertyRef Name="LocalID" />
+    </Key>
+    <Property Name="LocalID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="250" />
+    <Property Name="Description" Type="nvarchar" MaxLength="4000" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="AddedDate" Type="datetime" />
+    <Property Name="MarkAsCompleted" Type="bit" />
+    <Property Name="EditDate" Type="datetime" />
+    <Property Name="bDeleted" Type="bit" />
+    <Property Name="SubTask" Type="bit" />
+    <Property Name="CompletionDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="SubScheduleTask">
+    <Key>
+      <PropertyRef Name="SubLocalID" />
+    </Key>
+    <Property Name="SubLocalID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MainTaskID" Type="int" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="250" />
+    <Property Name="Description" Type="nvarchar" MaxLength="4000" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="AddedDate" Type="datetime" />
+    <Property Name="MarkAsCompleted" Type="bit" />
+    <Property Name="EditDate" Type="datetime" />
+    <Property Name="CompletionDate" Type="datetime" />
+    <Property Name="bDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="Trigger">
+    <Key>
+      <PropertyRef Name="TriggerID" />
+    </Key>
+    <Property Name="TriggerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="whatwasthetriggerevent" Type="nvarchar" MaxLength="4000" />
+    <Property Name="whatwastheemotionthatyoufelt" Type="nvarchar" MaxLength="4000" />
+    <Property Name="howdiditfeelinyourbody" Type="nvarchar" MaxLength="4000" />
+    <Property Name="whymightthisbeatriggerforyou_thinkaboutyourpast" Type="nvarchar" MaxLength="4000" />
+    <Property Name="howcanyouavoidthesituationand_ormanageyourresponsetoitinfuture" Type="nvarchar" MaxLength="4000" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" />
+    <Property Name="AddedDate" Type="datetime" />
+    <Property Name="MarkAsCompleted" Type="bit" />
+    <Property Name="EditDate" Type="datetime" />
+    <Property Name="CompletionDate" Type="datetime" />
+    <Property Name="bDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="waatsForm">
+    <Key>
+      <PropertyRef Name="localID" />
+    </Key>
+    <Property Name="localID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Firstname" Type="nvarchar" MaxLength="300" />
+    <Property Name="Surname" Type="nvarchar" MaxLength="300" />
+    <Property Name="DoB" Type="nvarchar" MaxLength="20" />
+    <Property Name="Age" Type="int" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="20" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="GPName" Type="nvarchar" MaxLength="500" />
+    <Property Name="HistoryofMentalIllness" Type="nvarchar" MaxLength="1000" />
+    <Property Name="ReferredtoMentalHealth" Type="nvarchar" MaxLength="1000" />
+    <Property Name="HaveYouEverHadAnyThoughtsorMadeAttemptstoHarmYourself" Type="nvarchar" MaxLength="10" />
+    <Property Name="HaveYouCurrentlyorrecentlyAnyThoughtsorMadeAttemptstoHarmYourself" Type="nvarchar" MaxLength="10" />
+    <Property Name="HaveYouCurrentlyorrecentlyAnyThoughtsorMadeAttemptstoHarmAnyoneElse" Type="nvarchar" MaxLength="10" />
+    <Property Name="CompleteProjects" Type="nvarchar" MaxLength="50" />
+    <Property Name="RequiresOrganization" Type="nvarchar" MaxLength="50" />
+    <Property Name="keepAppointments" Type="nvarchar" MaxLength="50" />
+    <Property Name="StartTasksOnTime" Type="nvarchar" MaxLength="50" />
+    <Property Name="FidgetAndSquirm" Type="nvarchar" MaxLength="50" />
+    <Property Name="OverlyActiveAndCompelled" Type="nvarchar" MaxLength="50" />
+    <Property Name="MakeCarelessMistakes" Type="nvarchar" MaxLength="50" />
+    <Property Name="DifficultyKeepingMyAttention" Type="nvarchar" MaxLength="50" />
+    <Property Name="DifficultyConcentrating" Type="nvarchar" MaxLength="50" />
+    <Property Name="DifficultyFinding" Type="nvarchar" MaxLength="50" />
+    <Property Name="EasilyDistracted" Type="nvarchar" MaxLength="50" />
+    <Property Name="LeaveMySeatInMeetings" Type="nvarchar" MaxLength="50" />
+    <Property Name="DifficultyRelaxingOrUnwinding" Type="nvarchar" MaxLength="50" />
+    <Property Name="TalkingTooMuch" Type="nvarchar" MaxLength="50" />
+    <Property Name="FinishingTheSentences" Type="nvarchar" MaxLength="50" />
+    <Property Name="DifficultyWaitingMyTurn" Type="nvarchar" MaxLength="50" />
+    <Property Name="InterruptOtherPeople" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReceiveWarningsAndPersistent" Type="nchar" MaxLength="10" />
+    <Property Name="DisciplinedOrAacked" Type="nchar" MaxLength="10" />
+    <Property Name="EverExperiencedABreakdown" Type="nchar" MaxLength="10" />
+    <Property Name="Completedby" Type="nvarchar" MaxLength="300" />
+    <Property Name="CompletionDate" Type="nvarchar" MaxLength="30" />
+    <Property Name="Action" Type="nvarchar" MaxLength="500" />
+    <Property Name="PracticeName" Type="nvarchar" MaxLength="500" />
+    <Property Name="Postcode" Type="nvarchar" MaxLength="500" />
+    <Property Name="Address" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaims">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogins">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="waatsModelStoreContainer">
+    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BrainFitness" EntityType="Self.BrainFitness" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EOT" EntityType="Self.EOT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EST" EntityType="Self.EST" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GenderT" EntityType="Self.GenderT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GratitudeJournal" EntityType="Self.GratitudeJournal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Logs" EntityType="Self.Logs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MemoryMaker" EntityType="Self.MemoryMaker" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MindFullAttention" EntityType="Self.MindFullAttention" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProfilePicT" EntityType="Self.ProfilePicT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ScheduleTask" EntityType="Self.ScheduleTask" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SubScheduleTask" EntityType="Self.SubScheduleTask" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Trigger" EntityType="Self.Trigger" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="waatsForm" EntityType="Self.waatsForm" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,1049 @@
+﻿@model waats.ViewModel.WaatsFormVM
+@{
+    ViewBag.Title = "Home Page";
+    var flag = Model.flag;
+}
+<div class="container-fluid p-0 m-0 overlayDiv accordion" id="accordionExample">
+    @*<div class="card AvatarIntro">*@
+        @*<h2 class="accordion-header" id="headingIntro">
+                <button class="accordion-button collapsed" id="section0"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseZero" aria-expanded="false" aria-controls="collapseZero">
+                    Section-Intro
+                </button>
+            </h2>*@
+        @*<div id="collapseZero" class="accordion-collapse collapse show" aria-labelledby="headingIntro" data-bs-parent="#accordionExample">
+            <div class="row accordion-body">*@
+    <div class="col-12 col-sm-12 col-md-6 col-lg-12">
+        <div class="row form-group ">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-12">
+                @*<p class="text-black lead">
+                    Welcome to your ADHD Assessment Assistant. My name is Wats and this service has been designed by Consultant
+                    Psychiatrists and NHS
+                    specialists with many years
+                    expertise in the assessment and diagnosis of ADHD. In this session I will guide you through your online preliminary
+                    ADHD assessment and at the end of it I can give you a strong indication as to whether or not you’re likely to have
+                    ADHD. Then, based on that, I can give you some clear options as to how best to proceed. If that all sounds
+                    good to you then click below and let’s begin.”
+                </p>
+                <p class="text-black lead">
+                    I am going to go through some questions with you now and, to ensure we get your full
+                    and accurate answers, I’ll ask you to type your responses into the page, if that’s ok. The first items are your
+                    personal details, so please now enter your name, DOB, age, gender, email address and GP details
+                </p>*@
+                <br />
+                <div class="text-center align-middle"><br /><br /><br />
+                    <video id="Intro1" style="width: 50%; height: auto; right: -2px !important; overflow: hidden !important; ">
+                        <source src="~/Media/eng/Intro.mp4" type='video/mp4;'>
+                    </video>
+                    <br />
+                    <i class="fa  fa-play-circle-o myHTMLvideo fw-semibold fa-1x text-dark" id="Intro" style="cursor:pointer">&nbsp;click here to play intro</i>
+                </div>
+                <br />
+                <br />
+                <div class="row text-center align-middle Section1Btn">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <button id="Section0BtnID" type="button" class="btn btn-success btn-lg" name="submit">Continue</button>
+                    </div>
+                </div><br />
+            </div>
+        </div>
+        @*</div>
+        </div>
+            </div>*@
+    </div>
+    @using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data", id = "CRForm", @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(x => x.flag)
+        <div class="card Section1" id="Section1Div">
+            <h2 class="accordion-header" id="headingOne">
+                <button id="section1" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Section-11
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="row  no-gutters AvatarSection1">
+                        <div class="col-12 col-sm-12 col-md-4 col-lg-4 d-flex gradient-custom-2">
+                            <div class="text-info-emphasis px-3 py-4 p-md-5 mx-md-4 align-items-center">
+                                @*<h4 class="mb-4  text-white">We are more than just a company</h4>
+                                <p class="small mb-0  text-white">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>*@
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+                            <div class="row no-gutters">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="form-group">
+                                        <div class="col-12">
+                                            <strong>@Html.LabelFor(model => model.Firstname, htmlAttributes: new { @class = "control-label col-md-12" })</strong>
+                                            @Html.EditorFor(model => model.Firstname, new { htmlAttributes = new { @class = "form-control section1C", placeholder = @Html.DisplayNameFor(m => m.Firstname) } })
+                                            @Html.ValidationMessageFor(model => model.Firstname, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="form-group">
+                                        <strong>@Html.LabelFor(model => model.Surname, htmlAttributes: new { @class = "control-label col-md-12" })</strong>
+                                        <div class="col-12">
+                                            @Html.EditorFor(model => model.Surname, new { htmlAttributes = new { @class = "form-control section1C", placeholder = @Html.DisplayNameFor(m => m.Surname) } })
+                                            @Html.ValidationMessageFor(model => model.Surname, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                                    <div class="form-group">
+                                        <strong>@Html.LabelFor(model => model.DoB, htmlAttributes: new { @class = "control-label col-md-12" })</strong>
+                                        <div class="col-12">
+                                            @Html.EditorFor(model => model.DoB, new
+                                            {
+                                                htmlAttributes = new
+                                                {
+                                                    @class = "form-control section1C",
+                                                    @min = DateTime.Now.AddYears(-100).ToString("yyyy-MM-dd"),
+                                                    @max = DateTime.Now.AddDays(0).ToString("yyyy-MM-dd"),
+                                                    placeholder = @Html.DisplayNameFor(m => m.DoB),
+                                            onchange = "myFunction('DoB');"
+                                                }
+                                            })
+                                            @Html.ValidationMessageFor(model => model.DoB, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                                    <div class="form-group">
+                                        <div class="col-12">
+                                            <strong>@Html.LabelFor(model => model.Age, htmlAttributes: new { @class = "control-label col-md-12" })</strong>
+                                            @Html.EditorFor(model => model.Age, new { htmlAttributes = new { @class = "form-control section1C", maxlength = "3", placeholder = @Html.DisplayNameFor(m => m.Age), @ReadOnly = "ReadOnly" } })
+                                            @Html.ValidationMessageFor(model => model.Age, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                                    <div class="form-group">
+                                        <strong>@Html.LabelFor(model => model.Gender, htmlAttributes: new { @class = "control-label col-md-12" })</strong>
+                                        <div class="col-12">
+                                            @Html.DropDownListFor(model => model.Gender, new List<SelectListItem> {
+                                                            new SelectListItem() { Text= "Female", Value = "Female" },
+                                                            new SelectListItem() { Text= "Male", Value = "Male" },
+                                                            new SelectListItem() { Text= "Other", Value = "Other" }
+                                                        }, "Please select", new { @class = "form-control section1C" })
+                                            @Html.ValidationMessageFor(model => model.Gender, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="form-group">
+                                        <strong>@Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-12" })</strong>
+                                        <div class="col-12">
+                                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control section1C", placeholder = @Html.DisplayNameFor(m => m.Email) } })
+                                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="form-group">
+                                        <strong>@Html.LabelFor(model => model.GPName, htmlAttributes: new { @class = "control-label col-md-12" })</strong>
+                                        <div class="col-12">
+                                            @Html.EditorFor(model => model.GPName, new { htmlAttributes = new { @class = "form-control section1C", placeholder = @Html.DisplayNameFor(m => m.GPName) } })
+                                            @Html.ValidationMessageFor(model => model.GPName, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="form-group">
+                                        <strong>@Html.LabelFor(model => model.PracticeName, htmlAttributes: new { @class = "control-label col-md-12" })</strong>
+                                        <div class="col-12">
+                                            @Html.EditorFor(model => model.PracticeName, new { htmlAttributes = new { @class = "form-control section1C", placeholder = @Html.DisplayNameFor(m => m.PracticeName) } })
+                                            @Html.ValidationMessageFor(model => model.PracticeName, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-12">
+                                    <div class="form-group">
+                                        <strong>@Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-md-12" })</strong>
+                                        <div class="col-12">
+                                            @Html.TextAreaFor(model => model.Address, new { @class = "form-control section1C", @rows = "3", @maxlength = "4000", placeholder = @Html.DisplayNameFor(m => m.Address) })
+                                            @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-12">
+                                    <div class="form-group">
+                                        <strong>@Html.LabelFor(model => model.Postcode, htmlAttributes: new { @class = "control-label col-md-12" })<small class="text-danger">Only accept capital letters</small></strong>
+
+                                        <div class="col-12">
+                                            @Html.EditorFor(model => model.Postcode, new { htmlAttributes = new { @class = "form-control section1C", placeholder = @Html.DisplayNameFor(m => m.Postcode) } })
+                                            @Html.ValidationMessageFor(model => model.Postcode, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    <br />
+                                    <button id="Section1BtnID" type="submit" class="btn btn-success" name="submit">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card Section2" id="Section2Div">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" id="section2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Section-2 Intro
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="card-body">
+                        <div class="row  no-gutters">
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 d-flex gradient-custom-4">
+                                <div class="text-info-emphasis px-3 py-4 p-md-5 mx-md-4 align-items-center">
+                                    @*<h4 class="mb-4  text-white">We are more than just a company</h4>
+                                    <p class="small mb-0  text-white">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    </p>*@
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+                                <div class="card-body  text-center">
+                                    <video class="mycedio" id="Q3Intro-1" style="width:100%;height:auto;border:none;">
+                                        <source src="~/Media/eng/Q3-Intro.mp4" type='video/mp4;'>
+                                    </video>
+                                    <br />
+                                    <i class="fa fa-play-circle-o myHTMLvideo small fw-semibold  fa-1x text-dark" style="cursor:pointer" id="Q3Intro-">&nbsp;click here to play intro</i>
+                                </div>
+                                <div class="row  no-gutters vstack gap-3">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <div class="col-12">
+                                                <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                    <div class="card-body">
+                                                        <h6 class="card-title">
+                                                            @Html.LabelFor(model => model.HistoryofMentalIllness, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                        </h6>
+                                                    </div>
+                                                    <div class="card-footer bg-transparent border-info">
+                                                        @Html.TextAreaFor(model => model.HistoryofMentalIllness, new { @class = "form-control section2a", @rows = "3", @maxlength = "4000", placeholder = @Html.DisplayNameFor(m => m.HistoryofMentalIllness) })
+                                                        @Html.ValidationMessageFor(model => model.HistoryofMentalIllness, "", new { @class = "text-danger" })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <div class="col-12">
+                                                <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                    <div class="card-body">
+                                                        <h6 class="card-title">
+                                                            @Html.LabelFor(model => model.ReferredtoMentalHealth, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                        </h6>
+                                                    </div>
+                                                    <div class="card-footer bg-transparent border-info">
+                                                        @Html.TextAreaFor(model => model.ReferredtoMentalHealth, new { @class = "form-control section2a", @rows = "3", @maxlength = "4000", placeholder = @Html.DisplayNameFor(m => m.HistoryofMentalIllness) })
+                                                        @Html.ValidationMessageFor(model => model.ReferredtoMentalHealth, "", new { @class = "text-danger" })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <div class="col-12">
+                                                <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                    <div class="card-body">
+                                                        <h6 class="card-title">
+                                                            @Html.LabelFor(model => model.HaveYouEverHadAnyThoughtsorMadeAttemptstoHarmYourself, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                        </h6>
+                                                    </div>
+                                                    <div class="card-footer bg-transparent border-info">
+                                                        @Html.DropDownListFor(model => model.HaveYouEverHadAnyThoughtsorMadeAttemptstoHarmYourself, new List<SelectListItem> {
+                                                        new SelectListItem() { Text= "No", Value = "No" },
+                                                        new SelectListItem() { Text= "Yes", Value = "Yes" }
+                                                    }, "Please select Yes/No", new { @class = "form-control section2cc" })
+                                                        @Html.ValidationMessageFor(model => model.HaveYouEverHadAnyThoughtsorMadeAttemptstoHarmYourself, "", new { @class = "text-danger" })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <div class="col-12">
+                                                <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                    <div class="card-body">
+                                                        <h6 class="card-title">
+                                                            @Html.LabelFor(model => model.HaveYouCurrentlyorrecentlyAnyThoughtsorMadeAttemptstoHarmYourself, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                        </h6>
+                                                    </div>
+                                                    <div class="card-footer bg-transparent border-info">
+                                                        @Html.DropDownListFor(model => model.HaveYouCurrentlyorrecentlyAnyThoughtsorMadeAttemptstoHarmYourself, new List<SelectListItem> {
+                                                        new SelectListItem() { Text= "No", Value = "No" },
+                                                        new SelectListItem() { Text= "Yes", Value = "Yes" }
+                                                    }, "Please select Yes/No", new { @class = "form-control section2cc" })
+                                                        @Html.ValidationMessageFor(model => model.HaveYouCurrentlyorrecentlyAnyThoughtsorMadeAttemptstoHarmYourself, "", new { @class = "text-danger" })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <div class="col-12">
+                                                <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                    <div class="card-body">
+                                                        <h6 class="card-title">
+                                                            @Html.LabelFor(model => model.HaveYouCurrentlyorrecentlyAnyThoughtsorMadeAttemptstoHarmAnyoneElse, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                        </h6>
+                                                    </div>
+                                                    <div class="card-footer bg-transparent border-info">
+                                                        @Html.DropDownListFor(model => model.HaveYouCurrentlyorrecentlyAnyThoughtsorMadeAttemptstoHarmAnyoneElse, new List<SelectListItem> {
+                                                        new SelectListItem() { Text= "No", Value = "No" },
+                                                        new SelectListItem() { Text= "Yes", Value = "Yes" }
+                                                    }, "Please select Yes/No", new { @class = "form-control section2cc" })
+                                                        @Html.ValidationMessageFor(model => model.HaveYouCurrentlyorrecentlyAnyThoughtsorMadeAttemptstoHarmAnyoneElse, "", new { @class = "text-danger" })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row section2_sub5Btn   text-center">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <br />
+                                        <button id="section2_sub5Btn" type="button" class="btn btn-success" name="submit">Next</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card Section3" id="Section3Div">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" id="section3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Section3-Intro
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 d-flex gradient-custom-4">
+                                <div class="text-info-emphasis px-3 py-4 p-md-5 mx-md-4 align-items-center">
+                                    @*<h4 class="mb-4  text-white">We are more than just a company</h4>
+                                    <p class="small mb-0  text-white">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    </p>*@
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+                                <div class="row  no-gutters AvatarSection3">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="card-body  text-center">
+                                            <video class="mycedio" id="Q4Intro-1" style="width:100%;height:auto;border:none;">
+                                                <source src="~/Media/eng/Q4-Intro.mp4" type='video/mp4;'>
+                                            </video>
+                                            <br />
+                                            <i class="fa fa-play-circle-o myHTMLvideo  small fw-semibold  fa-1x text-dark" style="cursor:pointer" id="Q4Intro-">&nbsp;click here to play intro</i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row  no-gutters">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <div class="col-12">
+                                                <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                    <div class="card-body">
+                                                        <h6 class="card-title">
+                                                            @Html.LabelFor(model => model.CompleteProjects, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                        </h6>
+                                                        @Html.ValidationMessageFor(model => model.CompleteProjects, "", new { @class = "text-danger" })
+
+                                                    </div>
+                                                    <div class="card-footer bg-transparent border-info">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="CompleteProjects" id="inlineRadio1" value="Never" @(Model.CompleteProjects != null && Model.CompleteProjects == "Never" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio1">Never</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="CompleteProjects" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.CompleteProjects != null && Model.CompleteProjects == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="CompleteProjects" id="inlineRadio3" value="Often" @(Model.CompleteProjects != null && Model.CompleteProjects == "Often" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio3">Often</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="CompleteProjects" id="inlineRadio3" value="Always" @(Model.CompleteProjects != null && Model.CompleteProjects == "Always" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio3">Always</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row  no-gutters">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <div class="col-12">
+                                                <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                    <div class="card-body">
+                                                        <h6 class="card-title">
+                                                            @Html.LabelFor(model => model.RequiresOrganization, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                        </h6>  @Html.ValidationMessageFor(model => model.RequiresOrganization, "", new { @class = "text-danger" })
+
+                                                    </div>
+                                                    <div class="card-footer bg-transparent border-info">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="RequiresOrganization" id="inlineRadio1" value="Never" @(Model.RequiresOrganization != null && Model.RequiresOrganization == "Never" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio1">Never</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="RequiresOrganization" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.RequiresOrganization != null && Model.RequiresOrganization == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="RequiresOrganization" id="inlineRadio3" value="Often" @(Model.RequiresOrganization != null && Model.RequiresOrganization == "Often" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio3">Often</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="RequiresOrganization" id="inlineRadio3" value="Always" @(Model.RequiresOrganization != null && Model.RequiresOrganization == "Always" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio3">Always</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row  no-gutters">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <div class="col-12">
+                                                <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                    <div class="card-body">
+                                                        <h6 class="card-title">
+                                                            @Html.LabelFor(model => model.keepAppointments, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                        </h6>  @Html.ValidationMessageFor(model => model.keepAppointments, "", new { @class = "text-danger" })
+                                                    </div>
+                                                    <div class="card-footer bg-transparent border-info">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="keepAppointments" id="inlineRadio1" value="Never" @(Model.keepAppointments != null && Model.keepAppointments == "Never" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio1">Never</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="keepAppointments" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.keepAppointments != null && Model.keepAppointments == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="keepAppointments" id="inlineRadio3" value="Often" @(Model.keepAppointments != null && Model.keepAppointments == "Often" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio3">Often</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="keepAppointments" id="inlineRadio3" value="Always" @(Model.keepAppointments != null && Model.keepAppointments == "Always" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio3">Always</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row  no-gutters">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <div class="col-12">
+                                                <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                    <div class="card-body">
+                                                        <h6 class="card-title">
+                                                            @Html.LabelFor(model => model.StartTasksOnTime, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                        </h6>   @Html.ValidationMessageFor(model => model.StartTasksOnTime, "", new { @class = "text-danger" })
+
+                                                    </div>
+                                                    <div class="card-footer bg-transparent border-info">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="StartTasksOnTime" id="inlineRadio1" value="Never" @(Model.StartTasksOnTime != null && Model.StartTasksOnTime == "Never" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio1">Never</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="StartTasksOnTime" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.StartTasksOnTime != null && Model.StartTasksOnTime == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="StartTasksOnTime" id="inlineRadio3" value="Often" @(Model.StartTasksOnTime != null && Model.StartTasksOnTime == "Often" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio3">Often</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="StartTasksOnTime" id="inlineRadio3" value="Always" @(Model.StartTasksOnTime != null && Model.StartTasksOnTime == "Always" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio3">Always</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row  no-gutters">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <div class="col-12">
+                                                <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                    <div class="card-body">
+                                                        <h6 class="card-title">
+                                                            @Html.LabelFor(model => model.FidgetAndSquirm, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                        </h6>  @Html.ValidationMessageFor(model => model.FidgetAndSquirm, "", new { @class = "text-danger" })
+                                                    </div>
+                                                    <div class="card-footer bg-transparent border-info">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="FidgetAndSquirm" id="inlineRadio1" value="Never" @(Model.FidgetAndSquirm != null && Model.FidgetAndSquirm == "Never" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio1">Never</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="FidgetAndSquirm" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.FidgetAndSquirm != null && Model.FidgetAndSquirm == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="FidgetAndSquirm" id="inlineRadio3" value="Often" @(Model.FidgetAndSquirm != null && Model.FidgetAndSquirm == "Often" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio3">Often</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="FidgetAndSquirm" id="inlineRadio3" value="Always" @(Model.FidgetAndSquirm != null && Model.FidgetAndSquirm == "Always" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio3">Always</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row  no-gutters">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <div class="col-12">
+                                                <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                    <div class="card-body">
+                                                        <h6 class="card-title">
+                                                            @Html.LabelFor(model => model.OverlyActiveAndCompelled, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                        </h6>   @Html.ValidationMessageFor(model => model.OverlyActiveAndCompelled, "", new { @class = "text-danger" })
+
+
+                                                    </div>
+                                                    <div class="card-footer bg-transparent border-info">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="OverlyActiveAndCompelled" id="inlineRadio1" value="Never" @(Model.OverlyActiveAndCompelled != null && Model.OverlyActiveAndCompelled == "Never" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio1">Never</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="OverlyActiveAndCompelled" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.OverlyActiveAndCompelled != null && Model.OverlyActiveAndCompelled == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="OverlyActiveAndCompelled" id="inlineRadio3" value="Often" @(Model.OverlyActiveAndCompelled != null && Model.OverlyActiveAndCompelled == "Often" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio3">Often</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="OverlyActiveAndCompelled" id="inlineRadio3" value="Always" @(Model.OverlyActiveAndCompelled != null && Model.OverlyActiveAndCompelled == "Always" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio3">Always</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row  no-gutters">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <div class="col-12">
+                                                <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                    <div class="card-body">
+                                                        <h6 class="card-title">
+                                                            @Html.LabelFor(model => model.MakeCarelessMistakes, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                        </h6>   @Html.ValidationMessageFor(model => model.MakeCarelessMistakes, "", new { @class = "text-danger" })
+
+
+                                                    </div>
+                                                    <div class="card-footer bg-transparent border-info">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="MakeCarelessMistakes" id="inlineRadio1" value="Never" @(Model.MakeCarelessMistakes != null && Model.MakeCarelessMistakes == "Never" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio1">Never</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="MakeCarelessMistakes" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.MakeCarelessMistakes != null && Model.MakeCarelessMistakes == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="MakeCarelessMistakes" id="inlineRadio3" value="Often" @(Model.MakeCarelessMistakes != null && Model.MakeCarelessMistakes == "Often" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio3">Often</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="MakeCarelessMistakes" id="inlineRadio3" value="Always" @(Model.MakeCarelessMistakes != null && Model.MakeCarelessMistakes == "Always" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio3">Always</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row  no-gutters">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <div class="col-12">
+                                                <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                    <div class="card-body">
+                                                        <h6 class="card-title">
+                                                            @Html.LabelFor(model => model.DifficultyKeepingMyAttention, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                        </h6>    @Html.ValidationMessageFor(model => model.DifficultyKeepingMyAttention, "", new { @class = "text-danger" })
+
+
+                                                    </div>
+                                                    <div class="card-footer bg-transparent border-info">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="DifficultyKeepingMyAttention" id="inlineRadio1" value="Never" @(Model.DifficultyKeepingMyAttention != null && Model.DifficultyKeepingMyAttention == "Never" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio1">Never</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="DifficultyKeepingMyAttention" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.DifficultyKeepingMyAttention != null && Model.DifficultyKeepingMyAttention == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="DifficultyKeepingMyAttention" id="inlineRadio3" value="Often" @(Model.DifficultyKeepingMyAttention != null && Model.DifficultyKeepingMyAttention == "Often" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio3">Often</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="DifficultyKeepingMyAttention" id="inlineRadio3" value="Always" @(Model.DifficultyKeepingMyAttention != null && Model.DifficultyKeepingMyAttention == "Always" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio3">Always</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row  no-gutters">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <div class="col-12">
+                                                <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                    <div class="card-body">
+                                                        <h6 class="card-title">
+                                                            @Html.LabelFor(model => model.DifficultyConcentrating, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                        </h6>  @Html.ValidationMessageFor(model => model.DifficultyConcentrating, "", new { @class = "text-danger" })
+
+
+                                                    </div>
+                                                    <div class="card-footer bg-transparent border-info">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="DifficultyConcentrating" id="inlineRadio1" value="Never" @(Model.DifficultyConcentrating != null && Model.DifficultyConcentrating == "Never" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio1">Never</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="DifficultyConcentrating" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.DifficultyConcentrating != null && Model.DifficultyConcentrating == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="DifficultyConcentrating" id="inlineRadio3" value="Often" @(Model.DifficultyConcentrating != null && Model.DifficultyConcentrating == "Often" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio3">Often</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="DifficultyConcentrating" id="inlineRadio3" value="Always" @(Model.DifficultyConcentrating != null && Model.DifficultyConcentrating == "Always" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio3">Always</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row  no-gutters">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <div class="col-12">
+                                                <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                    <div class="card-body">
+                                                        <h6 class="card-title">
+                                                            @Html.LabelFor(model => model.DifficultyFinding, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                        </h6>   @Html.ValidationMessageFor(model => model.DifficultyFinding, "", new { @class = "text-danger" })
+
+
+                                                    </div>
+                                                    <div class="card-footer bg-transparent border-info">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="DifficultyFinding" id="inlineRadio1" value="Never" @(Model.DifficultyFinding != null && Model.DifficultyFinding == "Never" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio1">Never</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="DifficultyFinding" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.DifficultyFinding != null && Model.DifficultyFinding == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="DifficultyFinding" id="inlineRadio3" value="Often" @(Model.DifficultyFinding != null && Model.DifficultyFinding == "Often" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio3">Often</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="DifficultyFinding" id="inlineRadio3" value="Always" @(Model.DifficultyFinding != null && Model.DifficultyFinding == "Always" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio3">Always</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row  no-gutters">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <div class="col-12">
+                                                <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                    <div class="card-body">
+                                                        <h6 class="card-title">
+                                                            @Html.LabelFor(model => model.EasilyDistracted, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                        </h6>   @Html.ValidationMessageFor(model => model.EasilyDistracted, "", new { @class = "text-danger" })
+
+
+                                                    </div>
+                                                    <div class="card-footer bg-transparent border-info">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="EasilyDistracted" id="inlineRadio1" value="Never" @(Model.EasilyDistracted != null && Model.EasilyDistracted == "Never" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio1">Never</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="EasilyDistracted" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.EasilyDistracted != null && Model.EasilyDistracted == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="EasilyDistracted" id="inlineRadio3" value="Often" @(Model.EasilyDistracted != null && Model.EasilyDistracted == "Often" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio3">Often</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="EasilyDistracted" id="inlineRadio3" value="Always" @(Model.EasilyDistracted != null && Model.EasilyDistracted == "Always" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio3">Always</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row  no-gutters">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <div class="col-12">
+                                                <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                    <div class="card-body">
+                                                        <h6 class="card-title">
+                                                            @Html.LabelFor(model => model.LeaveMySeatInMeetings, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                        </h6>  @Html.ValidationMessageFor(model => model.LeaveMySeatInMeetings, "", new { @class = "text-danger" })
+
+
+                                                    </div>
+                                                    <div class="card-footer bg-transparent border-info">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="LeaveMySeatInMeetings" id="inlineRadio1" value="Never" @(Model.LeaveMySeatInMeetings != null && Model.LeaveMySeatInMeetings == "Never" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio1">Never</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="LeaveMySeatInMeetings" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.LeaveMySeatInMeetings != null && Model.LeaveMySeatInMeetings == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="LeaveMySeatInMeetings" id="inlineRadio3" value="Often" @(Model.LeaveMySeatInMeetings != null && Model.LeaveMySeatInMeetings == "Often" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio3">Often</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="LeaveMySeatInMeetings" id="inlineRadio3" value="Always" @(Model.LeaveMySeatInMeetings != null && Model.LeaveMySeatInMeetings == "Always" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio3">Always</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row  no-gutters">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <div class="col-12">
+                                                <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                    <div class="card-body">
+                                                        <h6 class="card-title">
+                                                            @Html.LabelFor(model => model.DifficultyRelaxingOrUnwinding, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                        </h6>  @Html.ValidationMessageFor(model => model.DifficultyRelaxingOrUnwinding, "", new { @class = "text-danger" })
+
+                                                    </div>
+                                                    <div class="card-footer bg-transparent border-info">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="DifficultyRelaxingOrUnwinding" id="inlineRadio1" value="Never" @(Model.DifficultyRelaxingOrUnwinding != null && Model.DifficultyRelaxingOrUnwinding == "Never" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio1">Never</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="DifficultyRelaxingOrUnwinding" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.DifficultyRelaxingOrUnwinding != null && Model.DifficultyRelaxingOrUnwinding == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="DifficultyRelaxingOrUnwinding" id="inlineRadio3" value="Often" @(Model.DifficultyRelaxingOrUnwinding != null && Model.DifficultyRelaxingOrUnwinding == "Often" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio3">Often</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="DifficultyRelaxingOrUnwinding" id="inlineRadio3" value="Always" @(Model.DifficultyRelaxingOrUnwinding != null && Model.DifficultyRelaxingOrUnwinding == "Always" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio3">Always</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row  no-gutters">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <div class="col-12">
+                                                <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                    <div class="card-body">
+                                                        <h6 class="card-title">
+                                                            @Html.LabelFor(model => model.TalkingTooMuch, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                        </h6>  @Html.ValidationMessageFor(model => model.TalkingTooMuch, "", new { @class = "text-danger" })
+
+                                                    </div>
+                                                    <div class="card-footer bg-transparent border-info">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="TalkingTooMuch" id="inlineRadio1" value="Never" @(Model.TalkingTooMuch != null && Model.TalkingTooMuch == "Never" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio1">Never</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="TalkingTooMuch" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.TalkingTooMuch != null && Model.TalkingTooMuch == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="TalkingTooMuch" id="inlineRadio3" value="Often" @(Model.TalkingTooMuch != null && Model.TalkingTooMuch == "Often" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio3">Often</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="TalkingTooMuch" id="inlineRadio3" value="Always" @(Model.TalkingTooMuch != null && Model.TalkingTooMuch == "Always" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio3">Always</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row  no-gutters">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <div class="col-12">
+                                                <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                    <div class="card-body">
+                                                        <h6 class="card-title">
+                                                            @Html.LabelFor(model => model.FinishingTheSentences, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                        </h6>  @Html.ValidationMessageFor(model => model.FinishingTheSentences, "", new { @class = "text-danger" })
+                                                    </div>
+                                                    <div class="card-footer bg-transparent border-info">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="FinishingTheSentences" id="inlineRadio1" value="Never" @(Model.FinishingTheSentences != null && Model.FinishingTheSentences == "Never" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio1">Never</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="FinishingTheSentences" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.FinishingTheSentences != null && Model.FinishingTheSentences == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="FinishingTheSentences" id="inlineRadio3" value="Often" @(Model.FinishingTheSentences != null && Model.FinishingTheSentences == "Often" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio3">Often</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="FinishingTheSentences" id="inlineRadio3" value="Always" @(Model.FinishingTheSentences != null && Model.FinishingTheSentences == "Always" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio3">Always</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row  no-gutters">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <div class="col-12">
+                                                <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                    <div class="card-body">
+                                                        <h6 class="card-title">
+                                                            @Html.LabelFor(model => model.DifficultyWaitingMyTurn, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                        </h6>  @Html.ValidationMessageFor(model => model.DifficultyWaitingMyTurn, "", new { @class = "text-danger" })
+                                                    </div>
+                                                    <div class="card-footer bg-transparent border-info">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="DifficultyWaitingMyTurn" id="inlineRadio1" value="Never" @(Model.DifficultyWaitingMyTurn != null && Model.DifficultyWaitingMyTurn == "Never" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio1">Never</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="DifficultyWaitingMyTurn" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.DifficultyWaitingMyTurn != null && Model.DifficultyWaitingMyTurn == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="DifficultyWaitingMyTurn" id="inlineRadio3" value="Often" @(Model.DifficultyWaitingMyTurn != null && Model.DifficultyWaitingMyTurn == "Often" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio3">Often</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="DifficultyWaitingMyTurn" id="inlineRadio3" value="Always" @(Model.DifficultyWaitingMyTurn != null && Model.DifficultyWaitingMyTurn == "Always" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio3">Always</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row no-gutters">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <div class="col-12">
+                                                <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                    <div class="card-body">
+                                                        <h6 class="card-title">
+                                                            @Html.LabelFor(model => model.InterruptOtherPeople, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                        </h6>
+                                                        @Html.ValidationMessageFor(model => model.InterruptOtherPeople, "", new { @class = "text-danger" })
+                                                    </div>
+                                                    <div class="card-footer bg-transparent border-info">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="InterruptOtherPeople" id="inlineRadio1" value="Never" @(Model.InterruptOtherPeople != null && Model.InterruptOtherPeople == "Never" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio1">Never</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="InterruptOtherPeople" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.InterruptOtherPeople != null && Model.InterruptOtherPeople == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="InterruptOtherPeople" id="inlineRadio3" value="Often" @(Model.InterruptOtherPeople != null && Model.InterruptOtherPeople == "Often" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio3">Often</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="InterruptOtherPeople" id="inlineRadio3" value="Always" @(Model.InterruptOtherPeople != null && Model.InterruptOtherPeople == "Always" ? new { @checked = "checked" } : null)>
+                                                            <label class="form-check-label" for="inlineRadio3">Always</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row no-gutters">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <div class="col-12">
+                                                <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                    <div class="card-body">
+                                                        <h6 class="card-title">
+                                                            @Html.LabelFor(model => model.ReceiveWarningsAndPersistent, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                        </h6>
+                                                    </div>
+                                                    <div class="card-footer bg-transparent border-info">
+                                                        @Html.DropDownListFor(model => model.ReceiveWarningsAndPersistent, new List<SelectListItem> {
+                                                            new SelectListItem() { Text= "No", Value = "No" },
+                                                            new SelectListItem() { Text= "Yes", Value = "Yes" }
+                                                        }, "Please select Yes/No", new { @class = "form-control section18C" })
+                                                        @Html.ValidationMessageFor(model => model.ReceiveWarningsAndPersistent, "", new { @class = "text-danger" })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row no-gutters">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <div class="col-12">
+                                                <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                    <div class="card-body">
+                                                        <h6 class="card-title">
+                                                            @Html.LabelFor(model => model.DisciplinedOrAacked, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                        </h6>
+                                                    </div>
+                                                    <div class="card-footer bg-transparent border-info">
+                                                        @Html.DropDownListFor(model => model.DisciplinedOrAacked, new List<SelectListItem> {
+                                                            new SelectListItem() { Text= "No", Value = "No" },
+                                                            new SelectListItem() { Text= "Yes", Value = "Yes" }
+                                                        }, "Please select Yes/No", new { @class = "form-control section19C" })
+                                                        @Html.ValidationMessageFor(model => model.DisciplinedOrAacked, "", new { @class = "text-danger" })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row no-gutters">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <div class="col-12">
+                                                <div class="card text-bg-light mb-3" style="max-width: 180rem;">
+                                                    <div class="card-body">
+                                                        <h6 class="card-title">
+                                                            @Html.LabelFor(model => model.EverExperiencedABreakdown, htmlAttributes: new { @class = "control-label col-md-12" })
+                                                        </h6>
+                                                    </div>
+                                                    <div class="card-footer bg-transparent border-info">
+                                                        @Html.DropDownListFor(model => model.EverExperiencedABreakdown, new List<SelectListItem> {
+                                                            new SelectListItem() { Text= "No", Value = "No" },
+                                                            new SelectListItem() { Text= "Yes", Value = "Yes" }
+                                                        }, "Please select Yes/No", new { @class = "form-control section19C" })
+                                                        @Html.ValidationMessageFor(model => model.EverExperiencedABreakdown, "", new { @class = "text-danger" })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="row  text-center">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <button id="saveBtn" type="submit" class="btn btn-success" name="submit" value="Save_Completed">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+@section scripts {
+    <script src="~/Scripts/site.js"></script>
+    <script>
+        $(document).ready(function () {
+            let _flag = '@flag';
+            if (_flag == 'True') {
+                showall();
+            }
+            else {
+
+            }
+        });
+    </script>
+    
+}
