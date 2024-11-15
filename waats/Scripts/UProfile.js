@@ -36,7 +36,6 @@
         SubmitNewTask(form, actionUrl);
     });
     function LoadTask() {
-        debugger;
         TableT = $('#tbSTasks').DataTable({
             "destroy": true,
             "autoWidth": false,
@@ -77,23 +76,23 @@
                 {
                     mRender: function (data, type, row) {
                         var linkQuery = '';
-                        linkQuery = ' <div class="card card border-dark">';
+                        linkQuery = ' <div class="scpagewrap">';
                         linkQuery += '<div class="card-header">';
                         linkQuery += '<span class="card-title h5">{title}</span>&nbsp;&nbsp;<small>({Tdate})</small>';
                         linkQuery += '</div>';
-                        linkQuery += '<div class="card-body">';
+                        linkQuery += '<div class="card-body py-2">';
                         linkQuery += '<span class="card-text text-end">{description}</span>';
                         linkQuery += '</div>';
                         linkQuery += '<div class="card-footer text-body-secondary">';
                         linkQuery += row.MarkAsCompleted == false ?
-                            '&nbsp;&nbsp;<i id=Progress_{PT} class="btn fa fa-hourglass-start fw-semibold fa-1x text-danger" aria-hidden="true">&nbsp;In progress</i>'
-                            : '&nbsp;&nbsp;<i id=Completed_{CT} class="btn fa fa-check fw-semibold fa-1x text-success" aria-hidden="true">&nbsp;Completed</i>'
+                            '<span><i id=Progress_{PT} class="fa fa-hourglass-start fw-semibold fa-1x text-danger" aria-hidden="true"></i>In progress</span>'
+                            : '<span><i id=Completed_{CT} class="fa fa-check fw-semibold fa-1x text-success" aria-hidden="true"></i>Completed</span>'
                         linkQuery += row.MarkAsCompleted == false ?
-                            '<i id=Edit_{ET} class="EditTask btn fa fa-pencil-square-o fw-semibold fa-1x text-secondary-emphasis" aria-hidden="true">&nbsp;Edit</i>' +
-                            '&nbsp;&nbsp;<i id=Mark_{MT} class="MarkAsDone btn fa fa-calendar-check-o fw-semibold fa-1x text-secondary-emphasis" aria-hidden="true">&nbsp;Mark as done</i>'
-                            : '&nbsp;'
+                            '<span><i id=Edit_{ET} class="EditTask fa fa-pencil-square-o fw-semibold fa-1x text-secondary-emphasis" aria-hidden="true"></i>Edit</span>' +
+                            '<span><i id=Mark_{MT} class="MarkAsDone fa fa-calendar-check-o fw-semibold fa-1x text-secondary-emphasis" aria-hidden="true"></i>Mark as done</span>'
+                            : ''
                             ;
-                        linkQuery += '&nbsp;&nbsp;<i  id=Break_{BT} class="details-control btn fa fa-level-down fw-semibold fa-1x text-secondary-emphasis" aria-hidden="true">&nbsp;Break it down</i>';
+                        linkQuery += '<span><i  id=Break_{BT} class="details-control fa fa-level-down fw-semibold fa-1x text-secondary-emphasis" aria-hidden="true"></i>Break it down</span>';
                         linkQuery += '</div>';
                         linkQuery += '</div>';
                         linkQuery = linkQuery.replace("{title}", row.Title);
@@ -113,8 +112,13 @@
             ///// "order": [0, "desc"],
             "processing": "true",
             "language": {
-                "processing": "Loading Forms.. please wait"
+                "processing": "Loading Forms.. please wait",
+                "paginate": {
+                    "next": ">",    // Customize "Next" button text
+                    "previous": "<"    // Customize "Previous" button text
+                }
             }
+
         });
     }
     $('body').on('click', '#tbSTasks tbody i.details-control', function () {
@@ -200,11 +204,11 @@
             success: function (result) {
                 let dat = '';
                 let tableData = '', tableDataE='';
-                    tableData += '<div class="card">';
+                    tableData += '<div class="">';
                     tableData += '<div class="spacer10"></div>';
                     tableData += '<div class="card-body">';
                     tableData += '<div class="table-responsive">';
-                tableData += '<table id="Subtable" class="table table-striped table-hover table-responsive">';
+                    tableData += '<table id="Subtable" class="table table-striped table-hover table-responsive">';
                     tableData += '<thead>';
                     tableData += '<tr>';
                     tableData += '<th scope="col" class="small" style="width: 200px;">Sub task</th>';
@@ -225,13 +229,13 @@
                                 + '<td>' + item.Description + '</td>'
                                 + '<td>'
                                 + ((item.MarkAsCompleted=='' && item.MarkAsCompleted == false) ?
-                                 '<i id="Edit_' + item.SubLocalID + '" class="EditSubTask btn fa fa-pencil-square-o text-primary" aria-hidden="true">&nbsp; Edit</i> '
-                                + '&nbsp;&nbsp;<i id="Mark_' + item.SubLocalID + '" class="MarkAsDoneSubTask btn fa fa-calendar-check-o text-primary" aria-hidden="true">&nbsp;Mark as done</i>'
-                                : '&nbsp;&nbsp;<i id=Completed_{CT} class="btn fa fa-check fw-semibold fa-1x text-success" aria-hidden="true">&nbsp;Completed</i>')
+                                '<span><i id="Edit_' + item.SubLocalID + '" class="EditSubTask btn fa fa-pencil-square-o text-secondary-emphasis" aria-hidden="true"></i>Edit</span> '
+                                + '<span><i id="Mark_' + item.SubLocalID + '" class="MarkAsDoneSubTask btn fa fa-calendar-check-o text-secondary-emphasis" aria-hidden="true"></i>Mark as done</span>'
+                                : '<span><i id=Completed_{CT} class="btn fa fa-check fw-semibold fa-1x text-success" aria-hidden="true"></i>Completed</span>')
                                 +'</td ></tr > ';
                         }
-                appendData += '<div class="ThisDiv"> &nbsp; &nbsp; &nbsp;' +
-                    '<button class="btn AddTask fa fa-plus-circle o text-primary" aria-hidden="true" id="AddSubTask_' + mainID + '"  value=' + mainID +'>&nbsp; Add sub task</button > ' +
+                appendData += '<div class="ThisDiv">' +
+                    '<button class="btn AddTask o text-primary btn-primary rounded-pill text-white btn-x10-y30 my-3" aria-hidden="true" id="AddSubTask_' + mainID + '"  value=' + mainID +'><i class="fa fa-plus-circle"></i> Add sub task</button > ' +
                     tableData + dat + tableDataE + '</div>';
             },
             error: function (xhr, textStatus, err) {

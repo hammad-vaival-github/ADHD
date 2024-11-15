@@ -27,18 +27,16 @@
     <div class="spacer5"></div>
     <div class="spacer5"></div>
     <div class="row">
-        <div class="col-12 col-sm-12 col-md-12 col-lg-8">
-        </div>
-        <div class="col-12 col-sm-12 col-md-12 col-lg-4">
-            <div class="container-fluid text-start">
+        <div class="col-md-12 mt-3">
+            <div class="text-start">
                 @{
                     if (Model != null && Model.UserId != null)
                     {
-                        <input type="submit" value="Update task" class="btn btn-block   btn-sm btn-primary" />
+                        <input type="submit" value="Update task" class="btn float-end btn-primary" />
                     }
                     else
                     {
-                        <input type="submit" value="Add task" class="btn btn-block   btn-sm btn-primary" />
+                        <input type="submit" value="Add task" class="btn float-end btn-primary" />
                     }
                 }
             </div>

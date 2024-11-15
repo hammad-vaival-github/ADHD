@@ -64,9 +64,9 @@ function LoadTask() {
                 mRender: function (data, type, row) {
                     var linkQuery = '';
                     linkQuery = ' <div class="">';
-                    linkQuery += '<div class="">';
-                    linkQuery += '<span class="h5">{Tdate}</span>&nbsp;&nbsp;'
-                        +'<i id = Completed_{CT} class="btn fa fa-check fw-semibold fa-1x text-success" aria-hidden="true" >&nbsp; Completed</i> ';
+                    linkQuery += '<div class="mb-2">';
+                    linkQuery += '<span class="h5 px-2">{Tdate}</span>&nbsp;&nbsp;'
+                        +'<span id = Completed_{CT} class="text-success ps-2 fw-bold"><i class="fa fa-check fw-semibold fa-1x text-success" aria-hidden="true" ></i>Completed</span> ';
                     linkQuery += '</div>';
                     linkQuery += '<div class=""><table class="table"><thead>'+
                         '<tr role="row" ><th class="smallcard-text h6">Starting Number</th>' +
@@ -105,7 +105,11 @@ function LoadTask() {
         ///// "order": [0, "desc"],
         "processing": "true",
         "language": {
-            "processing": "Loading Forms.. please wait"
+            "processing": "Loading Forms.. please wait",
+            "paginate": {
+                "next": ">",    // Customize "Next" button text
+                "previous": "<"    // Customize "Previous" button text
+            }
         }
     });
 }

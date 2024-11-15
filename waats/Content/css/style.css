@@ -13,9 +13,9 @@ a {
 }
 
 .navbar {
-    padding: 16px 16px 16px 24px;
-    background-color: #e3e3e3;
-    border-radius: 16px;
+    padding: 13px 15px;
+    border-radius: 7px;
+    background-color: #fff;
 }
 
 .navbar-brand {
@@ -23,13 +23,17 @@ a {
 }
 
 .main-menu ul li {
-    padding: 0 5px;
+    padding: 0 10px;
 }
-
+nav.navbar.navbar-expand-lg.main-menu ul li a i {
+    width: 30px;
+    position: relative;
+    top: 5px;
+}
     .main-menu ul li .nav-link {
-        color: #000;
-        font-size: 14px;
-        display:flex;
+        color: #434343;
+        font-size: 16px;
+        display: flex;
     }
 /* video page on survey page*/
 .video-container {
@@ -204,4 +208,7 @@ body .VIpgJd-ZVi9od-vH1Gmf {
 .form-check-input[type=radio] {
     border-radius: 50%;
     border: 1px solid;
+}
+img.img-fluid.logo-survey {
+    max-width: 190px;
 }

@@ -38,6 +38,18 @@
         font-size: 12px;
         padding: 5px 10px;
     }
+    .col-md-3.col-lg-2.sidebar {
+        width: 100%;
+        position: relative;
+    }
+    .sidebar-wrapper {
+       
+        height: unset;
+    }
+
+    .col-md-9.col-lg-10.p-4.main-content {
+        margin-left: 0;
+    }
 }
 
 

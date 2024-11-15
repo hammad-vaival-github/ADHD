@@ -1,7 +1,6 @@
 body {
     font-family: 'Figtree', sans-serif;
     background-color: #e3e3e3;
-    ;
     color: #333;
 }
 
@@ -9,6 +8,16 @@ body {
     background-color: #ffffff;
     padding-top: 20px;
     border-right: 1px solid #dee2e6;
+    height: 100vh; /* Ensures it takes the full height of the screen */
+    position: fixed; /* Keeps it fixed in place */
+    top: 0;
+    left: 0;
+    overflow-y: auto; /* Allows scrolling if content overflows */
+    width: 16.66667%; /* Equal to col-md-3 and col-lg-2 */
+}
+.main-content {
+    margin-left: 16.66667%; /* Matches sidebar width */
+    padding: 20px;
 }
 
 .profile-image {
@@ -20,8 +29,8 @@ body {
 .task-card {
     background-color: #ffffff;
     border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
+    padding: 15px;
+    margin-bottom: 10px;
 }
 
     .task-card img {
@@ -30,11 +39,12 @@ body {
     }
 
 .evening-task {
-    padding: 15px 20px;
+    padding: 10.9px 10px;
     border-radius: 8px;
-    margin-bottom: 10px;
+    margin-bottom: 9px;
     color: #fff;
     text-transform: uppercase;
+    font-size: 15px;
 }
 
     .evening-task i {
@@ -59,8 +69,13 @@ body {
     align-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    height: calc(95% - 50px);
+    /*height: calc(95% - 50px);*/
 }
+    .sidebar-wrapper nav a i {
+        min-width: 20px;
+    }
+
+  
 
 .d-flex.sidebar-wrapper nav a, .stat-tabs ul li button {
     color: #434343;
@@ -123,8 +138,8 @@ body {
     border: 2px solid #d4bd76;
     text-transform: initial;
 }
-button#AddBrainFitness {
-    padding: 10px 40px;
+button#AddBrainFitness, button#AllBrainFitness, button#reset,.btn-x10-y30 {
+    padding: 10px 30px;
 }
 table.table.table-bordered.table-responsive.dataTable.no-footer thead tr th,
 table.table.table-bordered.table-responsive.dataTable.no-footer tbody tr td, .small {
@@ -150,14 +165,183 @@ table.dataTable tbody tr.even {
     background-color: rgb(145 134 134 / 40%) !important;
 }
 table.dataTable tbody tr.even td, table.dataTable tbody tr.odd td {
-    padding: 15px 5px;
+    padding: 15px 10px 10px;
 }
-.page-link.active, .active > .page-link {
+.page-link.active {
     background-color: #ffca2c !important;
     border-color: #ffca2c !important;
     color: #664d03 !important;
 }
-.paginate_button a {
+/*.paginate_button a {
     border-color: #ffca2c !important;
     color: #664d03 !important;
+}*/
+div#tbBrainFitness_wrapper {
+    margin: 0px !important;
+    padding: 0px !important;
+}
+div#tbBrainFitness_length select {
+    background: transparent;
+    border: 2px solid #d4bd76;
+    width: 50px;
+    outline: none;
+}
+div#tbSTasks_length select {
+    background: transparent;
+    border: 2px solid #052c65;
+    width: 50px;
+    outline: none;
+}
+div#tbGratitudeJournal_length select {
+    background: transparent;
+    border: 2px solid #58151c;
+    width: 50px;
+    outline: none;
+}
+
+
+
+div#tbtriggers_length select {
+    background: transparent;
+    border: 2px solid #710544;
+    width: 50px;
+    outline: none;
+}
+div#tbMemoryMaker_length select {
+    background: transparent;
+    border: 2px solid #495057;
+    width: 50px;
+    outline: none;
+}
+div#tbMindfulAttention_length select {
+    background: transparent;
+    border: 2px solid #055160;
+    width: 50px;
+    outline: none;
+}
+
+
+.bg-body-tertiary {
+    --bs-bg-opacity: 1;
+    background-color: #f9b4dc !important;
+    color: #710544 !important;
+}
+
+.bg-body-tertiary i {
+    color: #710544 !important;
+}
+.text-primaryTT-emphasis {
+    color: #710544 !important;
+}
+.text-transform-unset {
+    text-transform: unset !important;
+}
+.btn.bg-body-tertiary {
+    border-color: #710544 !important;
+}
+table.dataTable thead th, table.dataTable thead td, .dataTables_wrapper.no-footer .dataTables_scrollBody {
+    border-color: #710544 !important;
+}
+li.paginate_button {
+    padding: 0 !important;
+}
+ul.pagination li a {
+    margin: 0px !important;
+    background: transparent !important;
+    border: none;
+    color: #545C75 !important;
+    font-family: inherit !important;
+    box-shadow: none !important;
+    border-radius: 16px !important;
+    min-width: 30px !important;
+    padding: 5px 12px !important;
+}
+ul.pagination li.active, .dataTables_wrapper .dataTables_paginate .paginate_button.active:hover {
+    background: #1d64d8 !important;
+    border-color: #1d64d8 !important;
+}
+li.paginate_button.page-item.active a {
+    color: #fff !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background: none !important;
+    border: 1px solid transparent !important;
+    color: #fff !important;
+}
+div#tbtriggers_info, div#tbtriggers_paginate, div#tbBrainFitness_paginate,
+div#tbBrainFitness_info, div#tbMemoryMaker_paginate, div#tbMemoryMaker_info,
+div#tbMindfulAttention_paginate, div#tbMindfulAttention_info,
+div#tbGratitudeJournal_paginate, div#tbGratitudeJournal_info, div#tbSTasks_paginate, div#tbSTasks_info {
+    margin-top: 20px
+}
+span#Completed_\{CT\} {
+    position: relative;
+    top: -2px;
+    left: -10px;
+}
+    span#Completed_\{CT\} i {
+        color: #198754 !important;
+    }
+form#TriggerForm label {
+    color: #710544 !important;
+    padding: 20px 0 15px;
+    font-weight: bold;
+}
+form#staskForm label {
+    padding: 20px 0 15px;
+    font-weight: bold;
+    color: #052c65;
+}
+form#GratitudeJournalForm label {
+    color: #58151c;
+    padding: 20px 0 15px;
+    font-weight: bold;
+}
+form#MemoryMakerForm label {
+    color: #495057 !important;
+    padding: 20px 0 15px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+form#MindFullAttentionForm label {
+    color: #055160 !important;
+    padding: 20px 0 15px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+form#TriggerForm input.btn {
+    background-color: #f9b4dc !important;
+    color: #710544 !important;
+    border: #710544 !important;
+}
+.sidebar-wrapper nav a.nav-link:hover {
+    background-color: #ececec !important;
+    opacity: 0.9;
+}
+button#sectionZero-tab {
+    color: #000 !important;
+}
+.scpagewrap .card-footer.text-body-secondary span i {
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+
+.scpagewrap .card-footer.text-body-secondary span {
+    padding-right: 19px;
+    color: #052c65;
+}
+
+div#tbSTasks_wrapper th.small.sorting_disabled {
+    border-color: transparent !important;
+}
+
+div#toast-container .toast.toast-success {
+    background-color: #52B727;
+}
+div#toast-container .toast.toast-error {
+    background-color: #BD362F;
+}
+div#toast-container .toast.toast-warning {
+    background-color: #B79027;
 }

@@ -16,6 +16,7 @@ function Modeldata(data, FootFlag, Modellabel, savebHtml) {
     $("#msModal").modal("show");
     if (FootFlag == true) {
         $("#Modelfooter").show();
+        console.log(savebHtml);
         $('#saveb').html(savebHtml);
     }
     else {
@@ -30,10 +31,16 @@ function SubmitNewTask(form, actionUrl) {
         url: actionUrl,
         data: form.serialize(), // serializes the form's elements.
         success: function (data) {
+            //toastr.options = {
+            //    "closeButton": true,           // Show close button to allow manual dismissal
+            //    "timeOut": 0,                  // Keeps the toast on screen indefinitely
+            //    "extendedTimeOut": 0,          // Prevents the toast from disappearing on mouse hover
+            //    "progressBar": true            // Adds a progress bar for visual appeal
+            //};
             toastr.success(data, 'Success');
             $("#msModal").modal("toggle");
             $('.modal-backdrop').remove(); // removes the overlay
-            setTimeout(() => { document.location.reload() }, 2000);
+            setTimeout(() => { document.location.reload() }, 2000);//2000
 
         }
     });

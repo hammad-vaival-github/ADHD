@@ -2,11 +2,11 @@
     ViewBag.Title = "Index";
 }
 
-<div class="container-fluid">
+<div>
     <div class="row">
         <div class="col-12 col-sm-8 col-md-12">
             <div class="spacer20"></div>
-            <div id="logbox" class="card mt-0">
+            <div id="logbox" class="mt-0">
                 <div class="card-body">
                     <div class="text-center fw-semibold">
                         @Html.ValidationSummary("", new { @class = "text-danger" })
@@ -15,8 +15,8 @@
                         <div id="clientDisplay" class="col-xs-12 col-sm-12">
                             <div class="outframe">
                                 <div style="padding: -10px 10px;">
-                                    <div class="card text-white bg-primary mb-3">
-                                        <div class="card-header text-lg-center">
+                                    <div class="evening-task bg-primary-subtle text-primary-emphasis text-transform-unset">
+                                        @*<div class="card-header text-lg-center">
                                             <a href="@Url.Action("Index", "UProfile")" class="alert-link">
                                                 <i style="float: left;">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
@@ -26,17 +26,17 @@
                                                 </i>
                                             </a>
                                             <span class="h5 card-title">&nbsp;Commitment 1</span>
-                                        </div>
-                                        <div class="card-body text-primary">
-                                            <h6 class="card-subtitle mb-2 text-white">
-                                                <i class="fa fa-calendar-check-o fw-semibold fa-2x" aria-hidden="true"></i>&nbsp;Scheduling tasks
-                                                <button class="btn btn-light btn-sm " id="AboutCom">
+                                        </div>*@
+                                        <div class="card-body text-primary-emphasis">
+                                            <h6 class="card-subtitle mb-2 fw-bold py-3">
+                                                <i class="fa-regular fa-calendar-days text-primary-emphasis me-2" aria-hidden="true"></i>&nbsp;SCHEDULING TASKS
+                                                @*<button class="btn btn-light btn-sm " id="AboutCom">
                                                     <i class="fa fa-info-circle" aria-hidden="true"></i>
                                                     &nbsp;About this commitmnet
-                                                </button>
+                                                </button>*@
                                             </h6>
                                             <p class="card-text">
-                                                <div class="alert  text-white bg-primary" role="alert">
+                                                <div class="alert text-primary-emphasis alert-primary" role="alert">
                                                     <div class="row">
                                                         <div class="col-sm-12 mb-6 mb-sm-12 col-lg-9">
                                                             <h6 class="card-title">WHAT TO DO</h6>
@@ -44,7 +44,7 @@
                                                         </div>
                                                         <div class="col-sm-12 mb-6 mb-sm-12 col-lg-3">
                                                             <span class="card-title">
-                                                                <button href="javascript:void(0)" class="btn btn-primary btn-sm AddTask float-end" id="AddTask" value="0">
+                                                                <button href="javascript:void(0)" class="btn btn-primary btn-sm AddTask rounded-pill float-end btn-x10-y30" id="AddTask" value="0">
                                                                     <i class="fa fa-plus-circle" aria-hidden="true"></i>
                                                                     &nbsp;Add task
                                                                 </button>
@@ -56,14 +56,14 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-sm-12 mb-3 mb-sm-0">
-                                                        <div class="card">
-                                                            <div class="card-body">
-                                                                <div class="container-fluid" style="padding: 0 5px;">
+                                                        <div class="">
+                                                            <div class="">
+                                                                <div>
                                                                     <div class="table-responsive bluetablebackgrounds">
                                                                         <table id="tbSTasks" class="table table-bordered table-responsive">
                                                                             <thead>
                                                                                 <tr role="row">
-                                                                                    <th class="small">
+                                                                                    <th class="small" style="display: flex; justify-content: flex-end;padding-bottom:30px ">
                                                                                         Task
                                                                                     </th>
                                                                                 </tr>

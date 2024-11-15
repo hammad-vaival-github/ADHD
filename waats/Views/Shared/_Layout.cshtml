@@ -46,7 +46,10 @@
         <!--translation dropdown-->
         <div class="translation-wrapper">
             <div class="container-fluid">
-                <div class="d-flex justify-content-end">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <img src="~/Content/images/ADHD-Logo.png" class="img-fluid logo-survey" />
+                    </div>
                     <div>
                         @Html.Partial("_Translator")
                     </div>
@@ -54,136 +57,117 @@
             </div>
         </div>
     }
-    @{ if (User.Identity.IsAuthenticated)
-        {
-            if (path == "/")
-            {
-                <div class="total-wrapper">
-                    <nav class="navbar navbar-expand-lg main-menu">
-                        <div class="container-fluid p-0">
-                            @*<a class="navbar-brand" href="#">TEMPLATE<span style="color: #007bff;">LOGO</span></a>*@
-                            <img class="navbar-brand p-0 m-0" src="~/images/adhd.png" style="height:70px;" />
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div class="collapse navbar-collapse" id="navbarNav">
-                                <ul class="navbar-nav ms-auto">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" href="@Url.Action("SchedulingTasksList", "UProfile")">
-                                            <div>
-                                                <i class="fa-regular fa-calendar-days pe-2" aria-hidden="true"></i>
-                                            </div>
-                                            Scheduling tasks
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="@Url.Action("MindMeditation", "UProfile")">
-                                            <div>
-                                                <i class="fa-solid fa-brain pe-2" aria-hidden="true"> </i>
-                                            </div>
-                                            Mindfullness meditation
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="@Url.Action("brainFitness", "UProfile")">
-                                            <i class="fa-solid fa-brain pe-2"></i> Brain Fitness
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="@Url.Action("SpottingTriggers", "UProfile")">
-                                            <div>
-                                                <i class="fa-solid fa-triangle-exclamation pe-2" aria-hidden="true"></i>
-                                            </div>
-                                            Spotting triggers
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="@Url.Action("MemoryMaker", "UProfile")">
-                                            <div>
-                                                <i class="fa-solid fa-eye pe-2" aria-hidden="true"> </i>
-                                            </div>
-                                            Memory maker
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="@Url.Action("MindfullAttention", "UProfile")">
-                                            <i class="fa-regular fa-comment-dots pe-2" aria-hidden="true"></i>
-                                            Mindfull attention
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="@Url.Action("GratitudeJournal", "UProfile")">
-                                            <div>
-                                                <i class="fa-regular fa-heart pe-2" aria-hidden="true"></i>
-                                            </div>
-                                            Gratitude journal
-                                        </a>
-                                    </li>
-                                    @*</ul>*@
-                                    @*<ul class="navbar-nav d-flex flex-row">*@
-                                    <li class="nav-item text-center">
-                                        @Html.Partial("_LoginPartial")
-                                    </li>
-                                    @*</ul>*@
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-            }
-            else
-            {
-                <div class="container-fluid">
-                    <div class="row">
-                        <!-- Sidebar -->
-                        <div class="col-md-3 col-lg-2 sidebar">
-                            <div class="text-left mb-4">
-                                                @*<img src="" alt="Profile" class="profile-image">*@
-                                                <img src="~/Content/images/ADHD-Logo.png" class="img-fluid w-75"/>
-                                @*<h6 class="text-uppercase text-primary fw-bold">ADHD</h6>*@
-                                <!--                <div class="m-3">-->
-                                <!--                    <select class="form-select" aria-label="Default select example">-->
-                                <!--                        <option selected>Open this select menu</option>-->
-                                <!--                        <option value="1">One</option>-->
-                                <!--                        <option value="2">Two</option>-->
-                                <!--                        <option value="3">Three</option>-->
-                                <!--                    </select>-->
-                                <!--                </div>-->
-                            </div>
-                            <div class="d-flex sidebar-wrapper">
-                                <nav class="nav flex-column w-100">
-                                    <a class="nav-link active" href="@Url.Action("Index", "UProfile")"><i class="fa-solid fa-table-columns "></i>Dashboard</a>
-                                    <a class="nav-link" href="@Url.Action("SchedulingTasksList", "UProfile")"><i class="fa-regular fa-calendar-days "></i>Schedule</a>
-                                    <a class="nav-link" href="@Url.Action("MindMeditation", "UProfile")"><i class="fa-solid fa-brain "></i>Mindfulness Meditation</a>
-                                    <a class="nav-link" href="@Url.Action("brainFitness", "UProfile")"><i class="fa-solid fa-brain "></i>Brain Fitness</a>
-                                    <a class="nav-link" href="@Url.Action("SpottingTriggers", "UProfile")">
-                                        <i class="fa-solid fa-triangle-exclamation "></i>Spotting Triggers</a>
-                                    <a class="nav-link" href="@Url.Action("MemoryMaker", "UProfile")"><i class="fa-solid fa-eye "></i>Memory Maker</a>
-                                    <a class="nav-link" href="@Url.Action("MindfullAttention", "UProfile")">
-                                        <i class="fa-regular fa-comment-dots "></i>Mindful Attention</a>
-                                    <a class="nav-link" href="@Url.Action("GratitudeJournal", "UProfile")"><i class="fa-regular fa-heart "></i>Gratitude Journal</a>
-                                </nav>
-                                @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
-                                {
-                                    @Html.AntiForgeryToken()
-                                    <nav class="nav flex-column w-100">
+    @*@{ if (User.Identity.IsAuthenticated)
+        {*@
+    @if (path == "/")
+    {
+     <div class="total-wrapper">
+        <nav class="navbar navbar-expand-lg main-menu">
+            <div class="container-fluid p-0">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="@Url.Action("SchedulingTasksList", "UProfile")">
+                                <i class="fa-regular fa-calendar-days pe-2" aria-hidden="true"></i>Scheduling Tasks
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("MindMeditation", "UProfile")">
+                                <i class="fa-solid fa-brain pe-2" aria-hidden="true"> </i>Mindfullness Meditation
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("brainFitness", "UProfile")">
+                                <i class="fa-solid fa-brain pe-2"></i>Brain Fitness
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("SpottingTriggers", "UProfile")">
+                                <i class="fa-solid fa-triangle-exclamation pe-2" aria-hidden="true"></i>Spotting Triggers
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("MemoryMaker", "UProfile")">
+                                <i class="fa-solid fa-eye pe-2" aria-hidden="true"> </i>Memory Maker
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("MindfullAttention", "UProfile")">
+                                <i class="fa-regular fa-comment-dots pe-2" aria-hidden="true"></i>Mindfull Attention
 
-                                        <a class="nav-link" href="javascript:document.getElementById('logoutForm').submit()"><i class="fa-solid fa-arrow-right-from-bracket "></i> Logout</a>
-                                    </nav>
-                                }
-                            </div>
-
-                        </div>
-                        <!-- Main Content -->
-                        <div class="col-md-9 col-lg-10 p-4">
-                            @*<h4 class="fw-bold py-3">Good morning, <span class="text-primary">@User.Identity.Name !</span></h4>*@
-                            <!-- Current Task -->
-                            @RenderBody()
-                        </div>
-                    </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("GratitudeJournal", "UProfile")">
+                                <i class="fa-regular fa-heart pe-2" aria-hidden="true"></i>Gratitude Journal
+                            </a>
+                        </li>
+                        @*</ul>*@
+                        @*<ul class="navbar-nav d-flex flex-row">*@
+                        <li class="nav-item text-center">
+                            @Html.Partial("_LoginPartial")
+                        </li>
+                        @*</ul>*@
                 </div>
-            }
-        }
+            </div>
+        </nav>
+    </div>
     }
+    else
+    {
+     <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3 col-lg-2 sidebar">
+                <div class="text-left mb-4">
+                    @*<img src="" alt="Profile" class="profile-image">*@
+                    <img src="~/Content/images/ADHD-Logo.png" class="img-fluid w-75" />
+                    @*<h6 class="text-uppercase text-primary fw-bold">ADHD</h6>*@
+                    <!--                <div class="m-3">-->
+                    <!--                    <select class="form-select" aria-label="Default select example">-->
+                    <!--                        <option selected>Open this select menu</option>-->
+                    <!--                        <option value="1">One</option>-->
+                    <!--                        <option value="2">Two</option>-->
+                    <!--                        <option value="3">Three</option>-->
+                    <!--                    </select>-->
+                    <!--                </div>-->
+                </div>
+                <div class="d-flex sidebar-wrapper">
+                    <nav class="nav flex-column w-100">
+                        <a class="nav-link active" href="@Url.Action("Index", "UProfile")"><i class="fa-solid fa-gauge-high"></i>Dashboard</a>
+                        <a class="nav-link text-primary-emphasis" href="@Url.Action("SchedulingTasksList", "UProfile")"><i class="fa-regular fa-calendar-days"></i>Schedule</a>
+                        <a class="nav-link text-success-emphasis" href="@Url.Action("MindMeditation", "UProfile")"><i class="fa-solid fa-spa"></i>Mindfulness Meditation</a>
+                        <a class="nav-link text-warning-emphasis" href="@Url.Action("brainFitness", "UProfile")"><i class="fa-solid fa-brain"></i>Brain Fitness</a>
+                        <a class="nav-link text-primaryTT-emphasis" href="@Url.Action("SpottingTriggers", "UProfile")"><i class="fa-regular fa-life-ring"></i>Spotting Triggers</a>
+                        <a class="nav-link text-dark-emphasis" href="@Url.Action("MemoryMaker", "UProfile")"><i class="fa-solid fa-handshake"></i>Memory Maker</a>
+                        <a class="nav-link text-info-emphasis" href="@Url.Action("MindfullAttention", "UProfile")"><i class="fa-solid fa-leaf"></i>Mindful Attention</a>
+                        <a class="nav-link text-danger-emphasis" href="@Url.Action("GratitudeJournal", "UProfile")"><i class="fa-solid fa-hand-holding-heart"></i>Gratitude Journal</a>
+                    </nav>
+                    @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <nav class="nav flex-column w-100">
+
+                            <a class="nav-link" href="javascript:document.getElementById('logoutForm').submit()"><i class="fa-solid fa-arrow-right-from-bracket "></i> Logout</a>
+                        </nav>
+                    }
+                </div>
+
+            </div>
+            <!-- Main Content -->
+            <div class="col-md-9 col-lg-10 p-4 main-content">
+                @*<h4 class="fw-bold py-3">Good morning, <span class="text-primary">@User.Identity.Name !</span></h4>*@
+                <!-- Current Task -->
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    }
+    @* }
+        }*@
 
 
     <!-- Navbar -->
@@ -207,6 +191,18 @@
     @Scripts.Render("~/bundles/dataTables")
     @Scripts.Render("~/bundles/toastr")
     <script>
+        // Get the current URL path (e.g., /UProfile/Index)
+        var currentPath = window.location.pathname;
+
+        // Remove 'active' class from all links
+        $(".nav-link").removeClass("active");
+
+        // Add 'active' class to the link that matches the current path
+        $(".nav-link").each(function () {
+            if ($(this).attr("href") === currentPath) {
+                $(this).addClass("active");
+            }
+        });
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({ includedLanguages: 'en,es,fr,ur,hi', autoDisplay: true, layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
             ///new google.translate.TranslateElement({ autoDisplay: true, layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');

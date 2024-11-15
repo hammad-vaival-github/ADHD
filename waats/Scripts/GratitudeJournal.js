@@ -30,7 +30,7 @@ function LoadTriggerModel() {
         type: "Get",
         url: baseUrl + "UProfile/AddGratitudeJournal",
         success: function (data) {
-            Modeldata(data, false, "Add new Gratitude Journal", 'Not required');
+            Modeldata(data, false, "Add new gratitude journal", 'Not required');
         },
         error: function () {
             alert('error!');
@@ -59,13 +59,13 @@ function LoadTask() {
             {
                 mRender: function (data, type, row) {
                     var linkQuery = '';
-                    linkQuery = ' <div class="card card border-dark">';
-                    linkQuery += '<div class="card-header">';
-                    linkQuery += '<span class="card-title h5">{Tdate}</span>&nbsp;&nbsp;'
-                        +'<i id = Completed_{CT} class="btn fa fa-check fw-semibold fa-1x text-success" aria-hidden="true" >&nbsp; Completed</i> ';
+                    linkQuery = ' <div class="">';
+                    linkQuery += '<div class="mb-2">';
+                    linkQuery += '<span class="h5 px-0">{Tdate}</span>&nbsp;&nbsp;'
+                        +'<span id = Completed_{CT} class="text-success ps-2 fw-bold"><i id = Completed_{CT} class="btn fa fa-check fw-semibold fa-1x text-success" aria-hidden="true" ></i>Completed</span> ';
                     linkQuery += '</div>';
                     linkQuery += '<div class="card-body">';
-                    linkQuery += '<span class="card-text text-end h6">Things I am gratfull for today :</span> :<br/><span class="card-text text-end">{One}</span><br/><hr>';
+                    linkQuery += '<span class="card-text text-end h6">Things I am gratefull for today</span> :<br/><span class="card-text text-end">{One}</span><br/>';
                     linkQuery += '</div>';
                     linkQuery += '<div class="card-footer text-body-secondary">';
                     linkQuery += '</div>';
@@ -81,7 +81,11 @@ function LoadTask() {
         ///// "order": [0, "desc"],
         "processing": "true",
         "language": {
-            "processing": "Loading Forms.. please wait"
+            "processing": "Loading Forms.. please wait",
+            "paginate": {
+                "next": ">",    // Customize "Next" button text
+                "previous": "<"    // Customize "Previous" button text
+            }
         }
     });
 }

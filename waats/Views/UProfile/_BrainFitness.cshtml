@@ -13,48 +13,54 @@
     @Html.HiddenFor(model => model.Q_Take)
     @Html.HiddenFor(model => model.Q_A)
     @Html.HiddenFor(model => model.Q_NoofAttempts)
-<strong>
-    This is a mental exercise please do math/calculation
-    in your head.
-</strong><br/>
+    <h5 class="mb-4 fw-bold text-warning-emphasis">
+        This is a mental exercise please do math/calculation in your head.
+    </h5>
+    <br />
     <div class="card-body text-dark-emphasis">
-        <div class="form-group">
-            <label class="control-label col-md-12 text-primary"> Starting Number </label>
-            <div class="col-md-12">
-                <span class="h5 text-bg-light text-primary">@Model.StartingNumber</span>
+        <div class="row pb-3">
+            <div class="col-md-5">
+                <h5> Starting Number</h5>
+            </div>
+            <div class="col-md-7">
+                <h5 class="text-warning-emphasis fw-bold">@Model.StartingNumber</h5>
             </div>
         </div>
-        <div class="form-group">
-            <label class="control-label col-md-12"> </label>
-            <div class="col-md-12">
-                <span class="text-bg-light text-primary text-lg-center">@Model._a</span>
+        <div class="row pb-3">
+            <div class="col-md-5">
+                <h5> </h5>
+            </div>
+            <div class="col-md-7">
+                <h5 class="text-warning-emphasis fw-bold">@Model._a</h5>
             </div>
         </div>
-        <div class="form-group">
-            <label class="control-label col-md-12">  </label>
-            <div class="col-md-12">
-                <span class="text-bg-light  text-primary">@Model._t</span>
+        <div class="row pb-3">
+            <div class="col-md-5">
+                <h5> </h5>
+            </div>
+            <div class="col-md-7">
+                <h5 class="text-warning-emphasis fw-bold">@Model._t</h5>
             </div>
         </div>
-        <div class="form-group">
-            <label class="control-label col-md-12"> </label>
+        <div class="row pb-3">
             <div class="col-md-12">
-                @Html.EditorFor(model => model._UI, new { htmlAttributes = new { @class = "form-control section1C", id = "_UI" } })
-                @Html.ValidationMessageFor(model => model._UI, "", new { @class = "text-danger" })
+                <div class="col-md-12">
+                    @Html.EditorFor(model => model._UI, new { htmlAttributes = new { @class = "form-control section1C", id = "_UI" } })
+                    @Html.ValidationMessageFor(model => model._UI, "", new { @class = "text-danger" })
+                </div>
             </div>
         </div>
     </div>
     <div class="spacer5"></div>
     <div class="spacer5"></div>
     <div class="row">
-        <div class="col-12 col-sm-12 col-md-12 col-lg-9">
-        </div>
-        <div class="col-12 col-sm-12 col-md-12 col-lg-3">
-            <div class="container-fluid text-start">
+      
+        <div class="col-sm-12">
+            <div class="text-start">
                 @{
                     if (Model != null)
                     {
-                        <input type="submit" value="Submit" class="btn btn-block btn-sm btn-primary" />
+                        <input type="submit" value="Submit" class="btn btn-warning float-end" />
                     }
                 }
             </div>
