@@ -11,7 +11,7 @@
     }
 </style>
 <div class="video-container2">
-    <ul class="nav nav-pills nav-tabs mb-3 bg-light rounded p-2" id="myTab" role="tablist">
+    <ul class="nav nav-pills nav-tabs mb-3 bg-white rounded p-2" id="myTab" role="tablist">
         @*<li class="nav-item" role="presentation">
             <button class="nav-link text-secondary active" id="sectionOneZero-tab" data-bs-toggle="tab"
                     type="button" role="tab"
@@ -75,24 +75,25 @@
             {
                 <div class="tab-pane" id="sectionOne-tab-pane" role="tabpanel"
                      aria-labelledby="profile-tab" tabindex="0">
-                    <div class="row">
+                    <div class="row mt-3">
                         <div class="col-md-6">
                             <div class="video-container m-0">
                                 <div class="video-frame rounded frame-low-vh m-0">
                                     <video id="Intro1" style="width:560px;height:315px">
                                         <source src="~/Media/eng/Intro.mp4" type='video/mp4;'>
                                     </video>
-                                    <i class="fa  fa-play-circle-o myHTMLvideo fw-semibold fa-1x py-4 text-light" id="Intro" style="cursor:pointer">&nbsp;click here to play intro</i>
-                                </div>
+                                    <span id="Intro" style="cursor:pointer" class="myHTMLvideo fw-semibold fa-1x py-4 text-light">Click here to play intro</span>
+    @*<i class="fa  fa-play-circle-o myHTMLvideo fw-semibold fa-1x py-4 text-light" id="Intro" style="cursor:pointer">&nbsp;click here to play intro</i>*@
+</div>
                             </div>
-                            <div class="row text-center align-middle Section1Btn" style="display:none">
+                            <div class="row text-center align-middle Section1Btn mt-3" style="display:none">
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                     <button id="Section0BtnID" type="button" class="btn btn-success btn-lg" name="submit">Continue</button>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div id="divDisableFormContainer" class="form-container pb-5 disable-form mt-3">
+                            <div id="divDisableFormContainer" class="form-container pb-5 disable-form mt-0">
                                 <h4>Section 1</h4>
                                 <div class="mb-3">
                                     @Html.LabelFor(model => model.Firstname, htmlAttributes: new { @class = "form-label" })
@@ -178,7 +179,8 @@
                                     <video class="mycedio" id="Q3Intro-1" style="width: 560px; height: 315px; ">
                                         <source src="~/Media/eng/Q3-Intro.mp4" type='video/mp4;'>
                                     </video>
-                                    <i class="fa fa-play-circle-o myHTMLvideo small fw-semibold  fa-1x py-4 text-light" style="cursor:pointer" id="Q3Intro-">&nbsp;click here to play</i>
+                                    <span class="myHTMLvideo small fw-semibold  fa-1x py-4 text-light" style="cursor:pointer" id="Q3Intro-">Click here to play</span>
+                                    @*<i class="fa fa-play-circle-o myHTMLvideo small fw-semibold  fa-1x py-4 text-light" style="cursor:pointer" id="Q3Intro-">&nbsp;click here to play</i>*@
                                 </div>
                             </div>
                         </div>
@@ -236,7 +238,8 @@
                                     <video class="mycedio" id="Q4Intro-1" style="width: 560px; height: 315px; ">
                                         <source src="~/Media/eng/Q4-Intro.mp4" type='video/mp4;'>
                                     </video>
-                                    <i class="fa fa-play-circle-o myHTMLvideo  small fw-semibold  fa-1x py-4 text-light" style="cursor:pointer" id="Q4Intro-">&nbsp;click here to play</i>
+                                    <span class="myHTMLvideo small fw-semibold fa-1x py-4 text-light" style="cursor:pointer" id="Q4Intro-">Click here to play</span>
+                                    @*<i class="fa fa-play-circle-o myHTMLvideo  small fw-semibold  fa-1x py-4 text-light" style="cursor:pointer" id="Q4Intro-">&nbsp;click here to play</i>*@
                                 </div>
                             </div>
                         </div>
@@ -251,19 +254,19 @@
                                     @Html.ValidationMessageFor(model => model.CompleteProjects, "", new { @class = "text-danger" })
                                 </div>
                                 <div class="mb-3">
-                                    <div class="form-check">
+                                    <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="CompleteProjects" id="inlineRadio1" value="Never" @(Model.CompleteProjects != null && Model.CompleteProjects == "Never" ? new { @checked = "checked" } : null)>
                                         <label class="form-check-label" for="inlineRadio1">Never</label>
                                     </div>
-                                    <div class="form-check">
+                                    <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="CompleteProjects" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.CompleteProjects != null && Model.CompleteProjects == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
                                         <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
                                     </div>
-                                    <div class="form-check">
+                                    <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="CompleteProjects" id="inlineRadio3" value="Often" @(Model.CompleteProjects != null && Model.CompleteProjects == "Often" ? new { @checked = "checked" } : null)>
                                         <label class="form-check-label" for="inlineRadio3">Often</label>
                                     </div>
-                                    <div class="form-check">
+                                    <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="CompleteProjects" id="inlineRadio3" value="Always" @(Model.CompleteProjects != null && Model.CompleteProjects == "Always" ? new { @checked = "checked" } : null)>
                                         <label class="form-check-label" for="inlineRadio3">Always</label>
                                     </div>
@@ -669,7 +672,8 @@
                                 </div>
                                 <div class="mb-3">
                                     <h6 class="card-title">
-                                        @Html.Raw("18- ") @Html.LabelFor(model => model.ReceiveWarningsAndPersistent, htmlAttributes: new { @class = "form-label" })
+                                        @*@Html.Raw("18- ")*@
+                                        @Html.LabelFor(model => model.ReceiveWarningsAndPersistent, htmlAttributes: new { @class = "form-label" })
                                     </h6>
                                 </div>
                                 <div class="mb-3">

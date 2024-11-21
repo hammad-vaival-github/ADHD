@@ -1,9 +1,9 @@
 ﻿@model waats.Models.BrainFitnessVM
 @{
     ViewBag.Title = "Add new brain fitness";
-    Layout = "~/Views/Shared/_LayoutUnauthed.cshtml";
+    Layout = null;//"~/Views/Shared/_LayoutUnauthed.cshtml";
 }
-@using (Html.BeginForm(null, null, new { returnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form", @id = "BrainFitnessForm" }))
+@*@using (Html.BeginForm(null, null, new { returnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form", @id = "BrainFitnessForm" }))
 {
     @Html.AntiForgeryToken()
     @Html.HiddenFor(model => model.BrainFitnessID)
@@ -54,7 +54,7 @@
     <div class="spacer5"></div>
     <div class="spacer5"></div>
     <div class="row">
-      
+
         <div class="col-sm-12">
             <div class="text-start">
                 @{
@@ -66,4 +66,50 @@
             </div>
         </div>
     </div>
+}*@
+
+@using (Html.BeginForm(null, null, new { returnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "", role = "form", @id = "BrainFitnessForm" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.BrainFitnessID)
+    @Html.HiddenFor(model => model.UserId)
+    @Html.HiddenFor(model => model.StartingNumber)
+    @Html.HiddenFor(model => model.Q_Add)
+    @Html.HiddenFor(model => model.Q_Take)
+    @Html.HiddenFor(model => model.Q_A)
+    @Html.HiddenFor(model => model.Q_NoofAttempts)
+    @*<div class="offcanvas offcanvas-end" tabindex="-1" id="brainExerciseDrawer">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">New Brain Exercise</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>*@
+        <div class="offcanvas-body">
+            <p class="text-muted">This is a mental exercise. Please do math/calculation in your head.</p>
+
+            <!-- Exercise Form -->
+            <form>
+                <div class="formWrapper">
+                    <div class="d-flex justify-content-between">
+                        <label for="startingNumber" class="form-label">Starting Number</label>
+                        <input type="text" class="form-control-md" id="startingNumber" value="@Model.StartingNumber" disabled>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <label for="addTimes" class="form-label">Add</label>
+                        <input type="text" class="form-control-md" id="addTimes" value="@Model._a" disabled>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <label for="takeTimes" class="form-label">Take</label>
+                        <input type="text" class="form-control-md" id="takeTimes" value="@Model._t" disabled>
+                    </div>
+                </div>
+                <div class="d-flex flex-column answerInput">
+                    <label for="answer" class="form-label mb-2">Your Answer</label>
+                    @*<input type="text" class="form-control mb-0" id="answer" placeholder="Write your answer here">*@
+                    @Html.EditorFor(model => model._UI, new { htmlAttributes = new { @class = "form-control mb-0", id = "_UI" } })
+                    @Html.ValidationMessageFor(model => model._UI, "", new { @class = "text-danger" })
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Submit</button>
+            </form>
+        </div>
+    @*</div>*@
 }

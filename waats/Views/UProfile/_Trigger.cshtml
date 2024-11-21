@@ -1,66 +1,116 @@
 ﻿@model waats.Models.TriggerVM
 @{
     ViewBag.Title = "Add new task";
-    Layout = "~/Views/Shared/_LayoutUnauthed.cshtml";
+    Layout = null;
 }
-@using (Html.BeginForm(null, null, new { returnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form", @id = "TriggerForm" }))
+
+@using (Html.BeginForm(null, null, new { returnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "", role = "form", @id = "TriggerForm" }))
 {
     @Html.AntiForgeryToken()
     @Html.HiddenFor(model => model.TriggerID)
     @Html.HiddenFor(model => model.UserId)
 
-    <div class="form-group">
-        @Html.LabelFor(m => m.whatwasthetriggerevent, new { @class = "col-md-12 control-label" })
-        <div class="col-md-12">
-            @Html.TextAreaFor(model => model.whatwasthetriggerevent, new { @class = "form-control word_count", @rows = "3", @maxlength = "4000" })
+    <div class="px-2">
+        <div class="d-flex flex-column answerInput mt-3">
+            @Html.LabelFor(m => m.whatwasthetriggerevent, new { @class = "form-label mb-2" })
+            @Html.TextAreaFor(model => model.whatwasthetriggerevent, new { @class = "form-control", @rows = "3", @maxlength = "4000" })
             @Html.ValidationMessageFor(m => m.whatwasthetriggerevent, "", new { @class = "text-danger" })
         </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.whatwastheemotionthatyoufelt, new { @class = "col-md-12 control-label" })
-        <div class="col-md-12">
-            @Html.TextAreaFor(model => model.whatwastheemotionthatyoufelt, new { @class = "form-control word_count", @rows = "3", @maxlength = "4000" })
+        <div class="d-flex flex-column answerInput">
+            @Html.LabelFor(m => m.whatwastheemotionthatyoufelt, new { @class = "form-label mb-2" })
+            @Html.TextAreaFor(model => model.whatwastheemotionthatyoufelt, new { @class = "form-control", @rows = "3", @maxlength = "4000" })
             @Html.ValidationMessageFor(m => m.whatwastheemotionthatyoufelt, "", new { @class = "text-danger" })
         </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.howdiditfeelinyourbody, new { @class = "col-md-12 control-label" })
-        <div class="col-md-12">
-            @Html.TextAreaFor(model => model.howdiditfeelinyourbody, new { @class = "form-control word_count", @rows = "3", @maxlength = "4000" })
+        <div class="d-flex flex-column answerInput">
+            @Html.LabelFor(m => m.howdiditfeelinyourbody, new { @class = "form-label mb-2" })
+            @Html.TextAreaFor(model => model.howdiditfeelinyourbody, new { @class = "form-control", @rows = "3", @maxlength = "4000" })
             @Html.ValidationMessageFor(m => m.howdiditfeelinyourbody, "", new { @class = "text-danger" })
         </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.whymightthisbeatriggerforyou_thinkaboutyourpast, new { @class = "col-md-12 control-label" })
-        <div class="col-md-12">
-            @Html.TextAreaFor(model => model.whymightthisbeatriggerforyou_thinkaboutyourpast, new { @class = "form-control word_count", @rows = "3", @maxlength = "4000" })
+        <div class="d-flex flex-column answerInput">
+            @Html.LabelFor(m => m.whymightthisbeatriggerforyou_thinkaboutyourpast, new { @class = "form-label mb-2" })
+            @Html.TextAreaFor(model => model.whymightthisbeatriggerforyou_thinkaboutyourpast, new { @class = "form-control", @rows = "3", @maxlength = "4000" })
             @Html.ValidationMessageFor(m => m.whymightthisbeatriggerforyou_thinkaboutyourpast, "", new { @class = "text-danger" })
         </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.howcanyouavoidthesituationand_ormanageyourresponsetoitinfuture, new { @class = "col-md-12 control-label" })
-        <div class="col-md-12">
-            @Html.TextAreaFor(model => model.howcanyouavoidthesituationand_ormanageyourresponsetoitinfuture, new { @class = "form-control word_count", @rows = "3", @maxlength = "4000"})
+        <div class="d-flex flex-column answerInput">
+            @Html.LabelFor(m => m.howcanyouavoidthesituationand_ormanageyourresponsetoitinfuture, new { @class = "form-label mb-2" })
+            @Html.TextAreaFor(model => model.howcanyouavoidthesituationand_ormanageyourresponsetoitinfuture, new { @class = "form-control", @rows = "3", @maxlength = "4000" })
             @Html.ValidationMessageFor(m => m.howcanyouavoidthesituationand_ormanageyourresponsetoitinfuture, "", new { @class = "text-danger" })
         </div>
-    </div>
-    <div class="spacer5"></div>
-    <div class="spacer5"></div>
-    <div class="row">
-      
-        <div class="col-md-12 mt-3">
-            <div class="text-start">
-                @{
-                    if (Model != null && Model.UserId != null)
-                    {
-                        <input type="submit" value="Update task" class="btn float-end btn-danger " />
-                    }
-                    else
-                    {
-                        <input type="submit" value="Add task" class="btn float-end btn-danger " />
-                    }
-                }
-            </div>
-        </div>
+        @{
+            if (Model != null && Model.UserId != null)
+            {
+                <input type="submit" value="Update task" class="btn btn-primary w-100" />
+            }
+            else
+            {
+                <input type="submit" value="Add task" class="btn btn-primary w-100" />
+            }
+        }
     </div>
 }
+
+
+@*@using (Html.BeginForm(null, null, new { returnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form", @id = "TriggerForm" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.TriggerID)
+        @Html.HiddenFor(model => model.UserId)
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.whatwasthetriggerevent, new { @class = "col-md-12 control-label" })
+            <div class="col-md-12">
+                @Html.TextAreaFor(model => model.whatwasthetriggerevent, new { @class = "form-control word_count", @rows = "3", @maxlength = "4000" })
+                @Html.ValidationMessageFor(m => m.whatwasthetriggerevent, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.whatwastheemotionthatyoufelt, new { @class = "col-md-12 control-label" })
+            <div class="col-md-12">
+                @Html.TextAreaFor(model => model.whatwastheemotionthatyoufelt, new { @class = "form-control word_count", @rows = "3", @maxlength = "4000" })
+                @Html.ValidationMessageFor(m => m.whatwastheemotionthatyoufelt, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.howdiditfeelinyourbody, new { @class = "col-md-12 control-label" })
+            <div class="col-md-12">
+                @Html.TextAreaFor(model => model.howdiditfeelinyourbody, new { @class = "form-control word_count", @rows = "3", @maxlength = "4000" })
+                @Html.ValidationMessageFor(m => m.howdiditfeelinyourbody, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.whymightthisbeatriggerforyou_thinkaboutyourpast, new { @class = "col-md-12 control-label" })
+            <div class="col-md-12">
+                @Html.TextAreaFor(model => model.whymightthisbeatriggerforyou_thinkaboutyourpast, new { @class = "form-control word_count", @rows = "3", @maxlength = "4000" })
+                @Html.ValidationMessageFor(m => m.whymightthisbeatriggerforyou_thinkaboutyourpast, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.howcanyouavoidthesituationand_ormanageyourresponsetoitinfuture, new { @class = "col-md-12 control-label" })
+            <div class="col-md-12">
+                @Html.TextAreaFor(model => model.howcanyouavoidthesituationand_ormanageyourresponsetoitinfuture, new { @class = "form-control word_count", @rows = "3", @maxlength = "4000" })
+                @Html.ValidationMessageFor(m => m.howcanyouavoidthesituationand_ormanageyourresponsetoitinfuture, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="spacer5"></div>
+        <div class="spacer5"></div>
+        <div class="row">
+
+            <div class="col-md-12 mt-3">
+                <div class="text-start">
+                    @{
+                        if (Model != null && Model.UserId != null)
+                        {
+                            <input type="submit" value="Update task" class="btn float-end btn-danger " />
+                        }
+                        else
+                        {
+                            <input type="submit" value="Add task" class="btn float-end btn-danger " />
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    }*@
+
+
+

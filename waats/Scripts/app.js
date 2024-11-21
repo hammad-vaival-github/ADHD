@@ -7,22 +7,45 @@
 //    });
 });
 
+//function parseToNiceDate(jsonDateString) {
+//        return moment(jsonDateString).format('dddd DD MMMM YYYY HH:mm');
+//}
 function parseToNiceDate(jsonDateString) {
-        return moment(jsonDateString).format('dddd DD MMMM YYYY HH:mm');
+    return moment(jsonDateString).format('DD/MM/YYYY HH:mm');
 }
 function Modeldata(data, FootFlag, Modellabel, savebHtml) {
+    debugger;
     $("#ModalLabel").html(Modellabel);
-    $("#modal-body").html(data);
-    $("#msModal").modal("show");
+    $("#offcanvas-body").html(data);
+    //$("#AddBrainFitness").modal("show");
+    //$("#msModal").css("display","block");
     if (FootFlag == true) {
-        $("#Modelfooter").show();
+        //$("#AddBrainFitness").show();
         console.log(savebHtml);
         $('#saveb').html(savebHtml);
     }
     else {
-        $("#Modelfooter").hide();
+        //$("#AddBrainFitness").hide();
         $('#saveb').html('');
     }
+    //$('.offcanvas-backdrop.fade.show').slice(0, 2).remove();
+}
+function ModelPopUp(data, FootFlag, Modellabel, savebHtml) {
+    debugger;
+    $("#modal-popup").html(data);
+    $("#exampleModal").modal("show");
+    //$("#modal-popup").modal("show");
+    //$("#msModal").css("display","block");
+    if (FootFlag == true) {
+        //$("#AddBrainFitness").show();
+        console.log(savebHtml);
+        $('#saveb').html(savebHtml);
+    }
+    else {
+        //$("#AddBrainFitness").hide();
+        $('#saveb').html('');
+    }
+    
 }
 
 function SubmitNewTask(form, actionUrl) {

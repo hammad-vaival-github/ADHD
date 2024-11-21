@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     LoadTask();
-    $('body').on('click', "#AddGratitudeJournal", function () {
+    $('body').on('click', ".AddGratitudeJournal", function () {
         LoadTriggerModel();
     });
     //$('body').on('click', ".EditTask", function () {
@@ -24,8 +24,9 @@
 
 });
 function LoadTriggerModel() {
-    $("#modal-body").html('');
-    $("#msModal").modal("show");
+    $("#offcanvas-body").html('');
+    //$("#modal-body").html('');
+    //$("#msModal").modal("show");
     $.ajax({
         type: "Get",
         url: baseUrl + "UProfile/AddGratitudeJournal",
@@ -51,32 +52,56 @@ function LoadTask() {
             "url": baseUrl + "UProfile/GetUsersGratitudeJournalList",
             "type": "POST",
             "datatype": "json"
-        }, "columnDefs": [
-            { className: "small", "targets": [0] },
-            { targets: [0], className: "small text-center" }
-        ],
+        },
         "columns": [
             {
-                mRender: function (data, type, row) {
-                    var linkQuery = '';
-                    linkQuery = ' <div class="">';
-                    linkQuery += '<div class="mb-2">';
-                    linkQuery += '<span class="h5 px-0">{Tdate}</span>&nbsp;&nbsp;'
-                        +'<span id = Completed_{CT} class="text-success ps-2 fw-bold"><i id = Completed_{CT} class="btn fa fa-check fw-semibold fa-1x text-success" aria-hidden="true" ></i>Completed</span> ';
-                    linkQuery += '</div>';
-                    linkQuery += '<div class="card-body">';
-                    linkQuery += '<span class="card-text text-end h6">Things I am gratefull for today</span> :<br/><span class="card-text text-end">{One}</span><br/>';
-                    linkQuery += '</div>';
-                    linkQuery += '<div class="card-footer text-body-secondary">';
-                    linkQuery += '</div>';
-                    linkQuery += '</div>';
-                    linkQuery = linkQuery.replace("{Tdate}", parseToNiceDate(row.AddedDate));
-                    linkQuery = linkQuery.replace("{One}", row.thingsiamgratfullfortoday);
-                    return linkQuery
+                "data": "ThingsIAmGratefulToday",
+                "render": function (AccountID, type, full, meta) {
+                    let text = full.thingsiamgratfullfortoday;
+                    let truncated = text.length > 10 ? text.substring(0, 80) + '...' : text;
+                    return `<div class="detailTaskData" data-bs-toggle="tooltip"
+                        title="${full.thingsiamgratfullfortoday}">${truncated}</div>`
+                }
+            },
+            {
+                "data": "DateTime",
+                "render": function (AccountID, type, full, meta) {
+                    return parseToNiceDate(full.AddedDate);
+                }
+            },
+            {
+                "data": "IsActive",
+                "render": function (AccountID, type, full, meta) {
+                    return '<div id= Completed_{CT} class="badge rounded-pill text-bg-success">Completed</div>';
                 }
             }
-
         ],
+        //"columnDefs": [
+        //    { className: "small", "targets": [0] },
+        //    { targets: [0], className: "small text-center" }
+        //],
+        //"columns": [
+        //    {
+        //        mRender: function (data, type, row) {
+        //            var linkQuery = '';
+        //            linkQuery = ' <div class="">';
+        //            linkQuery += '<div class="mb-2">';
+        //            linkQuery += '<span class="h5 px-0">{Tdate}</span>&nbsp;&nbsp;'
+        //                +'<span id = Completed_{CT} class="text-success ps-2 fw-bold"><i id = Completed_{CT} class="btn fa fa-check fw-semibold fa-1x text-success" aria-hidden="true" ></i>Completed</span> ';
+        //            linkQuery += '</div>';
+        //            linkQuery += '<div class="card-body">';
+        //            linkQuery += '<span class="card-text text-end h6">Things I am gratefull for today</span> :<br/><span class="card-text text-end">{One}</span><br/>';
+        //            linkQuery += '</div>';
+        //            linkQuery += '<div class="card-footer text-body-secondary">';
+        //            linkQuery += '</div>';
+        //            linkQuery += '</div>';
+        //            linkQuery = linkQuery.replace("{Tdate}", parseToNiceDate(row.AddedDate));
+        //            linkQuery = linkQuery.replace("{One}", row.thingsiamgratfullfortoday);
+        //            return linkQuery
+        //        }
+        //    }
+
+        //],
         "serverSide": "true",
         ///// "order": [0, "desc"],
         "processing": "true",
@@ -89,3 +114,7 @@ function LoadTask() {
         }
     });
 }
+$('#tbGratitudeJournal').on('draw.dt', function () {
+    $('[data-bs-toggle="tooltip"]').tooltip(); // Initialize Bootstrap tooltips
+});
+$('#sectionZero-tab').trigger('click');

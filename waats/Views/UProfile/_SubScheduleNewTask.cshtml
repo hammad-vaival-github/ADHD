@@ -1,45 +1,35 @@
 ﻿@model waats.Models.SubScheduleTaskVM
 @{
     ViewBag.Title = "Add new task";
-    Layout = "~/Views/Shared/_LayoutUnauthed.cshtml";
+    Layout = null;
 }
-@using (Html.BeginForm(null, null, new { returnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form", @id = "staskForm" }))
+@using (Html.BeginForm(null, null, new { returnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "", role = "form", @id = "staskForm" }))
 {
     @Html.AntiForgeryToken()
     @Html.HiddenFor(model => model.SubLocalID)
     @Html.HiddenFor(model => model.MainTaskID)
     @Html.HiddenFor(model => model.UserId)
 
-    <div class="form-group">
-        @Html.LabelFor(m => m.Title, new { @class = "col-md-12 control-label" })
-        <div class="col-md-12">
-            @Html.TextBoxFor(m => m.Title, new { @class = "form-control", @placeholder = "Title" })
-            @Html.ValidationMessageFor(m => m.Title, "", new { @class = "text-danger" })
-        </div>
+<div class="px-2">
+    <div class="d-flex flex-column answerInput mt-3">
+        @Html.LabelFor(m => m.Title, new { @class = "form-label mb-2" })
+        @Html.TextBoxFor(m => m.Title, new { @class = "form-control", @placeholder = "Title" })
+        @Html.ValidationMessageFor(m => m.Title, "", new { @class = "text-danger" })
     </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Description, new { @class = "col-md-12 control-label" })
-        <div class="col-md-12">
-            @Html.TextAreaFor(model => model.Description, new { @class = "form-control word_count", @rows = "3", @maxlength = "4000", placeholder = @Html.DisplayNameFor(m => m.Description) })
-            @Html.ValidationMessageFor(m => m.Description, "", new { @class = "text-danger" })
-        </div>
+    <div class="d-flex flex-column answerInput mt-3">
+        @Html.LabelFor(m => m.Description, new { @class = "form-label mb-2" })
+        @Html.TextAreaFor(model => model.Description, new { @class = "form-control word_count", @rows = "3", @maxlength = "4000", placeholder = @Html.DisplayNameFor(m => m.Description) })
+        @Html.ValidationMessageFor(m => m.Description, "", new { @class = "text-danger" })
     </div>
-    <div class="spacer5"></div>
-    <div class="spacer5"></div>
-    <div class="row">
-        <div class="col-md-12 mt-3">
-            <div class="text-start">
-                @{
-                    if (Model != null && Model.UserId != null)
-                    {
-                        <input type="submit" value="Update task" class="btn float-end btn-primary" />
-                    }
-                    else
-                    {
-                        <input type="submit" value="Add task" class="btn float-end btn-primary" />
-                    }
-                }
-            </div>
-        </div>
-    </div>
+    @{
+        if (Model != null && Model.UserId != null)
+        {
+            <input type="submit" value="Update task" class="btn btn-primary w-100" />
+        }
+        else
+        {
+            <input type="submit" value="Add task" class="btn btn-primary w-100" />
+        }
+    }
+</div>
 }

@@ -2,7 +2,7 @@
     ViewBag.Title = "Index";
 }
 
-<div class="">
+<!--<div class="">
     <div class="row">
         <div class="col-12 col-sm-8 col-md-12">
             <div class="spacer20"></div>
@@ -15,7 +15,7 @@
                         <div id="clientDisplay" class="col-xs-12 col-sm-12">
                             <div class="outframe">
                                 <div style="padding: -10px 10px;">
-                                    <div class="evening-task bg-info-subtle text-transform-unset text-info-emphasis">
+                                    <div class="evening-task bg-info-subtle text-transform-unset text-info-emphasis">-->
                                         @*<div class="card-header text-lg-center">
                                             <a href="@Url.Action("Index", "UProfile")" class="alert-link">
                                                 <i style="float: left;">
@@ -27,13 +27,13 @@
                                             </a>
                                             <span class="h5 card-title">&nbsp;Commitment 6</span>
                                         </div>*@
-                                        <div class="card-body text-primary">
+                                        <!--<div class="card-body text-primary">
                                             <h6 class="card-subtitle mb-2 text-info-emphasis fw-bold py-3">
-                                                <i class="fa-solid fa-leaf text-info-emphasis me-2" aria-hidden="true"></i>MINFUL ATTENTION
+                                                <i class="fa-solid fa-leaf text-info-emphasis me-2" aria-hidden="true"></i>MINFUL ATTENTION-->
                                                 @*<button class="btn btn-primary btn-sm " id="AboutCom">
                                                     <i class="fa fa-info-circle" aria-hidden="true"></i>
                                                     &nbsp;About this commitmnet
-                                                </button>*@ </h6>
+                                                </button>*@ <!--</h6>
                                             <p class="card-text text-transform-unset">
                                                 <div class="alert alert-info mb-4" role="alert">
                                                     <div class="row">
@@ -82,6 +82,76 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+
+<div class="mt-4">
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="sectionZero-tab-pane" role="tabpanel"
+             aria-labelledby="sectionZero-tab" tabindex="0">
+            <div class="mainDataTablePage">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h4 class="mainTitleUnderDatatable">
+                            Mindful Attention <i data-bs-toggle="tooltip"
+                                                 data-bs-placement="top"
+                                                 title="Define clear goals for each task.Break down complex tasks into steps."
+                                                 class="fa-solid fa-circle-info ms-2"></i>
+                        </h4>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="d-flex justify-content-end">
+                            <button class="btn btn-outline-primary me-3" id="AllMindfulAttention">
+                                <i class="fa-solid fa-circle-plus me-2"></i>
+                                Timeline of all Mindful attention added
+                            </button>
+                            <button class="btn btn-outline-primary me-3" id="reset">
+                                <i class="fa-solid fa-circle-plus me-2"></i>
+                                Reset
+                            </button>
+                        <button class="btn btn-primary AddMindfulAttention" data-bs-toggle="offcanvas"
+                                data-bs-target="#brainExerciseDrawer">
+                            <i class="fa-solid fa-circle-plus me-2"></i>
+                            Add new mindful attention
+                        </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="alert alert-secondary" role="alert">
+                            <h5> What to do?</h5>
+                            <p>
+                                Focus all your attention on one person when they speak and log what they said.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5>@Html.ValidationSummary("", new { @class = "text-danger" })</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table id="tbMindfulAttention" class="display" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>The person i listened to spoke about</th>
+                                        <th>Date & Time</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>

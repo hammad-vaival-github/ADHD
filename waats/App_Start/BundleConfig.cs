@@ -19,7 +19,7 @@ namespace waats
 
             bundles.Add(new ScriptBundle("~/bundles/dataTables").Include(
                      "~/Scripts/DataTables/jquery.dataTables.js",
-                     "~/Scripts/DataTables/dataTables.bootstrap4.js",
+                    "~/Scripts/DataTables/dataTables.bootstrap4.js",
                      "~/Scripts/DataTables/dataTables.rowReorder.js"));//,
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at https://modernizr.com to pick only the tests you need.
@@ -33,10 +33,8 @@ namespace waats
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/font-awesome.css",
-                      "~/Content/css/style.css",
-                      "~/Content/css/dashboard.css",
-                      "~/Content/css/responsive.css"));
+                      "~/Content/font-awesome.css"
+                    ));
             bundles.Add(new StyleBundle("~/Content/datatablescss").Include(
                        "~/Content/DataTables/css/dataTables.bootstrap4.css",
                        "~/Content/DataTables/css/jquery.dataTables.css",

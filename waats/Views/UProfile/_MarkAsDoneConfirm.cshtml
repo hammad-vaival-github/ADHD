@@ -1,12 +1,33 @@
 ﻿@{
     ViewBag.Title = "Complete confirm";
-    Layout = "~/Views/Shared/_LayoutUnauthed.cshtml";
+    Layout = null;
 }
 
-<h6 class="card-title">Are you sure you want to mark following task as completed</h6>
+<div class="modal-body py-0">
+    <div class="iconActionWrapper"><i class="fa-solid fa-circle-check"></i></div>
+    <h4>Please confirm</h4>
+    <p> Are you sure you want to mark following task as completed?</p>
+    <div class="modal-detail">
+        <h5 class="h5">Title :</h5><p>@ViewBag.TaskTitle</p>
+        <h5 class="h5">Creation date :</h5><p>@ViewBag.dat</p>
+    </div>
+</div>
+<div class="fullWidthButton d-flex justify-content-between mt-1">
+    @*<button type="button" class="btn btn-primary">Yes</button>*@
+    <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">No</button>
+    @{
+        if (ViewBag.MainTaskID != null && ViewBag.MainTaskID > -1 && @ViewBag.SubLocalID != null)
+        {
+            <button type="button" id="@ViewBag.SubLocalID" data-bs-dismiss="modal" class="btn btn-primary SaveCompletedSubTask">Yes</button>
+        }
+        else
+        {
+            <button type="button" id="@ViewBag.localID" data-bs-dismiss="modal" class="btn  btn-primary SaveCompletedTask">Yes</button>
+        }
+    }
+</div>
+@*<span class="h6">Title :</span>@ViewBag.TaskTitle
 <br />
- <span class="h6">Title :</span>@ViewBag.TaskTitle
-<br/>
 <span class="h6">Creation date :</span>@ViewBag.dat
 
 <div class="row">
@@ -14,7 +35,7 @@
         <div class="text-start float-end">
             <button type="button" class="btn btn-secondary me-3" data-bs-dismiss="modal">Close</button>
             @{
-                if (ViewBag.MainTaskID != null && ViewBag.MainTaskID > -1 && @ViewBag.SubLocalID!=null)
+                if (ViewBag.MainTaskID != null && ViewBag.MainTaskID > -1 && @ViewBag.SubLocalID != null)
                 {
                     <button type="button" id="@ViewBag.SubLocalID" data-bs-dismiss="modal" class="btn  btn-primary SaveCompletedSubTask">Yes</button>
                 }
@@ -26,4 +47,4 @@
 
         </div>
     </div>
-</div>
+</div>*@

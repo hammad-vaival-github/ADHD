@@ -2,7 +2,7 @@
     ViewBag.Title = "Index";
 }
 
-<div class="">
+<!--<div class="">
     <div class="row">
         <div class="col-12 col-sm-8 col-md-12">
             <div class="spacer20"></div>
@@ -15,26 +15,15 @@
                         <div id="clientDisplay" class="col-xs-12 col-sm-12">
                             <div class="outframe">
                                 <div style="padding: -10px 10px;">
-                                    <div class="evening-task text-transform-unset bg-body-tertiary text-warning-emphasis">
-                                        @*<div class="card-header text-lg-center">
-                                            <a href="@Url.Action("Index", "UProfile")" class="alert-link">
-                                                <i style="float: left;">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-                                                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
-                                                    </svg>
-                                                    My Tasks
-                                                </i>
-                                            </a>
-                                            <span class="h5 card-title">&nbsp;Commitment 4</span>
-                                        </div>*@
+                                    <div id="divSpottingTriggers" class="evening-task text-transform-unset bg-body-tertiary text-warning-emphasis">
                                         <div class="card-body text-primary">
                                             <h6 class="card-subtitle mb-2 text-primaryTT-emphasis fw-bold py-3">
-                                                <i class="fa-regular fa-life-ring pe-3" aria-hidden="true"></i>Spotting Triggers
+                                                <i class="fa-regular fa-life-ring pe-3" aria-hidden="true"></i>Spotting Triggers-->
                                                 @*<button class="btn btn-primary btn-sm " id="AboutCom">
                                                     <i class="fa fa-info-circle" aria-hidden="true"></i>
                                                     &nbsp;About this commitmnet
                                                 </button>*@
-                                            </h6>
+                                            <!--</h6>
                                             <p class="card-text">
                                                 <div class="alert alert-danger mb-4" role="alert">
                                                     <div class="row">
@@ -89,6 +78,83 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+
+
+
+
+<div class="mt-4">
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="sectionZero-tab-pane" role="tabpanel"
+             aria-labelledby="sectionZero-tab" tabindex="0">
+            <div id="divSpottingTriggers" class="mainDataTablePage">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h4 class="mainTitleUnderDatatable">
+                            Spotting Triggers <i data-bs-toggle="tooltip"
+                                                 data-bs-placement="top"
+                                                 title="Define clear goals for each task.Break down complex tasks into steps."
+                                                 class="fa-solid fa-circle-info ms-2"></i>
+                        </h4>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="d-flex justify-content-end">
+                            <button class="btn btn-outline-primary me-3" id="AllTrigger">
+                                <i class="fa-solid fa-circle-plus me-2"></i>
+                                Timeline of all Brain Fitness added
+                            </button>
+                            <button class="btn btn-outline-primary me-3" id="reset">
+                                <i class="fa-solid fa-circle-plus me-2"></i>
+                                Reset
+                            </button> @*id="AddBrainFitness"*@
+                        <button class="btn btn-primary AddTrigger" data-bs-toggle="offcanvas"
+                                data-bs-target="#brainExerciseDrawer">
+                            <i class="fa-solid fa-circle-plus me-2"></i>
+                            Add new trigger
+                        </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="alert alert-secondary" role="alert">
+                            <h5> What to do?</h5>
+                            <p>
+                                Make a list of any time in the last 24 hours when you became short tempered or suddenly upset
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5>@Html.ValidationSummary("", new { @class = "text-danger" })</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table id="tbtriggers" class="display" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Trigger Event</th>
+                                        <th>Emotion</th>
+                                        <th>Body Feeling</th>
+                                        <th>Why is this a trigger?</th>
+                                        <th>Avoidance/Management of trigger</th>
+                                        <th>Date & Time</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>

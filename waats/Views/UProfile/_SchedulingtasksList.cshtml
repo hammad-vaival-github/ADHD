@@ -2,7 +2,7 @@
     ViewBag.Title = "Index";
 }
 
-<div>
+<!--<div>
     <div class="row">
         <div class="col-12 col-sm-8 col-md-12">
             <div class="spacer20"></div>
@@ -15,7 +15,7 @@
                         <div id="clientDisplay" class="col-xs-12 col-sm-12">
                             <div class="outframe">
                                 <div style="padding: -10px 10px;">
-                                    <div class="evening-task bg-primary-subtle text-primary-emphasis text-transform-unset">
+                                    <div class="evening-task bg-primary-subtle text-primary-emphasis text-transform-unset">-->
                                         @*<div class="card-header text-lg-center">
                                             <a href="@Url.Action("Index", "UProfile")" class="alert-link">
                                                 <i style="float: left;">
@@ -27,14 +27,14 @@
                                             </a>
                                             <span class="h5 card-title">&nbsp;Commitment 1</span>
                                         </div>*@
-                                        <div class="card-body text-primary-emphasis">
+                                        <!--<div class="card-body text-primary-emphasis">
                                             <h6 class="card-subtitle mb-2 fw-bold py-3">
-                                                <i class="fa-regular fa-calendar-days text-primary-emphasis me-2" aria-hidden="true"></i>&nbsp;SCHEDULING TASKS
+                                                <i class="fa-regular fa-calendar-days text-primary-emphasis me-2" aria-hidden="true"></i>&nbsp;SCHEDULING TASKS-->
                                                 @*<button class="btn btn-light btn-sm " id="AboutCom">
                                                     <i class="fa fa-info-circle" aria-hidden="true"></i>
                                                     &nbsp;About this commitmnet
                                                 </button>*@
-                                            </h6>
+                                            <!--</h6>
                                             <p class="card-text">
                                                 <div class="alert text-primary-emphasis alert-primary" role="alert">
                                                     <div class="row">
@@ -47,10 +47,10 @@
                                                                 <button href="javascript:void(0)" class="btn btn-primary btn-sm AddTask rounded-pill float-end btn-x10-y30" id="AddTask" value="0">
                                                                     <i class="fa fa-plus-circle" aria-hidden="true"></i>
                                                                     &nbsp;Add task
-                                                                </button>
+                                                                </button>-->
 
                                                                 @*<a id="addTemplate" href="javascript:void(0)" class="btn btn-sm btn-primary">Add new template</a>*@
-                                                            </span>
+                                                            <!--</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -58,7 +58,7 @@
                                                     <div class="col-sm-12 mb-3 mb-sm-0">
                                                         <div class="">
                                                             <div class="">
-                                                                <div>
+                                                                <div id="dataTableContainer">
                                                                     <div class="table-responsive bluetablebackgrounds">
                                                                         <table id="tbSTasks" class="table table-bordered table-responsive">
                                                                             <thead>
@@ -72,6 +72,12 @@
                                                                             </tbody>
                                                                         </table>
                                                                     </div>
+
+                                                                </div>-->
+                                                                <!-- Details container -->
+                                                                <!--<div id="detailsContainer" style="display: none;">
+                                                                    <div id="detailsContent"></div>
+                                                                    <button id="backToTable" class="btn btn-primary mt-3">Back to Table</button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -88,7 +94,79 @@
             </div>
         </div>
     </div>
+</div>-->
+
+<div class="mt-4">
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="sectionZero-tab-pane" role="tabpanel"
+             aria-labelledby="sectionZero-tab" tabindex="0">
+            <div class="mainDataTablePage">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h4 class="mainTitleUnderDatatable">
+                            Scheduling Tasks <i data-bs-toggle="tooltip"
+                                                data-bs-placement="top"
+                                                title="Define clear goals for each task.Break down complex tasks into steps."
+                                                class="fa-solid fa-circle-info ms-2"></i>
+                        </h4>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="d-flex justify-content-end">
+                            <button class="btn btn-primary AddTask" data-bs-toggle="offcanvas"
+                                    data-bs-target="#brainExerciseDrawer">
+                                <i class="fa-solid fa-circle-plus me-2"></i>
+                                Add task
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="alert alert-secondary" role="alert">
+                            <h5> What to do?</h5>
+                            <p>
+                                Come here at the start of each day and list tasks you to do.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5>@Html.ValidationSummary("", new { @class = "text-danger" })</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="dataTableContainer">
+                            <div class="table-responsive">
+                                <table id="tbSTasks" class="display" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th>Task</th>
+                                            <th>Description</th>
+                                            <th>Date & Time</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- Details container -->
+                        <div id="detailsContainer" style="display: none;">
+                            <div id="detailsContent"></div>
+                            @*<button id="backToTable" class="btn btn-primary mt-3">Back to Table</button>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+
 @section scripts {
     <script src="~/Scripts/UProfile.js"></script>
 }

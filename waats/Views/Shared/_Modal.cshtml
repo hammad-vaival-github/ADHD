@@ -1,20 +1,74 @@
 ﻿<!-- Modal -->
-
-    <div class="modal fade" id="msModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="ModalLabel">@ViewBag.Title</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body" id="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer" id="Modelfooter">
-                    @*<button type="button" class="btn btn-secondary ScrMatxSave" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary ScrMatxSave">Save</button>*@
-                </div>
+<!--<div class="modal fade" id="msModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="ModalLabel">@ViewBag.Title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+            <div class="modal-body" id="modal-body">
+                ...
+            </div>
+            <div class="modal-footer" id="Modelfooter">-->
+@*<button type="button" class="btn btn-secondary ScrMatxSave" data-bs-dismiss="modal">Close</button>
+    <button type="button" class="btn btn-primary ScrMatxSave">Save</button>*@
+<!--</div>
         </div>
     </div>
+</div>-->
 
+<div class="offcanvas offcanvas-end" tabindex="-1" id="brainExerciseDrawer">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="ModalLabel">@ViewBag.Title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div id="offcanvas-body" class="offcanvas-body">
+        @*<p class="text-muted">This is a mental exercise. Please do math/calculation in your head.</p>
+
+
+            <form>
+                <div class="formWrapper">
+                    <div class="d-flex justify-content-between">
+                        <label for="startingNumber" class="form-label">Starting Number</label>
+                        <input type="text" class="form-control-sm" id="startingNumber" value="686" disabled>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <label for="addTimes" class="form-label">Add</label>
+                        <input type="text" class="form-control-md" id="addTimes" value="5,5 Times" disabled>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <label for="takeTimes" class="form-label">Take</label>
+                        <input type="text" class="form-control-md" id="takeTimes" value="9,9 Times" disabled>
+                    </div>
+                </div>
+                <div class="d-flex flex-column answerInput">
+                    <label for="answer" class="form-label mb-2">Your Answer</label>
+                    <input type="text" class="form-control mb-0" id="answer" placeholder="Write your answer here">
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Submit</button>
+            </form>*@
+    </div>
+</div>
+
+
+<!-- Modal Confirmation -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div id="modal-popup" class="modal-content">
+            @*<div class="modal-body py-0">
+                <div class="iconActionWrapper"><i class="fa-solid fa-circle-check"></i></div>
+                <h4>Please confirm</h4>
+                <p> Are you sure you want to mark following task as completed?</p>
+                <div class="modal-detail">
+                    <h5 class="h5">Title :</h5><p>DFS_1</p>
+                    <h5 class="h5">Creation date :</h5><p>11/20/2024 10:16:10 AM</p>
+                </div>
+            </div>
+            <div class="fullWidthButton d-flex justify-content-between mt-1">
+                <button type="button" class="btn btn-primary">Yes</button>
+                <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">No</button>
+            </div>*@
+        </div>
+    </div>
+</div>

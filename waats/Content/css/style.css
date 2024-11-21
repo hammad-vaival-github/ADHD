@@ -1,6 +1,11 @@
 body {
     font-family: 'Figtree', sans-serif;
-    background-color: #f8f9fa;
+    background-color: #fff;
+    color: #333;
+}
+.survey-body {
+    font-family: 'Figtree', sans-serif;
+    background-color: #fff;
     color: #333;
 }
 /* navbar */
@@ -15,7 +20,7 @@ a {
 .navbar {
     padding: 13px 15px;
     border-radius: 7px;
-    background-color: #fff;
+    background-color: #f8f9fa;
 }
 
 .navbar-brand {
@@ -25,22 +30,25 @@ a {
 .main-menu ul li {
     padding: 0 10px;
 }
+
 nav.navbar.navbar-expand-lg.main-menu ul li a i {
     width: 30px;
     position: relative;
     top: 5px;
 }
-    .main-menu ul li .nav-link {
-        color: #434343;
-        font-size: 16px;
-        display: flex;
-    }
+
+.main-menu ul li .nav-link {
+    color: #434343;
+    font-size: 16px;
+    display: flex;
+}
 /* video page on survey page*/
 .video-container {
     background-color: #1a1a1a;
     padding: 0 9px;
     border-radius: 8px;
 }
+
 .video-container-dashboard {
     background-color: #1a1a1a;
     padding: 0px;
@@ -48,7 +56,7 @@ nav.navbar.navbar-expand-lg.main-menu ul li a i {
 }
 
 .bg-whole-wrapper {
-    background-color: #1a1a1a;
+    background-color: #f8f9fa;
     padding: 20px;
     border-radius: 8px;
 }
@@ -164,6 +172,7 @@ form.login-custom-page input.form-control {
     padding: 13px;
     position: relative;
 }
+
 .goog-te-gadget-simple {
     border: 1px solid #8790A9 !important;
     outline: none !important;
@@ -180,35 +189,48 @@ form.login-custom-page input.form-control {
     padding-right: 10px !important;
     justify-content: space-evenly !important;
 }
+
 .iframe .VIpgJd-ZVi9od-xl07Ob-OEVmcd skiptranslate {
     width: 209px !important;
     background: red !important;
     color: black !important;
 }
+
 body .VIpgJd-ZVi9od-vH1Gmf {
     width: 209px !important;
     background: red !important;
     color: black !important;
 }
+
 .frame-low-vh {
     height: unset !important;
     margin: 20px auto 25px;
 }
+
 .disable-form {
     opacity: 0.8;
     pointer-events: none;
 }
+
 #sectionThree-tab-pane h6 label {
     font-weight: bold;
     padding: 12px 0 10px;
 }
+
 #sectionThree-tab-pane h6 span {
     font-weight: bold;
 }
+
 .form-check-input[type=radio] {
     border-radius: 50%;
     border: 1px solid;
 }
+
 img.img-fluid.logo-survey {
     max-width: 190px;
+}
+div#divDisableFormContainer label {
+    font-weight: 900;
+    font-size: 14px;
+    text-transform:capitalize;
 }

@@ -1,59 +1,102 @@
 ﻿@model waats.Models.MemoryMakerVM
 @{
     ViewBag.Title = "Add new task";
-    Layout = "~/Views/Shared/_LayoutUnauthed.cshtml";
+    Layout = null;
 }
+
 @using (Html.BeginForm(null, null, new { returnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form", @id = "MemoryMakerForm" }))
 {
     @Html.AntiForgeryToken()
     @Html.HiddenFor(model => model.memoryId)
     @Html.HiddenFor(model => model.UserId)
 
-    <div class="form-group">
-        @Html.LabelFor(m => m.One, new { @class = "col-md-12 control-label" })
-        <div class="col-md-12">
-            @Html.TextAreaFor(model => model.One, new { @class = "form-control word_count", @rows = "3", @maxlength = "4000" })
+    <div class="px-2">
+        <div class="d-flex flex-column answerInput mt-3">
+            @Html.LabelFor(m => m.One, new { @class = "form-label mb-2" })
+            @Html.TextAreaFor(model => model.One, new { @class = "form-control", @rows = "3", @maxlength = "4000" })
             @Html.ValidationMessageFor(m => m.One, "", new { @class = "text-danger" })
         </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.two, new { @class = "col-md-12 control-label" })
-        <div class="col-md-12">
-            @Html.TextAreaFor(model => model.two, new { @class = "form-control word_count", @rows = "3", @maxlength = "4000" })
+        <div class="d-flex flex-column answerInput mt-3">
+            @Html.LabelFor(m => m.two, new { @class = "form-label mb-2" })
+            @Html.TextAreaFor(model => model.two, new { @class = "form-control", @rows = "3", @maxlength = "4000" })
             @Html.ValidationMessageFor(m => m.two, "", new { @class = "text-danger" })
         </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.three, new { @class = "col-md-12 control-label" })
-        <div class="col-md-12">
-            @Html.TextAreaFor(model => model.three, new { @class = "form-control word_count", @rows = "3", @maxlength = "4000" })
+        <div class="d-flex flex-column answerInput mt-3">
+            @Html.LabelFor(m => m.three, new { @class = "form-label mb-2" })
+            @Html.TextAreaFor(model => model.three, new { @class = "form-control", @rows = "3", @maxlength = "4000" })
             @Html.ValidationMessageFor(m => m.three, "", new { @class = "text-danger" })
         </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.four, new { @class = "col-md-12 control-label" })
-        <div class="col-md-12">
-            @Html.TextAreaFor(model => model.four, new { @class = "form-control word_count", @rows = "3", @maxlength = "4000" })
+        <div class="d-flex flex-column answerInput mt-3">
+            @Html.LabelFor(m => m.four, new { @class = "form-label mb-2" })
+            @Html.TextAreaFor(model => model.four, new { @class = "form-control", @rows = "3", @maxlength = "4000" })
             @Html.ValidationMessageFor(m => m.four, "", new { @class = "text-danger" })
         </div>
-    </div>
-    <div class="spacer5"></div>
-    <div class="spacer5"></div>
-    <div class="row">
-        
-        <div class="col-md-12 mt-3">
-            <div class="text-start">
-                @{
-                    if (Model != null && Model.UserId != null)
-                    {
-                        <input type="submit" value="Update task" class="btn float-end   btn-sm btn-dark" />
-                    }
-                    else
-                    {
-                        <input type="submit" value="Add task" class="btn float-end  btn-sm btn-dark" />
-                    }
-                }
-            </div>
-        </div>
+
+        @{
+            if (Model != null && Model.UserId != null)
+            {
+                <input type="submit" value="Update task" class="btn btn-primary w-100" />
+            }
+            else
+            {
+                <input type="submit" value="Add task" class="btn btn-primary w-100" />
+            }
+        }
     </div>
 }
+
+
+@*@using (Html.BeginForm(null, null, new { returnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form", @id = "MemoryMakerForm" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.memoryId)
+        @Html.HiddenFor(model => model.UserId)
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.One, new { @class = "col-md-12 control-label" })
+            <div class="col-md-12">
+                @Html.TextAreaFor(model => model.One, new { @class = "form-control word_count", @rows = "3", @maxlength = "4000" })
+                @Html.ValidationMessageFor(m => m.One, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.two, new { @class = "col-md-12 control-label" })
+            <div class="col-md-12">
+                @Html.TextAreaFor(model => model.two, new { @class = "form-control word_count", @rows = "3", @maxlength = "4000" })
+                @Html.ValidationMessageFor(m => m.two, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.three, new { @class = "col-md-12 control-label" })
+            <div class="col-md-12">
+                @Html.TextAreaFor(model => model.three, new { @class = "form-control word_count", @rows = "3", @maxlength = "4000" })
+                @Html.ValidationMessageFor(m => m.three, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.four, new { @class = "col-md-12 control-label" })
+            <div class="col-md-12">
+                @Html.TextAreaFor(model => model.four, new { @class = "form-control word_count", @rows = "3", @maxlength = "4000" })
+                @Html.ValidationMessageFor(m => m.four, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="spacer5"></div>
+        <div class="spacer5"></div>
+        <div class="row">
+
+            <div class="col-md-12 mt-3">
+                <div class="text-start">
+                    @{
+                        if (Model != null && Model.UserId != null)
+                        {
+                            <input type="submit" value="Update task" class="btn float-end   btn-sm btn-dark" />
+                        }
+                        else
+                        {
+                            <input type="submit" value="Add task" class="btn float-end  btn-sm btn-dark" />
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    }*@

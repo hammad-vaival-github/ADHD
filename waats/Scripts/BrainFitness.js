@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     LoadTask();
-    $('body').on('click', "#AddBrainFitness", function () {
+    $('body').on('click', ".brainExerciseDrawer", function () {
         LoadTriggerModel();
     });
     $("#AllBrainFitness").click(function () {
@@ -27,8 +27,9 @@
 
 });
 function LoadTriggerModel() {
-    $("#modal-body").html('');
-    $("#msModal").modal("show");
+    debugger;
+    $("#offcanvas-body").html('');
+    //$("#AddBrainFitness").modal("show");
     $.ajax({
         type: "Get",
         url: baseUrl + "UProfile/AddBrainFitness",
@@ -55,52 +56,110 @@ function LoadTask() {
             "url": baseUrl + "UProfile/GetbrainFitnessList",
             "type": "POST",
             "datatype": "json"
-        }, "columnDefs": [
-            { className: "small", "targets": [0] },
-            { targets: [0], className: "small text-center" }
-        ],
+        }, 
         "columns": [
             {
-                mRender: function (data, type, row) {
-                    var linkQuery = '';
-                    linkQuery = ' <div class="">';
-                    linkQuery += '<div class="mb-2">';
-                    linkQuery += '<span class="h5 px-2">{Tdate}</span>&nbsp;&nbsp;'
-                        +'<span id = Completed_{CT} class="text-success ps-2 fw-bold"><i class="fa fa-check fw-semibold fa-1x text-success" aria-hidden="true" ></i>Completed</span> ';
-                    linkQuery += '</div>';
-                    linkQuery += '<div class=""><table class="table"><thead>'+
-                        '<tr role="row" ><th class="smallcard-text h6">Starting Number</th>' +
-                        '<th class="smallcard-text h6">Add</th>'+
-                        '<th class="smallcard-text h6">Take</th>' +
-                        '<th class="smallcard-text h6">Answer</th>' +
-                        '<th class="smallcard-text h6">No of attempts</th></thead><tbody>' +
-                        '<tr role="row" ><td class="card-text">{te}</td>' +
-                        '<td class="smallcard-text ">{em}</td>' +
-                        '<td class="smallcard-text ">{bf}</td>' +
-                        '<td class="smallcard-text ">{whyt}</td>' +
-                        '<td class="smallcard-text ">{av}</td></thead></tbody></table>'
-                        ;
-                    //linkQuery += '<span class="card-text text-end h6">StartingNumber</span> :<br/><span class="card-text text-end">{te}</span>';
-                    //linkQuery += '<span class="card-text text-end h6">Add</span> :<br/><span class="card-text text-end">{em}</span>';
-                    //linkQuery += '<span class="card-text text-end h6">Take</span> :<br/><span class="card-text text-end">{bf}</span>';
-                    //linkQuery += '<span class="card-text text-end h6">Answer</span> :<br/><span class="card-text text-end">{whyt}</span>';
-                    //linkQuery += '<span class="card-text text-end h6">No of attempts</span> :<br/><span class="card-text text-end">{av}</span>';
-                    linkQuery += '</div>';
-                    linkQuery += '<div class="card-footer text-body-secondary">';
-                    linkQuery += '</div>';
-                    linkQuery += '</div>';
-                    /////linkQuery = linkQuery.replace("{te}", "Tilte");
-                    linkQuery = linkQuery.replace("{Tdate}", parseToNiceDate(row.AddedDate));
-                    linkQuery = linkQuery.replace("{te}", row.StartingNumber);
-                    linkQuery = linkQuery.replace("{em}", "Add " + row.Q_Add+" , "+row.Q_Add+" times");
-                    linkQuery = linkQuery.replace("{bf}", "Take " + row.Q_Take + " , " + row.Q_Take + " times");
-                    linkQuery = linkQuery.replace("{whyt}", row.Q_A);
-                    linkQuery = linkQuery.replace("{av}", row.Q_NoofAttempts);
-                    return linkQuery
+                "data": "StartingNumber",
+                "render": function (AccountID, type, full, meta) {
+                    return full.StartingNumber;
                 }
-            }
+            },
+            {
+                "data": "Title",
+                "render": function (AccountID, type, full, meta) {
+                    return "Add " + full.Q_Add + " , " + full.Q_Add + " times"
+                    //return full.title;
+                }
+            },
+            {
+                "data": "StartDate",
+                //"class": "text-align-center",
+                "render": function (AccountID, type, full, meta) {
+                    debugger;
+                    return "Take " + full.Q_Take + " , " + full.Q_Take + " times";
+                    
+                    //return "<span class=''>" + ConvertDateTimeFormat(new Date(full.startDate)) + "</span>";
+                }
+            },
+            {
+                "data": "EndDate",
+                //"class": "text-align-center",
+                "render": function (AccountID, type, full, meta) {
+                    return  full.Q_A;
+                }
+            },
+            {
+                "data": "IsActive",
+                "render": function (AccountID, type, full, meta) {
+                    return parseToNiceDate(full.AddedDate);
+                    //linkQuery = linkQuery.replace("{av}", row.Q_NoofAttempts);
+                }
+            },
+            {
+                "data": "IsActive",
+                "render": function (AccountID, type, full, meta) {
+                    return '<div id= Completed_{CT} class="badge rounded-pill text-bg-success">Completed</div>';
+                    //linkQuery = linkQuery.replace("{av}", row.Q_NoofAttempts);
+                }
+            },
+            {
+                "data": "IsActive",
+                "render": function (AccountID, type, full, meta) {
+                    return full.Q_NoofAttempts;
+                    //linkQuery = linkQuery.replace("{av}", row.Q_NoofAttempts);
+                }
+            },
+        ],
+        //"columnDefs": [
+        //    { "targets": [0] },
+        //    { targets: [0], className: "small text-center" }
+        //],
+        //"columns": [
+        //    {
+        //        mRender: function (data, type, row) {
+        //            var linkQuery = '';
+        //            //linkQuery = ' <div class="">';
+        //            //linkQuery += '<div class="mb-2">';
+        //            //linkQuery += '<span class="h5 px-2">{Tdate}</span>&nbsp;&nbsp;'
+        //           // linkQuery += '<span id = Completed_{CT} class="text-success ps-2 fw-bold"><i class="fa fa-check fw-semibold fa-1x text-success" aria-hidden="true" ></i>Completed</span> ';
+        //            //linkQuery += '</div>';
+        //            linkQuery += '<thead>'+
+        //                '<tr>' +
+        //                '<th>Starting Number</th>' +
+        //                '<th>Add</th>'+
+        //                '<th>Take</th>' +
+        //                '<th>Answer</th>' +
+        //                '<th>Date & Time</th>' +
+        //                '<th>Status</th>' +
+        //                '<th>No of attempts</th>' +
+        //                '</thead >' +
+        //                '<tbody>'+
+        //                '<tr><td>{te}</td>' +
+        //                '<td>{em}</td>' +
+        //                '<td>{bf}</td>' +
+        //                '<td>{whyt}</td>' +
+        //                '<td>{Tdate}</td>' +
+        //                '<td><div id = Completed_{CT} class="badge rounded-pill text-bg-success">Completed</div></td>' +
+        //                '<td>{av}</td></thead></tbody>';
+                   
+        //            //linkQuery += '</div>';
+        //            //linkQuery += '<div class="card-footer text-body-secondary">';
+        //            //linkQuery += '</div>';
+        //            //linkQuery += '</div>';
 
-        ],        
+        //            /////linkQuery = linkQuery.replace("{te}", "Tilte");
+                    
+        //            linkQuery = linkQuery.replace("{te}", row.StartingNumber);
+        //            linkQuery = linkQuery.replace("{em}", "Add " + row.Q_Add+" , "+row.Q_Add+" times");
+        //            linkQuery = linkQuery.replace("{bf}", "Take " + row.Q_Take + " , " + row.Q_Take + " times");
+        //            linkQuery = linkQuery.replace("{whyt}", row.Q_A);
+        //            linkQuery = linkQuery.replace("{Tdate}", parseToNiceDate(row.AddedDate));
+        //            linkQuery = linkQuery.replace("{av}", row.Q_NoofAttempts);
+        //            return linkQuery
+        //        }
+        //    }
+
+        //],        
         "serverSide": "true",
         ///// "order": [0, "desc"],
         "processing": "true",
@@ -113,3 +172,7 @@ function LoadTask() {
         }
     });
 }
+$('#tbBrainFitness').on('draw.dt', function () {
+    $('[data-bs-toggle="tooltip"]').tooltip(); // Initialize Bootstrap tooltips
+});
+$('#sectionZero-tab').trigger('click');

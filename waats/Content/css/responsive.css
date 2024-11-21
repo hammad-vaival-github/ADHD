@@ -20,6 +20,14 @@
     }
 }
 
+@media screen and (max-width:768px) {
+    .d-flex.justify-content-end {
+        flex-direction: column;
+    }
+    .d-flex.justify-content-end button{
+        margin-bottom: 10px;
+    }
+}
 @media screen and (max-width:600px) {
     .total-wrapper {
         padding: 10px 0;
