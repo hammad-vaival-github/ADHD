@@ -35,6 +35,10 @@
         var actionUrl = form.attr('action');
         SubmitNewTask(form, actionUrl);
     });
+    $('#audMarkAsDone').on('ended', function () {
+        // Enable the button when the audio ends
+        $('#divMarkAsDone').css('display', "block");
+    });
     function LoadTask() {
         TableT = $('#tbSTasks').DataTable({
             "destroy": true,
