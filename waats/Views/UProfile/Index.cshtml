@@ -1,7 +1,191 @@
-﻿
+﻿@model waats.Models.DashboardTasksPercentage
 @{
     ViewBag.Title = "Index";
 }
+<style>
+    /*:root {
+        --color: #000;*/ /* Define your color variable */
+    /*}
+
+    .font {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        display: block;
+        font-size: 0.2em;
+        position: absolute;
+        top: 0;
+        left: 0;
+        line-height: 5em;
+        z-index: 9999;
+        color: var(--color);
+        white-space: nowrap;
+        box-sizing: content-box;
+        border-radius: 50%;
+    }
+
+    .circle {
+        height: 1em;
+        width: 1em;
+        position: relative;
+        display: inline-block;
+        border-radius: 50%;
+        font-size: 200px;
+        box-sizing: content-box;
+    }
+
+        .circle:after {
+            content: "";
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+            box-sizing: border-box;
+            border: solid 0.1em #cccccc;
+            z-index: -1;
+        }
+
+        .circle > span {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            display: block;
+            font-size: 0.2em;
+            position: absolute;
+            top: 0;
+            left: 0;
+            line-height: 5em;
+            z-index: 9999;
+            color: var(--color);
+            white-space: nowrap;
+            box-sizing: content-box;
+            border-radius: 50%;
+        }
+
+        .circle > .bar {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            box-sizing: content-box;
+        }
+
+            .circle > .bar:before,
+            .circle > .bar:after {
+                content: "";
+                height: 80%;
+                width: 80%;
+                position: absolute;
+                border: solid 0.1em var(--color);
+                border-radius: 50%;
+                box-sizing: content-box;
+                clip: rect(0, 0.5em, 1em, 0);
+            }
+
+        .circle.big {
+            font-size: 300px;
+        }
+
+        .circle.medium {
+            font-size: 200px;
+        }
+
+        .circle.small {
+            font-size: 100px;
+        }
+
+        .circle.x-small {
+            font-size: 50px;
+        }
+
+    [data-fill="0"] > .bar {
+        clip: rect(0, 1em, 1em, 0.5em);
+    }
+
+        [data-fill="0"] > .bar:before {
+            transform: rotate(0deg);
+        }
+
+        [data-fill="0"] > .bar:after {
+            transform: rotate(0deg);
+        }*/
+</style>
+
+<style>
+      .donut-container {
+          position: relative;
+          width: 54px;
+          height: 54px;
+      }
+
+      .donut {
+          width: 54px;
+          height: 54px;
+          border-radius: 50%;
+          background: conic-gradient( #4a90e2 calc(var(--percentage) * 1%), #e6e6e6 0 );
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+
+      .donut-inner {
+          width: 40px;
+          height: 40px;
+          background-color: #fff;
+          border-radius: 50%;
+      }
+
+      .percentage {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 12px;
+          font-weight: bold;
+          color: #4a90e2;
+      }
+
+      /*   .highcharts-figure,
+      .highcharts-data-table table {
+          width: 100px;
+          margin: 0;
+          height: 100px;
+      }
+
+      .highcharts-data-table table {
+
+
+          border: 1px solid #ebebeb;
+          text-align: center;
+
+
+      }
+      .container-wrapper{
+          height: 100px;
+          width: 100px;
+      }
+
+      .highcharts-data-table thead tr,
+      .highcharts-data-table tr:nth-child(even) {
+          background: #f8f8f8;
+      }
+
+      .highcharts-data-table tr:hover {
+          background: #f1f7ff;
+      }
+
+      figure.highcharts-figure-2 {
+          margin: 0;
+      }
+    */
+</style>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+
+
 
 <!-- Current Task -->
 <div class="mt-4">
@@ -11,63 +195,103 @@
             <div class="row">
 
                 <div class="col-md-6">
-                    <div class="task-card">
-                        <h5 class="mb-3 pb-1">Morning Tasks</h5>
-                        <div class="evening-task bg-primary-subtle text-primary-emphasis" style="cursor:pointer"
+                    <div class="task-card" style="background-color: #FCEFC3 !important;">
+                        <h5 class="mb-3 pb-1">MORNING TASKS</h5>
+                        <div class="evening-task bg-primary-subtle text-primary-emphasis dashboard-morning-evening" style="cursor:pointer"
                              onclick="window.location.href='@Url.Action("SchedulingTasksList", "UProfile")'">
-                            <strong> <i class="fa-regular fa-calendar-days text-primary-emphasis pe-2"></i> Scheduling Task</strong>
-                            <a class="float-end" href="@Url.Action("SchedulingTasksList", "UProfile")"><i class="fa-solid fa-circle-right text-primary-emphasis"></i></a>
+                            <strong> <i class="fa-regular fa-calendar-days text-primary-emphasis pe-2"></i>Scheduling Task</strong>
+                            <div class="donut-container">
+                                <div class="donut" style="--percentage: @Model.ScheduleTasksPercentage;">
+                                    <div class="donut-inner"></div>
+                                </div>
+                                <div class="percentage">@($"{Model.ScheduleTasksPercentage}%")</div>
+                            </div>
+                            @*<a class="float-end" href="@Url.Action("SchedulingTasksList", "UProfile")"><i class="fa-solid fa-circle-right text-primary-emphasis"></i></a>*@
                         </div>
                         @*evening-task bg-success-subtle text-success-emphasis*@
-                        <div class="evening-task bg-primary-subtle text-primary-emphasis" style="cursor:pointer"
+                        <div class="evening-task bg-primary-subtle text-primary-emphasis dashboard-morning-evening" style="cursor:pointer"
                              onclick="window.location.href='@Url.Action("MindMeditation", "UProfile")'">
                             <strong>
-                                <i class="fa-solid fa-spa pe-2 text-success-emphasis"></i> Mindfulness
-                                Meditation
+                                <i class="fa-solid fa-spa pe-2 text-success-emphasis"></i>Mindfulness Meditation
                             </strong>
-                            <a class="float-end" href="@Url.Action("MindMeditation", "UProfile")"><i class="fa-solid fa-circle-right text-success-emphasis"></i></a>
+                            <div class="donut-container">
+                                <div class="donut" style="--percentage: @Model.MindfulnessMeditation;">
+                                    <div class="donut-inner"></div>
+                                </div>
+                                <div class="percentage">@($"{Model.MindfulnessMeditation}%")</div>
+                            </div>
+                            @*<a class="float-end" href="@Url.Action("MindMeditation", "UProfile")"><i class="fa-solid fa-circle-right text-success-emphasis"></i></a>*@
                         </div>
                         @*evening-task bg-warning-subtle text-warning-emphasis*@
-                        <div class="evening-task bg-primary-subtle text-primary-emphasis" style="cursor:pointer"
+                        <div class="evening-task bg-primary-subtle text-primary-emphasis dashboard-morning-evening" style="cursor:pointer"
                              onclick="window.location.href='@Url.Action("brainFitness", "UProfile")'">
                             <strong>
-                                <i class="fa-solid fa-brain pe-2 text-warning-emphasis"></i> Brain
-                                Fitness
+                                <i class="fa-solid fa-brain pe-2 text-success-emphasis"></i>Brain Fitness
                             </strong>
-                            <a class="float-end" href="@Url.Action("brainFitness", "UProfile")"><i class="fa-solid fa-circle-right text-warning-emphasis"></i></a>
+                            <div class="donut-container">
+                                <div class="donut" style="--percentage: @Model.BrainFitness;">
+                                    <div class="donut-inner"></div>
+                                </div>
+                                <div class="percentage">@($"{Model.BrainFitness}%")</div>
+                            </div>
+                            @*<a class="float-end" href="@Url.Action("brainFitness", "UProfile")"><i class="fa-solid fa-circle-right text-success-emphasis"></i></a>*@
                         </div>
                     </div>
-                    <div class="task-card">
-                        <h5>Evening Tasks</h5>
+                    <div class="task-card" style="background-color: #C8E5E1 !important;">
+                        <h5>EVENING TASKS</h5>
                         @*evening-task bg-body-tertiary text-primary-emphasis*@
-                        <div class="evening-task bg-primary-subtle text-primary-emphasis" style="cursor:pointer"
+                        <div class="evening-task bg-primary-subtle text-primary-emphasis dashboard-morning-evening" style="cursor:pointer"
                              onclick="window.location.href='@Url.Action("SpottingTriggers", "UProfile")'">
-                            <strong> <i class="fa-regular fa-life-ring text-dark-emphasis pe-2"></i> Spotting Triggers</strong>
-                            <a class="float-end" href="@Url.Action("SpottingTriggers", "UProfile")"><i class="fa-solid text-primary-emphasis fa-circle-right"></i></a>
+                            <strong> <i class="fa-regular fa-life-ring text-success-emphasis pe-2"></i>Spotting Triggers</strong>
+                            <div class="donut-container">
+                                <div class="donut" style="--percentage: @Model.SpottingTriggers;">
+                                    <div class="donut-inner"></div>
+                                </div>
+                                <div class="percentage">@($"{Model.SpottingTriggers}%")</div>
+                            </div>
+                            @*<a class="float-end" href="@Url.Action("SpottingTriggers", "UProfile")"><i class="fa-solid text-primary-emphasis fa-circle-right"></i></a>*@
                         </div>
                         @*evening-task bg-dark-subtle text-dark-emphasis*@
-                        <div class="evening-task bg-primary-subtle text-primary-emphasis" style="cursor:pointer"
+                        <div class="evening-task bg-primary-subtle text-primary-emphasis dashboard-morning-evening" style="cursor:pointer"
                              onclick="window.location.href='@Url.Action("MemoryMaker", "UProfile")'">
-                            <strong><i class="fa-solid fa-handshake text-dark-emphasis pe-2"></i> Memory Maker </strong>
-                            <a class="float-end" href="@Url.Action("MemoryMaker", "UProfile")"><i class="fa-solid fa-circle-right text-dark-emphasis"></i></a>
+                            <strong><i class="fa-solid fa-handshake text-success-emphasis pe-2"></i>Memory Maker</strong>
+                            <div class="donut-container">
+                                <div class="donut" style="--percentage: @Model.MemoryMaker;">
+                                    <div class="donut-inner"></div>
+                                </div>
+                                <div class="percentage">@($"{Model.MemoryMaker}%")</div>
+                            </div>
+                            @* <a class="float-end" href="@Url.Action("MemoryMaker", "UProfile")"><i class="fa-solid fa-circle-right text-success-emphasis"></i></a>*@
                         </div>
                         @*evening-task bg-info-subtle text-info-emphasis*@
-                        <div class="evening-task bg-primary-subtle text-primary-emphasis" style="cursor:pointer"
+                        <div class="evening-task bg-primary-subtle text-primary-emphasis dashboard-morning-evening" style="cursor:pointer"
                              onclick="window.location.href='@Url.Action("MindfullAttention", "UProfile")'">
-                            <strong><i class="text-info-emphasis fa-solid fa-leaf fa-comment-dots pe-2"></i> Mindful Attention</strong>
-                            <a class="float-end" href="@Url.Action("MindfullAttention", "UProfile")"><i class="fa-solid fa-circle-right text-info-emphasis"></i></a>
+                            <strong><i class="text-success-emphasis fa-solid fa-leaf pe-2"></i>Mindful Attention</strong>
+                            <div class="donut-container">
+                                <div class="donut" style="--percentage: @Model.MindfulAttention;">
+                                    <div class="donut-inner"></div>
+                                </div>
+                                <div class="percentage">@($"{Model.MindfulAttention}%")</div>
+                            </div>
+                            @*<a class="float-end" href="@Url.Action("MindfullAttention", "UProfile")"><i class="fa-solid fa-circle-right text-success-emphasis"></i></a>*@
                         </div>
                         @*evening-task bg-danger-subtle text-danger-emphasis*@
-                        <div class="evening-task bg-primary-subtle text-primary-emphasis" style="cursor:pointer"
+                        <div class="evening-task bg-primary-subtle text-primary-emphasis dashboard-morning-evening" style="cursor:pointer"
                              onclick="window.location.href='@Url.Action("GratitudeJournal", "UProfile")'">
-                            <strong><i class="fa-solid fa-hand-holding-heart text-danger-emphasis pe-2"></i> Gratitude Journal</strong>
-                            <a class="float-end" href="@Url.Action("GratitudeJournal", "UProfile")"><i class="text-danger-emphasis fa-solid fa-circle-right"></i></a>
+                            <strong><i class="fa-solid fa-hand-holding-heart text-success-emphasis pe-2"></i>Gratitude Journal</strong>
+                            <div class="donut-container">
+                                <div class="donut" style="--percentage: @Model.GratitudeJournal;">
+                                    <div class="donut-inner"></div>
+                                </div>
+                                <div class="percentage">@($"{Model.GratitudeJournal}%")</div>
+                            </div>
+                            @*<a class="float-end" href="@Url.Action("GratitudeJournal", "UProfile")"><i class="fa-solid fa-circle-right text-success-emphasis"></i></a>*@
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-6">
-                    <div class="task-card">
+                    <div class="task-card" style="height:641px !important">
                         <h5> Current Task</h5>
                         <div class="video-container-dashboard">
                             <div class="video-frame frame-low-vh rounded">
@@ -88,146 +312,146 @@
 </div>
 
 <!-- Evening Tasks and Statistics -->
-
 @*<div class="container-fluid">
-    <div class="row">
-        <div class="col-12 col-sm-8 col-md-12">
-            <div class="spacer20"></div>
-            <div id="logbox" class="card mt-0">
-                <div class="card-body">
-                    <div class="text-center fw-semibold">
-                        <p class="fw-semibold">
-                            Hi, I am your ADHD Assistant. Each day I will help you complete a set of task, designed to help reduceany symptoms or traits of ADHD you might have.
-                            We call them 7 commitments. I'll send reminders to make sure you stay on top of them regularly and I'll also send you test every few months to help track
-                            your progress. Be sure to also download the updates as they arrive. I look forward to the journey ahead with you.
-                            let us begin...<br /><i class="fa fa-info-circle" aria-hidden="true">&nbsp;&nbsp;About the programme</i>
-                        </p>
-                    </div>
-                    <hr />
-                    <div class="row">
-                        <div id="clientDisplay" class="col-xs-12 col-sm-12">
-                            <div class="outframe">
-                                <div style="padding: -10px 10px;">
-                                    <div class="m-4">
-                                        <ul class="nav nav-tabs" id="myTab">
-                                            <li class="nav-item">
-                                                <a href="#home" class="nav-link fw-semibold fa-1x active" data-bs-toggle="tab">
-                                                    <i class="fa fa-tasks" aria-hidden="true"></i>
-                                                    &nbsp;&nbsp; My tasks
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="#profile" class="nav-link fw-semibold  fa-1x" data-bs-toggle="tab">
-                                                    <i class="fa fa-bar-chart" aria-hidden="true"></i>
-                                                    &nbsp;&nbsp;My stats
-                                                </a>
-                                            </li>
-                                        </ul>
-                                        <div class="tab-content">
-                                            <div class="tab-pane fade show active" id="home">
-                                                <div class="card">
-                                                    <div class="card-body">
-                                                        <h6 class="card-subtitle mb-2 text-body-emphasis  fw-medium">------MORNING TASKS------</h6>
-                                                        <a href="@Url.Action("SchedulingTasksList", "UProfile")" class="alert-link">
-                                                            <div class="alert text-white bg-primary" role="alert">
-                                                                <i class="fa fa-calendar-check-o fw-semibold fa-1x" aria-hidden="true">
-                                                                    Scheduling tasks
-                                                                </i>
-                                                                <i style="float: right;">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                                                                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
-                                                                    </svg>
-                                                                </i>
-                                                            </div>
-                                                        </a>
-                                                        <a href="@Url.Action("MindMeditation", "UProfile")" class="alert-link">
-                                                            <div class="alert text-white bg-secondary" role="alert">
-                                                                <i class="fa fa-headphones fw-semibold fa-1x" aria-hidden="true">
-                                                                    Mindfullness meditation
-                                                                </i>
-                                                                <i style="float: right;">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                                                                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
-                                                                    </svg>
-                                                                </i>
-                                                            </div>
-                                                        </a>
-                                                        <a href="@Url.Action("brainFitness", "UProfile")" class="alert-link">
-                                                            <div class="alert text-white bg-success" role="alert">
-                                                                <span class="fw-semibold fa-1x" aria-hidden="true">
-                                                                    <svg width="30" height="30" viewBox="-20 0 190 190">
-                                                                        <path fill="#FFFFFF" clip-rule="evenodd" d="M129.49 114.51C129.121 116.961 128.187 119.293 126.762 121.322C125.337 123.351 123.461 125.021 121.28 126.2C120.676 126.535 120.043 126.816 119.39 127.04C120.22 138.04 102.74 142.04 93.32 139.42L96.82 151.66L87.82 151.98L72.07 129.43C66.76 130.93 60.49 131.65 56.44 125.15C56.0721 124.553 55.7382 123.935 55.44 123.3C54.4098 123.51 53.3614 123.617 52.31 123.62C49.31 123.62 44.31 122.72 41.77 120.96C39.7563 119.625 38.1588 117.75 37.16 115.55C31.75 116.29 27.16 115.02 24.16 111.88C20.36 107.97 19.28 101.51 21.26 94.58C23.87 85.33 31.81 74.91 47.59 71C48.9589 69.2982 50.5972 67.8322 52.44 66.66C62.35 60.31 78.44 59.76 90.65 65.79C95.3836 64.9082 100.27 65.376 104.75 67.14C113.53 70.43 119.91 77.31 121.11 84.3C123.487 85.5317 125.433 87.4568 126.69 89.82C129.32 94.76 129.69 99.71 127.92 103.71C129.587 107.049 130.138 110.835 129.49 114.51ZM123.01 109.31C121.612 110.048 120.056 110.434 118.475 110.434C116.894 110.434 115.338 110.048 113.94 109.31L114.67 104.46C117.75 104.76 120.26 103.8 121.57 101.83C123.04 99.64 122.81 96.39 120.95 92.9C118.87 88.99 114.38 88.37 111.89 88.34H111.73C105.49 88.34 99.13 91.89 96.56 96.52L92.82 94.73C93.5553 92.3449 94.8046 90.15 96.48 88.3C95.0376 87.0754 93.9474 85.4887 93.3217 83.703C92.696 81.9173 92.5574 79.9971 92.92 78.14L96.61 77.8C96.7789 79.302 97.4 80.7172 98.3911 81.8583C99.3822 82.9994 100.697 83.8125 102.16 84.19C105.238 82.8161 108.58 82.1335 111.95 82.19C112.43 82.19 112.89 82.24 113.36 82.27C110.969 78.0312 107.18 74.7545 102.64 73C91.56 68.7 84.09 75.37 82.38 77.67C78.26 83.19 80.9 88.41 82.91 91.8L79.61 94.8C76.736 92.314 74.8075 88.9127 74.15 85.17C69.92 86.44 64.24 86.17 61.06 80.74L64.06 78.68C67.43 81.2 72.78 80.98 75.32 77.87C75.9252 76.4949 76.6905 75.1959 77.6 74C79.044 72.093 80.7864 70.4316 82.76 69.08C74.47 66.82 62.76 67.19 55.68 71.73C53.7668 72.841 52.192 74.4517 51.1244 76.3895C50.0569 78.3274 49.5368 80.5192 49.62 82.73C49.62 86.3 52.42 91.94 56.19 92.82L54 97.07C51.5946 96.5129 49.4109 95.2487 47.73 93.44L44.48 97.58L41.23 96L44.41 87.68C43.8904 86.064 43.624 84.3774 43.62 82.68C43.628 81.3361 43.7687 79.9963 44.04 78.68C34.04 82.81 29.1 89.68 27.29 95.96C25.9 100.79 26.44 105.15 28.72 107.49C30.53 109.35 33.3 109.79 35.91 109.62L42.91 104.17L45.21 106.11L43.13 112.93C44.22 116.4 47.79 118.19 54.3 116.93C54.6375 114.169 55.7272 111.554 57.45 109.37C58.7133 107.552 60.3846 106.056 62.33 105L65.75 95.79L69.17 95.64L68.8 103.19C74.55 102.6 80.98 103.77 86.97 102.87L88.07 106.87C79.29 110.93 70.3 104.31 62.15 113.04C59.22 116.18 60.34 118.91 62.15 121.66C64.76 125.59 69.66 123.23 74.67 121.66C82.26 119.34 87.77 117.66 98.16 118.51C95.68 113.8 95.92 108.11 99.24 101.85L104.13 103.78C100.7 111.69 103.91 116.27 106.13 118.29C109.56 121.41 114.72 122.35 118.13 120.47C119.436 119.749 120.559 118.737 121.412 117.513C122.265 116.289 122.825 114.885 123.05 113.41C123.275 112.051 123.258 110.663 123 109.31H123.01Z" fill="#000000" />
-                                                                    </svg>
-                                                                    Brain fitness
-                                                                </span>
-                                                                <i style="float: right;">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                                                                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
-                                                                    </svg>
-                                                                </i>
-                                                            </div>
-                                                        </a>
-                                                    </div>
+        <div class="row">
+            <div class="col-12 col-sm-8 col-md-12">
+                <div class="spacer20"></div>
+                <div id="logbox" class="card mt-0">
+                    <div class="card-body">
+                        <div class="text-center fw-semibold">
+                            <p class="fw-semibold">
+                                Hi, I am your ADHD Assistant. Each day I will help you complete a set of task, designed to help reduceany symptoms or traits of ADHD you might have.
+                                We call them 7 commitments. I'll send reminders to make sure you stay on top of them regularly and I'll also send you test every few months to help track
+                                your progress. Be sure to also download the updates as they arrive. I look forward to the journey ahead with you.
+                                let us begin...<br /><i class="fa fa-info-circle" aria-hidden="true">&nbsp;&nbsp;About the programme</i>
+                            </p>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <div id="clientDisplay" class="col-xs-12 col-sm-12">
+                                <div class="outframe">
+                                    <div style="padding: -10px 10px;">
+                                        <div class="m-4">
+                                            <ul class="nav nav-tabs" id="myTab">
+                                                <li class="nav-item">
+                                                    <a href="#home" class="nav-link fw-semibold fa-1x active" data-bs-toggle="tab">
+                                                        <i class="fa fa-tasks" aria-hidden="true"></i>
+                                                        &nbsp;&nbsp; My tasks
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#profile" class="nav-link fw-semibold  fa-1x" data-bs-toggle="tab">
+                                                        <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                                                        &nbsp;&nbsp;My stats
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content">
+                                                <div class="tab-pane fade show active" id="home">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <h6 class="card-subtitle mb-2 text-body-emphasis  fw-medium">------MORNING TASKS------</h6>
+                                                            <a href="@Url.Action("SchedulingTasksList", "UProfile")" class="alert-link">
+                                                                <div class="alert text-white bg-primary" role="alert">
+                                                                    <i class="fa fa-calendar-check-o fw-semibold fa-1x" aria-hidden="true">
+                                                                        Scheduling tasks
+                                                                    </i>
+                                                                    <i style="float: right;">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                                                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                                                        </svg>
+                                                                    </i>
+                                                                </div>
+                                                            </a>
+                                                            <a href="@Url.Action("MindMeditation", "UProfile")" class="alert-link">
+                                                                <div class="alert text-white bg-secondary" role="alert">
+                                                                    <i class="fa fa-headphones fw-semibold fa-1x" aria-hidden="true">
+                                                                        Mindfullness meditation
+                                                                    </i>
+                                                                    <i style="float: right;">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                                                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                                                        </svg>
+                                                                    </i>
+                                                                </div>
+                                                            </a>
+                                                            <a href="@Url.Action("brainFitness", "UProfile")" class="alert-link">
+                                                                <div class="alert text-white bg-success" role="alert">
+                                                                    <span class="fw-semibold fa-1x" aria-hidden="true">
+                                                                        <svg width="30" height="30" viewBox="-20 0 190 190">
+                                                                            <path fill="#FFFFFF" clip-rule="evenodd" d="M129.49 114.51C129.121 116.961 128.187 119.293 126.762 121.322C125.337 123.351 123.461 125.021 121.28 126.2C120.676 126.535 120.043 126.816 119.39 127.04C120.22 138.04 102.74 142.04 93.32 139.42L96.82 151.66L87.82 151.98L72.07 129.43C66.76 130.93 60.49 131.65 56.44 125.15C56.0721 124.553 55.7382 123.935 55.44 123.3C54.4098 123.51 53.3614 123.617 52.31 123.62C49.31 123.62 44.31 122.72 41.77 120.96C39.7563 119.625 38.1588 117.75 37.16 115.55C31.75 116.29 27.16 115.02 24.16 111.88C20.36 107.97 19.28 101.51 21.26 94.58C23.87 85.33 31.81 74.91 47.59 71C48.9589 69.2982 50.5972 67.8322 52.44 66.66C62.35 60.31 78.44 59.76 90.65 65.79C95.3836 64.9082 100.27 65.376 104.75 67.14C113.53 70.43 119.91 77.31 121.11 84.3C123.487 85.5317 125.433 87.4568 126.69 89.82C129.32 94.76 129.69 99.71 127.92 103.71C129.587 107.049 130.138 110.835 129.49 114.51ZM123.01 109.31C121.612 110.048 120.056 110.434 118.475 110.434C116.894 110.434 115.338 110.048 113.94 109.31L114.67 104.46C117.75 104.76 120.26 103.8 121.57 101.83C123.04 99.64 122.81 96.39 120.95 92.9C118.87 88.99 114.38 88.37 111.89 88.34H111.73C105.49 88.34 99.13 91.89 96.56 96.52L92.82 94.73C93.5553 92.3449 94.8046 90.15 96.48 88.3C95.0376 87.0754 93.9474 85.4887 93.3217 83.703C92.696 81.9173 92.5574 79.9971 92.92 78.14L96.61 77.8C96.7789 79.302 97.4 80.7172 98.3911 81.8583C99.3822 82.9994 100.697 83.8125 102.16 84.19C105.238 82.8161 108.58 82.1335 111.95 82.19C112.43 82.19 112.89 82.24 113.36 82.27C110.969 78.0312 107.18 74.7545 102.64 73C91.56 68.7 84.09 75.37 82.38 77.67C78.26 83.19 80.9 88.41 82.91 91.8L79.61 94.8C76.736 92.314 74.8075 88.9127 74.15 85.17C69.92 86.44 64.24 86.17 61.06 80.74L64.06 78.68C67.43 81.2 72.78 80.98 75.32 77.87C75.9252 76.4949 76.6905 75.1959 77.6 74C79.044 72.093 80.7864 70.4316 82.76 69.08C74.47 66.82 62.76 67.19 55.68 71.73C53.7668 72.841 52.192 74.4517 51.1244 76.3895C50.0569 78.3274 49.5368 80.5192 49.62 82.73C49.62 86.3 52.42 91.94 56.19 92.82L54 97.07C51.5946 96.5129 49.4109 95.2487 47.73 93.44L44.48 97.58L41.23 96L44.41 87.68C43.8904 86.064 43.624 84.3774 43.62 82.68C43.628 81.3361 43.7687 79.9963 44.04 78.68C34.04 82.81 29.1 89.68 27.29 95.96C25.9 100.79 26.44 105.15 28.72 107.49C30.53 109.35 33.3 109.79 35.91 109.62L42.91 104.17L45.21 106.11L43.13 112.93C44.22 116.4 47.79 118.19 54.3 116.93C54.6375 114.169 55.7272 111.554 57.45 109.37C58.7133 107.552 60.3846 106.056 62.33 105L65.75 95.79L69.17 95.64L68.8 103.19C74.55 102.6 80.98 103.77 86.97 102.87L88.07 106.87C79.29 110.93 70.3 104.31 62.15 113.04C59.22 116.18 60.34 118.91 62.15 121.66C64.76 125.59 69.66 123.23 74.67 121.66C82.26 119.34 87.77 117.66 98.16 118.51C95.68 113.8 95.92 108.11 99.24 101.85L104.13 103.78C100.7 111.69 103.91 116.27 106.13 118.29C109.56 121.41 114.72 122.35 118.13 120.47C119.436 119.749 120.559 118.737 121.412 117.513C122.265 116.289 122.825 114.885 123.05 113.41C123.275 112.051 123.258 110.663 123 109.31H123.01Z" fill="#000000" />
+                                                                        </svg>
+                                                                        Brain fitness
+                                                                    </span>
+                                                                    <i style="float: right;">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                                                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                                                        </svg>
+                                                                    </i>
+                                                                </div>
+                                                            </a>
+                                                        </div>
 
-                                                </div>
-                                                <br />
-                                                <div class="card">
-                                                    <div class="card-body">
-                                                        <h6 class="card-subtitle mb-2 text-body-emphasis  fw-medium">------EVENING TASKS------</h6>
-                                                        <a href="@Url.Action("SpottingTriggers", "UProfile")" class="alert-link">
-                                                            <div class="alert text-white bg-danger" role="alert">
-                                                                <i class="fa fa-exclamation-triangle fw-semibold fa-1x" aria-hidden="true">
-                                                                    Spotting triggers
-                                                                </i>
-                                                                <i style="float: right;">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                                                                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
-                                                                    </svg>
-                                                                </i>
-                                                            </div>
-                                                        </a>
-                                                        <a href="@Url.Action("MemoryMaker", "UProfile")" class="alert-link">
-                                                            <div class="alert text-white bg-warning" role="alert">
-                                                                <i class="fa fa-eye fw-semibold fa-1x" aria-hidden="true">
-                                                                    Memory maker
-                                                                </i>
-                                                                <i style="float: right;">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                                                                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
-                                                                    </svg>
-                                                                </i>
-                                                            </div>
-                                                        </a>
-                                                        <a href="@Url.Action("MindfullAttention", "UProfile")" class="alert-link">
-                                                            <div class="alert text-white bg-info" role="alert">
-                                                                <i class="fa fa-commenting-o fw-semibold fa-1x" aria-hidden="true">
-                                                                    Mindfull attention
-                                                                </i>
-                                                                <i style="float: right;">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                                                                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
-                                                                    </svg>
-                                                                </i>
-                                                            </div>
-                                                        </a>
-                                                        <a href="@Url.Action("GratitudeJournal", "UProfile")" class="alert-link">
-                                                            <div class="alert text-white bg-dark" role="alert">
-                                                                <i class="fa fa-heart-o fw-semibold fa-1x" aria-hidden="true">
-                                                                    Gratitude journal
-                                                                </i>
-                                                                <i style="float: right;">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                                                                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
-                                                                    </svg>
-                                                                </i>
-                                                            </div>
-                                                        </a>
+                                                    </div>
+                                                    <br />
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <h6 class="card-subtitle mb-2 text-body-emphasis  fw-medium">------EVENING TASKS------</h6>
+                                                            <a href="@Url.Action("SpottingTriggers", "UProfile")" class="alert-link">
+                                                                <div class="alert text-white bg-danger" role="alert">
+                                                                    <i class="fa fa-exclamation-triangle fw-semibold fa-1x" aria-hidden="true">
+                                                                        Spotting triggers
+                                                                    </i>
+                                                                    <i style="float: right;">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                                                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                                                        </svg>
+                                                                    </i>
+                                                                </div>
+                                                            </a>
+                                                            <a href="@Url.Action("MemoryMaker", "UProfile")" class="alert-link">
+                                                                <div class="alert text-white bg-warning" role="alert">
+                                                                    <i class="fa fa-eye fw-semibold fa-1x" aria-hidden="true">
+                                                                        Memory maker
+                                                                    </i>
+                                                                    <i style="float: right;">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                                                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                                                        </svg>
+                                                                    </i>
+                                                                </div>
+                                                            </a>
+                                                            <a href="@Url.Action("MindfullAttention", "UProfile")" class="alert-link">
+                                                                <div class="alert text-white bg-info" role="alert">
+                                                                    <i class="fa fa-commenting-o fw-semibold fa-1x" aria-hidden="true">
+                                                                        Mindfull attention
+                                                                    </i>
+                                                                    <i style="float: right;">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                                                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                                                        </svg>
+                                                                    </i>
+                                                                </div>
+                                                            </a>
+                                                            <a href="@Url.Action("GratitudeJournal", "UProfile")" class="alert-link">
+                                                                <div class="alert text-white bg-dark" role="alert">
+                                                                    <i class="fa fa-heart-o fw-semibold fa-1x" aria-hidden="true">
+                                                                        Gratitude journal
+                                                                    </i>
+                                                                    <i style="float: right;">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                                                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                                                        </svg>
+                                                                    </i>
+                                                                </div>
+                                                            </a>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="tab-pane fade" id="profile">
-                                                <h4 class="mt-2">Profile tab content</h4>
-                                                <p class="fw-normal">Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut, mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis. Nunc facilisis leo at faucibus adipiscing.</p>
+                                                <div class="tab-pane fade" id="profile">
+                                                    <h4 class="mt-2">Profile tab content</h4>
+                                                    <p class="fw-normal">Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut, mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis. Nunc facilisis leo at faucibus adipiscing.</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -238,8 +462,98 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>*@
+    </div>*@
 @section scripts {
     <script src="~/Scripts/UProfile.js"></script>
+    <script>
+        Highcharts.chart('container', {
+            chart: {
+                type: 'pie',
+                height: 100, // Set chart height
+                width: 100,  // Set chart width
+                custom: {
+                    margin: 0,
+                    padding: 0
+                },
+                events: {
+                    render() {
+                        const chart = this,
+                            series = chart.series[0];
+                        let customLabel = chart.options.chart.custom.label;
+
+                        if (!customLabel) {
+                            customLabel = chart.options.chart.custom.label =
+                                chart.renderer.label('75%', 0, 0)
+                                    .css({
+                                        color: '#000',
+                                        textAnchor: 'middle',
+                                        fontWeight: 'bold'
+                                    })
+                                    .add();
+                        }
+
+                        const x = series.center[0] + chart.plotLeft,
+                            y = series.center[1] + chart.plotTop -
+                                (customLabel.getBBox().height / 2);
+
+                        customLabel.attr({
+                            x,
+                            y
+                        });
+
+                        // Adjust font size dynamically based on the diameter of the chart
+                        customLabel.css({
+                            fontSize: `${series.center[2] / 5}px`
+                        });
+                    }
+                }
+            },
+            navigation: {
+                buttonOptions: {
+                    enabled: false
+                }
+            },
+            accessibility: {
+                point: {
+                    valueSuffix: '%'
+                }
+            },
+            credits: {
+                enabled: false
+            },
+            title: {
+                text: ''
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.0f}%</b>',
+                enabled: false
+            },
+            legend: {
+                enabled: false
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: false
+                    }
+                }
+            },
+            series: [{
+                name: 'Percentage',
+                colorByPoint: true,
+                innerSize: '70%',
+                data: [{
+                    name: 'Completed',
+                    y: 75,
+                    color: '#28a745'
+                }, {
+                    name: 'Remaining',
+                    y: 25,
+                    color: '#d6d6d6'
+                }]
+            }]
+        });
+    </script>
 }

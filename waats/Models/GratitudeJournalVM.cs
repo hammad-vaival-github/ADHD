@@ -14,7 +14,7 @@ namespace waats.Models
 
         [Required(ErrorMessage = "* Required")]
         [StringLength(4000, ErrorMessage = "! Max 4000 characters")]
-        [DisplayName("Things I am gratfull for today : ")]
+        [DisplayName("Things I am gratefull for today : ")]
         public string thingsiamgratfullfortoday { get; set; }
         
         public Nullable<System.DateTime> AddedDate { get; set; }

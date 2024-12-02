@@ -109,7 +109,7 @@
                         strHTML += '<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton' + full.LocalID + '">';
                         strHTML += '<li><a id="Break_' + full.LocalID + '" class="details-control dropdown-item" href="#"><i class="fa-solid fa-turn-down"></i> Break it Down</a></li>';
                         if (full.MarkAsCompleted == false) {
-                            strHTML += '<li><a id="Edit_' + full.LocalID + '" class="EditTask dropdown-item" href="#"><i class="fas fa-edit"></i> Edit</a></li>';
+                            strHTML += '<li><a id="Edit_' + full.LocalID + '" class="EditTask dropdown-item"  data-bs-toggle="offcanvas" data-bs-target="#brainExerciseDrawer" href="#"><i class="fas fa-edit"></i> Edit</a></li>';
                             strHTML += '<li><a id="Mark_' + full.LocalID + '" class="MarkAsDone dropdown-item" href="#"><i class="fa-solid fa-file-circle-check me-2"></i>Mark as done</a></li>';
                         }
                         strHTML += '</ul></div>';
@@ -361,7 +361,7 @@
                                                 <div class="col-md-9">
                                                     <div class="d-flex justify-content-end">
                                                         <div class="ThisDiv">
-                                                            <button class="btn AddTask text-primary btn-primary rounded-pill text-white btn-x10-y30 my-3" aria-hidden="true" id="AddSubTask_${mainID}" value="${mainID}">
+                                                            <button data-bs-toggle="offcanvas" data-bs-target="#brainExerciseDrawer" class="btn AddTask text-primary btn-primary rounded-pill text-white btn-x10-y30 my-3"  id="AddSubTask_${mainID}" value="${mainID}">
                                                                 <i class="fa-solid fa-circle-plus me-2"></i> Add subtask
                                                             </button>
                                                         </div>

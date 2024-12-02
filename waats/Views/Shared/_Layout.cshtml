@@ -78,7 +78,7 @@
         {*@
     @if (path == "/")
     {
-        <div class="total-wrapper">
+        <!--<div class="total-wrapper">
             <nav class="navbar navbar-expand-lg main-menu">
                 <div class="container-fluid p-0">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -121,17 +121,17 @@
                                 <a class="nav-link" href="@Url.Action("GratitudeJournal", "UProfile")">
                                     <i class="fa-solid fa-hand-holding-heart pe-2" aria-hidden="true"></i>Gratitude Journal
                                 </a>
-                            </li>
+                            </li>-->
                             @*</ul>*@
                             @*<ul class="navbar-nav d-flex flex-row">*@
-                            <li class="nav-item text-center">
+                            <!--<li class="nav-item text-center">
                                 @Html.Partial("_LoginPartial")
-                            </li>
+                            </li>-->
                             @*</ul>*@
-                    </div>
+                    <!--</div>
                 </div>
             </nav>
-        </div>
+        </div>-->
     }
     else
     {
@@ -139,9 +139,11 @@
             <div class="row">
                 <!-- Sidebar -->
                 <div class="col-md-3 col-lg-2 sidebar">
-                    <div class="text-left mb-4">
-                        <img src="~/Content/images/ADHD-Logo.png" class="img-fluid w-75" />
-                    </div>
+                    <a href="@Url.Action("Index", "UProfile")">
+                        <div class="text-left mb-4">
+                            <img src="~/Content/images/ADHD-Logo.png" class="img-fluid w-75" />
+                        </div>
+                    </a>
                     <div class="d-flex sidebar-wrapper">
                         <nav class="nav flex-column w-100">
                             <a class="nav-link active" href="@Url.Action("Index", "UProfile")"><i class="fa-solid fa-gauge-high"></i>Dashboard</a>
@@ -175,14 +177,14 @@
                                     <i class="fa-solid fa-list-check"></i> My Task
                                 </button>
                             </li>
-                            <li class="nav-item" role="presentation">
+                            @*<li class="nav-item" role="presentation">
                                 <button class="nav-link text-secondary disabled" aria-disabled="true" id="sectionOne-tab"
                                         data-bs-toggle="tab"
                                         data-bs-target="#sectionOne-tab-pane" type="button" role="tab"
                                         aria-controls="sectionOne-tab-pane" aria-selected="false">
                                     <i class="fa-solid fa-chart-line"></i> My Statistics
                                 </button>
-                            </li>
+                            </li>*@
                         </ul>
                         <!-- Button trigger modal -->
                     </div>

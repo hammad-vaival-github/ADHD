@@ -43,12 +43,12 @@ body {
     border-radius: 8px;
     margin-bottom: 9px;
     color: #fff;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     font-size: 15px;
 }
 
     .evening-task i {
-        color: #fff;
+        /*color: #fff;*/
     }
 
 .statistics-card {
@@ -373,5 +373,13 @@ div#toast-container .toast.toast-warning {
 .modal-detail {
     margin-bottom: 10px;
 }
-
+.dashboard-morning-evening {
+    background-color: #fcfcfc !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 20px;
+}
 

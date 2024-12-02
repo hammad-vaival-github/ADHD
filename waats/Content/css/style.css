@@ -82,7 +82,7 @@ nav.navbar.navbar-expand-lg.main-menu ul li a i {
 
 /*form*/
 .form-container {
-    background-color: #e3e3e3;
+    background-color: #ecedf2;
     padding: 20px;
     border-radius: 8px;
     margin-top: 8px;
@@ -233,4 +233,9 @@ div#divDisableFormContainer label {
     font-weight: 900;
     font-size: 14px;
     text-transform:capitalize;
+}
+div#sectionTwo-tab-pane label.form-label {
+    font-weight: 900;
+    font-size: 14px;
+    text-transform: capitalize;
 }

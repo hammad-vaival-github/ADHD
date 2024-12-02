@@ -186,7 +186,7 @@
                         </div>
 
                         <div class="col-md-6">
-                            <div class="form-container pb-5 mt-3">
+                            <div class="form-container pb-5 mt-0">
                                 <h4>Section 2</h4>
                                 <div class="mb-3">
                                     @Html.LabelFor(model => model.HistoryofMentalIllness, htmlAttributes: new { @class = "form-label" })
@@ -244,56 +244,56 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="form-container pb-5 mt-3">
+                            <div class="form-container pb-5 mt-0">
                                 <h4>Section 3</h4>
                                 <div class="mb-3">
                                     <h6 class="card-title">
-                                        <span>1-</span>
+                                        <span>1.</span>
                                         @Html.LabelFor(model => model.CompleteProjects, htmlAttributes: new { @class = "form-label" })
                                     </h6>
                                     @Html.ValidationMessageFor(model => model.CompleteProjects, "", new { @class = "text-danger" })
                                 </div>
                                 <div class="mb-3">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="CompleteProjects" id="inlineRadio1" value="Never" @(Model.CompleteProjects != null && Model.CompleteProjects == "Never" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio1">Never</label>
+                                        <input class="form-check-input" type="radio" name="CompleteProjects" id="inlineRadioCP1" value="Never" @(Model.CompleteProjects != null && Model.CompleteProjects == "Never" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioCP1">Never</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="CompleteProjects" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.CompleteProjects != null && Model.CompleteProjects == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                        <input class="form-check-input" type="radio" name="CompleteProjects" id="inlineRadioCP2" value="Occasionally/Sometimes" @(Model.CompleteProjects != null && Model.CompleteProjects == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioCP2">Occasionally/Sometimes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="CompleteProjects" id="inlineRadio3" value="Often" @(Model.CompleteProjects != null && Model.CompleteProjects == "Often" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio3">Often</label>
+                                        <input class="form-check-input" type="radio" name="CompleteProjects" id="inlineRadioCP3" value="Often" @(Model.CompleteProjects != null && Model.CompleteProjects == "Often" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioCP3">Often</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="CompleteProjects" id="inlineRadio3" value="Always" @(Model.CompleteProjects != null && Model.CompleteProjects == "Always" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio3">Always</label>
+                                        <input class="form-check-input" type="radio" name="CompleteProjects" id="inlineRadioCP4" value="Always" @(Model.CompleteProjects != null && Model.CompleteProjects == "Always" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioCP4">Always</label>
                                     </div>
                                 </div>
                                 <div class="mb-3">
                                     <h6 class="card-title">
-                                        <span>2-</span>
+                                        <span>2.</span>
                                         @Html.LabelFor(model => model.RequiresOrganization, htmlAttributes: new { @class = "form-label" })
                                     </h6>
                                     @Html.ValidationMessageFor(model => model.RequiresOrganization, "", new { @class = "text-danger" })
                                 </div>
                                 <div class="mb-3">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="RequiresOrganization" id="inlineRadio1" value="Never" @(Model.RequiresOrganization != null && Model.RequiresOrganization == "Never" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio1">Never</label>
+                                        <input class="form-check-input" type="radio" name="RequiresOrganization" id="inlineRadioRO1" value="Never" @(Model.RequiresOrganization != null && Model.RequiresOrganization == "Never" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioRO1">Never</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="RequiresOrganization" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.RequiresOrganization != null && Model.RequiresOrganization == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                        <input class="form-check-input" type="radio" name="RequiresOrganization" id="inlineRadioRO2" value="Occasionally/Sometimes" @(Model.RequiresOrganization != null && Model.RequiresOrganization == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioRO2">Occasionally/Sometimes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="RequiresOrganization" id="inlineRadio3" value="Often" @(Model.RequiresOrganization != null && Model.RequiresOrganization == "Often" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio3">Often</label>
+                                        <input class="form-check-input" type="radio" name="RequiresOrganization" id="inlineRadioRO3" value="Often" @(Model.RequiresOrganization != null && Model.RequiresOrganization == "Often" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioRO3">Often</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="RequiresOrganization" id="inlineRadio3" value="Always" @(Model.RequiresOrganization != null && Model.RequiresOrganization == "Always" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio3">Always</label>
+                                        <input class="form-check-input" type="radio" name="RequiresOrganization" id="inlineRadioRO4" value="Always" @(Model.RequiresOrganization != null && Model.RequiresOrganization == "Always" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioRO4">Always</label>
                                     </div>
                                     @*<div class="row sub-Section3_2Btn">
                                         <div class="col-12 col-sm-12 col-md-12 col-lg-12">
@@ -304,26 +304,26 @@
                                 </div>
                                 <div class="mb-3">
                                     <h6 class="card-title">
-                                        <span>3-</span>
+                                        <span>3.</span>
                                         @Html.LabelFor(model => model.keepAppointments, htmlAttributes: new { @class = "form-label" })
                                     </h6>  @Html.ValidationMessageFor(model => model.keepAppointments, "", new { @class = "text-danger" })
                                 </div>
                                 <div class="mb-3">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="keepAppointments" id="inlineRadio1" value="Never" @(Model.keepAppointments != null && Model.keepAppointments == "Never" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio1">Never</label>
+                                        <input class="form-check-input" type="radio" name="keepAppointments" id="inlineRadioKP1" value="Never" @(Model.keepAppointments != null && Model.keepAppointments == "Never" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioKP1">Never</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="keepAppointments" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.keepAppointments != null && Model.keepAppointments == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                        <input class="form-check-input" type="radio" name="keepAppointments" id="inlineRadioKP2" value="Occasionally/Sometimes" @(Model.keepAppointments != null && Model.keepAppointments == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioKP2">Occasionally/Sometimes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="keepAppointments" id="inlineRadio3" value="Often" @(Model.keepAppointments != null && Model.keepAppointments == "Often" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio3">Often</label>
+                                        <input class="form-check-input" type="radio" name="keepAppointments" id="inlineRadioKP3" value="Often" @(Model.keepAppointments != null && Model.keepAppointments == "Often" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioKP3">Often</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="keepAppointments" id="inlineRadio3" value="Always" @(Model.keepAppointments != null && Model.keepAppointments == "Always" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio3">Always</label>
+                                        <input class="form-check-input" type="radio" name="keepAppointments" id="inlineRadioKP3" value="Always" @(Model.keepAppointments != null && Model.keepAppointments == "Always" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioKP3">Always</label>
                                     </div>
                                     @*<div class="row sub-Section3_3Btn">
                                         <div class="col-12 col-sm-12 col-md-12 col-lg-12">
@@ -334,340 +334,340 @@
                                 </div>
                                 <div class="mb-3">
                                     <h6 class="card-title">
-                                        <span>4-</span>
+                                        <span>4.</span>
                                         @Html.LabelFor(model => model.StartTasksOnTime, htmlAttributes: new { @class = "form-label" })
                                     </h6>
                                     @Html.ValidationMessageFor(model => model.StartTasksOnTime, "", new { @class = "text-danger" })
                                 </div>
                                 <div class="mb-3">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="StartTasksOnTime" id="inlineRadio1" value="Never" @(Model.StartTasksOnTime != null && Model.StartTasksOnTime == "Never" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio1">Never</label>
+                                        <input class="form-check-input" type="radio" name="StartTasksOnTime" id="inlineRadioST1" value="Never" @(Model.StartTasksOnTime != null && Model.StartTasksOnTime == "Never" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioST1">Never</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="StartTasksOnTime" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.StartTasksOnTime != null && Model.StartTasksOnTime == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                        <input class="form-check-input" type="radio" name="StartTasksOnTime" id="inlineRadioST2" value="Occasionally/Sometimes" @(Model.StartTasksOnTime != null && Model.StartTasksOnTime == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioST2">Occasionally/Sometimes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="StartTasksOnTime" id="inlineRadio3" value="Often" @(Model.StartTasksOnTime != null && Model.StartTasksOnTime == "Often" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio3">Often</label>
+                                        <input class="form-check-input" type="radio" name="StartTasksOnTime" id="inlineRadioST3" value="Often" @(Model.StartTasksOnTime != null && Model.StartTasksOnTime == "Often" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioST3">Often</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="StartTasksOnTime" id="inlineRadio3" value="Always" @(Model.StartTasksOnTime != null && Model.StartTasksOnTime == "Always" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio3">Always</label>
+                                        <input class="form-check-input" type="radio" name="StartTasksOnTime" id="inlineRadioST4" value="Always" @(Model.StartTasksOnTime != null && Model.StartTasksOnTime == "Always" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioST4">Always</label>
                                     </div>
                                 </div>
                                 <div class="mb-3">
                                     <h6 class="card-title">
-                                        <span>5-</span>
+                                        <span>5.</span>
                                         @Html.LabelFor(model => model.FidgetAndSquirm, htmlAttributes: new { @class = "form-label" })
                                     </h6>  @Html.ValidationMessageFor(model => model.FidgetAndSquirm, "", new { @class = "text-danger" })
                                 </div>
                                 <div class="mb-3">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="FidgetAndSquirm" id="inlineRadio1" value="Never" @(Model.FidgetAndSquirm != null && Model.FidgetAndSquirm == "Never" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio1">Never</label>
+                                        <input class="form-check-input" type="radio" name="FidgetAndSquirm" id="inlineRadioFS1" value="Never" @(Model.FidgetAndSquirm != null && Model.FidgetAndSquirm == "Never" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioFS1">Never</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="FidgetAndSquirm" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.FidgetAndSquirm != null && Model.FidgetAndSquirm == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                        <input class="form-check-input" type="radio" name="FidgetAndSquirm" id="inlineRadioFS2" value="Occasionally/Sometimes" @(Model.FidgetAndSquirm != null && Model.FidgetAndSquirm == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioFS2">Occasionally/Sometimes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="FidgetAndSquirm" id="inlineRadio3" value="Often" @(Model.FidgetAndSquirm != null && Model.FidgetAndSquirm == "Often" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio3">Often</label>
+                                        <input class="form-check-input" type="radio" name="FidgetAndSquirm" id="inlineRadioFS3" value="Often" @(Model.FidgetAndSquirm != null && Model.FidgetAndSquirm == "Often" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioFS3">Often</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="FidgetAndSquirm" id="inlineRadio3" value="Always" @(Model.FidgetAndSquirm != null && Model.FidgetAndSquirm == "Always" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio3">Always</label>
+                                        <input class="form-check-input" type="radio" name="FidgetAndSquirm" id="inlineRadioFS4" value="Always" @(Model.FidgetAndSquirm != null && Model.FidgetAndSquirm == "Always" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioFS4">Always</label>
                                     </div>
                                 </div>
                                 <div class="mb-3">
                                     <h6 class="card-title">
-                                        <span>6-</span>
+                                        <span>6.</span>
                                         @Html.LabelFor(model => model.OverlyActiveAndCompelled, htmlAttributes: new { @class = "form-label" })
                                     </h6>   @Html.ValidationMessageFor(model => model.OverlyActiveAndCompelled, "", new { @class = "text-danger" })
                                 </div>
                                 <div class="mb-3">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="OverlyActiveAndCompelled" id="inlineRadio1" value="Never" @(Model.OverlyActiveAndCompelled != null && Model.OverlyActiveAndCompelled == "Never" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio1">Never</label>
+                                        <input class="form-check-input" type="radio" name="OverlyActiveAndCompelled" id="inlineRadioOC1" value="Never" @(Model.OverlyActiveAndCompelled != null && Model.OverlyActiveAndCompelled == "Never" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioOC1">Never</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="OverlyActiveAndCompelled" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.OverlyActiveAndCompelled != null && Model.OverlyActiveAndCompelled == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                        <input class="form-check-input" type="radio" name="OverlyActiveAndCompelled" id="inlineRadioOC2" value="Occasionally/Sometimes" @(Model.OverlyActiveAndCompelled != null && Model.OverlyActiveAndCompelled == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioOC2">Occasionally/Sometimes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="OverlyActiveAndCompelled" id="inlineRadio3" value="Often" @(Model.OverlyActiveAndCompelled != null && Model.OverlyActiveAndCompelled == "Often" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio3">Often</label>
+                                        <input class="form-check-input" type="radio" name="OverlyActiveAndCompelled" id="inlineRadioOC3" value="Often" @(Model.OverlyActiveAndCompelled != null && Model.OverlyActiveAndCompelled == "Often" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioOC3">Often</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="OverlyActiveAndCompelled" id="inlineRadio3" value="Always" @(Model.OverlyActiveAndCompelled != null && Model.OverlyActiveAndCompelled == "Always" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio3">Always</label>
+                                        <input class="form-check-input" type="radio" name="OverlyActiveAndCompelled" id="inlineRadioOC4" value="Always" @(Model.OverlyActiveAndCompelled != null && Model.OverlyActiveAndCompelled == "Always" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioOC4">Always</label>
                                     </div>
                                 </div>
                                 <div class="mb-3">
                                     <h6 class="card-title">
-                                        <span>7-</span>
+                                        <span>7.</span>
                                         @Html.LabelFor(model => model.MakeCarelessMistakes, htmlAttributes: new { @class = "form-label" })
                                     </h6>   @Html.ValidationMessageFor(model => model.MakeCarelessMistakes, "", new { @class = "text-danger" })
                                 </div>
                                 <div class="mb-3">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="MakeCarelessMistakes" id="inlineRadio1" value="Never" @(Model.MakeCarelessMistakes != null && Model.MakeCarelessMistakes == "Never" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio1">Never</label>
+                                        <input class="form-check-input" type="radio" name="MakeCarelessMistakes" id="inlineRadioMC1" value="Never" @(Model.MakeCarelessMistakes != null && Model.MakeCarelessMistakes == "Never" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioMC1">Never</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="MakeCarelessMistakes" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.MakeCarelessMistakes != null && Model.MakeCarelessMistakes == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                        <input class="form-check-input" type="radio" name="MakeCarelessMistakes" id="inlineRadioMC2" value="Occasionally/Sometimes" @(Model.MakeCarelessMistakes != null && Model.MakeCarelessMistakes == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioMC2">Occasionally/Sometimes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="MakeCarelessMistakes" id="inlineRadio3" value="Often" @(Model.MakeCarelessMistakes != null && Model.MakeCarelessMistakes == "Often" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio3">Often</label>
+                                        <input class="form-check-input" type="radio" name="MakeCarelessMistakes" id="inlineRadioMC3" value="Often" @(Model.MakeCarelessMistakes != null && Model.MakeCarelessMistakes == "Often" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioMC3">Often</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="MakeCarelessMistakes" id="inlineRadio3" value="Always" @(Model.MakeCarelessMistakes != null && Model.MakeCarelessMistakes == "Always" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio3">Always</label>
+                                        <input class="form-check-input" type="radio" name="MakeCarelessMistakes" id="inlineRadioMC4" value="Always" @(Model.MakeCarelessMistakes != null && Model.MakeCarelessMistakes == "Always" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioMC4">Always</label>
                                     </div>
                                 </div>
                                 <div class="mb-3">
                                     <h6 class="card-title">
-                                        <span>8-</span>
+                                        <span>8.</span>
                                         @Html.LabelFor(model => model.DifficultyKeepingMyAttention, htmlAttributes: new { @class = "form-label" })
                                     </h6>    @Html.ValidationMessageFor(model => model.DifficultyKeepingMyAttention, "", new { @class = "text-danger" })
                                 </div>
                                 <div class="mb-3">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="DifficultyKeepingMyAttention" id="inlineRadio1" value="Never" @(Model.DifficultyKeepingMyAttention != null && Model.DifficultyKeepingMyAttention == "Never" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio1">Never</label>
+                                        <input class="form-check-input" type="radio" name="DifficultyKeepingMyAttention" id="inlineRadioDK1" value="Never" @(Model.DifficultyKeepingMyAttention != null && Model.DifficultyKeepingMyAttention == "Never" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioDK1">Never</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="DifficultyKeepingMyAttention" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.DifficultyKeepingMyAttention != null && Model.DifficultyKeepingMyAttention == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                        <input class="form-check-input" type="radio" name="DifficultyKeepingMyAttention" id="inlineRadioDK2" value="Occasionally/Sometimes" @(Model.DifficultyKeepingMyAttention != null && Model.DifficultyKeepingMyAttention == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioDK2">Occasionally/Sometimes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="DifficultyKeepingMyAttention" id="inlineRadio3" value="Often" @(Model.DifficultyKeepingMyAttention != null && Model.DifficultyKeepingMyAttention == "Often" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio3">Often</label>
+                                        <input class="form-check-input" type="radio" name="DifficultyKeepingMyAttention" id="inlineRadioDK3" value="Often" @(Model.DifficultyKeepingMyAttention != null && Model.DifficultyKeepingMyAttention == "Often" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioDK3">Often</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="DifficultyKeepingMyAttention" id="inlineRadio3" value="Always" @(Model.DifficultyKeepingMyAttention != null && Model.DifficultyKeepingMyAttention == "Always" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio3">Always</label>
+                                        <input class="form-check-input" type="radio" name="DifficultyKeepingMyAttention" id="inlineRadioDK4" value="Always" @(Model.DifficultyKeepingMyAttention != null && Model.DifficultyKeepingMyAttention == "Always" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioDK4">Always</label>
                                     </div>
                                 </div>
                                 <div class="mb-3">
                                     <h6 class="card-title">
-                                        <span>9-</span>
+                                        <span>9.</span>
                                         @Html.LabelFor(model => model.DifficultyConcentrating, htmlAttributes: new { @class = "form-label" })
                                     </h6>  @Html.ValidationMessageFor(model => model.DifficultyConcentrating, "", new { @class = "text-danger" })
                                 </div>
                                 <div class="mb-3">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="DifficultyConcentrating" id="inlineRadio1" value="Never" @(Model.DifficultyConcentrating != null && Model.DifficultyConcentrating == "Never" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio1">Never</label>
+                                        <input class="form-check-input" type="radio" name="DifficultyConcentrating" id="inlineRadioDC1" value="Never" @(Model.DifficultyConcentrating != null && Model.DifficultyConcentrating == "Never" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioDC1">Never</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="DifficultyConcentrating" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.DifficultyConcentrating != null && Model.DifficultyConcentrating == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                        <input class="form-check-input" type="radio" name="DifficultyConcentrating" id="inlineRadioDC2" value="Occasionally/Sometimes" @(Model.DifficultyConcentrating != null && Model.DifficultyConcentrating == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioDC2">Occasionally/Sometimes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="DifficultyConcentrating" id="inlineRadio3" value="Often" @(Model.DifficultyConcentrating != null && Model.DifficultyConcentrating == "Often" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio3">Often</label>
+                                        <input class="form-check-input" type="radio" name="DifficultyConcentrating" id="inlineRadioDC3" value="Often" @(Model.DifficultyConcentrating != null && Model.DifficultyConcentrating == "Often" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioDC3">Often</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="DifficultyConcentrating" id="inlineRadio3" value="Always" @(Model.DifficultyConcentrating != null && Model.DifficultyConcentrating == "Always" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio3">Always</label>
+                                        <input class="form-check-input" type="radio" name="DifficultyConcentrating" id="inlineRadioDC4" value="Always" @(Model.DifficultyConcentrating != null && Model.DifficultyConcentrating == "Always" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioDC4">Always</label>
                                     </div>
                                 </div>
                                 <div class="mb-3">
                                     <h6 class="card-title">
-                                        <span>10-</span>
+                                        <span>10.</span>
                                         @Html.LabelFor(model => model.DifficultyFinding, htmlAttributes: new { @class = "form-label" })
                                     </h6>   @Html.ValidationMessageFor(model => model.DifficultyFinding, "", new { @class = "text-danger" })
                                 </div>
                                 <div class="mb-3">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="DifficultyFinding" id="inlineRadio1" value="Never" @(Model.DifficultyFinding != null && Model.DifficultyFinding == "Never" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio1">Never</label>
+                                        <input class="form-check-input" type="radio" name="DifficultyFinding" id="inlineRadioDF1" value="Never" @(Model.DifficultyFinding != null && Model.DifficultyFinding == "Never" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioDF1">Never</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="DifficultyFinding" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.DifficultyFinding != null && Model.DifficultyFinding == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                        <input class="form-check-input" type="radio" name="DifficultyFinding" id="inlineRadioDF2" value="Occasionally/Sometimes" @(Model.DifficultyFinding != null && Model.DifficultyFinding == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioDF2">Occasionally/Sometimes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="DifficultyFinding" id="inlineRadio3" value="Often" @(Model.DifficultyFinding != null && Model.DifficultyFinding == "Often" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio3">Often</label>
+                                        <input class="form-check-input" type="radio" name="DifficultyFinding" id="inlineRadioDF3" value="Often" @(Model.DifficultyFinding != null && Model.DifficultyFinding == "Often" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioDF3">Often</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="DifficultyFinding" id="inlineRadio3" value="Always" @(Model.DifficultyFinding != null && Model.DifficultyFinding == "Always" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio3">Always</label>
+                                        <input class="form-check-input" type="radio" name="DifficultyFinding" id="inlineRadioDF4" value="Always" @(Model.DifficultyFinding != null && Model.DifficultyFinding == "Always" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioDF4">Always</label>
                                     </div>
                                 </div>
                                 <div class="mb-3">
                                     <h6 class="card-title">
-                                        <span>11-</span>
+                                        <span>11.</span>
                                         @Html.LabelFor(model => model.EasilyDistracted, htmlAttributes: new { @class = "form-label" })
                                     </h6>   @Html.ValidationMessageFor(model => model.EasilyDistracted, "", new { @class = "text-danger" })
                                 </div>
                                 <div class="mb-3">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="EasilyDistracted" id="inlineRadio1" value="Never" @(Model.EasilyDistracted != null && Model.EasilyDistracted == "Never" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio1">Never</label>
+                                        <input class="form-check-input" type="radio" name="EasilyDistracted" id="inlineRadioED1" value="Never" @(Model.EasilyDistracted != null && Model.EasilyDistracted == "Never" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioED1">Never</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="EasilyDistracted" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.EasilyDistracted != null && Model.EasilyDistracted == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                        <input class="form-check-input" type="radio" name="EasilyDistracted" id="inlineRadioED2" value="Occasionally/Sometimes" @(Model.EasilyDistracted != null && Model.EasilyDistracted == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioED2">Occasionally/Sometimes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="EasilyDistracted" id="inlineRadio3" value="Often" @(Model.EasilyDistracted != null && Model.EasilyDistracted == "Often" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio3">Often</label>
+                                        <input class="form-check-input" type="radio" name="EasilyDistracted" id="inlineRadioED3" value="Often" @(Model.EasilyDistracted != null && Model.EasilyDistracted == "Often" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioED3">Often</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="EasilyDistracted" id="inlineRadio3" value="Always" @(Model.EasilyDistracted != null && Model.EasilyDistracted == "Always" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio3">Always</label>
+                                        <input class="form-check-input" type="radio" name="EasilyDistracted" id="inlineRadioED4" value="Always" @(Model.EasilyDistracted != null && Model.EasilyDistracted == "Always" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioED4">Always</label>
                                     </div>
                                 </div>
                                 <div class="mb-3">
                                     <h6 class="card-title">
-                                        <span>12-</span>
+                                        <span>12.</span>
                                         @Html.LabelFor(model => model.LeaveMySeatInMeetings, htmlAttributes: new { @class = "form-label" })
                                     </h6>  @Html.ValidationMessageFor(model => model.LeaveMySeatInMeetings, "", new { @class = "text-danger" })
                                 </div>
                                 <div class="mb-3">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="LeaveMySeatInMeetings" id="inlineRadio1" value="Never" @(Model.LeaveMySeatInMeetings != null && Model.LeaveMySeatInMeetings == "Never" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio1">Never</label>
+                                        <input class="form-check-input" type="radio" name="LeaveMySeatInMeetings" id="inlineRadioLM1" value="Never" @(Model.LeaveMySeatInMeetings != null && Model.LeaveMySeatInMeetings == "Never" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioLM1">Never</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="LeaveMySeatInMeetings" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.LeaveMySeatInMeetings != null && Model.LeaveMySeatInMeetings == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                        <input class="form-check-input" type="radio" name="LeaveMySeatInMeetings" id="inlineRadioLM2" value="Occasionally/Sometimes" @(Model.LeaveMySeatInMeetings != null && Model.LeaveMySeatInMeetings == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioLM2">Occasionally/Sometimes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="LeaveMySeatInMeetings" id="inlineRadio3" value="Often" @(Model.LeaveMySeatInMeetings != null && Model.LeaveMySeatInMeetings == "Often" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio3">Often</label>
+                                        <input class="form-check-input" type="radio" name="LeaveMySeatInMeetings" id="inlineRadioLM3" value="Often" @(Model.LeaveMySeatInMeetings != null && Model.LeaveMySeatInMeetings == "Often" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioLM3">Often</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="LeaveMySeatInMeetings" id="inlineRadio3" value="Always" @(Model.LeaveMySeatInMeetings != null && Model.LeaveMySeatInMeetings == "Always" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio3">Always</label>
+                                        <input class="form-check-input" type="radio" name="LeaveMySeatInMeetings" id="inlineRadioLM4" value="Always" @(Model.LeaveMySeatInMeetings != null && Model.LeaveMySeatInMeetings == "Always" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioLM4">Always</label>
                                     </div>
                                 </div>
                                 <div class="mb-3">
                                     <h6 class="card-title">
-                                        <span>13-</span>
+                                        <span>13.</span>
                                         @Html.LabelFor(model => model.DifficultyRelaxingOrUnwinding, htmlAttributes: new { @class = "form-label" })
                                     </h6>  @Html.ValidationMessageFor(model => model.DifficultyRelaxingOrUnwinding, "", new { @class = "text-danger" })
                                 </div>
                                 <div class="mb-3">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="DifficultyRelaxingOrUnwinding" id="inlineRadio1" value="Never" @(Model.DifficultyRelaxingOrUnwinding != null && Model.DifficultyRelaxingOrUnwinding == "Never" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio1">Never</label>
+                                        <input class="form-check-input" type="radio" name="DifficultyRelaxingOrUnwinding" id="inlineRadioDR1" value="Never" @(Model.DifficultyRelaxingOrUnwinding != null && Model.DifficultyRelaxingOrUnwinding == "Never" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioDR1">Never</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="DifficultyRelaxingOrUnwinding" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.DifficultyRelaxingOrUnwinding != null && Model.DifficultyRelaxingOrUnwinding == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                        <input class="form-check-input" type="radio" name="DifficultyRelaxingOrUnwinding" id="inlineRadioDR2" value="Occasionally/Sometimes" @(Model.DifficultyRelaxingOrUnwinding != null && Model.DifficultyRelaxingOrUnwinding == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioDR2">Occasionally/Sometimes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="DifficultyRelaxingOrUnwinding" id="inlineRadio3" value="Often" @(Model.DifficultyRelaxingOrUnwinding != null && Model.DifficultyRelaxingOrUnwinding == "Often" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio3">Often</label>
+                                        <input class="form-check-input" type="radio" name="DifficultyRelaxingOrUnwinding" id="inlineRadioDR3" value="Often" @(Model.DifficultyRelaxingOrUnwinding != null && Model.DifficultyRelaxingOrUnwinding == "Often" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioDR3">Often</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="DifficultyRelaxingOrUnwinding" id="inlineRadio3" value="Always" @(Model.DifficultyRelaxingOrUnwinding != null && Model.DifficultyRelaxingOrUnwinding == "Always" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio3">Always</label>
+                                        <input class="form-check-input" type="radio" name="DifficultyRelaxingOrUnwinding" id="inlineRadioDR4" value="Always" @(Model.DifficultyRelaxingOrUnwinding != null && Model.DifficultyRelaxingOrUnwinding == "Always" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioDR4">Always</label>
                                     </div>
                                 </div>
                                 <div class="mb-3">
                                     <h6 class="card-title">
-                                        <span>14-</span>
+                                        <span>14.</span>
                                         @Html.LabelFor(model => model.TalkingTooMuch, htmlAttributes: new { @class = "form-label" })
                                     </h6>  @Html.ValidationMessageFor(model => model.TalkingTooMuch, "", new { @class = "text-danger" })
                                 </div>
                                 <div class="mb-3">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="TalkingTooMuch" id="inlineRadio1" value="Never" @(Model.TalkingTooMuch != null && Model.TalkingTooMuch == "Never" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio1">Never</label>
+                                        <input class="form-check-input" type="radio" name="TalkingTooMuch" id="inlineRadioTM1" value="Never" @(Model.TalkingTooMuch != null && Model.TalkingTooMuch == "Never" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioTM1">Never</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="TalkingTooMuch" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.TalkingTooMuch != null && Model.TalkingTooMuch == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                        <input class="form-check-input" type="radio" name="TalkingTooMuch" id="inlineRadioTM2" value="Occasionally/Sometimes" @(Model.TalkingTooMuch != null && Model.TalkingTooMuch == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioTM2">Occasionally/Sometimes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="TalkingTooMuch" id="inlineRadio3" value="Often" @(Model.TalkingTooMuch != null && Model.TalkingTooMuch == "Often" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio3">Often</label>
+                                        <input class="form-check-input" type="radio" name="TalkingTooMuch" id="inlineRadioTM3" value="Often" @(Model.TalkingTooMuch != null && Model.TalkingTooMuch == "Often" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioTM3">Often</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="TalkingTooMuch" id="inlineRadio3" value="Always" @(Model.TalkingTooMuch != null && Model.TalkingTooMuch == "Always" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio3">Always</label>
+                                        <input class="form-check-input" type="radio" name="TalkingTooMuch" id="inlineRadioTM4" value="Always" @(Model.TalkingTooMuch != null && Model.TalkingTooMuch == "Always" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioTM4">Always</label>
                                     </div>
                                 </div>
                                 <div class="mb-3">
                                     <h6 class="card-title">
-                                        <span>15-</span>
+                                        <span>15.</span>
                                         @Html.LabelFor(model => model.FinishingTheSentences, htmlAttributes: new { @class = "form-label" })
                                     </h6>  @Html.ValidationMessageFor(model => model.FinishingTheSentences, "", new { @class = "text-danger" })
                                 </div>
                                 <div class="mb-3">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="FinishingTheSentences" id="inlineRadio1" value="Never" @(Model.FinishingTheSentences != null && Model.FinishingTheSentences == "Never" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio1">Never</label>
+                                        <input class="form-check-input" type="radio" name="FinishingTheSentences" id="inlineRadioFT1" value="Never" @(Model.FinishingTheSentences != null && Model.FinishingTheSentences == "Never" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioFT1">Never</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="FinishingTheSentences" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.FinishingTheSentences != null && Model.FinishingTheSentences == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                        <input class="form-check-input" type="radio" name="FinishingTheSentences" id="inlineRadioFT2" value="Occasionally/Sometimes" @(Model.FinishingTheSentences != null && Model.FinishingTheSentences == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioFT2">Occasionally/Sometimes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="FinishingTheSentences" id="inlineRadio3" value="Often" @(Model.FinishingTheSentences != null && Model.FinishingTheSentences == "Often" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio3">Often</label>
+                                        <input class="form-check-input" type="radio" name="FinishingTheSentences" id="inlineRadioFT3" value="Often" @(Model.FinishingTheSentences != null && Model.FinishingTheSentences == "Often" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioFT3">Often</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="FinishingTheSentences" id="inlineRadio3" value="Always" @(Model.FinishingTheSentences != null && Model.FinishingTheSentences == "Always" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio3">Always</label>
+                                        <input class="form-check-input" type="radio" name="FinishingTheSentences" id="inlineRadioFT4" value="Always" @(Model.FinishingTheSentences != null && Model.FinishingTheSentences == "Always" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioFT4">Always</label>
                                     </div>
                                 </div>
                                 <div class="mb-3">
                                     <h6 class="card-title">
-                                        <span>16-</span>
+                                        <span>16.</span>
                                         @Html.LabelFor(model => model.DifficultyWaitingMyTurn, htmlAttributes: new { @class = "form-label" })
                                     </h6>  @Html.ValidationMessageFor(model => model.DifficultyWaitingMyTurn, "", new { @class = "text-danger" })
                                 </div>
                                 <div class="mb-3">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="DifficultyWaitingMyTurn" id="inlineRadio1" value="Never" @(Model.DifficultyWaitingMyTurn != null && Model.DifficultyWaitingMyTurn == "Never" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio1">Never</label>
+                                        <input class="form-check-input" type="radio" name="DifficultyWaitingMyTurn" id="inlineRadioDW1" value="Never" @(Model.DifficultyWaitingMyTurn != null && Model.DifficultyWaitingMyTurn == "Never" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioDW1">Never</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="DifficultyWaitingMyTurn" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.DifficultyWaitingMyTurn != null && Model.DifficultyWaitingMyTurn == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                        <input class="form-check-input" type="radio" name="DifficultyWaitingMyTurn" id="inlineRadioDW2" value="Occasionally/Sometimes" @(Model.DifficultyWaitingMyTurn != null && Model.DifficultyWaitingMyTurn == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioDW2">Occasionally/Sometimes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="DifficultyWaitingMyTurn" id="inlineRadio3" value="Often" @(Model.DifficultyWaitingMyTurn != null && Model.DifficultyWaitingMyTurn == "Often" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio3">Often</label>
+                                        <input class="form-check-input" type="radio" name="DifficultyWaitingMyTurn" id="inlineRadioDW3" value="Often" @(Model.DifficultyWaitingMyTurn != null && Model.DifficultyWaitingMyTurn == "Often" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioDW3">Often</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="DifficultyWaitingMyTurn" id="inlineRadio3" value="Always" @(Model.DifficultyWaitingMyTurn != null && Model.DifficultyWaitingMyTurn == "Always" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio3">Always</label>
+                                        <input class="form-check-input" type="radio" name="DifficultyWaitingMyTurn" id="inlineRadioDW4" value="Always" @(Model.DifficultyWaitingMyTurn != null && Model.DifficultyWaitingMyTurn == "Always" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioDW4">Always</label>
                                     </div>
                                 </div>
                                 <div class="mb-3">
                                     <h6 class="card-title">
-                                        <span>17-</span>
+                                        <span>17.</span>
                                         @Html.LabelFor(model => model.InterruptOtherPeople, htmlAttributes: new { @class = "form-label" })
                                     </h6>
                                     @Html.ValidationMessageFor(model => model.InterruptOtherPeople, "", new { @class = "text-danger" })
                                 </div>
                                 <div class="mb-3">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="InterruptOtherPeople" id="inlineRadio1" value="Never" @(Model.InterruptOtherPeople != null && Model.InterruptOtherPeople == "Never" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio1">Never</label>
+                                        <input class="form-check-input" type="radio" name="InterruptOtherPeople" id="inlineRadioIO1" value="Never" @(Model.InterruptOtherPeople != null && Model.InterruptOtherPeople == "Never" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioIO1">Never</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="InterruptOtherPeople" id="inlineRadio2" value="Occasionally/Sometimes" @(Model.InterruptOtherPeople != null && Model.InterruptOtherPeople == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio2">Occasionally/Sometimes</label>
+                                        <input class="form-check-input" type="radio" name="InterruptOtherPeople" id="inlineRadioIO2" value="Occasionally/Sometimes" @(Model.InterruptOtherPeople != null && Model.InterruptOtherPeople == "Occasionally/Sometimes" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioIO2">Occasionally/Sometimes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="InterruptOtherPeople" id="inlineRadio3" value="Often" @(Model.InterruptOtherPeople != null && Model.InterruptOtherPeople == "Often" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio3">Often</label>
+                                        <input class="form-check-input" type="radio" name="InterruptOtherPeople" id="inlineRadioIO3" value="Often" @(Model.InterruptOtherPeople != null && Model.InterruptOtherPeople == "Often" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioIO3">Often</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="InterruptOtherPeople" id="inlineRadio3" value="Always" @(Model.InterruptOtherPeople != null && Model.InterruptOtherPeople == "Always" ? new { @checked = "checked" } : null)>
-                                        <label class="form-check-label" for="inlineRadio3">Always</label>
+                                        <input class="form-check-input" type="radio" name="InterruptOtherPeople" id="inlineRadioIO4" value="Always" @(Model.InterruptOtherPeople != null && Model.InterruptOtherPeople == "Always" ? new { @checked = "checked" } : null)>
+                                        <label class="form-check-label" for="inlineRadioIO4">Always</label>
                                     </div>
                                 </div>
                                 <div class="mb-3">

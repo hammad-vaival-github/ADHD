@@ -136,6 +136,94 @@ namespace waats.Classes
             vm._t = t;
             return vm;
         }
+        //DashboardTasksPercentage
+        public DashboardTasksPercentage DashboardTasksPercentage(string UserId = null)
+        {
+            DashboardTasksPercentage _dashboardTasksPercentage = new DashboardTasksPercentage();
+            var scheduleTasks = db.ScheduleTask
+                                .Where(x => x.UserId == UserId)
+                                .GroupBy(x => x.MarkAsCompleted)
+                                .Select(group => new
+                                {
+                                    MarkAsCompleted = group.Key,
+                                    Count = group.Count(),
+                                    Records = group.ToList()
+                                })
+                                .ToList();
+            if (scheduleTasks.Count() > 0)
+            {
+                var allRecords = scheduleTasks.SelectMany(g => g.Records).ToList();
+                var trueCount = scheduleTasks.FirstOrDefault(g => g.MarkAsCompleted == true)?.Count ?? 0;
+                int schedulePercentage = (int)Math.Ceiling((trueCount / (double)allRecords.Count) * 100);
+                _dashboardTasksPercentage.ScheduleTasksPercentage = schedulePercentage;
+            }
+            else
+            {
+                _dashboardTasksPercentage.ScheduleTasksPercentage = 0;
+            }
+
+            var brainFitness = db.BrainFitness
+                                .Count(x => x.UserId == UserId && x.MarkAsCompleted == true);
+            if (brainFitness > 0)
+            {
+                int brainFitnessPercentage = (int)Math.Ceiling((brainFitness / (double)brainFitness) * 100);
+                _dashboardTasksPercentage.BrainFitness = brainFitnessPercentage;
+            }
+            else 
+            {
+                _dashboardTasksPercentage.BrainFitness = 0;
+            }
+
+            var spottingTriggers = db.Trigger
+                                .Count(x => x.UserId == UserId && x.MarkAsCompleted == true);
+            if (spottingTriggers > 0)
+            {
+                int spottingTriggersPercentage = (int)Math.Ceiling((spottingTriggers / (double)spottingTriggers) * 100);
+                _dashboardTasksPercentage.SpottingTriggers = spottingTriggersPercentage;
+            }
+            else 
+            {
+                _dashboardTasksPercentage.SpottingTriggers = 0;
+            }
+
+            var memoryMaker = db.MemoryMaker
+                              .Count(x => x.UserId == UserId && x.MarkAsCompleted == true);
+            if (memoryMaker > 0)
+            {
+                int memoryMakerPercentage = (int)Math.Ceiling((memoryMaker / (double)memoryMaker) * 100);
+                _dashboardTasksPercentage.MemoryMaker = memoryMakerPercentage;
+            }
+            else
+            {
+                _dashboardTasksPercentage.MemoryMaker = 0;
+            }
+
+            var mindfulAttention = db.MindFullAttention
+                              .Count(x => x.UserId == UserId && x.MarkAsCompleted == true);
+            if (mindfulAttention > 0)
+            {
+                int mindfulAttentionPercentage = (int)Math.Ceiling((mindfulAttention / (double)mindfulAttention) * 100);
+                _dashboardTasksPercentage.MindfulAttention = mindfulAttentionPercentage;
+            }
+            else 
+            {
+                _dashboardTasksPercentage.MindfulAttention = 0;
+            }
+
+            var gratitudeJournal = db.GratitudeJournal
+                              .Count(x => x.UserId == UserId && x.MarkAsCompleted == true);
+            if (gratitudeJournal > 0)
+            {
+                int gratitudeJournalPercentage = (int)Math.Ceiling((gratitudeJournal / (double)gratitudeJournal) * 100);
+                _dashboardTasksPercentage.GratitudeJournal = gratitudeJournalPercentage;
+            }
+            else
+            {
+                _dashboardTasksPercentage.GratitudeJournal = 0;
+            }
+
+            return _dashboardTasksPercentage;
+        }
         public List<ScheduleTask> ReturnScheduleTasks(string UserId = null)
         {
             var t = db.ScheduleTask.Where(x=>x.UserId==UserId);

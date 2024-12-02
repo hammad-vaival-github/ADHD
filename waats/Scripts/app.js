@@ -28,7 +28,7 @@ function Modeldata(data, FootFlag, Modellabel, savebHtml) {
         //$("#AddBrainFitness").hide();
         $('#saveb').html('');
     }
-    //$('.offcanvas-backdrop.fade.show').slice(0, 2).remove();
+    $('.offcanvas-backdrop.fade.show').slice(0, 1).remove();
 }
 function ModelPopUp(data, FootFlag, Modellabel, savebHtml) {
     debugger;
@@ -60,7 +60,7 @@ function SubmitNewTask(form, actionUrl) {
             //    "extendedTimeOut": 0,          // Prevents the toast from disappearing on mouse hover
             //    "progressBar": true            // Adds a progress bar for visual appeal
             //};
-            toastr.success(data, 'Success');
+            //toastr.success(data, 'Success');
             $("#msModal").modal("toggle");
             $('.modal-backdrop').remove(); // removes the overlay
             setTimeout(() => { document.location.reload() }, 2000);//2000

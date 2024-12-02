@@ -87,27 +87,27 @@ namespace waats.ViewModel
         [Required(ErrorMessage = "* Required")]
         ///[RegularExpression(@"^[a-zA-Z'-/_.!,@# ]*$", ErrorMessage = "Only accept a-z,A-Z,.!@#'")]
         [StringLength(1000, ErrorMessage = "! Max 1000 characters")]
-        [Display(Name = "Do you have any history of mental illness? If so, please outline it and any treatment you received: ")]
+        [Display(Name = "* Do you have any history of mental illness? If so, please outline it and any treatment you received: ")]
         public string HistoryofMentalIllness { get; set; }
 
         [Required(ErrorMessage = "* Required")]
         ////[RegularExpression(@"^[a-zA-Z'-/_.!,@# ]*$", ErrorMessage = "Only accept a-z,A-Z,.!@#'")]
         [StringLength(1000, ErrorMessage = "! Max 1000 characters")]
-        [Display(Name = "Were you ever referred to mental health/psychiatric services and seen by a specialist before? If so, please give details: ")]
+        [Display(Name = "* Were you ever referred to mental health/psychiatric services and seen by a specialist before? If so, please give details: ")]
         public string ReferredtoMentalHealth { get; set; }
 
         [Required(ErrorMessage = "* Required")]
         [StringLength(1000, ErrorMessage = "! Max 1000 characters")]
-        [Display(Name = "Have you ever had any thoughts or made any attempts to harm yourself or end your life or to harm others? ")]
+        [Display(Name = "* Have you ever had any thoughts or made any attempts to harm yourself or end your life or to harm others? ")]
         public string HaveYouEverHadAnyThoughtsorMadeAttemptstoHarmYourself { get; set; }
 
         [Required(ErrorMessage = "* Required")]
         [StringLength(10, ErrorMessage = "! Max 10 characters")]
-        [Display(Name = "Do you currently or have you recently had any thoughts or made any attempts to harm yourself or end your life?  ")]
+        [Display(Name = "* Do you currently or have you recently had any thoughts or made any attempts to harm yourself or end your life?  ")]
         public string HaveYouCurrentlyorrecentlyAnyThoughtsorMadeAttemptstoHarmYourself { get; set; }
         [Required(ErrorMessage = "* Required")]
         [StringLength(10, ErrorMessage = "! Max 10 characters")]
-        [Display(Name = "Do you currently or have you recently had any thoughts or made any attempts to harm anyone else?  ")]
+        [Display(Name = "* Do you currently or have you recently had any thoughts or made any attempts to harm anyone else?  ")]
         public string HaveYouCurrentlyorrecentlyAnyThoughtsorMadeAttemptstoHarmAnyoneElse { get; set; }
 
         public bool BoolW
@@ -120,13 +120,13 @@ namespace waats.ViewModel
         }
 
         [RequiredIf("BoolW", true, ErrorMessage = "* Required")]
-        [Display(Name = "I am able to complete projects that I start (whether for work, hobbies or home life)  ")]
+        [Display(Name = "I am able to complete projects that I start (whether for work, hobbies or home life).  ")]
         public string CompleteProjects { get; set; }
         [RequiredIf("BoolW", true, ErrorMessage = "* Required")]
-        [Display(Name = "When a task requires organization I am able to organize and order things accordingly  ")]
+        [Display(Name = "When a task requires organization I am able to organize and order things accordingly.  ")]
         public string RequiresOrganization { get; set; }
         [RequiredIf("BoolW", true, ErrorMessage = "* Required")]
-        [Display(Name = "I am able to keep appointments  ")]
+        [Display(Name = "I am able to keep appointments.  ")]
         public string keepAppointments { get; set; }
         [RequiredIf("BoolW", true, ErrorMessage = "* Required")]
         [Display(Name = "I am able to start tasks on time including those that require some thought.  ")]
@@ -138,51 +138,51 @@ namespace waats.ViewModel
         [Display(Name = "I feel overly active and compelled to do things.  ")]
         public string OverlyActiveAndCompelled { get; set; }
         [RequiredIf("BoolW", true, ErrorMessage = "* Required")]
-        [Display(Name = "I make careless mistakes  ")]
+        [Display(Name = "I make careless mistakes.  ")]
         public string MakeCarelessMistakes { get; set; }
         [RequiredIf("BoolW", true, ErrorMessage = "* Required")]
-        [Display(Name = "I find difficulty keeping my attention on anything I'm doing  ")]
+        [Display(Name = "I find difficulty keeping my attention on anything I'm doing. ")]
         public string DifficultyKeepingMyAttention { get; set; }
         [RequiredIf("BoolW", true, ErrorMessage = "* Required")]
-        [Display(Name = "I find difficulty concentrating on what people are saying to me  ")]
+        [Display(Name = "I find difficulty concentrating on what people are saying to me.  ")]
         public string DifficultyConcentrating { get; set; }
         [RequiredIf("BoolW", true, ErrorMessage = "* Required")]
-        [Display(Name = "I misplace or have difficulty finding things  ")]
+        [Display(Name = "I misplace or have difficulty finding things.  ")]
         public string DifficultyFinding { get; set; }
         [RequiredIf("BoolW", true, ErrorMessage = "* Required")]
-        [Display(Name = "I become easily distracted by noise or activity around me  ")]
+        [Display(Name = "I become easily distracted by noise or activity around me.  ")]
         public string EasilyDistracted { get; set; }
         [RequiredIf("BoolW", true, ErrorMessage = "* Required")]
-        [Display(Name = "I leave my seat when in meetings or other situations where I am expected to remain seated  ")]
+        [Display(Name = "I leave my seat when in meetings or other situations where I am expected to remain seated.  ")]
         public string LeaveMySeatInMeetings { get; set; }
         [RequiredIf("BoolW", true, ErrorMessage = "* Required")]
-        [Display(Name = "I have difficulty relaxing or unwinding when I have time to myself  ")]
+        [Display(Name = "I have difficulty relaxing or unwinding when I have time to myself.  ")]
         public string DifficultyRelaxingOrUnwinding { get; set; }
         [RequiredIf("BoolW", true, ErrorMessage = "* Required")]
-        [Display(Name = "I find myself talking too much in social occasions  ")]
+        [Display(Name = "I find myself talking too much in social occasions.  ")]
         public string TalkingTooMuch { get; set; }
         [RequiredIf("BoolW", true, ErrorMessage = "* Required")]
-        [Display(Name = "I find myself finishing the sentences of other people when I am talking to them ")]
+        [Display(Name = "I find myself finishing the sentences of other people when I am talking to them. ")]
         public string FinishingTheSentences { get; set; }
         [RequiredIf("BoolW", true, ErrorMessage = "* Required")]
-        [Display(Name = "I have difficulty waiting my turn when in a situation where turn talking is required  ")]
+        [Display(Name = "I have difficulty waiting my turn when in a situation where turn talking is required.  ")]
         public string DifficultyWaitingMyTurn { get; set; }
 
         [RequiredIf("BoolW", true, ErrorMessage = "* Required")]
-        [Display(Name = "I interrupt other people when they are busy  ")]
+        [Display(Name = "I interrupt other people when they are busy.  ")]
         public string InterruptOtherPeople { get; set; }
         [RequiredIf("BoolW", true, ErrorMessage = "* Required")]
         [StringLength(10, ErrorMessage = "! Max 10 characters")]
-        [Display(Name = "18- Did you receive warnings and persistent negative reports from your teachers at school – across all or most subjects – about under performance due to lack of focus and concentration in class and/or high levels of overactive behaviour?  ")]
+        [Display(Name = "18. Did you receive warnings and persistent negative reports from your teachers at school – across all or most subjects – about under performance due to lack of focus and concentration in class and/or high levels of overactive behaviour?  ")]
         public string ReceiveWarningsAndPersistent { get; set; }
         [RequiredIf("BoolW", true, ErrorMessage = "* Required")]
         [StringLength(10, ErrorMessage = "! Max 10 characters")]
-        [Display(Name = "19- Have you ever been disciplined or sacked from work due to bad performance as a result of poor focus and concentration in your job?  ")]
+        [Display(Name = "19. Have you ever been disciplined or sacked from work due to bad performance as a result of poor focus and concentration in your job?  ")]
         public string DisciplinedOrAacked { get; set; }
 
         [RequiredIf("BoolW", true, ErrorMessage = "* Required")]
         [StringLength(10, ErrorMessage = "! Max 10 characters")]
-        [Display(Name = "20- Have you ever experienced a breakdown of a relationship because your partner thought you were always distracted, forgetting and ignoring them and what’s important?  ")]
+        [Display(Name = "20. Have you ever experienced a breakdown of a relationship because your partner thought you were always distracted, forgetting and ignoring them and what’s important?  ")]
         public string EverExperiencedABreakdown { get; set; }
         public string Completedby { get; set; }
         public string CompletionDate { get; set; }

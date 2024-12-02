@@ -29,7 +29,10 @@ namespace waats.Controllers
         // GET: UProfile
         public ActionResult Index()
         {
-            return View();
+            var result = _q.DashboardTasksPercentage(GetuserId());
+            DashboardTasksPercentage _dashboardTasksPercentage = new DashboardTasksPercentage();
+            _dashboardTasksPercentage = result;
+            return View(_dashboardTasksPercentage);
         }
         public ActionResult SchedulingTasksList()
         {
