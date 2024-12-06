@@ -132,8 +132,23 @@ namespace waats.Controllers
         public ActionResult Index(int FormId = 0)
         {
             ////PreparePDF1();
-            var t=_Managequeries.ReturnWaatsForm(FormId);
-            return View("_Index",t);
+            var t = _Managequeries.ReturnWaatsForm(FormId);
+            return View("_Index", t);
+        }
+        public ActionResult AdviceQ4_D_E_New()
+        {
+
+            return View();
+        }
+        public ActionResult AdviceQ_18Y_19Y_20Y_New()
+        {
+
+            return View();
+        }
+        public ActionResult AdviceQ_18N_19Y_20Y_New()
+        {
+
+            return View();
         }
         [HttpPost]
         public ActionResult Index(WaatsFormVM vm)
@@ -186,8 +201,9 @@ namespace waats.Controllers
             if (HaveYouCurrentlyorrecentlyAnyThoughtsorMadeAttemptstoHarmYourself == "Yes" ||
                HaveYouCurrentlyorrecentlyAnyThoughtsorMadeAttemptstoHarmAnyoneElse == "Yes")
             {
-                _Managequeries.AddLogs(loclID,"Q4 d and/or e is yes");
-                return RedirectToAction("AdviceQ4_D_E",new { name,  Email,  DoB, loclID });//4 d) AND/OR 4 e) is “yes
+                _Managequeries.AddLogs(loclID, "Q4 d and/or e is yes");
+                return RedirectToAction("AdviceQ4_D_E_New");
+                //return RedirectToAction("AdviceQ4_D_E",new { name,  Email,  DoB, loclID });//4 d) AND/OR 4 e) is “yes
             }
 
             //Q18 + ONE OR BOTH of Q19 and Q20 is “yes
@@ -199,7 +215,8 @@ namespace waats.Controllers
                 _Managequeries.AddLogs(loclID, "Preparing " + name + " report for the clinicians");
                 var model = TempData["WFVM"] as WaatsFormVM;
                 PreparePDF(model, "ADHD Triage Report", "ADHD_Triage_Report_"+ name, null, null, null);
-                return RedirectToAction("AdviceQ_18Y_19Y_20Y",new { name, Email, DoB, loclID });//Q18 + ONE OR BOTH of Q19 and Q20 is “yes
+                return RedirectToAction("AdviceQ_18Y_19Y_20Y_New");
+                //return RedirectToAction("AdviceQ_18Y_19Y_20Y", new { name, Email, DoB, loclID });//Q18 + ONE OR BOTH of Q19 and Q20 is “yes
             }
 
 
@@ -218,7 +235,8 @@ namespace waats.Controllers
                 string username = t[0];
                 string password = t[1];
                 PreparePDF(model, "LETTER TO PATIENT", "LETTER_TO_PATIENT_" + name,username,password, activC);
-                return RedirectToAction("AdviceQ_18N_19Y_20Y", new { name, Email, DoB, loclID }); //Q18 No 
+                return RedirectToAction("AdviceQ_18N_19Y_20Y_New"); //Q18 No 
+                //return RedirectToAction("AdviceQ_18N_19Y_20Y", new { name, Email, DoB, loclID }); //Q18 No 
             }
             //Q18 yes” + BOTH Q18 and Q19 are “no” 
             if (ReceiveWarningsAndPersistent == "Yes" &&
@@ -236,8 +254,9 @@ namespace waats.Controllers
                 string username = t[0];
                 string password = t[1];
                 PreparePDF(model, "LETTER TO PATIENT", "LETTER_TO_PATIENT_" + name, username, password, activC);
-                PreparePDF(model, "ADHD Triage Report", "ADHD_Triage_Report_" + name,null, null,null);                
-                return RedirectToAction("AdviceQ_18N_19Y_20Y", new { name, Email, DoB, loclID });//Q18 yes” + BOTH Q18 and Q19 are “no” 
+                PreparePDF(model, "ADHD Triage Report", "ADHD_Triage_Report_" + name,null, null,null);
+                return RedirectToAction("AdviceQ_18N_19Y_20Y_New"); //Q18 No //Q18 yes” + BOTH Q18 and Q19 are “no” 
+                //return RedirectToAction("AdviceQ_18N_19Y_20Y", new { name, Email, DoB, loclID });//Q18 yes” + BOTH Q18 and Q19 are “no” 
             }
             return View("_ThankYou");
         }

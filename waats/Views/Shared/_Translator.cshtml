@@ -1,24 +1,55 @@
-﻿<ul class="translate-wrapper">
-    <li>
-        <div id="google_translate_element"></div>
-    </li>
-</ul>
-<style>
-    .goog-te-banner-frame.skiptranslate {
-        display: none !important;
-    }
-
-    body {
-        top: 0px !important;
-    }
-
-    .goog-te-gadget {
-        font-size: 0 !important;
-    }
-
-        .goog-te-gadget .goog-te-combo {
-            width: 200px; /* Set your desired width here */
-            font-size: 14px; /* Optional: adjust font size */
-        }
-</style>
+﻿<div class="language-dropdown dropdown">
+    <button class="btn btn-secondary dropdown-toggle"
+            type="button"
+            id="languageDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false">
+        <img id="selected-flag" src="https://flagcdn.com/w40/us.png" alt="US Flag">
+        <span id="selected-language">EN - English</span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+        <li>
+            <a class="dropdown-item" href="#" onclick="translatePage('en', 'https://flagcdn.com/w40/us.png', 'EN - English')">
+                <img src="https://flagcdn.com/w40/us.png" alt="US Flag"> EN - English
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="#" onclick="translatePage('fr', 'https://flagcdn.com/w40/fr.png', 'FR - Français')">
+                <img src="https://flagcdn.com/w40/fr.png" alt="France Flag"> FR - Français
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="#" onclick="translatePage('es', 'https://flagcdn.com/w40/es.png', 'ES - Español')">
+                <img src="https://flagcdn.com/w40/es.png" alt="Spain Flag"> ES - Español
+            </a>
+        </li>
+    </ul>
+</div>
+<div id="google_translate_element" style="display:none;"></div>
+@*<div class="language-dropdown dropdown">
+        <button class="btn btn-secondary dropdown-toggle"
+                type="button"
+                id="languageDropdown"
+                data-bs-toggle="dropdown"
+                aria-expanded="false">
+            <img src="https://flagcdn.com/w40/us.png" alt="US Flag"> EN - English
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+            <li>
+                <a class="dropdown-item" href="#" onclick="translatePage('en')">
+                    <img src="https://flagcdn.com/w40/us.png" alt="US Flag"> EN - English
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="#" onclick="translatePage('fr')">
+                    <img src="https://flagcdn.com/w40/fr.png" alt="France Flag"> FR - Français
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="#" onclick="translatePage('es')">
+                    <img src="https://flagcdn.com/w40/es.png" alt="Spain Flag"> ES - Español
+                </a>
+            </li>
+        </ul>
+    </div>*@
 
