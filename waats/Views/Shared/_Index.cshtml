@@ -221,10 +221,13 @@
                                     <div class="tab-pane fade" id="lastSection" role="tabpanel" aria-labelledby="lastSection-tab">
 
                                         <div class="mb-4">
-                                            <h6 class="card-title">
-                                                <span>1.</span>
-                                                @Html.LabelFor(model => model.CompleteProjects, htmlAttributes: new { @class = "form-label" })
-                                            </h6>
+                                            <div class="d-flex align-items-center ">
+                                                <p>1.</p>
+                                                <h6 class="card-title ms-2">
+                                                    @Html.LabelFor(model => model.CompleteProjects, htmlAttributes: new { @class = "form-label" })
+
+                                                </h6>
+                                            </div>
                                             @Html.ValidationMessageFor(model => model.CompleteProjects, "", new { @class = "text-danger" })
                                         </div>
                                         <div class="mb-4">
@@ -251,13 +254,19 @@
                                                 @Html.LabelFor(model => model.CompleteProjects, "Always", new { @class = "form-check-label", @for = "inlineRadioCP4" })
                                             </div>
                                         </div>
+
+
                                         <div class="mb-4">
-                                            <h6 class="card-title">
-                                                <span>2.</span>
-                                                @Html.LabelFor(model => model.RequiresOrganization, htmlAttributes: new { @class = "form-label" })
-                                            </h6>
+                                            <div class="d-flex align-items-center ">
+                                                <p>2.</p>
+                                                <h6 class="card-title ms-2">
+                                                    @Html.LabelFor(model => model.RequiresOrganization, htmlAttributes: new { @class = "form-label" })
+
+                                                </h6>
+                                            </div>
                                             @Html.ValidationMessageFor(model => model.RequiresOrganization, "", new { @class = "text-danger" })
                                         </div>
+
                                         <div class="mb-4">
                                             <div class="form-check form-check-inline">
                                                 @Html.RadioButtonFor(model => model.RequiresOrganization, "Never", new { @class = "form-check-input", @id = "inlineRadioRO1", @checked = (Model.RequiresOrganization != null && Model.RequiresOrganization == "Never") ? "checked" : null })
@@ -278,11 +287,16 @@
                                                 @Html.LabelFor(model => model.RequiresOrganization, "Always", new { @class = "form-check-label", @for = "inlineRadioRO4" })
                                             </div>
                                         </div>
+
                                         <div class="mb-4">
-                                            <h6 class="card-title">
-                                                <span>3.</span>
-                                                @Html.LabelFor(model => model.keepAppointments, htmlAttributes: new { @class = "form-label" })
-                                            </h6>  @Html.ValidationMessageFor(model => model.keepAppointments, "", new { @class = "text-danger" })
+                                            <div class="d-flex align-items-center ">
+                                                <p class="m-0">3.</p>
+                                                <h6 class="card-title ms-2">
+                                                    @Html.LabelFor(model => model.keepAppointments, htmlAttributes: new { @class = "form-label" })
+
+                                                </h6>
+                                            </div>
+                                            @Html.ValidationMessageFor(model => model.keepAppointments, "", new { @class = "text-danger" })
                                         </div>
                                         <div class="mb-4">
                                             <div class="form-check form-check-inline">
@@ -305,13 +319,18 @@
 
                                             </div>
                                         </div>
+
                                         <div class="mb-4">
-                                            <h6 class="card-title">
-                                                <span>4.</span>
-                                                @Html.LabelFor(model => model.StartTasksOnTime, htmlAttributes: new { @class = "form-label" })
-                                            </h6>
+                                            <div class="d-flex align-items-center ">
+                                                <p>4.</p>
+                                                <h6 class="card-title ms-2">
+                                                    @Html.LabelFor(model => model.StartTasksOnTime, htmlAttributes: new { @class = "form-label" })
+
+                                                </h6>
+                                            </div>
                                             @Html.ValidationMessageFor(model => model.StartTasksOnTime, "", new { @class = "text-danger" })
                                         </div>
+
                                         <div class="mb-4">
                                             <div class="form-check form-check-inline">
                                                 @Html.RadioButtonFor(model => model.StartTasksOnTime, "Never", new { @class = "form-check-input", @id = "inlineRadioST1", @checked = (Model.StartTasksOnTime != null && Model.StartTasksOnTime == "Never") ? "checked" : null })
@@ -335,11 +354,16 @@
                                             </div>
                                         </div>
                                         <div class="mb-4">
-                                            <h6 class="card-title">
-                                                <span>5.</span>
-                                                @Html.LabelFor(model => model.FidgetAndSquirm, htmlAttributes: new { @class = "form-label" })
-                                            </h6>  @Html.ValidationMessageFor(model => model.FidgetAndSquirm, "", new { @class = "text-danger" })
+                                            <div class="d-flex align-items-center ">
+                                                <p class="m-0">5.</p>
+                                                <h6 class="card-title ms-2">
+                                                    @Html.LabelFor(model => model.FidgetAndSquirm, htmlAttributes: new { @class = "form-label" })
+
+                                                </h6>
+                                            </div>
+                                            @Html.ValidationMessageFor(model => model.FidgetAndSquirm, "", new { @class = "text-danger" })
                                         </div>
+
                                         <div class="mb-4">
                                             <div class="form-check form-check-inline">
                                                 @Html.RadioButtonFor(model => model.FidgetAndSquirm, "Never", new { @class = "form-check-input", @id = "inlineRadioFS1", @checked = (Model.FidgetAndSquirm != null && Model.FidgetAndSquirm == "Never") ? "checked" : null })
@@ -363,10 +387,14 @@
                                             </div>
                                         </div>
                                         <div class="mb-4">
-                                            <h6 class="card-title">
-                                                <span>6.</span>
-                                                @Html.LabelFor(model => model.OverlyActiveAndCompelled, htmlAttributes: new { @class = "form-label" })
-                                            </h6>   @Html.ValidationMessageFor(model => model.OverlyActiveAndCompelled, "", new { @class = "text-danger" })
+                                            <div class="d-flex align-items-center ">
+                                                <p>6.</p>
+                                                <h6 class="card-title ms-2">
+                                                    @Html.LabelFor(model => model.OverlyActiveAndCompelled, htmlAttributes: new { @class = "form-label" })
+
+                                                </h6>
+                                            </div>
+                                            @Html.ValidationMessageFor(model => model.OverlyActiveAndCompelled, "", new { @class = "text-danger" })
                                         </div>
                                         <div class="mb-4">
                                             <div class="form-check form-check-inline">
@@ -386,12 +414,19 @@
                                                 @Html.LabelFor(model => model.OverlyActiveAndCompelled, "Always", new { @class = "form-check-label", @for = "inlineRadioOC4" })
                                             </div>
                                         </div>
+
                                         <div class="mb-4">
-                                            <h6 class="card-title">
-                                                <span>7.</span>
-                                                @Html.LabelFor(model => model.MakeCarelessMistakes, htmlAttributes: new { @class = "form-label" })
-                                            </h6>   @Html.ValidationMessageFor(model => model.MakeCarelessMistakes, "", new { @class = "text-danger" })
+                                            <div class="d-flex align-items-center ">
+                                                <p class="m-0">7.</p>
+                                                <h6 class="card-title ms-2">
+                                                    @Html.LabelFor(model => model.MakeCarelessMistakes, htmlAttributes: new { @class = "form-label" })
+
+                                                </h6>
+                                            </div>
+                                            @Html.ValidationMessageFor(model => model.MakeCarelessMistakes, "", new { @class = "text-danger" })
                                         </div>
+
+
                                         <div class="mb-4">
                                             <div class="form-check form-check-inline">
                                                 @Html.RadioButtonFor(model => model.MakeCarelessMistakes, "Never", new { @class = "form-check-input", @id = "inlineRadioMC1", @checked = (Model.MakeCarelessMistakes != null && Model.MakeCarelessMistakes == "Never") ? "checked" : null })
@@ -414,12 +449,18 @@
 
                                             </div>
                                         </div>
+
                                         <div class="mb-4">
-                                            <h6 class="card-title">
-                                                <span>8.</span>
-                                                @Html.LabelFor(model => model.DifficultyKeepingMyAttention, htmlAttributes: new { @class = "form-label" })
-                                            </h6>    @Html.ValidationMessageFor(model => model.DifficultyKeepingMyAttention, "", new { @class = "text-danger" })
+                                            <div class="d-flex align-items-center ">
+                                                <p>8.</p>
+                                                <h6 class="card-title ms-2">
+                                                    @Html.LabelFor(model => model.DifficultyKeepingMyAttention, htmlAttributes: new { @class = "form-label" })
+
+                                                </h6>
+                                            </div>
+                                            @Html.ValidationMessageFor(model => model.DifficultyKeepingMyAttention, "", new { @class = "text-danger" })
                                         </div>
+
                                         <div class="mb-4">
                                             <div class="form-check form-check-inline">
                                                 @Html.RadioButtonFor(model => model.DifficultyKeepingMyAttention, "Never", new { @class = "form-check-input", @id = "inlineRadioDK1", @checked = (Model.DifficultyKeepingMyAttention != null && Model.DifficultyKeepingMyAttention == "Never") ? "checked" : null })
@@ -443,11 +484,16 @@
                                             </div>
                                         </div>
                                         <div class="mb-4">
-                                            <h6 class="card-title">
-                                                <span>9.</span>
-                                                @Html.LabelFor(model => model.DifficultyConcentrating, htmlAttributes: new { @class = "form-label" })
-                                            </h6>  @Html.ValidationMessageFor(model => model.DifficultyConcentrating, "", new { @class = "text-danger" })
+                                            <div class="d-flex align-items-center ">
+                                                <p>9.</p>
+                                                <h6 class="card-title ms-2">
+                                                    @Html.LabelFor(model => model.DifficultyConcentrating, htmlAttributes: new { @class = "form-label" })
+
+                                                </h6>
+                                            </div>
+                                            @Html.ValidationMessageFor(model => model.DifficultyConcentrating, "", new { @class = "text-danger" })
                                         </div>
+
                                         <div class="mb-4">
                                             <div class="form-check form-check-inline">
                                                 @Html.RadioButtonFor(model => model.DifficultyConcentrating, "Never", new { @class = "form-check-input", @id = "inlineRadioDC1", @checked = (Model.DifficultyConcentrating != null && Model.DifficultyConcentrating == "Never") ? "checked" : null })
@@ -470,12 +516,18 @@
 
                                             </div>
                                         </div>
+
                                         <div class="mb-4">
-                                            <h6 class="card-title">
-                                                <span>10.</span>
-                                                @Html.LabelFor(model => model.DifficultyFinding, htmlAttributes: new { @class = "form-label" })
-                                            </h6>   @Html.ValidationMessageFor(model => model.DifficultyFinding, "", new { @class = "text-danger" })
+                                            <div class="d-flex align-items-center ">
+                                                <p class="m-0">10.</p>
+                                                <h6 class="card-title ms-2">
+                                                    @Html.LabelFor(model => model.DifficultyFinding, htmlAttributes: new { @class = "form-label" })
+
+                                                </h6>
+                                            </div>
+                                            @Html.ValidationMessageFor(model => model.DifficultyFinding, "", new { @class = "text-danger" })
                                         </div>
+
                                         <div class="mb-4">
                                             <div class="form-check form-check-inline">
                                                 @Html.RadioButtonFor(model => model.DifficultyFinding, "Never", new { @class = "form-check-input", @id = "inlineRadioDF1", @checked = (Model.DifficultyFinding != null && Model.DifficultyFinding == "Never") ? "checked" : null })
@@ -499,11 +551,16 @@
                                             </div>
                                         </div>
                                         <div class="mb-4">
-                                            <h6 class="card-title">
-                                                <span>11.</span>
-                                                @Html.LabelFor(model => model.EasilyDistracted, htmlAttributes: new { @class = "form-label" })
-                                            </h6>   @Html.ValidationMessageFor(model => model.EasilyDistracted, "", new { @class = "text-danger" })
+                                            <div class="d-flex align-items-center ">
+                                                <p>11.</p>
+                                                <h6 class="card-title ms-2">
+                                                    @Html.LabelFor(model => model.EasilyDistracted, htmlAttributes: new { @class = "form-label" })
+
+                                                </h6>
+                                            </div>
+                                            @Html.ValidationMessageFor(model => model.EasilyDistracted, "", new { @class = "text-danger" })
                                         </div>
+
                                         <div class="mb-4">
                                             <div class="form-check form-check-inline">
                                                 @Html.RadioButtonFor(model => model.EasilyDistracted, "Never", new { @class = "form-check-input", @id = "inlineRadioED1", @checked = (Model.EasilyDistracted != null && Model.EasilyDistracted == "Never") ? "checked" : null })
@@ -527,11 +584,16 @@
                                             </div>
                                         </div>
                                         <div class="mb-4">
-                                            <h6 class="card-title">
-                                                <span>12.</span>
-                                                @Html.LabelFor(model => model.LeaveMySeatInMeetings, htmlAttributes: new { @class = "form-label" })
-                                            </h6>  @Html.ValidationMessageFor(model => model.LeaveMySeatInMeetings, "", new { @class = "text-danger" })
+                                            <div class="d-flex align-items-center ">
+                                                <p>12.</p>
+                                                <h6 class="card-title ms-2">
+                                                    @Html.LabelFor(model => model.LeaveMySeatInMeetings, htmlAttributes: new { @class = "form-label" })
+
+                                                </h6>
+                                            </div>
+                                            @Html.ValidationMessageFor(model => model.LeaveMySeatInMeetings, "", new { @class = "text-danger" })
                                         </div>
+
                                         <div class="mb-4">
                                             <div class="form-check form-check-inline">
                                                 @Html.RadioButtonFor(model => model.LeaveMySeatInMeetings, "Never", new { @class = "form-check-input", @id = "inlineRadioLM1", @checked = (Model.LeaveMySeatInMeetings != null && Model.LeaveMySeatInMeetings == "Never") ? "checked" : null })
@@ -556,11 +618,16 @@
                                             </div>
                                         </div>
                                         <div class="mb-4">
-                                            <h6 class="card-title">
-                                                <span>13.</span>
-                                                @Html.LabelFor(model => model.DifficultyRelaxingOrUnwinding, htmlAttributes: new { @class = "form-label" })
-                                            </h6>  @Html.ValidationMessageFor(model => model.DifficultyRelaxingOrUnwinding, "", new { @class = "text-danger" })
+                                            <div class="d-flex align-items-center ">
+                                                <p>13.</p>
+                                                <h6 class="card-title ms-2">
+                                                    @Html.LabelFor(model => model.DifficultyRelaxingOrUnwinding, htmlAttributes: new { @class = "form-label" })
+
+                                                </h6>
+                                            </div>
+                                            @Html.ValidationMessageFor(model => model.DifficultyRelaxingOrUnwinding, "", new { @class = "text-danger" })
                                         </div>
+
                                         <div class="mb-4">
                                             <div class="form-check form-check-inline">
                                                 @Html.RadioButtonFor(model => model.DifficultyRelaxingOrUnwinding, "Never", new { @class = "form-check-input", @id = "inlineRadioDR1", @checked = (Model.DifficultyRelaxingOrUnwinding != null && Model.DifficultyRelaxingOrUnwinding == "Never") ? "checked" : null })
@@ -584,11 +651,16 @@
                                             </div>
                                         </div>
                                         <div class="mb-4">
-                                            <h6 class="card-title">
-                                                <span>14.</span>
-                                                @Html.LabelFor(model => model.TalkingTooMuch, htmlAttributes: new { @class = "form-label" })
-                                            </h6>  @Html.ValidationMessageFor(model => model.TalkingTooMuch, "", new { @class = "text-danger" })
+                                            <div class="d-flex align-items-center ">
+                                                <p>14.</p>
+                                                <h6 class="card-title ms-2">
+                                                    @Html.LabelFor(model => model.TalkingTooMuch, htmlAttributes: new { @class = "form-label" })
+
+                                                </h6>
+                                            </div>
+                                            @Html.ValidationMessageFor(model => model.TalkingTooMuch, "", new { @class = "text-danger" })
                                         </div>
+
                                         <div class="mb-4">
                                             <div class="form-check form-check-inline">
                                                 @Html.RadioButtonFor(model => model.TalkingTooMuch, "Never", new { @class = "form-check-input", @id = "inlineRadioTM1", @checked = (Model.TalkingTooMuch != null && Model.TalkingTooMuch == "Never") ? "checked" : null })
@@ -612,11 +684,16 @@
                                             </div>
                                         </div>
                                         <div class="mb-4">
-                                            <h6 class="card-title">
-                                                <span>15.</span>
-                                                @Html.LabelFor(model => model.FinishingTheSentences, htmlAttributes: new { @class = "form-label" })
-                                            </h6>  @Html.ValidationMessageFor(model => model.FinishingTheSentences, "", new { @class = "text-danger" })
+                                            <div class="d-flex align-items-center ">
+                                                <p>15.</p>
+                                                <h6 class="card-title ms-2">
+                                                    @Html.LabelFor(model => model.FinishingTheSentences, htmlAttributes: new { @class = "form-label" })
+
+                                                </h6>
+                                            </div>
+                                            @Html.ValidationMessageFor(model => model.FinishingTheSentences, "", new { @class = "text-danger" })
                                         </div>
+
                                         <div class="mb-4">
                                             <div class="form-check form-check-inline">
                                                 @Html.RadioButtonFor(model => model.FinishingTheSentences, "Never", new { @class = "form-check-input", @id = "inlineRadioFT1", @checked = (Model.FinishingTheSentences != null && Model.FinishingTheSentences == "Never") ? "checked" : null })
@@ -640,11 +717,16 @@
                                             </div>
                                         </div>
                                         <div class="mb-4">
-                                            <h6 class="card-title">
-                                                <span>16.</span>
-                                                @Html.LabelFor(model => model.DifficultyWaitingMyTurn, htmlAttributes: new { @class = "form-label" })
-                                            </h6>  @Html.ValidationMessageFor(model => model.DifficultyWaitingMyTurn, "", new { @class = "text-danger" })
+                                            <div class="d-flex align-items-center ">
+                                                <p>16.</p>
+                                                <h6 class="card-title ms-2">
+                                                    @Html.LabelFor(model => model.DifficultyWaitingMyTurn, htmlAttributes: new { @class = "form-label" })
+
+                                                </h6>
+                                            </div>
+                                            @Html.ValidationMessageFor(model => model.DifficultyWaitingMyTurn, "", new { @class = "text-danger" })
                                         </div>
+
                                         <div class="mb-4">
                                             <div class="form-check form-check-inline">
                                                 @Html.RadioButtonFor(model => model.DifficultyWaitingMyTurn, "Never", new { @class = "form-check-input", @id = "inlineRadioDW1", @checked = (Model.DifficultyWaitingMyTurn != null && Model.DifficultyWaitingMyTurn == "Never") ? "checked" : null })
@@ -669,12 +751,16 @@
                                             </div>
                                         </div>
                                         <div class="mb-4">
-                                            <h6 class="card-title">
-                                                <span>17.</span>
-                                                @Html.LabelFor(model => model.InterruptOtherPeople, htmlAttributes: new { @class = "form-label" })
-                                            </h6>
+                                            <div class="d-flex align-items-center ">
+                                                <p class="m-0">17.</p>
+                                                <h6 class="card-title ms-2">
+                                                    @Html.LabelFor(model => model.InterruptOtherPeople, htmlAttributes: new { @class = "form-label" })
+
+                                                </h6>
+                                            </div>
                                             @Html.ValidationMessageFor(model => model.InterruptOtherPeople, "", new { @class = "text-danger" })
                                         </div>
+                                       
                                         <div class="mb-4">
                                             <div class="form-check form-check-inline">
                                                 @Html.RadioButtonFor(model => model.InterruptOtherPeople, "Never", new { @class = "form-check-input", @id = "inlineRadioIO1", @checked = (Model.InterruptOtherPeople != null && Model.InterruptOtherPeople == "Never") ? "checked" : null })
@@ -744,8 +830,8 @@
                             }
                             </div>
                         <div class="fixedActionButtons">
-                            <button type="button" class="btn btn-secondary me-3 disabled">Clear</button>
-                            <button type="button" class="btn btn-primary" id="next-tab" >Next <i class="fa-solid fa-arrow-right ms-2"></i></button>
+                            <button type="button" class="btn btn-secondary me-3" id="clearButton" onclick="clearForm('CRForm')">Clear</button>
+                            <button type="button" class="btn btn-primary" id="next-tab">Next <i class="fa-solid fa-arrow-right ms-2"></i></button>
                         </div>
                     </div>
                 </div>
@@ -791,17 +877,20 @@
                 const $prevTab = $activeTab.closest('li').prev('li').find('.nav-link');
                 const $nextTab = $activeTab.closest('li').next('li').find('.nav-link');
 
-                // Update icons
+                // Update "Previous" icon
                 if ($prevTab.length) {
                     $('#prev-tab i').addClass('active');
                 } else {
                     $('#prev-tab i').removeClass('active');
                 }
 
+                // Update "Next" icon and button
                 if ($nextTab.length) {
-                    $('#next-link i').addClass('active');
+                    $('#next-tab i').addClass('active');
+                    $('#next-tab').prop('disabled', false); // Enable "Next" button
                 } else {
-                    $('#next-link i').removeClass('active');
+                    $('#next-tab i').removeClass('active');
+                    $('#next-tab').prop('disabled', true); // Disable "Next" button
                 }
             }
 
@@ -878,20 +967,8 @@
             updateSectionName(); // Update section name
         });
 
+
     $(document).ready(function () {
-
-
-        // Adding an event listener to format the date when the user selects a date
-        document.getElementById('date1').addEventListener('change', function () {
-            const date = new Date(this.value); // Get the selected date
-            const formattedDate = date.getFullYear() + '-' +
-                String(date.getMonth() + 1).padStart(2, '0') + '-' +
-                String(date.getDate()).padStart(2, '0'); // Format as YYYY-MM-DD
-            console.log("Formatted Date:", formattedDate); // Logs the date in YYYY-MM-DD format
-            // You can now use formattedDate as needed
-        });
-
-
         let _flag = '@flag';
         if (_flag == 'True') {
             showall();
@@ -900,6 +977,26 @@
 
         }
     });
+        function clearForm(formId) {
+            // Get the form element by ID
+            const form = document.getElementById(formId);
+
+            // Reset the form fields
+            if (form) {
+                form.reset();
+            }
+
+            // Clear manually populated fields, if necessary
+            const inputs = form.querySelectorAll('input[type="text"], input[type="email"], textarea');
+            inputs.forEach(input => {
+                input.value = '';
+            });
+
+            const selects = form.querySelectorAll('select');
+            selects.forEach(select => {
+                select.selectedIndex = 0;
+            });
+        }
 
     $.validator.unobtrusive.adapters.add("uniqueemail", [], function (options) {
         options.rules["uniqueemail"] = true;

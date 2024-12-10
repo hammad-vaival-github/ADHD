@@ -47,6 +47,7 @@ namespace waats.ViewModel
         public string DoB { get; set; }
 
         [Required(ErrorMessage = "* Required")]
+        [Range(18, int.MaxValue, ErrorMessage = "Age should be greater than 18 years.")]
         //[StringLength(20, ErrorMessage = "! Max 20 characters")]
         [Display(Name = "* Age: ")]
         public int? Age { get; set; }

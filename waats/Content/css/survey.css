@@ -240,11 +240,10 @@ a{
     padding-top: 30px;
 }
 label.form-label {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
     line-height: 14.4px;
-    letter-spacing: 0.24em;
-  text-transform: uppercase;
+    text-transform: inherit;
     color: #69738E;
     margin-bottom: 4px;
 }
@@ -391,14 +390,23 @@ p.description {
 }
 
 
+/* modificTION IN SECTION 3*/
+div#lastSection .d-flex.align-items-center p {
+    margin: 0;
+    font-size: 12px;
+}
+
+label.form-check-label {
+    font-size: 13px;
+}
 
 
-
-
-
-
-
-
+textarea.form-control {
+    min-height: 85px;
+}
+button#saveBtn {
+    margin-bottom: 20px;
+}
 
 @media screen and (max-width:768px) {
     .videoWrapper {

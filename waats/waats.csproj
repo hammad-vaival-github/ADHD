@@ -234,6 +234,7 @@
     </Compile>
     <Compile Include="Helper\HelpFunctions.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\DashboardTasksPercentage.cs" />
     <Compile Include="Models\data\AspNetRoles.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -317,12 +318,18 @@
     <Content Include="Content\css\dashboard.css" />
     <Content Include="Content\css\responsive.css" />
     <Content Include="Content\css\style.css" />
+    <Content Include="Content\css\survey.css" />
     <Content Include="Content\images\40.png" />
     <Content Include="Content\images\ADHD-InvertLogo.png" />
     <Content Include="Content\images\ADHD-Logo.png" />
+    <Content Include="Content\images\bg.png" />
+    <Content Include="Content\images\logo.png" />
+    <Content Include="Content\images\logoColor.png" />
+    <Content Include="images\adhd-logo.png" />
     <Content Include="Views\Shared\_Layout - Copy.cshtml" />
     <Content Include="Views\Shared\_Index_WithSubSections - Copy.cshtml" />
     <Content Include="Views\Shared\_Index - Copy.cshtml" />
+    <Content Include="Views\Shared\_survey_layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\backupT\LETTER TO PATIENT.htm" />
@@ -759,6 +766,9 @@
     <Content Include="Views\Home\AdviceQ4_D_E.cshtml" />
     <Content Include="Views\Home\AdviceQ_18N_19Y_20Y.cshtml" />
     <Content Include="Views\Account\Login - Copy.cshtml" />
+    <Content Include="Views\Home\AdviceQ4_D_E_New.cshtml" />
+    <Content Include="Views\Home\AdviceQ_18N_19Y_20Y_New.cshtml" />
+    <Content Include="Views\Home\AdviceQ_18Y_19Y_20Y_New.cshtml" />
     <None Include="Views\Home\___AdviceQ_18N_19Y_20Y.cshtml.bak" />
     <None Include="Views\Home\___AdviceQ_18N_19Y_20Y_Sub_No.cshtml.bak" />
     <None Include="Views\Home\___AdviceQ_18N_19Y_20Y_Sub_Yes.cshtml.bak" />

@@ -397,11 +397,32 @@ function showall() {
     //    scrollTop: $('.Section3').offset().top
     //}, 500);
 }
+//function myFunction(IdTag) {
+//    var dob = document.getElementById(IdTag).value;
+//    var ageInput = document.getElementById('Age'); // Assuming the input field has id 'Age'
+
+//    if (dob !== '') {
+//        var age = moment().diff(moment(dob, 'YYYY-MM-DD'), 'years');
+
+//        if (age >= 18) {
+//            ageInput.value = age;
+//            ageInput.style.color = ''; // Reset the text color
+//            ageInput.setCustomValidity(''); // Reset the validation message
+//        } else {
+//            ageInput.value = 18;
+//            ageInput.style.color = 'red'; // Set text color to red
+//            ageInput.setCustomValidity('Age should be greater than 18'); // Trigger validation message
+//        }
+//    }
+//}
 
 function myFunction(IdTag) {
     var dob = document.getElementById(IdTag).value;
     if (dob != '') {
         var age = moment().diff(moment(dob, 'YYYY-MM-DD'), 'years');
+        if (age >= 18) {
+            $('#Age-error').addClass('d-none');
+        }
         $('#Age').val(age);
         }
 }
